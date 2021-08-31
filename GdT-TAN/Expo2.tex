@@ -1,0 +1,392 @@
+\input amstex
+\magnification=\magstep1
+\documentstyle {amsppt}
+\NoBlackBoxes
+\refstyle{B}
+
+%%% Version du 13 Janvier 2000
+
+\def\goes{\mathrel{\rightarrow}}
+\def\Log{\operatorname{Log}}
+\def\section#1{\goodbreak\smallskip\noindent{\bf #1}}
+\def\fin{$\diamond\diamond\diamond$\enddemo}
+\def\about{\mathrel{{\smallsmile\atop\smallfrown}}}
+
+\document
+
+\topmatter
+\title
+L'in\'egalit\'e du grand crible par la fonction de Selberg
+\endtitle
+\author
+Olivier Ramar\'e
+\endauthor
+\abstract
+Expos\'e introductif sur l'in\'egalit\'e du grand crible que nous
+d\'emontrons \`a l'aide d'un lissage. Nous \'etablissons aussi la
+forme arithm\'etique du grand crible, due \`a Montgomery.
+Version du 10 F\'evrier 2000.
+\endabstract
+\endtopmatter
+
+
+Le lecteur trouvera deux autres approches classiques dans les
+monographes respectivement de Bombieri et de Montgomery cit\'es
+ci-apr\`es.
+
+\section{I. Une formule de Poisson.}
+
+Bien que la formule de Poisson soit d'un usage courant en th\'eorie
+analytique des nombres, il n'est pas facile de trouver dans cette
+litt\'erature une telle formule avec des hypoth\`eses assez
+larges. Nous donnons ici une telle formule.
+
+La transform\'ee de Fourier d'une fonction $f:\Bbb R\goes\Bbb R$ est
+d\'efinie au point $x$ par
+$$
+\hat f(x)=\int_{-\infty}^\infty f(t)\,e(xt)dt=
+\lim_{T\goes\infty}\int_{-T}^{T} f(t)\,e(xt)dt
+$$
+avec $e(\alpha)=\exp(2i\pi\alpha)$. Nous avons, sous l'hypoth\`ese
+suppl\'ementaire que $f$ et $\hat f$
+appartiennent \`a $\Cal L^1(\Bbb R)$,
+$$
+f(t)=\int_{-\infty}^\infty \hat f(x)\,e(-xt)dx.
+$$
+Dans cette partie uniquement, nous posons
+$$
+\mathop{\sum_{n\in\Bbb Z}}\nolimits^{\text{sym}}\varphi_n
+=\lim_{N\goes\infty}\sum_{-N\le n\le N}\varphi_n
+$$
+si cette limite existe.
+
+Nous avons alors le th\'eor\`eme suivant d\^u \`a Bochner~:
+\proclaim{Th\'eor\`eme}
+Soit $f:\Bbb R\goes\Bbb R$ et $\alpha$ r\'eel. Supposons que
+\roster
+\item la fonction $f$ est continue est $\Bbb R$,
+\item la s\'erie
+$\sum_{n\in\Bbb Z}^{\text{sym}}f(t+n)e(\alpha(t+n))$
+converge uniform\'ement pour $t\in[-\tfrac12,\tfrac12]$,
+\item la s\'erie
+$\sum_{k\in\Bbb Z}^{\text{sym}}\hat f(k-\alpha)$
+converge.
+\endroster
+Alors
+$$
+\mathop{\sum_{n\in\Bbb Z}}\nolimits^{\text{sym}}f(n)e(\alpha(n))
+=
+\mathop{\sum_{k\in\Bbb Z}}\nolimits^{\text{sym}}\hat f(k-\alpha).
+$$
+\endproclaim
+
+Remarquons que sous les deux premi\`eres hypoth\`eses, la preuve
+montre que $\hat f$ existe.
+
+\demo{Preuve}
+Voir le livre de Chandrasekharan, cit\'e ci-dessous,
+chap\^\i tre II, th\'eor\`eme~1.
+\fin
+
+\section{II. Une bonne fonction de lissage.}
+
+Voici notre fonction favorite~:
+
+\proclaim{Th\'eor\`eme}
+Soit $N\ge1$ et $\delta>0$ deux r\'eels. Il existe une fonction
+$b(t)=b_{N,\delta}(t)$ de $\Bbb R$ dans $\Bbb R$ telle que
+\roster
+\item $b$ est $C^\infty$.
+\item $b(t)=\Cal O_{N,\delta}(|t|^{-2})$ quand $|t|\goes\infty$.
+\item $b(t)\ge0$ pour tout $t$.
+\item $b(t)\ge1$ pour tout $t\in[1,N]$.
+\item $\hat b(x)=0$ si $|x|\ge\delta$.
+\item $\hat b(0)=N-1+\delta^{-1}$.
+\endroster
+\endproclaim
+
+La fonction $b$ ressemble \`a~:
+
+\vskip1cm
+
+Nous avons aussi $b(t)\le 2$. Pour la construction, le lecteur
+consultera l'article de Vaaler cit\'e ci-apr\`es.
+
+
+\section{III. L'in\'egalit\'e du grand crible.}
+
+Soit $(\varphi_n)$ une suite de complexes. Posons
+$$
+S(\alpha)=\sum_{1\le n\le N}\varphi_n e(n\alpha).
+$$
+Un ensemble fini $\Cal X\subset \Bbb R/\Bbb Z$ est dit $\delta$-bien
+espac\'e si l'on a
+$$
+\min\big\{\|x-x'\|,\quad x,x'\in\Cal X,\ x\neq x'\big\}\ge\delta,
+$$
+o\`u $\|y\|$ est pris sur le cercle de circonf\'erence unit\'e
+($\|y\|=\min_{k\in\Bbb Z}|y-k|$), et donc $\delta<1/2$. Dans le
+cas (fortement inint\'eressant) o\`u $\Cal X$ est r\'eduit \`a un
+point, on prend $\delta=1/2$. Nous avons alors
+$$
+\sum_{x\in\Cal X}|S(x)|^2\le \sum_{n\le N}|\varphi_n|^2\
+(N-1+\delta^{-1})
+\qquad(\Cal X\text{ $\delta$-bien espac\'e})
+\leqno(3.1)
+$$
+\demo{Preuve}
+\'Ecrivons
+$$
+\sum_{x\in\Cal X}|S(x)|^2
+=
+\sum_{1\le n\le N}\sum_{x\in\Cal X}\varphi_n\overline{S(x)}\,e(nx).
+$$
+Par cons\'equent,
+$$
+\aligned
+\left(\sum_{x\in\Cal X}|S(x)|^2\right)^2
+&\le
+\sum_{n\le N}|\varphi_n|^2\sum_{n\le N}\bigg|\sum_{x\in \Cal
+X}\overline{S(x)}\,e(nx)\bigg|^2\\
+&\le
+\sum_{n\le N}|\varphi_n|^2\sum_{n\in\Bbb Z}b(n)\bigg|\sum_{x\in \Cal
+X}\overline{S(x)}\,e(nx)\bigg|^2\\
+\endaligned
+$$
+o\`u $b=b_{N\delta}$ est la fonction donn\'ee par le th\'eor\`eme de
+la seconde partie.
+Par ailleurs
+$$
+\aligned
+\sum_{n\le N}|\varphi_n|^2\sum_{n\in\Bbb Z}b(n)\bigg|\sum_{x\in \Cal
+X}\overline{S(x)}\,e(nx)\bigg|^2
+&=
+\sum_{x,x'\in\Cal X}\overline{S(x)}S(x')\sum_{n\in\Bbb
+Z}b(n)e(n(x-x'))\\
+&=
+\sum_{x,x'\in\Cal X}\overline{S(x)}S(x')\sum_{k\in\Bbb
+Z}\hat b(k-(x-x'))\\
+&=
+\sum_{x\in\Cal X}|S(x)|^2(N-1+\delta^{-1})
+\endaligned
+$$
+ce qui permet de conclure facilement.
+\fin
+Notons que
+$$
+|S(x_0)|\le \sum_{n\le N}|\varphi_n|^2 N \leqno(3.2)
+$$
+ce qui fait que, lorsque $\delta^{-1}=o(N)$, l'in\'equation $(3.1)$
+donne essentiellement la m\^eme majoration que $(3.2)$, alors que l'on
+majore simultan\'ement de nombreux termes.
+
+\bigskip
+Il existe \`a l'heure actuelle essentiellement quatre preuves de
+l'in\'egalit\'e du grand crible. Celle que nous venons de donner
+dont l'id\'ee se trouve dans un article de Davenport \& Halberstam de 1966,
+une due \`a Gallagher et qui tente de comprendre le membre de
+gauche de $(3.1)$ comme une somme de Riemann, une (due \`a Montgomery
+\& Vaughan ?) qui passe par l'in\'egalit\'e de Hilbert et une derni\`ere, en fait
+plus ancienne, qui utilisait notamment des disques de Gegenbauer. La
+preuve que nous pr\'esentons est en quelque sorte la forme achev\'ee
+de cette derni\`ere approche. Le lecteur trouvera aussi des
+d\'emonstration hybrides, comme celle que pr\'esente Vaaler dans
+l'article sus-cit\'e et qui combine la technique de Selberg et l'id\'ee
+de Gallagher.
+
+
+\section{IV. L'in\'egalit\'e du grand crible pour la suite de Farey.}
+
+Presque toutes les utilisations de $(3.1)$ en th\'eorie des nombres se
+font en prenant
+$$
+\Cal X=\{\tfrac aq,\quad q\le Q, (a,q)=1, 1\le a\le q\}.
+$$
+L'in\'egalit\'e du grand crible ($(3.1)$) s'\'ecrit alors~:
+$$
+\sum_{q\le Q}\sum_{a\mod^* q}|S(a/q)|^2\le
+\sum_{n\le N}|\varphi_n|^2\ (N-1+\delta^{-1}).
+\leqno(3.3)
+$$
+En effet, deux points distincts $a/q$ et $a'/q'$ de $\Cal X$
+v\'erifient
+$$
+\big\|\frac aq-\frac{a'}{q'}\big\|
+=
+\big\|\frac {aq'-a'q}{qq'}\big\|\ge\frac1{Q^2}.
+$$
+En fait, si $a/q$ et $a'/q'$ sont cons\'ecutifs, il est classique que
+$(q,q')=1$, et notamment $q\neq q'$ si $Q\ge2$. La minoration
+pr\'ec\'edente peut donc \^etre remplac\'ee par $\frac{1}{Q(Q-1)}$,
+qui est atteinte entre $1/Q$ et $1/(Q-1)$.
+
+\bigskip
+Notons que $|\Cal X\|=\sum_{q\le Q}\phi(q)\about Q^2$, ce qui fait que
+les points de $\Cal X$ sont quasiment \'equi-distribu\'es sur le
+cercle.
+
+\bigskip
+La remarque vitale ensuite consiste \`a dire que $S(a/q)$ ne d\'epend
+que de la distribution de $(\varphi_n)_n$ modulo $q$ puisque nous
+avons
+$$
+S(a/q)=\sum_{b\mod q}\bigg(\sum_{n\equiv b[q]}\varphi_n\bigg)e(ab/q).
+$$
+En particulier, si $q=p$ est un nombre premier, nous avons
+$$
+\sum_{a\mod^*p}|S(a/p)|^2=p\sum_{b\mod p}\bigg|\sum_{n\equiv b[p]}\varphi_n-\frac{S(0)}p\bigg|^2.
+$$
+
+\section{V. Le crible de Montgomery.}
+
+Pour chaque nombre premier $p$, nous nous donnons un sous-ensemble
+$\Cal K_p\subset\Bbb Z/p\Bbb Z$ (l'ensemble des classes que l'on
+garde).
+
+Nous dirons que la suite $(\varphi_n)_n$ est port\'ee par $(\Cal K_p)$
+jusqu'au niveau $Q$ si nous avons
+$$
+\forall n\le N\qquad
+\big[\varphi_n\neq0\implies\forall p\le Q,\quad n\in\Cal K_p\big].
+\leqno(5.1)
+$$
+Par exemple, pour cribler la suite des nombres premiers compris entre
+$\sqrt{N}$ et $N$, nous prendrons $\Cal K_p=\Bbb Z/p\Bbb
+Z\setminus\{0\}$ et $Q=\sqrt{N}$. Notons que si $(5.1)$ est
+v\'erifi\'e pour un certain $Q$, elle est encore triviallement vraie
+pour tout $Q'$ inf\'erieur \`a $Q$. 
+\bigskip
+Posons
+$$
+G(\Cal K,Q)=\sum_{q\le Q}\mu^2(q)\prod_{p|q}
+\big(\frac p{|\Cal K_p|}-1\big).\leqno(5.2)
+$$
+Alors, si $(\varphi_n)_n$ est port\'ee par $(\Cal K_p)$
+jusqu'au niveau $Q$, nous avons
+$$
+\bigg|\sum_n \varphi_n\bigg|^2\le
+\sum_n|\varphi_n|^2\frac{N-1+Q^2}{G(\Cal K,Q)}.
+\leqno(5.3)
+$$
+\proclaim{Corollaire}
+Soit $Z$ le nombre d'entiers $n$ de $[1,N]$ qui v\'erifient
+$\forall p\le Q,\quad n\in\Cal K_p$. Nous avons
+$$
+Z\le\frac{N-1+Q^2}{G(\Cal K,Q)}.
+$$
+\endproclaim
+\demo{Preuve du corollaire}
+Nous prenons pour $(\varphi_n)$ la fonction caract\'eristique des
+$n\in[1,N]$ qui sont tels que $\forall p\le Q,\quad n\in\Cal K_p$.
+L'in\'egalit\'e $(5.3)$ nous donne alors le r\'esultat annonc\'e.
+\fin
+
+\demo{Preuve de $(5.3)$}
+Nous proc\'edons \`a reculons en trois \'etapes.
+Histoire se simplifier la typographie, nous posons~:
+$$
+g(q)=\mu^2(q)\prod_{p|q}
+\big(\frac p{|\Cal K_p|}-1\big).
+$$
+
+Tout d'abord, il suffit de d\'emontrer l'in\'egalit\'e suivante (pour
+$(\varphi_n)$ v\'erifiant $(5.1)$)~:
+$$
+g(q)\,|S(0)|^2\le
+\sum_{a\mod^* q}|S(a/q)|^2.\leqno(5.4)
+$$
+En effet, combin\'e \`a $(3.3)$, cela nous donne bien l'in\'egalit\'e
+attendue.
+
+Secundo, pour prouver $(5.4)$ pour $qq'$, il suffit de le prouver pour
+$q$ et pour $q'$ si $(q,q')=1$. En effet, dans ce cas, nous aurons~:
+$$
+\aligned
+\sum_{b\mod^* qq'}\big|S\big(\frac{b}{qq'}\big)\big|^2
+&=
+\sum_{a'\mod^* q'}\sum_{a\mod^* q}
+\big|S\big(\frac{a}{q}+\frac{a'}{q'}\big)\big|^2
+\\&\ge
+\sum_{a'\mod^* q'}g(q')\big|S\big(\frac{a'}{q'}\big)\big|^2
+\endaligned
+$$
+obtenue en appliquant $(5.4)$ \`a $q$ et \`a la suite
+$(\varphi_n e(na'/q'))$ qui v\'erifie bien $(5.1)$.
+Nous r\'eappliquons $(5.4)$, mais cette fois-ci \`a $q'$ et \`a la
+suite $(\varphi_n)$, ce qui nous donne
+$$
+\sum_{b\mod^* qq'}\big|S\big(\frac{b}{qq'}\big)\big|^2
+\ge
+g(q')g(q)|S(0)|^2=g(qq')|S(0)|^2,
+$$
+ce qui prouve notre assertion.
+
+Finalement, il nous reste \`a prouver $(5.4)$ pour $q=p$, un nombre
+premier. Dans ce cas, nous avons
+$$
+\aligned
+\sum_{a\mod^* p}|S(a/p)|^2
+&=\sum_{a\mod p}|S(a/p)|^2-|S(0)|^2
+=p\sum_{b\mod p}\big|\sum_{n\equiv b[p]}\varphi_n\big|^2-|S(0)|^2
+\\&=p\sum_{b\in \Cal K_p}\big|\sum_{n\equiv b[p]}\varphi_n\big|^2-|S(0)|^2.
+\endaligned
+\leqno(5.5)
+$$
+Mais l'in\'egalit\'e de Cauchy-Schwartz nous donne~:
+$$
+|S(0)|^2=\big|\sum_{b\in \Cal K_p}\sum_{n\equiv
+b[p]}\varphi_n\big|^2
+\le |\Cal K_p|\sum_{b\in \Cal K_p}\big|\sum_{n\equiv b[p]}\varphi_n\big|^2
+$$
+ce qui combin\'e \`a $(5.5)$ nous donne bien ce que nous souhaitions.
+\fin
+
+\Refs
+
+\ref
+\paper
+Le grand crible dans la th\'eorie analytique des nombres
+\by E. Bombieri
+\yr 1974/1987
+\jour Ast\'erisque
+\vol 18
+\pages 103pp
+\endref
+
+\ref
+\paper Arithmetical Functions
+\by K. Chandrasekharan
+\jour Grundlehren der Mathematischen Wissenschaften (Springer-Verlag)
+\vol 167
+\yr 
+\pages 
+\endref
+
+\ref
+\paper Topics in Multiplicative Number Theory
+\by H. Montgomery
+\yr 1971
+\jour Lecture Notes in Mathematics (Berlin)
+\vol 227
+\pages 178pp
+\endref
+
+\ref
+\paper Somme Extremal Functions in Fourier Analysis
+\by J. Vaaler
+\yr 1985
+\jour Bull. AMS
+\vol 12
+\pages 183--216.
+\endref
+
+\endRefs
+
+
+\enddocument
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% TeX-master: t
+%%% End: 

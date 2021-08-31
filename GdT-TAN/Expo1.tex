@@ -1,0 +1,316 @@
+\input amstex
+\magnification=\magstep1
+\documentstyle {amsppt}
+\NoBlackBoxes
+\refstyle{B}
+
+%%% Version du 13 Janvier 2000
+
+\def\goes{\mathrel{\rightarrow}}
+\def\Log{\operatorname{Log}}
+\def\section#1{\goodbreak\smallskip\noindent{\bf #1}}
+\def\fin{$\diamond\diamond\diamond$\enddemo}
+
+\document
+
+\topmatter
+\title
+Le th\'eor\`eme de Brun-Titchmarsh par le crible de Selberg.
+\endtitle
+\author
+Olivier Ramar\'e
+\endauthor
+\abstract
+Expos\'e introductif au crible sup\'erieur de Selberg. L'exemple
+choisi est bien s\^ur le th\'eor\`eme de Brun-Titchmarsh.
+Version du 17 Janvier 2000.
+\endabstract
+\endtopmatter
+
+\proclaim{Th\'eor\`eme de Brun-Titchmarsh}
+
+Si $2\le y<q$, $x\ge0$ et $a$ est premier \`a $q$, nous avons
+$$
+\pi(x+y;q,a)-\pi(x;q,a)\le\frac{2y}{\phi(q)\Log(y/q)}.
+\leqno(\star)
+$$
+\endproclaim
+Rappelons que $\pi(x;q,a)$ d\'esigne le nombre de nombres premiers
+inf\'erieurs \`a $x$ et congrus \`a $a$ modulo $q$.
+
+
+
+Titchmarsh a d\'emontr\'e un r\'esultat plus faible que le
+pr\'ec\'edent dans les ann\'ees~30 en utilisant le crible de Brun. La
+d\'enomination ``th\'eor\`eme de Brun-Titchmarsh'' est d\^u \`a Linnik
+et date des ann\'ees~40.
+
+Nous allons montrer une version un peu plus faible de $(\star)$ et
+utiliser ce probl\`eme pour illustrer la fa\c con dont le crible de
+Selberg fonctionne. Ce crible date des ann\'ees~47-50. Le lecteur en
+trouvera une pr\'esentation classique dans le livre de Halberstam \&
+Richert cit\'e ci-dessous.
+
+Posons
+$$
+S=\pi(x+y;q,a)-\pi(x;q,a)
+=\sum\Sb x<p\le x+y\\ p\equiv a[q]\endSb 1
+\leqno(1)
+$$
+et consid\'erons
+$$
+\Sigma=
+\sum\Sb x<n\le x+y\\ n\equiv a[q]\endSb
+\bigg(\sum_{d|n}\lambda_d\bigg)^2
+\leqno(2)
+$$
+o\`u les $(\lambda_d)$ sont des nombres r\'eels qui v\'erifient
+$\lambda_1=1$ et $\lambda_d=0$ si $d>z$ o\`u $z$ est un
+param\`etre. Si $p$ est un nombre premier dans $]x+z,x+y]$, $p$
+n'admet pas d'autres diviseurs inf\'erieurs \`a $z$ que 1 et par
+cons\'equent
+$$
+\bigg(\sum_{d|p}\lambda_d\bigg)^2=1.
+$$
+Il vient alors
+$$
+S\le \Sigma + z.\leqno(3)
+$$
+Il nous reste \`a \'etudier $\Sigma$ et en fait \`a obtenir le minimum
+de cette forme quadratique des $(\lambda_d)$. Pour cela nous d\'eveloppons le
+carr\'e et obtenons
+$$
+\Sigma=\sum_{d_1,d_2\le z}\lambda_{d_1}\lambda_{d_2}
+\sum\Sb x<n\le x+y\\ [d_1,d_2]|n\\ n\equiv a[q]\endSb 1,
+$$
+o\`u $[r,s]$ d\'esigne le ppcm de $r$ et $s$ et $(r,s)$ leur pgcd.
+Comme $(a,q)=1$, seuls les $d$ tels que $(d,q)=1$ interviennent, ce
+qui fait que nous pouvons imposer $\lambda_d=0$ si $(d,q)\neq1$. En
+utilisant maintenant
+$$
+\sum\Sb x<n\le x+y \\ n\equiv b[q]\endSb 1= \frac{y}{r}+\Cal O^*(1),
+\leqno(4)
+$$
+nous obtenons
+$$
+\aligned
+\Sigma
+&=
+\frac{y}{r}\sum_{d_1,d_2\le z}
+\frac{\lambda_{d_1}\lambda_{d_2}}{[d_1,d_2]}
++\Cal O^*\bigg(\sum_{d_1,d_2}|\lambda_{d_1}||\lambda_{d_2}|\bigg)\\
+&=\frac{y}{r}
+\Sigma_0
++\Cal O^*\bigg(\bigg(\sum_{d}|\lambda_{d}|\bigg)^2\bigg)\quad\text{disons.}
+\endaligned
+\leqno(5)
+$$
+Nous diagonalisons alors $\Sigma_0$ par un proc\'ed\'e
+mis au point par Selberg.
+\'Ecrivons
+$$
+\Sigma_0=\sum_{d_1,d_2\le z}(d_1,d_2)
+\frac{\lambda_{d_1}}{d_1}\frac{\lambda_{d_2}}{d_2}.
+$$
+Or $d=\sum_{\ell|d}\phi(\ell)$, d'o\`u
+$$
+\Sigma_0=\sum_{\ell\le z}\phi(\ell)\bigg(\sum\Sb \ell|d\le z\endSb
+\frac{\lambda_d}{d}\bigg)^2,
+\leqno(6)
+$$
+ce qui est la forme diagonale annonc\'ee. Posons
+$$
+y_{\ell}=\sum\Sb \ell|d\le z\endSb
+\frac{\lambda_d}{d}.\leqno(7)
+$$
+La matrice de passage des $(\lambda_d)$ aux $(y_{\ell})$ est
+triangulaire avec des \'el\'ements non nuls sur la diagonale et est
+donc inversible. De fa\c con explicite, nous avons
+$$
+\lambda_d=d\sum_{d|\ell\le z} \mu(\ell/d) y_{\ell}\leqno(8)
+$$
+ce que l'on v\'erifie en introduisant cette expression dans
+$(7)$. Cela nous permet notamment de traduire la condition
+$\lambda_1=1$ en terme des $(y_{\ell})$. En d\'efinitive, notre
+probl\`eme devient~: 
+$$
+\left\{
+\aligned
+&\text{minimiser}\quad \sum_{\ell}\phi(\ell)y_\ell^2,\\
+&\text{sous}\quad
+\left\{
+\aligned
+&\sum_{\ell\le z}\mu(\ell)y_{\ell}=1,\\
+& y_{\ell}=0\quad\text{si}\quad (\ell,q)\neq1.
+\endaligned
+\right.
+\endaligned
+\right.
+\leqno(9)
+$$
+Nous utilisons un multiplicateur ($\theta$) de Lagrange et obtenons
+$$
+\left\{
+\aligned
+&2\phi(\ell)y_\ell -\theta\mu(\ell)=0\quad(\ell,q)=1,\\
+&\sum_{\ell\le z}\mu(\ell)y_{\ell}=1,
+\endaligned
+\right.
+\leqno(10)
+$$
+ce qui donne
+$$
+y_\ell=\frac{\theta}2\frac{\mu(\ell)}{\phi(\ell)}\quad,
+\quad
+\frac{\theta}2\sum\Sb \ell\le z\\ (\ell,q)=1\endSb
+\frac{\mu^2(\ell)}{\phi(\ell)}=1.
+\leqno(11)
+$$
+Remarquons, ce qui est \'evident sur $(9)$, que $y_\ell=0$ si $\ell$
+est divisible par un carr\'e, ce qui \'equivaut \`a la m\^eme
+propri\'et\'e sur les $(\lambda_d)$.
+
+Posons
+$$
+G_f(z)=\sum\Sb \ell\le z\\ (\ell,f)=1\endSb
+\frac{\mu^2(\ell)}{\phi(\ell)}.\leqno(12)
+$$\
+Alors
+$$
+\left\{\aligned
+y_\ell&=\frac{1}{G_q(z)}\frac{\mu(\ell)}{\phi(\ell)}\quad(\ell,q)=1,\\
+\lambda_d&=\mu(d)\frac{d}{\phi(d)}\frac{G_{dq}(z/d)}{G_q(z)}\quad(d,q)=1,\\
+\Sigma_0&=1/G_q(z).
+\endaligned\right.
+\leqno(13)
+$$
+Il nous faut \`a pr\'esent \'evaluer $G_q(z)$ et nous commen\c cons
+par un lemme de van Lint \& Richert (voir les r\'ef\'erences)~:
+\proclaim{Lemme}
+
+Soit $f$ et $h$ deux entiers tels que $(f,h)=1$. Nous avons
+$$
+\frac{f}{\phi(f)}G_{fh}(z/f)\le G_h(z)\le \frac{f}{\phi(f)}G_{fh}(z).
+$$
+\endproclaim
+
+\demo{Preuve}
+Nous \'ecrivons
+$$
+G_h(z)
+=\sum_{r|f}\sum\Sb \ell\le z/r\\
+(\ell,fh)=1\endSb\frac{\mu^2(\ell r)}{\phi(\ell r)}
+=\sum_{r|f}\frac{\mu^2(r)}{\phi(r)}G_{fh}(z/r)
+$$
+et il nous suffit alors d'utiliser $G_{fh}(z/f)\le G_{fh}(z/r)\le
+G_{fh}(z)$ ainsi que
+$$
+\sum_{r|f}\frac{\mu^2(r)}{\phi(r)}=\frac{f}{\phi(f)}
+$$
+pour conclure.
+\fin
+
+Ce lemme nous donne notamment
+$$
+|\lambda_d|\le 1,\leqno(14)
+$$
+et ram\`ene l'\'evaluation de $G_q(z)$ \`a celle de $G_1(z)$. Il nous
+suffit d'ailleurs de minorer $G_1(z)$, ce qui se fait tr\`es
+facilement de la fa\c con suivante~:
+$$
+\aligned
+G_1(z)
+&=\sum_{\ell\le z}\frac{\mu^2(\ell)}{\phi(\ell)}
+=\sum_{\ell\le z}\frac{\mu^2(\ell)}{\ell}\prod_{p|\ell}\frac{1}{1-1/p}
+\\&=
+\sum_{\scriptstyle k\atop
+{\text{tel que le noyau sans}
+\atop\text{facteurs carr\'es de $k$ soit $\le z$}}}
+\frac1k
+\endaligned
+\leqno(15)
+$$
+o\`u l'on obtient la derni\`ere \'egalit\'e \`a partir de
+$$
+\frac{1}{1-1/p}=1+\frac1p+\frac1{p^2}+\dots
+$$
+Il vient alors
+$$
+G_1(z)\ge\sum_{k\le z}\frac1k\ge\Log z.\leqno(16)
+$$
+Le lecteur pourra consulter l'article et/ou le livre de Halberstam \&
+Richert cit\'es ci-apr\`es pour une \'evaluation compl\`ete de
+$G_1(z)$.
+
+Rassemblant $(3)$, $(5)$, $(13)$ et $(14)$, nous obtenons
+$$
+S\le \frac{y}{\phi(q)}\frac{1}{G_1(z)}+z^2+z\leqno(17)
+$$
+et avec $(16)$~:
+$$
+S\le \frac{y}{\phi(q)}\frac{1}{\Log z}+z^2+z.\leqno(18)
+$$
+Il nous suffit \`a pr\'esent de choisir $z$. Nous prenons
+$$
+z=\frac{y}{q}(\Log (y/q))^{-1}\leqno(19)
+$$
+ce qui nous donne
+$$
+S\le (2+o(1))\frac{y}{\phi(q)}\frac{1}{\Log (y/q)}\qquad(y/q\goes\infty).\leqno(20)
+$$
+
+\bigskip
+La d\'emonstration que nous avons donn\'ee est insuffisante pour
+\'etablir $(\star)$ puisque nous n'avons que $(2+o(1))$ au lieu de
+$(2)$. On trouvera une preuve de $(\star)$ dans l'article de
+Montgomery \& Vaughan cit\'e ci-apr\'es.
+
+
+\Refs
+
+\ref
+\paper Mean value theorems for a class of arithmetic functions
+\by H. Halberstam \& H. E. Richert
+\yr 1971
+\jour Acta Arith.
+\vol 43
+\pages 243--256
+\endref
+
+\ref
+\paper Sieves methods
+\by H. Halberstam \& H. E. Richert
+\yr 1974
+\jour Academic Press (London)
+\pages 364pp
+\endref
+
+\ref
+\paper On primes in arithmetic progressions
+\by J.E. van Lint \& H.E. Richert
+\yr 1965
+\jour Acta Arith.
+\vol 11
+\pages 209--216
+\endref
+
+\ref
+\by H. Montgomery \& R. C. Vaughan
+\paper The large sieve
+\jour Mathematika
+\vol 20 no 2
+\yr 1973 
+\pages 119--133
+\endref
+
+\endRefs
+
+
+\enddocument
+
+
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% End: 

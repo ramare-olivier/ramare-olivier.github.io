@@ -1,0 +1,417 @@
+\input amstex
+\magnification=\magstep1
+\documentstyle {amsppt}
+\NoBlackBoxes
+\refstyle{B}
+
+%%% Version du 25 Janvier 2000
+
+\def\goes{\mathrel{\rightarrow}}
+\def\Log{\operatorname{Log}}
+\def\section#1{\goodbreak\smallskip\noindent{\bf #1}}
+\def\fin{$\diamond\diamond\diamond$\enddemo}
+\def\Ker{\operatorname{Ker}}
+
+\document
+
+\topmatter
+\title
+Caract\`eres de Dirichlet, sommes de Gauss
+et th\'eor\`eme de Bombieri-Davenport.
+\endtitle
+\rightheadtext{Caract\`eres de Dirichlet ... et
+th\'eor\`eme de Bombieri-Davenport.}
+\author
+Olivier Ramar\'e
+\endauthor
+\abstract
+Nous rappelons rapidement ce que sont les caract\`eres de Dirichlet et
+nous les exprimons en termes des caract\`eres additifs de $\Bbb Z/q\Bbb
+Z$, introduisant ainsi les sommes de Gauss.
+Nous donnons alors l'extension grand crible de l'in\'egalit\'e de
+Brun-Titchmarsh donn\'ee par Bombieri \& Davenport.
+Version du 25 Janvier 2000.
+\endabstract
+\endtopmatter
+
+
+\section{I. Les caract\`eres de Dirichlet.}
+
+Nous supposons essentiellement que le lecteur est familier avec la
+dualit\'e sur les groupes ab\'eliens finis.
+
+Le groupe multiplicatif de $\Bbb Z/q\Bbb Z$ sera not\'e $\Cal U_q$ ou
+$\big(\Bbb Z/q\Bbb Z\big)^*$~; il s'agit d'un groupe ab\'elien
+fini. En ce qui concerne sa structure, rappelons que $\Cal U_{p^k}$
+est cyclique si $p\neq2$ et $k\ge1$ et que $\Cal U_{2^{k+1}}$ est le
+produit direct de $\Bbb Z/2\Bbb Z$ par un 2-groupe cyclique.
+
+Nous consid\'erons alors $\widehat{\Cal U_q}$ le groupe des caract\`eres
+de $\Cal U_q$, i.e. le groupe des morphismes de $(\Cal U_q,\cdot)$
+dans $(\Bbb C\setminus\{0\},\cdot)$. Il est facile de voir qu'un tel
+morphisme prend ses valeurs dans les racines de l'unit\'e et est donc
+de module~1. C'est un tel morphisme que l'on appelle {\it un caract\`ere
+de Dirichlet}. La th\'eorie g\'en\'erale nous apprend que
+$\widehat{\Cal U_q}$ est isomorphe \`a $\Cal U_q$ et en particulier
+est de cardinal $\phi(q)$.
+
+Soit $\chi\in\widehat{\Cal U_d}$ o\`u $d$ divise $q$. Nous pouvons bien
+s\^ur consid\'erer $\chi$ sur $\Cal U_q$ (en le composant avec la
+projection canonique) et le probl\`eme est de d\'efinir un $d$ minimum
+tel que $\chi$ provienne de $\widehat{\Cal U_d}$. Pour cela, notons le
+r\'esultat suivant~: si $\chi$ provient de $\widehat{\Cal U_{d_1}}$ et de
+$\widehat{\Cal U_{d_2}}$, alors $\chi$ provient de $\widehat{\Cal
+U_{(d_1,d_2)}}$.
+\demo{Preuve}
+Remarquons que $\chi$ provient de $\widehat{\Cal U_d}$ si et seulement si
+l'ensemble $E_d=\{1+kd, k\in\Bbb Z/q\Bbb Z\}$ est contenu dans
+$\Ker\chi$, tout simplement parce que $E_d$ est le noyau de la
+projection canonique de $\Cal U_q$ sur $\Cal U_d$. Notre hypoth\`ese
+nous dit donc que
+$E_{d_1}\subset\Ker\chi$ et similairement pour $E_{d_2}$.
+Mais il est facile de v\'erifier que $E_{d_1}\cdot E_{d_2}=E_{(d_1,d_2)}$,
+ce qui conclut la preuve.
+\fin
+Nous pouvons d\`es lors parler de {\it conducteur} d'un caract\`ere,
+soit le plus petit $f$ tel ce caract\`ere provienne de $\widehat{\Cal U_f}$.
+En particulier, le conducteur du caract\`ere identiquement \'egal
+\`a~1, dit {\it principal}, est bien s\^ur~1.
+Un caract\`ere modulo $q$ de
+conducteur $q$ est dit {\it primitif modulo $q$}
+
+Si $\chi$ est un caract\`ere de Dirichlet sur $\Cal U_q$, nous
+l'\'etendons \`a $\Bbb Z/q\Bbb Z$ en posant $\chi(x)=0$ si
+$(x,q)\neq1$. Il est alors imm\'ediat de v\'erifier que nous avons
+encore $\chi(xy)=\chi(x)\chi(y)$ pour tout $x$, $y$ modulo $q$.
+De plus, nous \'etendons aussi $\chi$ \`a $\Bbb Z$ en le composant
+avec la surjection canonique. Il faut toutefois remarquer que m\^eme
+si $\chi$ modulo $q$ provient de $\chi^*$ modulo $f$, en tant que
+fonction sur $\Bbb Z$, $\chi$ et $\chi^*$ sont distincts, tout
+simplement parce qu'ils ne prennent pas la m\^eme valeur sur les
+entiers qui ne sont pas premiers \`a $q$. En particulier le
+caract\`ere principal modulo $q$ n'est pas, en tant que fonction sur
+$\Bbb Z$, la fonction identiquement \'egale \`a~1, ce qu'est pourtant
+le caract\`ere principal modulo ~1.
+
+Nous ne souhaitons pas entrer dans les d\'etails de la dualit\'e de
+Pontrjagin dont le cadre naturel est la cat\'egorie des groupes
+ab\'eliens localement compact, mais il nous faut tout de m\^eme faire
+une remarque. Notre pr\'eoccupation ici est de d\'eterminer le groupe
+des caract\`eres de $\widehat{\Cal U_q}$. Il se trouve qu'il est
+possible d'identifier naturellement ce ``double-dual'' avec $\Cal U_q$
+en remarquant que $\chi\mapsto\chi(x)$ est un caract\`ere sur
+$\widehat{\Cal U_q}$ d\`es que $x\in\Cal U_q$. Un argument de comptage
+permet de montrer que nous avons bel et bien exhib\'e un isomorphisme
+entre $\widehat{\widehat{\Cal U_q}}$ et $\Cal U_q$.
+
+\section{II. Analyse de Fourier des caract\`eres de Dirichlet.}
+
+Les caract\`eres de Dirichlet pr\'esentent de remarquables
+propri\'et\'es $L^2$ qui viennent essentiellement de l'\'egalit\'e
+suivante ~:
+$$
+\sum_{x\mod^* q}\chi_1(x)\overline{\chi_2}(x)=
+\cases
+\phi(q)\quad&\text{si\quad}\chi_1=\chi_2,\\
+0      \quad&\text{si\quad}\chi_1\neq\chi_2,\\
+\endcases
+$$
+dont la duale s'\'ecrit~:
+$$
+\sum_{\chi\in\widehat{\Cal U_q}}\chi(x_1)\overline{\chi}(x_2)=
+\cases
+\phi(q)\quad&\text{si\quad}x_1=x_2,\\
+0      \quad&\text{si\quad}x_1\neq x_2.
+\endcases
+$$
+\demo{Preuve} Si $\chi_1\neq\chi_2$, alors il existe $x_0$ tel que
+$\chi_1(x_0)\overline{\chi_2}(x_0)\neq1$. Comme le produit par $x_0$
+est un isomorphisme de $\Cal U_q$, nous avons
+$$
+\sum_{x\mod^* q}\chi_1(x)\overline{\chi_2}(x)=
+\sum_{x\mod^* q}\chi_1(x_0x)\overline{\chi_2}(x_0x)
+$$
+d'o\`u nous tirons
+$$
+(1-\chi_1(x_0)\overline{\chi_2}(x_0))
+\sum_{x\mod^* q}\chi_1(x)\overline{\chi_2}(x)=0.
+$$
+Conclusion facile.
+\fin
+L'\'egalit\'e duale se comprend mieux en notant que
+$\chi(x^{-1})=\overline{\chi}(x)$.
+
+\bigskip
+Une fois ceci d\^ument not\'e, nous nous tournons vers la comparaison
+des structures additives et multiplicatives de $\Bbb Z/q\Bbb Z$. Les
+caract\`eres de $(\Bbb Z/q\Bbb Z,+)$ sont les
+$$
+x\mapsto e(ax/q)
+$$
+et nous cherchons alors \`a exprimer les caract\`eres multiplicatifs
+en termes de ces caract\`eres additifs. Soit donc
+$\chi\in\widehat{\Cal U_q}$. Regardons
+$$
+\tau_q(\chi,a)=\sum_{x\mod^*q}\chi(x)e(ax/q).
+$$
+L'inversion classique de Fourier (que l'on peut prouver ici
+directement) nous donne
+$$
+\chi(n)=\frac{1}{q}\sum_{a\mod q}\tau_q(\chi,a) e(-an/q)
+\qquad(n\in\Bbb Z/q\Bbb Z).
+$$
+Il nous faut \`a pr\'esent \'evaluer ces coefficients
+$\tau_q(\chi,a)$. L'\'egalit\'e de Parseval nous donne
+$$
+\sum_{a\mod q}|\tau_q(\chi,a)|^2=q\phi(q).
+$$
+\proclaim{Th\'eor\`eme 1} Soit $\chi$ un caract\`ere de Dirichlet
+modulo $q$ et de conducteur $f$. Soit $d$ un diviseur de $q$
+et soit $a'\in\Bbb Z/q\Bbb Z$ premier \`a $d$. Nous avons
+$$
+\tau_{q}(\chi,a'q/d)=\left\{
+\aligned
+&\mu(d/f)\overline{ \chi^*(a')}\chi^*(d/f)\frac{\phi(q)}{\phi(d)}
+\tau_{f}(\chi,1)\quad
+\text{si}\quad f|d\quad\text{et}\quad(d/f,f)=1,\\
+&0 \qquad\text{sinon},
+\endaligned
+\right.
+$$
+o\`u $\chi^*$ est le caract\`ere induit par $\chi$ modulo $f$.
+\endproclaim
+\demo{Preuve}
+Nous avons
+$$
+\tau_q(\chi,a'q/d)=\sum_{b\mod q}\,e(a'b/d)\chi(b)
+=\sum_{c\mod d}e(a'c/d)\sum\Sb b\mod q\\ b\equiv c[d]\endSb\chi(b).
+$$
+Introduisons le sous-groupe $E_d=\{b\mod q, b\equiv 1[d]\}$. Si
+$\Ker\chi\not\subset E_d$, alors les sommes int\'erieures sont nulles. Sinon,
+i.e. si $f|d$,
+$\chi$ est induit par un caract\`ere modulo $d$ que nous d\'enotons
+aussi par $\chi$. Nous avons
+$$
+\tau_q(\chi,a'q/d)={\phi(q)\over\phi(d)}\sum_{c\mod d}\chi(c)\,e(a'c/d)
+={\phi(q)\over\phi(d)}\tau_{d}(\chi,a').
+$$
+Nous avons donc r\'eduit notre probl\`eme initial au cas
+$d=q$. Comme alors $b\mapsto a'b$ est une bijection, nous avons
+$$
+\tau_{d}(\chi,a')=\sum_{c\mod d}\,e(c/d)\chi(c)\overline{\chi(a')}
+=\overline{\chi(a')}\tau_{d}(\chi,1).
+$$
+Le conducteur de $\chi$ \'etant $f$, nous avons
+$$
+\tau_{d}(\chi,1)=\sum_{b\mod f}\chi(b)\sum\Sb c\mod^* d\\ c\equiv
+b[f]\endSb \,e(c/d)
+$$
+La somme int\'erieure vaut 0 si $(d/f,f)\neq1$ et $e(\nu b/f)\mu(d/f)$
+sinon, o\`u $\nu$ est l'inverse de $d/f$ modulo $f$. Supposant d\`es
+lors que $(d/f,f)=1$, nous constatons que l'expression ci-dessus \'egale
+$\mu(d/f)\chi^*(d/f) \tau_{f}(\chi)$ o\`u $\chi^*$ est le caract\`ere modulo
+$f$ induit par $\chi$.
+\fin
+
+Par cons\'equent seul $\tau_f(\chi,1)$ importe vraiment.
+Pour ce qui est de son module, il nous suffit d'appliquer Parseval, et
+pour cela, de nous restreindre au cas $f=q$.
+Il vient alors
+$$
+|\tau_f(\chi,1)|=\sqrt{f}\qquad(\chi\text{\ de conducteur\ }f).
+$$
+Notons que lorsque $\chi$ est primitif, nous avons toujours
+$$
+\left\{\aligned
+\tau_q(\chi,a)&=\overline{\chi}(a)\tau_q(\chi,1)
+\qquad(\forall a\in\Bbb Z/q\Bbb Z,\quad\chi\text{\ primitif}),
+\\
+\tau_q(\chi,a)&=\overline{\chi}(a)\tau_q(\chi,1)
+\qquad(\forall a\in\Cal U_q,\quad\chi\text{\ quelconque}).
+\endaligned\right.
+$$
+ce qui montre clairement que nous n'avons pas vraiment calcul\'e la
+transform\'ee de Fourier de $\chi$, mais bien plut\^ot \'etabli une
+\'equation reliant cette transform\'ee \`a $\chi$.
+
+\section{III. Le th\'eor\`eme de Bombieri-Davenport.}
+
+Rappelons l'in\'egalit\'e du grand crible pour la suite de 
+Farey~:
+$$
+\sum_{q\le Q}\sum_{a\mod^*q}|S(a/q)|^2\le \sum_{n\le N}|\varphi_n|^2
+(N+Q^2)\leqno(3.1)
+$$
+o\`u
+$$
+S(\alpha)=\sum_{M<n\le M+N}\varphi_n \,e(n\alpha).\leqno(3.2)
+$$
+Ajoutons alors une hypoth\`ese $(H)$ sur la suite $(\varphi_n)$~: nous
+supposons qu'elle est port\'ee par $(\Cal U_q)$ jusqu'au niveau $Q$,
+ou, dit autrement,
+$$
+\forall n\in]M,M+ N]\quad\big[\varphi_n\neq0\implies \forall q\le Q
+(n,q)=1\big].\leqno(H)
+$$
+Dans ce cadre, nous d\'efinissons
+$$
+G_q(Q/q)=\sum\Sb d\le Q/q\\ (d,q)=1\endSb\frac{\mu^2(q)}{\phi(q)}
+\leqno(3.3)
+$$
+et rappelons que nous avons montr\'e que
+$G_q(Q/q)\ge\frac{\phi(q)}{q}\Log(Q/q)$.
+Nous posons enfin
+$$
+S(\chi)=\sum_{n\in]M,M+ N] }\varphi_n\,\chi(n)
+\leqno(3.4)
+$$
+la distinction entre $(3.2)$ et $(3.4)$ \'etant clair d'apr\`es le
+contexte. 
+\proclaim{Th\'eor\`eme (Bombieri \& Davenport --1968)} Si
+$(\varphi_n)$ v\'erifie $(H)$, alors
+$$
+\sum_{q\le Q}
+\frac{q}{\phi(q)}G_q(Q/q)
+\sum_{\chi\in\widehat{\Cal U_q}^*}|S(\chi)|^2\le
+\sum_{n\in]M,M+ N]}|\varphi_n|^2 (N+Q^2)
+$$
+o\`u $\widehat{\Cal U_q}^*$ est l'ensemble des caract\`eres primitifs
+modulo $q$.
+\endproclaim
+
+En restreignant le membre de gauche \`a $q=1$, nous obtenons~:
+\proclaim{Corollaire}
+Si $(\varphi_n)$ v\'erifie $(H)$, alors
+$$
+\big|S(0)\big|^2\le\sum_{n\in]M,M+ N]}|\varphi_n|^2 \frac{N+Q^2}{G_1(Q)}.
+$$
+\endproclaim
+\demo{Preuve}
+Soit $e_{\Cal U_d}(\cdot a/d)$ la fonction d\'efinie par
+$$
+e_{\Cal U_d}(n a/d)=\cases
+e(na/d)\quad&\text{si}\quad n\in\Cal U_d,\\
+0\quad&\text{sinon.}
+\endcases
+$$
+Comme $\widehat{\Cal U_d}$ forme une base orthogonale de l'espace
+vectoriels des fonctions sur $\Cal U_d$, nous pouvons exprimer
+$e_{\Cal U_d}(\cdot a/d)$ en termes des caract\`eres odulo $d$ et plus
+pr\'ecis\'ement~:
+$$
+e_{\Cal U_d}(n a/d)=
+\sum_{\chi\in\widehat{\Cal U_d}}[e_{\Cal U_d}(\cdot a/d)|\chi]\,\chi(n)
+\quad\text{avec}\quad
+[e_{\Cal U_d}(\cdot a/d)|\chi]=\frac{1}{\phi(d)}\sum_{k\in\Cal U_d}e(ka/d)\overline{\chi}(k).
+$$
+Par ailleurs, par $(H)$, nous avons
+$$
+S(a/d)=\sum_{n\le N}\varphi_n\,e_{\Cal U_d}(n a/d)=
+\sum_{\chi\in\widehat{\Cal U_d}}[e_{\Cal U_d}(\cdot a/d)|\chi]\, S(\chi).
+$$
+Il vient
+$$
+\sum_{a\mod d}|S(a/d)|^2=\sum_{\chi_1,\chi_2\in\widehat{\Cal U_d}}
+S(\chi_1)\overline{S(\chi_2)}
+\sum_{a\mod d}[e_{\Cal U_d}(\cdot a/d)|\chi_1]\,\overline{[a/d|\chi_2]}
+$$
+o\`u l'on reconna\^\i t en somme int\'erieure le produit scalaire (\`a
+normalisation pr\`es) de
+$\chi_1$ et $\chi_2$ exprim\'e dans la base $(e(\cdot a/d))$. Par
+cons\'equent
+$$
+\sum_{a\mod d}|S(a/d)|^2=\frac{d}{\phi(d)}\sum_{\chi\in\widehat{\Cal U_d}}
+|S(\chi)|^2.
+$$
+En posant
+$$
+W(f)=\sum_{\chi\in\widehat{\Cal U_q}^*}|S(\chi)|^2
+$$
+nous avons donc \'etabli
+$$
+\sum_{q|d}\sum_{a\mod^*q}|S(a/q)|^2=\frac{d}{\phi(d)}
+\sum_{f|d}W(f).
+$$
+Nous utilisons alors la formule d'inversion de M\oe bius pour obtenir
+$$
+\aligned
+\sum_{a\mod^*q}|S(a/q)|^2
+&=\sum_{d|q}\mu(q/d)\frac{d}{\phi(d)}
+\sum_{f|d}W(f)
+\\&=
+\sum_{f|q}\left(\sum_{f|d|q}\mu(q/d)\frac{d}{\phi(d)}\right)W(f)
+\endaligned
+$$
+et il nous suffit \`a pr\'esent de calculer la somme interne. Par
+multiplicativit\'e, nous v\'erifions que
+$$
+\sum_{f|d|q}\mu(q/d)\frac{d}{\phi(d)}=
+\prod_p
+\left(\sum_{p^{|v_p(f)}|p^a|p^{v_p(q)}}
+\mu(p^{v_p(q)-a})\frac{p^a}{\phi(p^a)}\right).
+$$
+Il nous reste \`a \'evaluer les facteurs locaux. Or
+\roster
+\item Si $v_p(f)\ge1$ et $v_p(q)-v_p(f)\ge1$ alors ce facteur vaut 0.
+\item Si $v_p(f)\ge1$ et $v_p(q)=v_p(f)$ alors ce facteur vaut
+$\frac{p^{v_p(f)}}{\phi(p^{v_p(f)})}$.
+\item Si $v_p(f)=0$ et $v_p(q)\ge2$ alors ce facteur vaut 0.
+\item Si $v_p(f)=0$ et $v_p(q)=1$ alors ce facteur vaut $1/\phi(p)$.
+\endroster
+Nous en tirons une expression globale qui nous donne
+$$
+\sum_{a\mod^*q}|S(a/d)|^2=
+\sum\Sb f|q\\ (f,q/f)=1\endSb
+\frac{f}{\phi(f)}{\mu^2(q/f)}{\phi(q/f)}W(f)
+$$
+qu'il nous suffit alors d'ins\'erer dans $(3.1)$ pour obtenir
+l'in\'egalit\'e annonc\'ee.
+\fin
+
+Remarquons que contrairement \`a la preuve usuelle (comme elle est par
+exemple reprise dans le livre de Bombieri cit\'e ci-dessous), celle que
+nous avons pr\'esent\'ee n'utilise pas la valeur des sommes de Gauss
+et en particulier ignore le fait que les $\chi$ soient multiplicatifs.
+
+
+\Refs
+
+\ref
+\paper
+Le grand crible dans la th\'eorie analytique des nombres
+\by E. Bombieri
+\yr 1974/1987
+\jour Ast\'erisque
+\vol 18
+\pages 103pp
+\endref
+
+
+\ref
+\paper
+On the large sieve method
+\book
+Abh. aus Zahlentheorie und Analysis zur Erinnerung an Edmund Landau,
+\jour Deut. Verlag Wiss., Berlin
+\by E. Bombieri \& H. Davenport
+\yr 1968
+\pages 11--22
+\endref
+
+\ref
+\paper Sieving by prime powers
+\by P.X. Gallagher
+\yr 1974
+\jour Acta Arith.
+\vol 24
+\pages 491--497
+\endref
+
+\endRefs
+
+\enddocument
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% End: 

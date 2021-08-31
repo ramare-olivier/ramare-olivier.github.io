@@ -1,0 +1,340 @@
+\input amstex
+\magnification=\magstep1
+\documentstyle {amsppt}
+\NoBlackBoxes
+\refstyle{B}
+
+%%% Version du 3 Fevrier 2000
+
+\def\goes{\mathrel{\rightarrow}}
+\def\Log{\operatorname{Log}}
+\def\section#1{\goodbreak\smallskip\noindent{\bf #1}}
+\def\fin{$\diamond\diamond\diamond$\enddemo}
+\def\Ker{\operatorname{Ker}}
+
+\document
+
+\topmatter
+\title
+Une r\'egion sans z\'eros pour $\zeta$
+\endtitle
+\author
+Olivier Ramar\'e
+\endauthor
+\abstract
+Nous montrons comment obtenir une r\'egion sans z\'eros pour
+$\zeta$. 
+Version initiale : 3 F\'evrier 2000.
+Version courante : 1 Avril 2013.
+\endabstract
+\endtopmatter
+
+
+\section{Introduction.}
+
+Nous donnons ici le sch\'ema classique d'une preuve donnant une
+r\'egion sans z\'eros pour la fonction $\zeta$ de Riemann. Nous
+d\'egageons trois \'etapes. Il est \`a noter que la premi\`ere
+\'etape peut \^etre atteinte de multiples fa\c cons.
+
+Dans cet expos\'e, $\rho=\beta+i\gamma$ d\'esigne un z\'ero de $\zeta$
+v\'erifiant $\beta\in]0,1[$.
+
+Nous d\'emontrons ici
+\proclaim{Th\'eor\`eme}
+Tous les z\'eros de la fonction $\zeta$ de Riemann v\'erifient
+$$
+(1-\beta)\Log|\gamma|\ge\frac{14-8\sqrt{3}}{5}=0.028718\dots
+$$
+\endproclaim
+
+La meilleure constante obtenue \`a ce jour est due \`a Rosser et
+vaut $1/R$ avec $R=9.645908801\dots$.
+
+\section{I. Majorer $-\Re\zeta'/\zeta(s)$ en fonction des z\'eros
+proches de $s$.}
+
+\proclaim{\'Etape no~1}
+Soit $s=\sigma+it$ avec $\sigma\in]1,2]$ et soit $r\ge0$. Pour $t>4$, nous
+avons
+$$
+-\Re\frac{\zeta'}{\zeta}(s)\le
+-\sum\Sb |\rho-s|\le r\endSb \frac{1}{s-\rho}+\tfrac12\Log (|t|/2.9).
+$$
+\endproclaim
+Auquel il convient d'ajouter
+$$
+-\frac{\zeta'}{\zeta}(\sigma)\le\frac1{\sigma-1}\qquad
+(1<\sigma\le\tfrac32),
+$$
+in\'egalit\'e dont le lecteur trouvera la d\'emonstration dans le
+livre de Ellison/Mend\`es-France (p 184).
+
+\demo{Preuve}
+
+Nous avons, avec $b=-\Log(2\pi)+1+\gamma/2$, 
+$$
+-\frac{\zeta'}{\zeta}(s)=b+\frac{1}{s-1}+\frac12\frac{\Gamma'}{\Gamma}
+(\frac s2+1)-\sum_{\rho}\left(\frac{1}{\rho}+\frac{1}{s-\rho}\right).
+$$
+Rappelons encore que (Davenport page 84)
+$$
+\sum_{\rho}\frac1\rho=-\gamma/2+1-\tfrac12\Log(2\pi).
+$$
+Il vient finalement
+$$
+-\Re\frac{\zeta'}{\zeta}(s)=-\tfrac12\Log(2\pi)+\Re\frac{1}{s-1}
++\frac12\Re\frac{\Gamma'}{\Gamma}
+(\frac s2+1)-\sum_{\rho}\Re\frac{1}{s-\rho}.
+$$
+
+Rappelons aussi (voir l'\'egalit\'e $(9)$ de l'article de
+de~la~Vall\'ee-Poussin cit\'e ci-apr\`es) que
+$$
+\Re\frac{\Gamma'}{\Gamma}(u+i\tau)=\Log|\tau|-\frac{u}{2(u^2+\tau^2)}
++\Cal O^*(\frac1{12 u|\tau|}+\frac{u^2}{2\tau^2})
+\quad(\tau^2>u^2,\ u\ge0).
+$$
+En posant $s=\sigma+it$, nous obtenons alors
+$$
+\aligned
+-\Re\frac{\zeta'}{\zeta}(s)
+&\le
+-\sum_{\rho}\Re\frac{1}{s-\rho}
++\frac12\Log|t|
+\\&
++\frac{\sigma-1}{t^2}
+-\frac{\sigma+2}{2((\sigma+2)^2+t^2)}
++\frac1{6 (\sigma+2)|t|}+\frac{(\sigma+2)^2}{4t^2}
+-\tfrac12\Log(4\pi).
+\endaligned
+$$
+Nous avons alors
+$$
+\aligned
+\frac{\sigma-1}{t^2}
+&-\frac{\sigma+2}{2((\sigma+2)^2+t^2)}
++\frac1{6 (\sigma+2)|t|}+\frac{(\sigma+2)^2}{4t^2}
+-\tfrac12\Log(4\pi)
+\\&\le\frac{5}{t^2}+\frac{1}{18|t|}-\tfrac12\Log(4\pi)
+\le\frac{5}{16}+\frac{1}{72}-\tfrac12\Log(4\pi)\le
+-\Log(2.9).
+\endaligned
+$$
+La conclusion est facile si l'on remarque que
+$$
+\Re\frac{1}{\sigma-\rho}\ge0
+$$
+ce qui nous permet de ne garder dans la somme sur $\rho$ que ceux qui
+nous int\'eressent.
+\fin
+
+
+
+\bigskip
+Il existe d'autre fa\c cons de proc\'eder, notamment via le lemme
+suivant, d\^u \`a Landau~:
+
+\proclaim{Lemme}
+Supposons connue une borne sup\'erieure $M$ pour la fonction $F$
+holomorphe dans $|s-s_0|\le R$. Supposons encore que l'on connaisse
+une borne inf\'erieure $m$ pour $|F(s_0)|$. Alors
+$$
+\frac{F'(s)}{F(s)}=\sum_{|\rho-s_0|\le R/2}\frac1{s-\rho}+\Cal O^*\bigg(
+8\frac{\Log(M/m)}{R}\bigg)
+$$
+pour $|s-s_0|\le\tfrac14 R$.
+\endproclaim\goodbreak
+
+L'article de Heath-Brown cit\'e ci-apr\`es propose encore une autre
+fa\c con de faire. D'un point de vue explicite, il semble que ce soit
+une technique de Stechkin (dont le lecteur trouvera l'origine dans
+l'article de de la Vall\'ee-Poussin cit\'e ci-dessous)
+qui soit le plus efficace. Voir les articles de Stechkin, Rosser et
+Ramar\'e \& Rumely cit\'es en fin d'exposition.
+
+\section{II. Une in\'egalit\'e trigonom\'etrique.}
+
+
+\proclaim{\'Etape no 2}
+Soit $Q(\theta)=\sum_{k=0}^Ka_k\cos(k\theta)$ un polyn\^ome
+trigonom\'etrique qui v\'erifie $a_k\ge0$ et $Q(\theta)\ge0$.
+Nous avons, pour $\sigma>1$,
+$$
+\Re\sum_{k=0}^Ka_k
+\sum_{n\ge1}\frac{\Lambda(n)}{n^\sigma}
+\frac{1}{n^{ikt}}\ge0.
+\leqno(\ddagger)
+$$
+\endproclaim
+
+\demo{Preuve}
+Il suffit d'\'ecrire
+$$
+\Re\sum_{k=0}^Ka_k
+\sum_{n\ge1}\frac{\Lambda(n)}{n^\sigma}
+\frac{1}{n^{ikt}}=
+\sum_{n\ge1}\frac{\Lambda(n)}{n^\sigma}
+Q(-t\Log n).
+$$
+\fin
+
+Le polyn\^ome choisi par de la Vall\'ee-Poussin est
+$$
+2(1+\cos\theta)^2=3+4\cos\theta+\cos(2\theta).
+$$
+Il est en l'occurence plus efficace d'utiliser (voir Rosser)
+$$
+8(0.9126+\cos\theta)^2(0.2766+\cos\theta)^2.
+$$
+Voir les articles de Heath-Brown et de
+Liu \& Wang cit\'es ci-dessous pour d'autres remarques sur ces polyn\^omes.
+
+
+\section{III. La conclusion.}
+
+\proclaim{\'Etape no 3}
+Pour $\Re s>1$, nous avons
+$$
+\Re\frac{1}{s-\rho}\ge0.
+$$
+\endproclaim
+
+Nous pouvons attaquer la preuve.
+Des calculs num\'eriques que nous n'entreprendrons pas montre que nous
+pouvons supposer $|\gamma|\ge4$.
+
+Gr\^ace \`a l'\'etape no~3, nous pouvons \'eliminer autant de z\'eros
+que nous le souhaitons dans la majoration donn\'ee \`a l'\'etape no~1.
+Soit alors $\rho$ un z\'ero de $\zeta$ v\'erifiant $|\gamma|\ge4$.
+En combinant cette remarque, l'\'etape no~1 et l'\'etape no~2, nous
+obtenons
+\def\tvi{\vrule height 11pt depth 8pt width 0pt}
+\def\tv{\tvi\vrule}
+\def\oh{\omit\hrulefill}
+\def\oo{\omit}
+\def\cca#1{\hbox to 15 pt{$#1$}}
+\def\ccb#1{\hbox to 50 pt{\hfill$#1$}}
+\def\ccc#1{\hbox to 75 pt{$#1$}}
+\def\ccd#1{\hbox to 50 pt{$#1$}}
+$$
+\vbox{\offinterlineskip
+\halign{%
+& \cca{#} &\tv\ \ccb{#} & $\le$ \ccc{#}& \ccd{#} \cr
+3\ \times\ & -\frac{\zeta'}{\zeta}(\sigma)&\frac1{\sigma-1}\cr
+4\ \times\ & -\frac{\zeta'}{\zeta}(\sigma+it)&-\Re\frac1{\sigma+it-\rho}&+\tfrac12\Log|t|\cr
+1\ \times\ & -\frac{\zeta'}{\zeta}(\sigma+2it)&&\mkern15mu\tfrac12\Log|t|\cr
+\noalign{\hrule}\cr
+\omit&0&\frac{3}{\sigma-1}-\Re\frac4{\sigma+it-\rho}&+\tfrac52\Log|t|\cr
+}}
+$$
+Nous prenons $t=\gamma$. Il vient
+$$
+0\le\frac{3}{\sigma-1}-\frac4{\sigma-\beta}+\tfrac52\Log|\gamma|
+$$
+qu'il suffit alors de r\'esoudre. Pour cela, nous posons
+$\lambda=(\sigma-1)\Log|\gamma|$ et $\eta=(1-\beta)\Log|\gamma|$. La
+r\'esolution en $\eta$ se d\'eroule sans probl\`eme et donne
+$$
+\eta\ge\frac{2\lambda-5\lambda^2}{6+5\lambda}
+$$
+et la valeur optimale de $\lambda$ est $\lambda=(4\sqrt{3}-6)/5$, ce
+qui donne le r\'esultat annonc\'e.
+
+\bigskip
+En utilisant un polyn\^ome trigonom\'etrique g\'en\'eral v\'erifiant
+les conditions de l'\'etape no~2 ainsi que $a_1>a_0$, cette m\^eme
+m\'ethode donne
+$$
+(1-\beta)\Log|\gamma|\ge2(1+o(1))\frac{a_1+a_0-2\sqrt{a_1a_0}}{a_1+a_2+\dots+a_K}
+$$
+o\`u le $o(1)$ est une fonction de $\gamma$ qui tend vers 0 quand
+$|\gamma|$ tend vers l'infini.
+
+\Refs
+
+\ref
+\paper
+Le grand crible dans la th\'eorie analytique des nombres
+\by E. Bombieri
+\yr 1987
+\jour Ast\'erisque
+\vol 18
+\pages 103pp
+\endref
+
+\ref
+\paper Zero-free regions for Dirichlet L-functions and the least prime
+in an arithmetic progression.
+\by D.R.~Heath-Brown
+\jour Proc. Lond. Math. Soc.
+\vol 64
+\yr 1991
+\pages 265--338
+\endref
+
+\ref
+\paper A numerical bound for small prime solutions of some ternary
+linear equations
+\by M.-C.~Liu \& T.~Wang
+\jour Acta Arith.
+\vol 86
+\yr 1998
+\pages 343--383
+\endref
+
+\ref
+\paper Rational inequalities and zeros of the Riemann zeta-function.
+\by S. B. Stechkin
+\jour Trudy Mat. Inst. Steklov
+\transl English transl. in Proc. Steklov Inst. Math. 189 (1990)
+\vol 189
+\yr 1989
+\pages 127--134
+\endref
+
+\ref
+\paper Zeros of Riemann zeta-function
+\by S. B. Stechkin
+\jour Math. Notes
+\vol 8
+\yr 1970
+\pages 706--711
+\endref
+
+\ref
+\paper Explicit bounds for some functions of prime numbers
+\by J. B. Rosser
+\jour Amer. J. Math.
+\vol 63
+\yr 1941
+\pages 211--232
+\endref
+
+\ref
+\paper Primes in Arithmetic Progressions
+\by O. Ramar\'e \& R. Rumely
+\jour Math. Comp.
+\vol 65
+\yr 1996
+\pages 397--425
+\endref
+
+\ref
+\paper Sur la fonction $\zeta(s)$ de Riemann et le nombre des nombres
+premiers inf\'erieurs \`a une limite donn\'ee
+\by C.-J.~de~la~Vall\'ee-Poussin
+\jour CBRM : Colloque sur la Th\'eorie des Nombres
+\vol Bruxelles, les 19, 20 et 21 D\'ecembre
+\yr 1955
+\pages 9--66
+\endref
+
+\endRefs
+
+\enddocument
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% End: 

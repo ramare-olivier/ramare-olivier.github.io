@@ -1,0 +1,520 @@
+\input amstex
+\magnification=\magstep1
+\documentstyle {amsppt}
+\NoBlackBoxes
+\refstyle{B}
+
+%%% Version du 4 Fevrier 2000
+
+\def\goes{\mathrel{\rightarrow}}
+\def\Log{\operatorname{Log}}
+\def\section#1{\goodbreak\smallskip\noindent{\bf #1}}
+\def\fin{$\diamond\diamond\diamond$\enddemo}
+\def\Ker{\operatorname{Ker}}
+
+\document
+
+\topmatter
+\title
+Moyennes de fonctions multiplicatives positives~: la m\'ethode de convolution.
+\endtitle
+\rightheadtext{La m\'ethode de convolution}
+\author
+Olivier Ramar\'e
+\endauthor
+\abstract
+Nous pr\'esentons une m\'ethode classique pour calculer l'ordre
+moyen d'une fonction multiplicative non oscillante.
+Version du 4 F\'evrier 2000.
+\endabstract
+\endtopmatter
+
+\section{I. Premiers pas.}
+
+Soit $f:\Bbb N\setminus\{0\}\goes\Bbb C$ une fonction multiplicative,
+i.e. telle que
+$$
+\left\{
+\aligned
+&f(1)=1,\\
+&f(mn)=f(m)f(n)\qquad\text{si $n$ et $m$ sont premiers entre eux.}
+\endaligned
+\right.
+$$
+Une telle fonction est d\'efinie par ses valeurs sur les puissances de
+nombres premiers et, formellement, nous avons
+$$
+D(f,s)=\sum_{n\ge1}\frac{f(n)}{n^s}
+=\prod_{p\ge2}\big(\sum_{k\ge0}\frac{f(p^k)}{p^{ks}}\big).
+$$
+Souvent, la fonction $f$ est assez ``proche'' d'une fonction
+connue, et c'est cette id\'ee que nous mettons ici en pratique.
+
+\noindent{\underbar{Exemples :}}
+
+\roster
+\item $f_1(n)=\prod_{p|n}(p-2)$. Il vient
+$$
+\aligned
+D(f_1,s)
+&=\prod_{p\ge2}\big(1+\frac{p-2}{p^s-1}\big)
+=\prod_{p\ge2}\bigg(1-\frac{2p^{s-1}+p-3}{(p^s-1)p^{s-1}}\bigg)\frac{1}{1-1/p^{s-1}}
+\\&=C_1(s)\zeta(s-1)
+\endaligned
+$$
+o\`u $C_1(s)$ est holomorphe pour $\Re s>\tfrac32$. Cette \'ecriture
+montre que $D(f_1,s)$ est m\'eromorphe pour $\Re s>\tfrac32$ et admet
+un p\^ole simple en $s=2$.
+
+\item  $f_2(n)=\mu^2(n)/\phi(n)$. Il vient
+$$
+\aligned
+D(f_2,s)
+&=\prod_{p\ge2}\big(1+\frac{1}{(p-1)p^s}\big)
+\\&=\prod_{p\ge2}\bigg(1-\frac{1}{(p-1)p^{s+1}}-\frac{1}{(p-1)p^{2s+1}}\bigg)
+\frac{1}{1-1/p^{s+1}}
+\\&=C_2(s)\zeta(s+1)
+\endaligned
+$$
+o\`u $C_2(s)$ est holomorphe pour $\Re s>-\tfrac12$. Cette \'ecriture
+montre que $D(f_2,s)$ est m\'eromorphe pour $\Re s>-\tfrac12$ et admet
+un p\^ole simple en $s=0$.
+
+\item  $f_3(n)=2^{\Omega(n)}$. Il vient
+$$
+\aligned
+D(f_3,s)
+&=\prod_{p\ge2}\frac{1}{1-\frac{2}{p^s}}
+=\prod_{p\ge2}\big(1+\frac{1}{p^{2s}-2p^s}\big)
+\zeta^2(s)
+\\&=C_3(s)\zeta^2(s)
+\endaligned
+$$
+o\`u $C_3(s)$ est holomorphe pour $\Re s>\tfrac12$. Cette \'ecriture
+montre que $D(f_3,s)$ est m\'eromorphe pour $\Re s>\tfrac12$ et admet
+un p\^ole double en $s=1$.
+\endroster
+
+Nous d\'eveloppons alors les $C_i$ en s\'eries de Dirichlet ~:
+$$
+C_i(s)=\sum_{n\ge1}\frac{g_i(n)}{n^s}
+$$
+o\`u les fonctions $g_i$ sont bien s\^ur multiplicatives. Pour obtenir
+leurs valeurs exactes, il suffit d'identifier les coefficients dans le
+d\'eveloppement du facteur local en s\'erie de $p^-s$. Nous obtenons
+ainsi
+$$
+\left\{
+\aligned
+g_1(p)&=-2\\
+g_1(p^k)&=-(p^2-3p+2), \quad(k\ge2)
+\endaligned
+\right.
+\qquad
+\left\{
+\aligned
+g_2(p)&=g_2(p^2)=-\frac{1}{p(p-1)}\\
+g_2(p^k)&=0, \quad(k\ge3)
+\endaligned
+\right.
+$$
+ainsi que
+$$
+\left\{
+\aligned
+g_3(p)&=0\\
+g_3(p^k)&=2^{k-2}, \quad(k\ge2)
+\endaligned
+\right.
+$$
+Nous posons aussi
+$$
+\overline{C_i}(s)=\sum_n\frac{|g_i(n)|}{n^{s}}
+$$
+et il se trouve que ces s\'eries convergent encore l\`a o\`u nous
+avons montr\'e que $C_i$ existait, c'est \`a dire respectivement pour
+$\Re s\ge\tfrac32$, $\Re s\ge-\tfrac12$ et $\Re s\ge\tfrac12$.
+
+\bigskip
+Occupons-nous \`a pr\'esent des ordres moyens. La traduction sur les
+coefficients de $D(f_1,s)=C_1(s)\zeta(s-1)$ nous donne
+$$
+f_1(n)=\sum_{\ell m=n}g_1(\ell)m
+$$
+et par cons\'equent
+$$
+\aligned
+\sum_{n\le X}f_1(n)
+&=\sum_{\ell m\le X}g_1(\ell)m
+=\sum_{\ell\le X}g_1(\ell)
+\bigg(\frac12\bigg(\frac X\ell\bigg)^2
++\Cal O\bigg(\frac X\ell\bigg)\bigg)
+\\&=\frac{X^2}{2}
+\sum_{\ell\le X}\frac{g_1(\ell)}{\ell^2}
++\Cal O\bigg(X \sum_{\ell\le X}\frac{|g_1(\ell)|}{\ell}\bigg)
+\endaligned
+$$
+Nous utilisons alors
+\let\ve=\varepsilon
+$$
+\aligned
+\sum_{\ell\le X}\frac{g_1(\ell)}{\ell^2}
+&=
+\sum_{\ell\ge 1}\frac{g_1(\ell)}{\ell^2}
++\Cal O\bigg(
+\sum_{\ell> X}\frac{|g_1(\ell)|}{\ell^2}
+\bigg)
+\\&=C_1(2)+\Cal O\bigg(
+\sum_{\ell> X}\frac{|g_1(\ell)|}{\ell^{\frac32+\ve}}\frac{1}{X^{\frac12-\ve}}
+\bigg)
+\\&=C_1(2)+\Cal O_\ve\big(X^{-\frac12+\ve}\big)
+\endaligned
+$$
+pour tout $\ve>0$,
+et
+$$
+\sum_{\ell\le X}\frac{|g_1(\ell)|}{\ell}
+\le
+X^{\frac12+\ve}\sum_{\ell\le X}\frac{|g_1(\ell)|}{\ell^{\frac32+\ve}}
+\ll_\ve X^{\frac12+\ve}\qquad(\ve>0).
+$$
+Bref
+$$
+\sum_{n\le X}f_1(n)=C_1(2)\frac{X^2}{2}+\Cal O_\ve\big(X^{\frac12+\ve}\big).
+$$
+
+\bigskip
+Pour ce qui est de l'ordre moyen de $f_2$, nous proc\'edons comme
+ci-dessus. Il vient
+$$
+\aligned
+\sum_{n\le X}f_2(n)
+&=\sum_{\ell m\le X}g_2(\ell)\frac{1}m
+=\sum_{\ell\le X}g_2(\ell)
+\bigg(\Log\frac X\ell+\gamma
++\Cal O\bigg(\frac \ell X\bigg)\bigg)
+\\&=
+\big(\Log X +\gamma\big)\sum_{\ell\le X}g_2(\ell)
+-\sum_{\ell\le X}g_2(\ell)\Log\ell
++\Cal O\bigg(\frac1X\sum_{\ell\le X}|g_2(\ell)|\ell\bigg)
+\endaligned
+$$
+o\`u $\gamma$ est la constante d'Euler. 
+Le programme pr\'ec\'edent s'applique moyennant de rappeler que
+$$
+-\sum_{\ell\ge1}\frac{g_2(\ell)\Log\ell}{\ell^s}
+\quad\left( \text{resp.}\ 
+-\sum_{\ell\ge1}\frac{|g_2(\ell)|\Log\ell}{\ell^s} \right)
+$$
+est simplement la d\'eriv\'ee de $C_2(s)$ (resp. $\overline{C_2}(s)$)
+et que cette s\'erie admet la m\^eme abscisse de convergence absolue
+que la s\'erie initiale. Nous obtenons alors
+$$
+\sum_{n\le X}f_2(n)=
+\big(\Log X +\gamma\big)\big(C_2(0)+\Cal O_\ve(X^{-\tfrac12+\ve})\big)
++C'_1(0)+\Cal O_\ve(X^{-\tfrac12+\ve})+\Cal O_\ve(X^{-\tfrac12+\ve}).
+$$
+
+\bigskip
+Il nous reste \`a nous occuper de $C_3(s)$. Nous avons cette fois-ci
+$$
+\sum_{n\le X}f_2(n)
+=\sum_{\ell m\le X}g_2(\ell)d(m)
+$$
+o\`u $d(m)$ est le nombre de diviseurs de $m$. Nous avons de fa\c con
+classique ~:
+$$
+\sum_{m\le M}d(m)=M\Log M+(2\gamma-1)M+\Cal O(M^{1/2})
+$$
+et donc
+$$
+\aligned
+\sum_{n\le X}f_2(n)
+&=
+\endaligned
+$$
+
+\section{II. Un th\'eor\`eme g\'en\'eral.}
+
+Le lemme suivant est une g\'en\'eralisation d'un lemme de Riesel \&
+Vaughan (le papier est cit\'e ci-dessous).
+\def\O{\Cal O^*}
+
+\proclaim{Lemme 1}
+Soit $g$, $h$ et $k$ trois fonctions sur $\Bbb N\setminus\{0\}$ \`a
+valeurs complexes.
+Posons $H(s)=\sum_nh(n)n^{-s}$, et
+$\overline{H}(s)=\sum_n|h(n)|n^{-s}$.
+Supposons que $g=h\star k$, que $\overline{H}(s)$ soit convergente pour
+$\Re(s)\ge-1/3$ et enfin qu'il existe quatre constantes
+$A$, $B$, $C$ et $D$ telles que
+$$
+\sum_{n\le t}k(n)
+=
+A\Log^2t+B\Log t+C+\O(D t^{-1/3})
+\text{\ \ pour\ \ }
+t>0;
+$$
+Alors, pour tout $t>0$, nous avons :
+$$
+\sum_{n\le t}g(n)
+=
+u\Log^2t+v\Log t+w+\O(D t^{-1/3}\overline{H}(-1/3))
+$$
+avec
+$u=AH(0)$, $v=2AH^{\prime}(0)+BH(0)$ and $w=AH^{\prime\prime}(0)+BH^{\prime}(0)+CH(0)$.
+Nous avons aussi
+$$
+\sum_{n\le t}ng(n)
+=
+Ut\Log t+Vt+W+\O(2.5D t^{2/3}\overline{H}(-1/3))
+$$
+avec
+$$
+\left\{\aligned
+U=&AH(0),\text{\ \ \ \ \ \ }V=-2AH(0)+2AH^{\prime}(0)+BH(0),\\
+W=&A(H^{\prime\prime}(0)-2H^{\prime}(0)+2H(0))+B(H^{\prime}(0)-H(0))+CH(0).
+\endaligned\right.
+$$
+\endproclaim
+
+\demo{Preuve}
+\'Ecrivons
+$\sum_{\ell\le t}g({\ell})=\sum_{m}h(m)\sum_{n\le t/m}k(n)$, et toute
+la r\'egularit\'e de nos expresions vient de ce qu'il n'est pas
+n\'ecessaire d'imposer $m\le t$ dans $\sum_{m}h(m)$.
+Nous compl\'etons alors la preuve facilement
+
+Pour estimer $\sum_{\ell\le t}\ell g({\ell})$ for $t>0$, nous \'ecrivons
+$$
+\sum_{\ell\le t}\ell g({\ell})=
+t\sum_{\ell\le t}g({\ell})-
+\int_1^t \sum_{\ell\le u}g({\ell})du,
+$$
+et utilisons l'expression asymptotique de $\sum_{\ell\le u}g({\ell})$.
+\fin
+
+
+Pour appliquer le lemme pr\'ec\'edent, nous aurons besoin de
+
+\proclaim{Lemme 2} Pour tout $t>0$, nous avons
+$$
+\sum_{n\le t}\frac 1n=\Log t+\gamma+\O\big(0.9105 t^{-1/3}\big).
+$$
+Soit $d(n)$ le nombre de diviseurs de $n$. Pour tout $t>0$, nous avons
+$$
+\sum_{n\le t}\frac{d(n)}n=
+\frac12\Log^2t+2\gamma\Log t+\gamma^2-\gamma_1+\O\big(1.641 t^{-1/3}\big),
+$$
+avec
+$$
+\gamma_1=\lim_{n\rightarrow\infty}
+\left(\shave{\sum_{m\le n}}\frac{\Log m}m-\frac{\Log^2n}2
+\right).
+$$
+$(-0.072816<\gamma_1<-0.072815)$.
+\endproclaim
+\goodbreak
+\demo{Preuve}
+La preuve de la seconde partie de ce lemme se trouve dans le papier de
+in Riesel \& Vaughan cit\'e ci-dessous
+(Lemma 1).
+
+Pour la premi\`ere partie, rappelons que
+$$
+|\sum_{n\le t}\frac1n-\Log t-\gamma|\le\frac{7}{12t}
+\text{\ \ pour\ \ }t\ge1.
+$$
+Pour $0<t<1$, nous choisissons $a>0$ tel que $\Log t+\gamma+a\ t^{-1/3}\ge0$. Cette
+fonction d\'ecro\^\i t de $0$ \`a $(a/3)^3$ et ensuite cro\^\i t. Cela
+nous donne la valeur minimale $a=3\exp(-\gamma/3-1)\le0.9105$.
+\fin
+
+Dans la pratique, la fonction $g$ sera multiplicative et v\'erifiera
+$g_p=b/p+o(1/p)$ avec $b=1$ or 2. Dans ce cas, nous prenons $\sum
+k(n)n^{-s}=\zeta(s+1)^b$ et $h$ est la fonction multiplicative
+d\'etermin\'ee par $\sum h(n)n^{-s}=\sum g(n)n^{-s}\zeta(s+1)^{-b}$.
+
+Lorsque $h$ est multiplicative, nous avons
+$$
+H(0)=\prod_p(1+\sum_mh({p^m})),
+$$
+et
+$$
+\frac{H^{\prime}(0)}{H(0)}=
+\sum_p
+\frac{\sum_mmh({p^m})}{1+\sum_mh({p^m})}(-\Log p),
+$$
+ainsi que
+$$
+\frac{H^{\prime\prime}(0)}{H(0)}=
+\bigg(
+\frac{H^{\prime}(0)}{H(0)}
+\bigg)^2+
+\sum_p
+\bigg\{
+\frac{\sum_mm^2h({p^m})}{1+\sum_mh({p^m})}
+-\bigg(\frac{\sum_mmh({p^m})}{1+\sum_mh({p^m})}\bigg)^2
+\bigg\}
+\Log^2p.
+$$
+
+Un exemple.
+
+\proclaim{Lemma 3} Pour tout $X>0$ et tout entier $d\ge1$, nous avons
+$$
+\sum\Sb n\le X\\ (n,d)=1\endSb
+\frac{\mu^2(n)}{\phi(n)}=
+\frac{\phi(d)}d
+\bigg\{\!
+\Log X+
+\gamma+\sum_{p\ge2}\frac{\Log p}{p(p-1)}
++\sum_{p|d}\frac{\Log p}{p}
+\bigg\}
++\O(
+7.284 X^{-1/3}f_1(d))
+$$
+avec
+$$
+f_1(d)=
+\prod_{p|d}
+(1+p^{-2/3})
+\big(1+\frac{p^{1/3}+p^{2/3}}{p(p-1)}\big)^{-1}.
+$$
+\endproclaim
+
+\underbar{Remarque} :
+La somme de gauche est $G_d(X)$. Le cas $d=1$ a d\'ej\`a \'et\'e
+\'etudi\'e plus haut. La s\'erie de Dirichlet associ\'ee est
+$$
+\sum_{n}\frac{\mu^2(n)}{\phi(n)n^{s-1}}=
+\frac{\zeta(s)}{\zeta(2s)}
+\prod_{p\ge2}
+\bigg(
+1+\frac1{(p-1)(p^s+1)}
+\bigg)
+$$
+ce qui fait que le terme d'erreur $\Cal O(X^{-1/2})$ est admissible
+(notre m\'ethode pourrait donner $\Cal O(X^{-1/2}\Log^2X)$), et que
+nous ne pouvons esp\'erer mieux que $\Cal O(X^{-3/4})$.
+\bigskip
+
+Rosser \& Schoenfeld (voir ci-dessous, \'equation (2.11) du papier
+cit\'e) nous donne
+$$
+\gamma+\sum_{p\ge2}\frac{\Log p}{p(p-1)}=
+1.332\ 582\ 275\ 332\ 21...
+$$
+\demo{Preuve}
+D\'efinissons la fonction multiplicative $h_d$ par
+$$
+h_d(p)=\frac1{p(p-1)},
+\quad h_d(p^2)=\frac{-1}{p(p-1)},
+\quad h_d(p^m)=0
+\quad \text{si\ \ }m\ge3,
+$$
+si $p$ est un nombre premier qui ne divise pas $d$,
+et par $h_d(p^m)=\frac{\mu(p^m)}{p^m}$ pour tout
+$m\ge1$ si $p$ est un facteur premier de $d$.
+
+Nous avons alors
+$$
+\sum\Sb n\ge1\endSb\frac{h_d(n)}{n^s}\zeta(s+1)=
+\sum\Sb n\ge1\\ (n,d)=1\endSb\frac{\mu^2(n)}{\phi(n)n^s}
+$$
+ce qui nous permet d'appliquer le lemme 2. Nous v\'erifions que
+$$
+\prod_{p\ge2}
+\bigg(1+\frac{p^{1/3}+p^{2/3}}{p(p-1)}\bigg)
+\le8.
+$$
+\fin
+
+\proclaim{Lemma 4}
+\roster
+\item Pour $z\ge1$, nous avons $G(z)\le\Log z+1.4709$.
+\item Pour $z\ge6$, nous avons $1.07+\Log z\le G(z)$.
+\item Pour $z\ge\exp(18)$ et $\alpha\ge1.1$, nous avons $G(z^\alpha)\le\alpha G(z)$.
+\endroster
+\endproclaim
+
+\demo{Preuve}
+La premi\`ere partie provient de notre expression asymptotique si $z\ge146\ 050$.
+Finir par des calculs serait assez co\^uteux en temps, aussi modifions
+nous le lemme~2 et prenons l'exposant $0.45$ au lieu de $1/3$. Nous
+avons alors $G(z)-\Log z\le1.4708$ d\`es que
+$$
+\frac1{0.45}\Log\big(\overline{H}(-0.45)
+\frac{\exp(-1-0.45\gamma)}{0.45(1.4708-1.332583)}\big)\le\Log z.
+$$
+Il nous faut calculer $\overline{H}(-0.45)$, et pour ce faire, un
+contr\^ole du terme d'erreur est n\'ecessaire.
+Nous avons
+$$
+\prod_{2\le p\le200\ 000}(1+\frac{p^{0.45}+p^{0.9}}{p(p-1)})\le20.26
+$$
+et, avec $F(t)=(t^{0.45}+t^{0.9})/[t(t-1)\Log t]$ et $X=200\ 000$,
+nous obtenons
+$$
+\Log\prod_{p>X}(1+\frac{p^{0.45}+p^{0.9}}{p(p-1)})\le
+1.001\ 093\big(XF(X)+\int_X^{\infty}F(t)dt\big)\le0.266\ 47
+$$
+en utilisant $\theta(t)\le1.001\ 093t$ si $t>0$ (cf l'article de Schoenfeld).
+D'o\`u l'in\'egalit\'e voulue si $z\ge42\ 300$.
+Un calcul direct donne alors
+$$
+\max_{z\ge1}(G(z)-\Log z)=G(7)-\Log 7\le1.4709.
+$$
+La seconde in\'egalit\'e est d\^ue \`a Montgomery \& Vaughan
+(Lemma 7 du papier cit\'e ci-dessous). La troisi\`eme assertion est
+une cons\'equence des deux premi\`eres,
+\fin
+
+\Refs
+
+
+\ref
+\by H.Montgomery \& R.C.Vaughan
+\paper The large sieve
+\jour Mathematika
+\vol 20 no 2
+\yr 1973 
+\pages 119--133
+\endref
+
+\ref
+\by H.Riesel \& R.C.Vaughan
+\paper On sums of primes
+\jour Arkiv f\"or mathematik 
+\vol 21
+\yr 1983
+\pages 45--74
+\endref
+
+\ref
+\by J.B.Rosser \& L.Schoenfeld 
+\paper Approximate formulas for some functions of prime numbers
+\jour Illinois J. Math.
+\vol  6 
+\yr 1962
+\pages 64--94
+\endref
+
+
+\ref
+\by L.Schoenfeld
+\paper Sharper bounds for the Chebyshev functions $\psi$ and $\theta$. II
+\jour Math. Comp.
+\vol 30 no 134
+\yr 1976 
+\pages 337--360
+\endref
+
+\endRefs
+
+\enddocument
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% End: 

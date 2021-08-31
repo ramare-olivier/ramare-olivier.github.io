@@ -1,0 +1,351 @@
+\input amstex
+\magnification=\magstep1
+\documentstyle {amsppt}
+\NoBlackBoxes
+\refstyle{B}
+
+%%% Version du 28 Mars 2000
+
+\def\goes{\mathrel{\rightarrow}}
+\def\Log{\operatorname{Log}}
+\def\section#1{\goodbreak\smallskip\noindent{\bf #1}}
+\def\fin{$\diamond\diamond\diamond$\enddemo}
+\def\Ker{\operatorname{Ker}}
+\def\1{1\!\!\!1}
+
+\document
+
+\topmatter
+\title
+Le th\'eor\`eme de Mertens sur la distribution des nombres premiers en
+progressions arithm\'etiques et la non-annulation des fonctions L en 1
+\endtitle
+\rightheadtext{Le th\'eor\`eme de Mertens}
+\author
+Olivier Ramar\'e
+\endauthor
+\abstract
+Une preuve qui ne demande que peu de pr\'erequis et d\'emontre de
+belles choses~!
+
+Version du 28 Mars 2000.
+\endabstract
+\endtopmatter
+
+\section{I. R\'esultats.}
+
+Soit $q$ un entier $\ge 1$ et $a$ un entier premier \`a $q$. Nous
+d\'emontrons le th\'eor\`eme de Mertens qui affirme que
+$$
+\sum\Sb d\le D\\d\equiv a[q]\endSb
+\frac{\Lambda(d)}{d}=\frac1{\phi(q)}\Log D+\Cal O(1),
+\leqno(1.1)
+$$
+o\`u le symbole $\Cal O$ d\'epend de $q$. Nous n'utiliserons que les
+propri\'et\'es \'el\'ementaires des caract\`eres de Dirichlet,
+une borne sup\'erieure de type Tchebyschef (le lemme~1 ci-dessous)
+et les identit\'es de convolution $\Lambda\star\1=\Log$ et
+$\mu\star\Log=\Lambda$.
+
+Nous en d\'eduirons qu'il existe trois constantes strictement
+positives $C_1(q)$, $C_2(q)$ et $C_3(q)$ telles que
+$$
+C_1(q) \,\frac{D}{\phi(q)}\le
+\sum\Sb d\le D\\d\equiv a[q]\endSb\Lambda(d)
+\le C_2(q) \,\frac{D}{\phi(q)}\qquad,\quad(D\ge C_3(q)).
+$$
+
+\section{II. Pr\'eliminaires.}
+
+\proclaim{Lemme~1 (Tchebyschef)}
+Il existe une constante strictement positive $C$ telle que
+$$
+\sum_{d\le D}\Lambda(d)\le C\, D\qquad(D\ge1)
+$$
+\endproclaim
+
+\proclaim{Lemme~2}
+Nous avons, pour tout caract\`ere $\chi$ non principal modulo $q$ ~:
+$$
+\left\{\aligned
+&\sum_{d\le D}\frac{\Lambda(d)}{d}=\Log X+\Cal O(1)
+\\&
+\sum_{n\le N}\frac{\chi(n)}{n}= L(1,\chi)+\Cal O(1/N)
+\\&
+\sum_{n\le N}\frac{\chi(n)\Log n}{n}= -L'(1,\chi)+\Cal O((\Log N)/N)
+\\&
+\sum_{n\le N}\frac{\chi(n)}{\sqrt{n}}= L(1/2,\chi)+\Cal O(1/N^{1/2})
+\endaligned\right.
+$$
+\endproclaim
+Il faut remarquer que dans les \'egalit\'es ci-dessus, ce qui nous
+int\'eresse c'est que $L(1,\chi)$, $L'(1,\chi)$ et $L(1/2,\chi)$
+soient des constantes et non leur forme particuli\`ere.
+
+\demo{Preuve}
+Nous partons de
+$$
+\sum_{n\le N}\Log n=N\Log N+\Cal O(N).
+$$
+Comme $\Log=\1\star\Lambda$, nous en d\'eduisons
+$$
+\aligned
+N\Log N+\Cal O(N)
+&=\sum\Sb d,m\ge 1\\ dm\le N\endSb\Lambda(d)
+=
+\sum_{ d\le N}\Lambda(d)\left(
+\frac{N}{d}+\Cal O(1)
+\right)
+\\&=N\sum_{d\le N}\frac{\Lambda(d)}{d}+\Cal O(N)
+\endaligned
+$$
+grace au lemme~1, ce qui d\'emontre la premi\`ere \'egalit\'e.
+Les suivantes suivent toutes le m\^emes sch\'ema et nous ne montrons
+que la premi\`ere. Nous avons
+$$
+\sum_{n\le N}\frac{\chi(n)}{n}
+=L(1,\chi)-\sum_{n>N}\frac{\chi(n)}{n}
+=L(1,\chi)-\int_{N}^{\infty}\frac{\sum_{N<n\le t}\chi(n)}{t^2}dt
+$$
+en utilisant
+$\frac1n=\int_n^{\infty}dt/t^2$,
+et le r\'esultat provient ensuite de ce que $|\sum_{n\le t}\chi(n)|\le q$.
+\fin
+
+\section{III. Deux lemmes.}
+
+\proclaim{Lemme~3}
+Soit $\chi$ un caract\`ere modulo $q$ non principal.
+Nous avons
+$$
+\left[L(1,\chi)\neq0\quad\implies\quad
+\sum_{d\le D}\frac{\chi(d)\Lambda(d)}{d}=\Cal O(1)\right].
+$$
+\endproclaim
+
+\demo{Preuve}
+Puisque $\Lambda\star\1=\Log$, nous avons
+$$
+\aligned
+\sum_{n\le N}\frac{\chi(n)\Log n}{n}
+&=
+\sum_{d\le N}\frac{\chi(d)\Lambda(d)}{d}\sum_{m\le
+N/d}\frac{\chi(m)}{m}
+\\&=
+\sum_{d\le N}\frac{\chi(d)\Lambda(d)}{d}
+\left\{
+L(1,\chi)+\Cal O\bigg(\frac{d}{N}\bigg)
+\right\}
+\\&=
+L(1,\chi)\sum_{d\le N}\frac{\chi(d)\Lambda(d)}{d}
++\Cal O\bigg(\sum_{d\le N}\Lambda(d)/N\bigg).
+\endaligned
+$$
+Les lemmes~1 et~2 nous permettent de conclure
+facilement.
+\fin
+
+\proclaim{Lemme~4}
+Soit $\chi$ un caract\`ere modulo $q$ non principal.
+Nous avons
+$$
+\left[L(1,\chi)=0\quad\implies\quad
+\sum_{d\le D}\frac{\chi(d)\Lambda(d)}{d}=-\Log D+\Cal O(1)\right].
+$$
+\endproclaim
+
+\demo{Preuve}
+Nous avons
+$$
+\sum_{n|d}\mu(n)\Log\frac{D}{n}
+=
+\sum_{n|d}\mu(n)\Log\frac{D}{d}
++\sum_{n|d}\mu(n)\Log\frac{d}{n}
+=\cases
+\Log D\quad&\text{si}\quad d=1\\
+\Lambda(d)\quad&\text{si}\quad d>1.
+\endcases
+$$
+Il vient alors
+$$
+\aligned
+\sum_{d\le D}\frac{\chi(d)\Lambda(d)}{d}
+&=-\Log D
++\sum_{d\le D}\frac{\chi(d)}d\sum_{n|d}\mu(n)\Log\frac{D}{n}
+\\&=
+-\Log D
++\sum_{n\le D}\frac{\mu(n)\chi(n)}{n}\Log\frac{D}{n}
+\sum_{m\le D/n}\frac{\chi(m)}{m}
+\\&=
+-\Log D
++\sum_{n\le D}\frac{\mu(n)\chi(n)}\Log\frac{D}{n}
+\left\{L(1,\chi)+\Cal O\bigg(\frac{n}{D}\bigg)\right\}.
+\endaligned
+$$
+Puisque nous supposons que $L(1,\chi)=0$, et moyennant de rappeler que
+$$
+\sum_{n\le D}\Log\frac{D}{n}=\Cal O(D),
+$$
+nous obtenons bien le r\'esultat annonc\'e.
+\fin
+
+\section{IV. Premi\`eres d\'eductions.}
+
+Nous avons
+$$
+\frac1{\phi(q)}\sum_{\chi\mod q}\overline{\chi(a)}\chi(d)
+=\cases
+1\quad&\text{si}\quad d\equiv a[q]\\
+0\quad&\text{si}\quad d\not\equiv a[q]\\
+\endcases
+$$
+ce qui nous donne
+$$
+\sum\Sb d\equiv a[q]\\ d\le D\endSb\frac{\Lambda(d)}d=
+\frac1{\phi(q)}\sum_{\chi\mod q}\overline{\chi(a)}
+\sum\Sb d\le D\endSb\frac{\chi(d)\Lambda(d)}d.
+$$
+D\'efinissons $\delta(\chi)$ par
+$$
+\delta(\chi)=\cases
+1\quad&\text{si}\quad \chi=\chi_0\\
+-1\quad&\text{si}\quad \chi\neq\chi_0\quad\text{et}\quad L(1,\chi)=0\\
+0\quad&\text{si}\quad \chi\neq\chi_0\quad\text{et}\quad L(1,\chi)\neq0\\
+\endcases
+$$
+(o\`u $\chi_0$ est le caract\`ere principal) de telle sorte que
+$$
+\sum\Sb d\le D\endSb\frac{\chi(d)\Lambda(d)}d=\delta(\chi)\Log D+\Cal O(1).
+$$
+Nous obtenons alors
+$$
+\sum\Sb d\equiv a[q]\\ d\le D\endSb\frac{\Lambda(d)}d=
+\frac{1}{\phi(q)}\left(
+\sum_{\chi\mod q}\overline{\chi(a)}\delta(\chi)
+\right)\Log D+\Cal O(1).
+\leqno(4.1)
+$$
+En sp\'ecialisant en $a=1$, et en remarquant que le membre de gauche
+de l'\'egalit\'e pr\'ec\'edente est positif ou nul, nous obtenons
+$$
+0\le\sum_{\chi\mod q}\delta(\chi)
+=1-\sum\Sb \chi/ L(1,\chi)=0\endSb 1
+$$
+tant et si bien qu'il y a au plus un caract\`ere modulo $q$ pour
+lequel $L(1,\chi)=0$. Comme
+$L(1,\overline{\chi})=\overline{L(1,\chi)}$, ce caract\`ere est
+n\'ecessairement r\'eel.
+
+\section{V. La non-annulation de $L(1,\chi)$ pour $\chi$ r\'eel.}
+
+Pour montrer que $L(1,\chi)\neq0$ lorsque $\chi$ est r\'eel,
+remarquons tout d'abord que
+$$
+\sum_{d|n}\chi(d)\ge0
+$$
+et m\^eme $\ge 1$ si $n$ est un carr\'e. En effet, comme la fonction
+$\1\star\chi$ est multiplicative, il nous suffit de v\'erifier ces
+propri\'et\'es sur les puissances de nombres premiers. Si $\chi(p)=1$,
+alors $\1\star\chi(p^{\nu})=\nu+1$ et si $\chi(p)=-1$, alors
+$\1\star\chi(p^{\nu})=((-1)^{\nu}+1)/2$, ce qui d\'emontre bien ce que
+nous avons annonc\'e.
+
+Donnons-nous deux param\`etres $M,D\ge1$ et tels que $MD=N$.
+Il vient
+$$
+\aligned
+\sum_{n\le N}\frac{{\sum_{d|n}\chi(d)}}{\sqrt{n}}
+&=
+\sum_{d, m/ dm\le N}\frac{\chi(d)}{\sqrt{d}}\frac1{\sqrt{m}}
+\\&=
+\sum_{d\le D}\frac{\chi(d)}{\sqrt{d}}\sum_{m\le N/d}\frac1{\sqrt{m}}
++
+\sum_{m\le M}\frac1{\sqrt{m}}\sum_{D<d\le N/m}\frac{\chi(d)}{\sqrt{d}}
+\\&=
+\sum_{d\le D}\frac{\chi(d)}{\sqrt{d}}
+\left\{
+\frac12\sqrt{\frac{N}{d}}+c+\Cal O\bigg(\sqrt{\frac{d}{N}}\bigg)
+\right\}
++\sum_{m\le M}\frac1{\sqrt{m}}\Cal O(1/\sqrt{D})
+\endaligned
+$$
+(car $\sum_{m\le M}m^{-1/2}=M^{1/2}/2+c+\Cal O(M^{-1/2})$),
+soit finalement
+$$
+\sum_{n\le N}\frac{{\sum_{d|n}\chi(d)}}{\sqrt{n}}
+=\frac12\sqrt{{N}}(L(1,\chi)+\Cal O(1/D))
++\Cal O(1+ D N^{-1/2}+M^{1/2}D^{-1/2}).
+$$
+Nous prenons alors $D=M=N^{1/2}$, ce qui nous donne
+$$
+\sum_{n\le N}\frac{{\sum_{d|n}\chi(d)}}{\sqrt{n}}
+=\frac12\sqrt{{N}}L(1,\chi)
++\Cal O(1)
+.
+$$
+Par ailleurs
+$$
+\sum_{n\le N}\frac{{\sum_{d|n}\chi(d)}}{\sqrt{n}}
+\ge \sum_{\ell^2\le N}\frac{1}{\sqrt{\ell^2}}
+\ge \frac12\Log N+\Cal O(1).
+$$
+Par cons\'equent
+$$
+L(1,\chi)\ge\frac{\Log N+\Cal O(1)}{\sqrt{N}}
+$$
+et il suffit de prendre $N$ assez grand pour obtenir $L(1,\chi)\ne0$.
+
+\section{VI. Conclusion.}
+
+L'\'equation $(4.1)$ alli\'e au fait que $\delta_\chi=0$ pour tout
+caract\`ere non principal nous donne le th\'eor\`eme de Mertens
+$(1.1)$.
+
+Pour en d\'eduire des in\'egalit\'es de type Tchebyschef $(1.2)$, nous
+proc\'edons comme suit. Donnons-nous un param\`etre $\alpha\in]0,1[$.
+Nous avons
+$$
+\sum\Sb \alpha D< d\le D\\ d\equiv a[q]\endSb\frac{\alpha D\Lambda(d)}{d}
+\le
+\sum\Sb \alpha D< d\le D\\ d\equiv a[q]\endSb\Lambda(d)
+\le
+\sum\Sb \alpha D< d\le D\\ d\equiv a[q]\endSb\frac{D\Lambda(d)}{d}
+$$
+o\`u il nous suffit d'appliquer $(1.1)$ pour obtenir
+$$
+\alpha D\left(\frac{\Log(1/\alpha)}{\phi(q)}+\Cal O(1)\right)
+\le
+\sum\Sb \alpha D< d\le D\\ d\equiv a[q]\endSb\Lambda(d)
+\le
+D\left(\frac{\Log(1/\alpha)}{\phi(q)}+\Cal O(1)\right)
+$$
+et nous prenons alors $\alpha$ suffisamment petit de sorte que les
+quantit\'es $\frac{\Log(1/\alpha)}{\phi(q)}+\Cal O(1)$
+ci-dessus soient toutes les deux $\ge1$. Nous ajoutons les
+contributions de $D$ \`a $\alpha D$, puis de $\alpha D$ \`a $\alpha^2
+D$, etc, ce qui prouve $(1.2)$.
+
+
+\section{VII. Commentaires.}
+
+Les lignes qui suivent sont emprunt\'ees \`a plusieurs preuves
+plus ou moins classiques dont je ne saurai reconna\^\i tre les
+auteurs. Il faut remarquer que $(4.1)$ parle d\'ej\`a de la
+c\'el\`ebre constante~2 du th\'eor\`eme de Brun-Tichmarsh~: si il
+existe un z\'ero exceptionnel, disons ici $L(1,\chi)=0$ dans notre
+formalisme simplifi\'e, alors certaines classes contiennent deux fois
+plus de nombres premiers que la valeur esp\'er\'ee. Plus remarquable
+encore, ces classes forment un sous-groupe...
+
+L'argument de la partie $V$ si il a l'avantage de s'int\'egrer
+agr\'eablement au reste du d\'eveloppement donne une pi\`etre
+minoration de $L(1,\chi)$ en fonction de $q$ d\`es que l'on explicite
+la d\'ependance dans ce param\`etre.
+
+
+\enddocument
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% End: 

@@ -1,0 +1,122 @@
+
+
+                       Compteur de t‚l‚chargements
+                     Commentaires : <spineau@teaser.fr>
+            Site : http://www.teaser.fr/~spineau/php/index.php3
+                        Langage : Script Server PHP 3
+                         Auteur : St‚ph' Pineau
+                           Version 1 15/10/1999
+
+
+  (A) Pr‚ambule : Droits d'utilisation
+  (B) Descriptif
+  (C) Pr‚-requis
+  (D) Installation
+  (E) Cr‚ation des liens de t‚l‚chargement
+  (F) Liste des fichiers scripts
+
+
+-----------------------------------------------------------------------------
+(A) Pr‚ambule :
+
+    L'utilisation  de  ces  scripts est gratuite* et sans formalit‚ pr‚alable
+    pour  les  sites  personnels,  scolaires, universitaires, associatifs, si
+    ceux-ci sont sans but lucratif. Merci toutefois de communiquer par E-mail
+    … l'auteur <spineau@teaser.fr>,  l'URL  ou  vous  installez  ces  scripts
+    ainsi que votre adresse E-mail pour qu'il puisse vous informer des mises-
+    …-jour.
+
+    Pour  toute  autre  utilisation  sur  site   commercial,   l'autorisation
+    pr‚alable    de    l'auteur    est   …   demander   …   l'adresse   email
+    <spineau@teaser.fr>
+
+    Toute  r‚utilisation  partielle  des scripts pour un usage commercial est
+    soumis aux mˆmes restrictions.
+
+    L'auteur  de  ces  scripts ne saurait ˆtre tenu responsable des problŠmes
+    pouvant survenir sur les serveurs et sites ou ceux-ci sont install‚s.
+
+-----------------------------------------------------------------------------
+(B) Descriptif :
+
+    Cet ensemble de scripts comptabilise chaque t‚l‚chargement d'un ou
+    plusieurs fichiers mis-…-disposition des visiteurs sur un site Web. Le
+    compteur associ‚ … chaque fichier en t‚l‚chargement peut par ailleurs
+    ˆtre affich‚ dans une page Web.
+
+----------------------------------------------------------------------------
+(C) Pr‚-Requis :
+
+    Pour  utiliser  ces scripts sur votre site vous devez v‚rifier les points
+    suivants :
+
+      - Votre  fournisseur  d'accŠs doit avoir install‚ PHP version 3 sur son
+        serveur  et  celui-ci  doit  ˆtre   accessible   par   les   abonn‚s.
+      - Avoir un  programme  client  "FTP"  et  savoir   s'en   servir   :-)
+      - Avoir un  programme  client  "Web" (navigateur) et savoir
+        s'en  servir   :-)
+
+----------------------------------------------------------------------------
+(D) Installation :
+
+    1.  Cr‚er un r‚pertoire sur le site Web qui contiendra tous les fichiers
+        mis … disposition des visiteurs pour t‚l‚chargement.
+
+    2.  Copier dans ce r‚pertoire les fichiers … t‚l‚charger ainsi que les
+        deux scripts "download.php3" et "compteur.php3".
+
+        2.1  Veiller … ce  que tous les noms  de fichiers soient  stock‚s en
+             minuscules sur le site ftp.
+        2.2  Renommer tous les fichiers *.php en *.php3 si cel…  n'a pas ‚t‚
+             fait automatiqement par le client ftp.
+
+    3.  En ‚tant plac‚ dans le r‚pertoire contenant le r‚pertoire cr‚‚  pour
+        stocker les scripts et fichiers, entrer en  mode de commande dans le
+        client ftp : (avec WS_FTP :  clic droit  de la  souris,  Option
+        "Ftp Commands", Option "QUOTE")
+
+        - Taper la commande "SITE CHMOD 0777 xxxx" et confirmez
+                                             ^ nom du r‚pertoire en
+                                                minuscules !
+        Ceci afin d'autoriser les  accŠs en  lecture/‚criture sur le dit
+        r‚pertoire.
+----------------------------------------------------------------------------
+(E) Cr‚ation de liens de t‚l‚chargement :
+
+    NB : On postulera dans ce qui suit que le r‚pertoire contenant les
+         fichiers … t‚l‚charger et les scripts s'appelle /arc
+
+    Cr‚ez votre page Web listant les fichiers … t‚l‚charger comme d'habitude.
+
+    Pour les liens vers les programmes … t‚l‚charger utiliser la syntaxe
+    suivante :
+
+    <A HREF="htpp:/url_site/arc/download.php3?Fichier=fichier.zip">Prog1</A>
+                                              ^Attention l'initiale doit ˆtre
+                                               en Majuscule.
+
+    Si vous souhaitez que le compteur de t‚l‚chargement s'affiche dans cette
+    page pour chaque fichier :
+
+    Ajouter la ligne suivante en tout d‚but de la page :
+
+    <?php include("./arc/compteur.php3"); ?>
+
+    Puis en face de chaque programme propos‚ :
+
+    <?php PrintCompteur("./arc/fichier.zip");?> T&eacute;l&eacute;chargement.
+
+    Sauvegarder cette page Web, la renommer avec l'extension .php3 au lieu de
+    .phtml et l'installer sur le site dans le r‚pertoire contenant le sous-
+    r‚pertoire /arc.
+
+----------------------------------------------------------------------------
+(F) Liste des fichiers de l'archive
+
+    DOWNLOAD.PHP :             Le script de comptabilisation des
+                               t‚l‚chargements.
+    COMPTEUR.PHP :             Le script d'affichage des compteurs.
+    DOWN.TXT     :             Cette Doc.
+
+[EOF]-----------------------------------------------------------------------
+

@@ -1,0 +1,148 @@
+\def\widebar{\overline}
+\def\order{\asymp}
+\def\lcm{\text{lcm}}
+\def\equivalent{\Leftrightarrow}
+\def\Log{\operatorname{Log}}
+\def\fin{$\diamond\diamond\diamond$\enddemo}
+\def\dif{\partial}
+\def\la{\Lambda}
+\def\RamI{[R]}
+\def\RamII{[RR]}
+\magnification=\magstep1
+\input amstex
+\documentstyle {amsppt}
+\NoBlackBoxes
+
+
+\def\section#1{\goodbreak\noindent{\bf #1}}
+\topmatter
+\title
+La suite de Kolakoski
+\endtitle
+\author
+Olivier Ramar\'e
+\endauthor
+\abstract
+Suite  A000002 chez Sloane.
+\endabstract
+\endtopmatter
+
+\document
+Les premiers termes~:
+$$
+\aligned
+&   1,2,2,1,1,2,1,2,2,1,2,2,1,1,2,1,1,2,2,1,2,1,1,2,1,2,2,1,1,2,
+\\& 1,1,2,1,2,2,1,2,2,1,1,2,1,2,2,1,2,1,1,2,1,1,2,2,1,2,2,1,1,2,
+\\& 1,2,2,1,2,2,1,1,2,1,1,2,1,2,2,1,2,1,1,2,2,1,2,2,1,1,2,1,2,2,
+\\& 1,2,2,1,1,2,1,1,2,2,1,2,1,1,2,1,2,2
+\endaligned
+$$
+
+Le programme qui les g\'en\`ere~:
+{\tt
+\obeylines
+
+a=[1,2,2];
+for(n=3,80,
+\quad  for(i=1,a[n],
+\qquad    a=concat(a,1+((n-1)\%2))));
+a
+}
+
+
+\def\tvi{\vrule height 9.5pt depth 3.5pt width 0pt}
+\def\tv{\tvi\vrule}
+\def\oh{\omit\hrulefill}
+\def\oo{\omit}
+\def\cc#1{\hbox to 12 pt{\hfill\kern2pt#1}}
+\let\ve\varepsilon
+
+La suite~:
+$$
+\vbox{\offinterlineskip
+\halign{%
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#}
+& #   & \cc{#} & # & \cc{#} & # & \cc{#} & # & \cc{#} & #\cr
+\tv &  1  & \tv &  2  & \tv &  3  & \tv &  4  & 
+\tv &  5  & \tv &  6  & \tv &  7  & \tv &  8  & 
+\tv &  9  & \tv & 10  & \tv & 11  & \tv & 12  & 
+\tv & 13  & \tv & 14  & \tv & 15  & \tv & 16  & 
+\tv & 17  & \tv & 18  & \tv & 19  & \tv & 20  & 
+\tv & 21  & \tv & 22  & \tv & 23  & \tv & 24  & \tv \cr
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh \cr
+\tv &  1  & \tv &  2  & \tv &  2  & \tv &  3  & 
+\tv &  3  & \tv &  4  & \tv &  5  & \tv &  6  & 
+\tv &  6  & \tv &  7  & \tv &  8  & \tv &  8  & 
+\tv &  9  & \tv &  9  & \tv & 10  & \tv & 11  & 
+\tv & 11  & \tv & 12  & \tv & 12  & \tv & 13  & 
+\tv & 14  & \tv & 15  & \tv & 15  & \tv & 16  & \tv \cr
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh &
+\oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh & \oh \cr
+\tv &  1  & \tv &  2  & \tv &  2  & \tv &  1  & 
+\tv &  1  & \tv &  2  & \tv &  1  & \tv &  2  & 
+\tv &  2  & \tv &  1  & \tv &  2  & \tv &  2  & 
+\tv &  1  & \tv &  1  & \tv &  2  & \tv &  1  & 
+\tv &  1  & \tv &  2  & \tv &  2  & \tv &  1  & 
+\tv &  2  & \tv &  1  & \tv &  1  & \tv &  2  & \tv \cr
+}}
+$$
+
+Bref
+$$
+\ve(F(n))=
+\#\{m/F(m)=n\}=
+\cases
+1&\text{\ si $F(n)$ est impair}\\
+2&\text{\ si $F(n)$ est pair}\\
+\endcases
+$$
+Posons
+$$
+G(\ell)=\max\{n/F(n)=\ell\}.
+$$
+Il vient
+$$
+m+1 \ge G(F(m))\ge m\qquad,\qquad
+F(G(m))=m.
+$$
+On a aussi
+$$
+G(\ell)=\sum_{n\le\ell}\ve(F(n))
+$$
+
+\vfill\eject
+
+R\'ef\'erences~:
+
+W. Kolakoski, Problem 5304, Amer. Math. Monthly, 73 (1966), 681-682.
+
+I. Vardi, Computational Recreations in Mathematica.
+           Addison-Wesley, Redwood City, CA, 1991, p. 233.
+
+J. C. Lagarias, Number Theory and Dynamical Systems, pp. 35-72 of S. A.
+           Burr, ed., The Unreasonable Effectiveness of Number Theory, Proc.
+           Sympos. Appl. Math., 46 (1992). Amer. Math. Soc.
+
+\enddocument
+
+%%% Local Variables: 
+%%% mode: plain-tex
+%%% TeX-master: t
+%%% TeX-master: t
+%%% End: 

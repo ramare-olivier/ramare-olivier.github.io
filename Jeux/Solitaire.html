@@ -1,0 +1,1035 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Use the DOCTYPE string above if you want :hover to work!! -->
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <link  rel="stylesheet" href="../style.css" type="text/css" />  
+
+   <TITLE>Olivier Ramar&eacute; : Le jeu du Solitaire</TITLE>
+
+
+<SCRIPT LANGUAGE="javascript">
+
+<!-- ---------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------- -->
+var Anglais_selectedstartx=-1; // -1: aucune case de selectionnee 
+var Anglais_selectedstarty=-1; // -1: aucune case de selectionnee 
+var Anglais_message="";
+var Anglais_problematique_message="";
+var Anglais_history=0;
+var initialcolor="#2EFEF7";
+var selectedcolor="#F3F781";
+var intermediatecolor="#C8FE2E";
+var explodecolor="#58FA58";
+var lettres = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+<!-- Case : 0: case existante, aucun pion,
+     //       1: case existante, un pion
+     //       9: case inexistante
+     //       -1: case existante, on ne sait pas si il y a un pion -->
+var Anglais_pos1 = [9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9,
+                    1,1,1,1,1,1,1,
+                    1,1,1,0,1,1,1,
+                    1,1,1,1,1,1,1,
+                    9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9];
+
+var Anglais_pos = [9,9,1,1,1,9,9,
+                   9,9,1,1,1,9,9,
+                   1,1,1,1,1,1,1,
+                   1,1,1,0,1,1,1,
+                   1,1,1,1,1,1,1,
+                   9,9,1,1,1,9,9,
+                   9,9,1,1,1,9,9];
+
+var Anglais_diamant = [9,9,0,0,0,9,9,
+                       9,9,0,1,0,9,9,
+                       0,0,1,1,1,0,0,
+                       0,1,1,0,1,1,0,
+                       0,0,1,1,1,0,0,
+                       9,9,0,1,0,9,9,
+                       9,9,0,0,0,9,9];
+
+var Anglais_arc_court = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,0,0,0,0,
+                       0,1,1,0,1,1,0,
+                       0,1,1,1,1,1,0,
+                       9,9,0,1,0,9,9,
+                       9,9,0,0,0,9,9];
+
+var Anglais_arc_long = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       1,0,0,0,0,0,1,
+                       1,1,0,1,0,1,1,
+                       0,1,0,1,0,1,0,
+                       9,9,1,1,1,9,9,
+                       9,9,0,1,0,9,9];
+
+var Anglais_verre = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,1,0,1,0,0,
+                       0,0,1,0,1,0,0,
+                       0,0,1,1,1,0,0,
+                       9,9,0,1,0,9,9,
+                       9,9,1,1,1,9,9];
+
+var Anglais_maison = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,1,0,0,0,
+                       0,0,1,0,1,0,0,
+                       0,1,0,0,0,1,0,
+                       9,9,1,0,1,9,9,
+                       9,9,1,0,1,9,9];
+
+var Anglais_arcades = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,1,0,1,0,1,0,
+                       1,0,1,0,1,0,1,
+                       1,0,1,0,1,0,1,
+                       9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9];
+
+var Anglais_Yo = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       1,1,0,0,0,1,1,
+                       0,0,1,0,1,0,0,
+                       0,0,1,0,1,0,0,
+                       9,9,0,1,0,9,9,
+                       9,9,0,1,0,9,9];
+
+var Anglais_spirale = [9,9,1,0,0,9,9,
+                       9,9,1,0,0,9,9,
+                       0,0,0,1,0,1,1,
+                       0,0,1,0,1,0,0,
+                       1,1,0,1,0,0,0,
+                       9,9,0,0,1,9,9,
+                       9,9,0,0,1,9,9 ];
+
+var Anglais_troupe = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       1,1,1,1,0,0,0,
+                       1,1,1,1,0,0,0,
+                       1,1,1,1,0,0,0,
+                       9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9]
+
+var Anglais_troupe_final = [9,9,-1,-1,-1,9,9,
+                       9,9,-1,-1,-1,9,9,
+                       -1,-1,-1,-1,-1,-1,-1,
+                       -1,-1,-1,-1,-1,1,-1,
+                       -1,-1,-1,-1,-1,-1,-1,
+                       9,9,-1,-1,-1,9,9,
+                       9,9,-1,-1,-1,9,9]
+
+var Anglais_fenetre = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,0,0,0,0,
+                       0,0,1,1,1,0,0,
+                       0,0,1,0,1,0,0,
+                       9,9,1,1,1,9,9,
+                       9,9,1,1,1,9,9]
+
+var Anglais_fenetre_final = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,0,0,0,0,
+                       0,0,0,0,0,0,0,
+                       0,0,0,1,0,0,0,
+                       9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9]
+
+var Anglais_deux_absents = [9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9,
+                    1,1,1,1,1,1,1,
+                    1,1,0,1,0,1,1,
+                    1,1,1,1,1,1,1,
+                    9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9];
+
+var Anglais_bassin = [9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9,
+                    1,1,1,0,1,1,1,
+                    1,1,0,0,0,1,1,
+                    1,1,1,0,1,1,1,
+                    9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9];
+
+var Anglais_salle = [9,9,0,1,0,9,9,
+                    9,9,0,0,0,9,9,
+                    1,1,1,1,1,1,1,
+                    1,1,1,1,1,1,1,
+                    1,1,1,1,1,1,1,
+                    9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9];
+
+var Anglais_pos_final1 = [9,9,0,0,0,9,9,
+                          9,9,0,0,0,9,9,
+                          0,0,0,0,0,0,0,
+                          0,0,0,1,0,0,0,
+                          0,0,0,0,0,0,0,
+                          9,9,0,0,0,9,9,
+                          9,9,0,0,0,9,9];
+
+var Anglais_pos_final = [9,9,-1,-1,-1,9,9,
+                         9,9,-1,-1,-1,9,9,
+                         -1,-1,-1,-1,-1,-1,-1,
+                         -1,-1,-1,-1,-1,-1,-1,
+                         -1,-1,-1,-1,-1,-1,-1,
+                         9,9,-1,-1,-1,9,9,
+                         9,9,-1,-1,-1,9,9];
+
+var Anglais_pos_final2 = [9,9,-1,-1,-1,9,9,
+                         9,9,-1,-1,-1,9,9,
+                         -1,-1,-1,-1,-1,-1,-1,
+                         -1,-1,-1,-1,-1,-1,-1,
+                         -1,-1,-1,-1,-1,-1,-1,
+                         9,9,-1,-1,-1,9,9,
+                         9,9,-1,-1,-1,9,];
+
+
+function Anglais_display() {
+  var nb_element=1;
+  for (var i = 0; i<49; i++)  {
+     if(Anglais_pos[i]<9){
+       if(Anglais_pos[i] == 1){
+          document.forms["Anglais"].elements[nb_element].value = "  o  "}
+       else { document.forms["Anglais"].elements[nb_element].value = "      "};
+       nb_element++}}
+   if(Anglais_message != ""){
+     if(Anglais_history == 2){
+       Anglais_message = "\r" + Anglais_message;
+       Anglais_history = 0};
+     document.forms["Anglais"].Anglaishistorique.value
+       = document.forms["Anglais"].Anglaishistorique.value + Anglais_message + ", ";
+     Anglais_history++;
+   }
+   document.forms["Anglais"].Anglaishistorique.scrollTop = document.forms["Anglais"].Anglaishistorique.scrollHeight;
+   Anglais_win();
+}
+
+function Anglais_win() {  
+  var ok, i;
+  ok = 1;
+  for(i = 0; i < 49 & ok==1; i++){
+    if(Anglais_pos[i] != Anglais_pos_final[i]){
+      ok = 0;}}
+  if(ok == 1){
+      if (confirm('You did it! Do you want to restart?')) newAnglaisgame();}
+  else {
+    
+                 }
+}
+
+function Anglais_display_final() {
+  var i, j, nb_element=34;
+  for (i = 0; i<49; i++)  {
+     if(Anglais_pos_final[i]<9){
+       if(Anglais_pos_final[i] == 1){
+          document.forms["Anglais"].elements[nb_element].value = "  o  "
+       } else if(Anglais_pos_final[i] == -1){
+          document.forms["Anglais"].elements[nb_element].value = "  ?  "}
+       else { document.forms["Anglais"].elements[nb_element].value = "      "};
+       nb_element++}};
+  for(i = 0; i<7; i++){
+    for(j = 0; j<7; j++){
+      if(Anglais_pos_final[Anglais_code(lettres[i],lettres[j])]<9){
+        Anglais_mycoloring_final(lettres[i], lettres[j], initialcolor)};};};
+  document.forms["Anglais"].Anglaisproblematique.value = Anglais_problematique_message;
+  document.forms["Anglais"].Anglaisproblematique.style.backgroundColor = "#8080ff";
+}
+
+function Anglais_mycoloring(x, y, mycolor){
+ switch (x){
+    case "a": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_aa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_ab.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_ac.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_ad.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ae.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_af.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_ag.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_ah.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ai.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_aj.style.background=mycolor; break;
+             default: break;}; break;
+    case "b": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ba.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_bb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_bc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_bd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_be.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_bf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_bg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_bh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_bi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_bj.style.background=mycolor; break;
+             default: break;}; break;
+    case "c": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ca.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_cb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_cc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_cd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ce.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_cf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_cg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_ch.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ci.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_cj.style.background=mycolor; break;
+             default: break;}; break;
+    case "d": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_da.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_db.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_dc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_dd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_de.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_df.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_dg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_dh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_di.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_dj.style.background=mycolor; break;
+             default: break;}; break;
+    case "e": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ea.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_eb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_ec.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_ed.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ee.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_ef.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_eg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_eh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ei.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_ej.style.background=mycolor; break;
+             default: break;}; break;
+    case "f": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_fa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_fb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_fc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_fd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_fe.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_ff.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_fg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_fh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_fi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_fj.style.background=mycolor; break;
+             default: break;}; break;
+    case "g": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ga.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_gb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_gc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_gd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ge.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_gf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_gg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_gh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_gi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_gj.style.background=mycolor; break;
+             default: break;}; break;
+    case "h": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ha.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_hb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_hc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_hd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_he.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_hf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_hg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_hh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_hi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_hj.style.background=mycolor; break;
+             default: break;}; break;
+    case "i": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ia.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_ib.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_ic.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_id.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ie.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_if.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_ig.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_ih.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ii.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_ij.style.background=mycolor; break;
+             default: break;}; break;
+    case "j": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ja.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_jb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_jc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_jd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_je.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_jf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_jg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_jh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ji.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_jj.style.background=mycolor; break;
+             default: break;}; break;
+    default: break;
+    }
+}
+
+function Anglais_mycoloring_final(x, y, mycolor){
+switch (x){
+    case "a": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_aa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_ab.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_ac.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_ad.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ae.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_af.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_ag.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_ah.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ai.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_aj.style.background=mycolor; break;
+             default: break;}; break;
+    case "b": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ba.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_bb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_bc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_bd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_be.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_bf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_bg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_bh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_bi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_bj.style.background=mycolor; break;
+             default: break;}; break;
+    case "c": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ca.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_cb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_cc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_cd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ce.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_cf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_cg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_ch.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ci.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_cj.style.background=mycolor; break;
+             default: break;}; break;
+    case "d": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_da.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_db.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_dc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_dd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_de.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_df.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_dg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_dh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_di.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_dj.style.background=mycolor; break;
+             default: break;}; break;
+    case "e": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ea.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_eb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_ec.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_ed.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ee.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_ef.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_eg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_eh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ei.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_ej.style.background=mycolor; break;
+             default: break;}; break;
+    case "f": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_fa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_fb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_fc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_fd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_fe.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_ff.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_fg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_fh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_fi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_fj.style.background=mycolor; break;
+             default: break;}; break;
+    case "g": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ga.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_gb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_gc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_gd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ge.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_gf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_gg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_gh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_gi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_gj.style.background=mycolor; break;
+             default: break;}; break;
+    case "h": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ha.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_hb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_hc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_hd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_he.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_hf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_hg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_hh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_hi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_hj.style.background=mycolor; break;
+             default: break;}; break;
+    case "i": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ia.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_ib.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_ic.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_id.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ie.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_if.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_ig.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_ih.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ii.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_ij.style.background=mycolor; break;
+             default: break;}; break;
+    case "j": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ja.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_jb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_jc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_jd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_je.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_jf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_jg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_jh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ji.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_jj.style.background=mycolor; break;
+             default: break;}; break;
+    default: break;
+    }
+}
+
+function Anglais_code(x, y){
+ switch (x){
+    case "a": switch (y){
+             case "a": return 0; break;
+             case "b": return 1; break;
+             case "c": return 2; break;
+             case "d": return 3; break;
+             case "e": return 4; break;
+             case "f": return 5; break;
+             case "g": return 6; break;
+             default: break;}; break;
+    case "b": switch (y){
+             case "a": return 7; break;
+             case "b": return 8; break;
+             case "c": return 9; break;
+             case "d": return 10; break;
+             case "e": return 11; break;
+             case "f": return 12; break;
+             case "g": return 13; break;
+             default: break;}; break;
+    case "c": switch (y){
+             case "a": return 14; break;
+             case "b": return 15; break;
+             case "c": return 16; break;
+             case "d": return 17; break;
+             case "e": return 18; break;
+             case "f": return 19; break;
+             case "g": return 20; break;
+             default: break;}; break;
+    case "d": switch (y){
+             case "a": return 21; break;
+             case "b": return 22; break;
+             case "c": return 23; break;
+             case "d": return 24; break;
+             case "e": return 25; break;
+             case "f": return 26; break;
+             case "g": return 27; break;
+             default: break;}; break;
+    case "e": switch (y){
+             case "a": return 28; break;
+             case "b": return 29; break;
+             case "c": return 30; break;
+             case "d": return 31; break;
+             case "e": return 32; break;
+             case "f": return 33; break;
+             case "g": return 34; break;
+             default: break;}; break;
+    case "f": switch (y){
+             case "a": return 35; break;
+             case "b": return 36; break;
+             case "c": return 37; break;
+             case "d": return 38; break;
+             case "e": return 39; break;
+             case "f": return 40; break;
+             case "g": return 41; break;
+             default: break;}; break;
+    case "g": switch (y){
+             case "a": return 42; break;
+             case "b": return 43; break;
+             case "c": return 44; break;
+             case "d": return 45; break;
+             case "e": return 46; break;
+             case "f": return 47; break;
+             case "g": return 48; break;
+             default: break;}; break;
+    default: break;
+    }
+}
+
+function Anglais_middle(x1, x2){
+  if(x1 == x2) return x1;
+  switch (x1){
+    case "a": switch (x2){
+                case "c": return "b"; break;
+                default: return -1; break;}; break;
+    case "b": switch (x2){
+                case "d": return "c"; break;
+                default: return -1; break;}; break;
+    case "c": switch (x2){
+                case "a": return "b"; break;
+                case "e": return "d"; break;
+                default: return -1; break;}; break;
+    case "d": switch (x2){
+                case "b": return "c"; break;
+                case "f": return "e"; break;
+                default: return -1; break;}; break;
+    case "e": switch (x2){
+                case "c": return "d"; break;
+                case "g": return "f"; break;
+                default: return -1; break;}; break;
+    case "f": switch (x2){
+                case "d": return "e"; break;
+                default: return -1; break;}; break;
+    case "g": switch (x2){
+                case "e": return "f"; break;
+                default: return -1; break;}; break;
+    default: return -1; break;}
+}
+
+function Anglais_switch(x,y){
+   var aux;
+   aux = Anglais_pos[x];
+   Anglais_pos[x] = Anglais_pos[y];
+   Anglais_pos[y] = aux;
+}
+
+function Anglais_move(x, y) {
+  var x3, y3, x2, y2;
+  x2 = Anglais_selectedstartx;
+  y2 = Anglais_selectedstarty
+  if(x2 == -1){
+    Anglais_selectedstartx = x;
+    Anglais_selectedstarty = y;
+    Anglais_message="";
+    Anglais_mycoloring(x, y, selectedcolor);
+  } else if (x2 == x & y2 == y) {
+    Anglais_message="";
+    Anglais_selectedstartx = -1;
+    Anglais_mycoloring(x, y, initialcolor);
+  } else {
+    x3 = Anglais_middle(x, x2);
+    y3 = Anglais_middle(y, y2);//alert(x3+y3+" "+Anglais_pos[Anglais_code(x, y)]);
+    if(x3 == -1 | y3 == -1 | Anglais_pos[Anglais_code(x3, y3)] == 9
+       | Anglais_pos[Anglais_code(x, y)] == 1
+       | Anglais_pos[Anglais_code(x2, y2)] == 0){
+      Anglais_message="Impossible!";
+    } else {
+      Anglais_pos[Anglais_code(x, y)] = 1;
+      Anglais_pos[Anglais_code(x3, y3)] = 0;
+      Anglais_pos[Anglais_code(x2, y2)] = 0;
+      Anglais_selectedstartx = -1;
+      Anglais_mycoloring(x3, y3, explodecolor);
+      Anglais_mycoloring(x2, y2, intermediatecolor);
+      setTimeout(function(){
+        Anglais_mycoloring(x, y, initialcolor);
+        Anglais_mycoloring(x3, y3, initialcolor);
+        Anglais_mycoloring(x2, y2, initialcolor);},400);
+      Anglais_message=x2+y2+"+"+x3+y3+"->"+x+y;
+    };
+  };
+  Anglais_display();
+}
+
+function newAnglaisgame() {
+  var i, j;
+  Anglais_problematique_message="Il faut finir avec un seul pion !";           
+  switch (document.forms["Anglais"].Debut.value){
+    case "d1": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_pos1[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; 
+               break;
+    case "d2": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_diamant[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d3": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_arc_court[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d4": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_arc_long[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d5": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_verre[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d6": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_maison[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d7": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_arcades[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d8": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_Yo[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d9": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_spirale[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+    case "d10": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_troupe[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_troupe_final[Anglais_code(lettres[i], lettres[j])];
+                  };}; 
+               Anglais_problematique_message="Essayez de mettre un pion sur la case indiquée, quelque soit ce qui reste à côté.";   
+               break;
+    case "d11": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_fenetre[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_fenetre_final[Anglais_code(lettres[i], lettres[j])];
+                  };}; 
+               Anglais_problematique_message="Essayez de finir avec un seul pion, et sur la case indiquée.";   
+               break;
+    case "d12": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_deux_absents[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final1[Anglais_code(lettres[i], lettres[j])];
+                  };}; 
+               Anglais_problematique_message="Essayez de finir avec un seul pion, et sur la case indiquée.";   
+               break;
+    case "d13": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_bassin[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; 
+               Anglais_problematique_message="Essayez de finir avec un seul pion, ou démontrez que c'est impossible.";   
+               break;
+    case "d14": for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_salle[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; 
+               break;
+    default :  for( i = 0; i<7;i++){
+                for( j = 0; j<7; j++){
+                  Anglais_pos[Anglais_code(lettres[i],lettres[j])]
+                  = Anglais_pos1[Anglais_code(lettres[i],lettres[j])];
+                  Anglais_pos_final[Anglais_code(lettres[i], lettres[j])]
+                  = Anglais_pos_final2[Anglais_code(lettres[i], lettres[j])];
+                  };}; break;
+  };
+
+  for( i=0; i<7; i++){
+    for( j=0; j<7; j++){
+      if(Anglais_pos[Anglais_code(lettres[i], lettres[j])]<9){
+      Anglais_mycoloring(lettres[i], lettres[j], initialcolor);};};};
+
+  Anglais_selectedstartx = -1;
+  Anglais_message = "";
+  Anglais_history = 0;
+  document.forms["Anglais"].Anglaishistorique.value = "";
+  Anglais_display_final();
+  Anglais_display();   
+}
+
+</script>
+</head>
+
+<body BACKGROUND="http://math.univ-lille1.fr/~ramare/trucs/fond-ens.jpg"
+      onLoad="window.newAnglaisgame()" >
+
+<center>
+<h1>
+  Zone r&eacute;serv&eacute;e au Solitaire
+</h1>
+</center>
+
+<br>
+<br>
+
+<center>
+<img src="../trucs/construction.gif" width="70px"></fig>
+</center>
+
+<center>
+<blockquote>
+<i>
+Nous renvoyons le lecteur &agrave; la <a class="someword" href="IndexJeux.html">page</a> pour
+des analyses de ce jeu. Nous nous restreignons ici &agrave; des scripts
+javascript qui permettent d'explorer ce jeu.
+</i>
+</blockquote>
+</center>
+
+<br>
+<center>
+<hr width="30%" size=3 color="lightblue"></center>
+<br>
+
+  <form name="Anglais">
+    <table>
+    <tr>
+      <td></td>
+      <td align="center"><font size = +1><i>Position initiale :</i></font></td>
+      <td></td>
+      <td align="center"><font size = +1><i>Position finale recherch&eacute;e:</i></font></td>
+    </tr>
+      <tr>
+        <td>
+          <select name="Debut" onChange="window.newAnglaisgame()" 
+                  style="width:160px;font-size:16px;font-style:bold;margin-right:50px;background:#A9F5A9;color:blue;border:none">
+     	    <option value="d1">D&eacute;but classique</option>
+	        <option value="d2">Le diamant</option>
+	        <option value="d3">L'arc court</option>
+	        <option value="d4">L'arc long</option>
+	        <option value="d5">Le verre</option>
+	        <option value="d6">La maison</option>
+	        <option value="d7">Les arcades</option>
+	        <option value="d8">Yo</option>
+	        <option value="d9">La spirale</option>
+            <option>---------------</option>
+	        <option value="d10">La troupe</option>
+	        <option value="d11">Le fen&ecirc;tre</option>
+	        <option value="d12">Deux absents</option>
+	        <option value="d13">Le bassin</option>
+	        <option value="d14">La salle de classe</option>
+		      </select>
+        </td>
+        <td>
+          <table>
+            <tr> <!-- Premiere ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_button_ac" value="    " 
+                          onClick="window.Anglais_move('a','c')"> </td>
+              <td> <input type="button" name="Anglais_button_ad" value="    "
+                          onClick="window.Anglais_move('a','d')"> </td>
+              <td> <input type="button" name="Anglais_button_ae" value="    "
+                          onClick="window.Anglais_move('a','e')"> </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr> <!-- Deuxieme ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_button_bc" value="    "
+                          onClick="window.Anglais_move('b','c')"> </td>
+              <td> <input type="button" name="Anglais_button_bd" value="    "
+                          onClick="window.Anglais_move('b','d')"> </td>
+              <td> <input type="button" name="Anglais_button_be" value="    "
+                          onClick="window.Anglais_move('b','e')"> </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr> <!-- Troisieme ligne -->
+              <td> <input type="button" name="Anglais_button_ca" value="    "
+                          onClick="window.Anglais_move('c','a')"> </td>
+              <td> <input type="button" name="Anglais_button_cb" value="    "
+                          onClick="window.Anglais_move('c','b')"> </td>
+              <td> <input type="button" name="Anglais_button_cc" value="    "
+                          onClick="window.Anglais_move('c','c')"> </td>
+              <td> <input type="button" name="Anglais_button_cd" value="    "
+                          onClick="window.Anglais_move('c','d')"> </td>
+              <td> <input type="button" name="Anglais_button_ce" value="    "
+                          onClick="window.Anglais_move('c','e')"> </td>
+              <td> <input type="button" name="Anglais_button_cf" value="    "
+                          onClick="window.Anglais_move('c','f')"> </td>
+              <td> <input type="button" name="Anglais_button_cg" value="    "
+                          onClick="window.Anglais_move('c','g')"> </td>
+            </tr>
+            <tr> <!-- Quatrieme ligne -->
+              <td> <input type="button" name="Anglais_button_da" value="    "
+                          onClick="window.Anglais_move('d','a')"> </td>
+              <td> <input type="button" name="Anglais_button_db" value="    "
+                          onClick="window.Anglais_move('d','b')"> </td>
+              <td> <input type="button" name="Anglais_button_dc" value="    "
+                          onClick="window.Anglais_move('d','c')"> </td>
+              <td> <input type="button" name="Anglais_button_dd" value="    "
+                          onClick="window.Anglais_move('d','d')"> </td>
+              <td> <input type="button" name="Anglais_button_de" value="    "
+                          onClick="window.Anglais_move('d','e')"> </td>
+              <td> <input type="button" name="Anglais_button_df" value="    "
+                          onClick="window.Anglais_move('d','f')"> </td>
+              <td> <input type="button" name="Anglais_button_dg" value="    "
+                          onClick="window.Anglais_move('d','g')"> </td>
+            </tr>
+            <tr> <!-- Cinquieme ligne -->
+              <td> <input type="button" name="Anglais_button_ea" value="    "
+                          onClick="window.Anglais_move('e','a')"> </td>
+              <td> <input type="button" name="Anglais_button_eb" value="    "
+                          onClick="window.Anglais_move('e','b')"> </td>
+              <td> <input type="button" name="Anglais_button_ec" value="    "
+                          onClick="window.Anglais_move('e','c')"> </td>
+              <td> <input type="button" name="Anglais_button_ed" value="    "
+                          onClick="window.Anglais_move('e','d')"> </td>
+              <td> <input type="button" name="Anglais_button_ee" value="    "
+                          onClick="window.Anglais_move('e','e')"> </td>
+              <td> <input type="button" name="Anglais_button_ef" value="    "
+                          onClick="window.Anglais_move('e','f')"> </td>
+              <td> <input type="button" name="Anglais_button_eg" value="    "
+                          onClick="window.Anglais_move('e','g')"> </td>
+            </tr>
+             <tr><!-- Sixieme ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_button_fc" value="    "
+                          onClick="window.Anglais_move('f','c')"> </td>
+              <td> <input type="button" name="Anglais_button_fd" value="    "
+                          onClick="window.Anglais_move('f','d')"> </td>
+              <td> <input type="button" name="Anglais_button_fe" value="    "
+                          onClick="window.Anglais_move('f','e')"> </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr><!-- Septieme ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_button_gc" value="    "
+                          onClick="window.Anglais_move('g','c')"> </td>
+              <td> <input type="button" name="Anglais_button_gd" value="    "
+                          onClick="window.Anglais_move('g','d')"> </td>
+              <td> <input type="button" name="Anglais_button_ge" value="    "
+                          onClick="window.Anglais_move('g','e')"> </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;<hr length="3cm" size=10 color="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <table>
+            <tr> <!-- Premiere ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_final_button_ac" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ad" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ae" value="    "> </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr> <!-- Deuxieme ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_final_button_bc" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_bd" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_be" value="    "> </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr> <!-- Troisieme ligne -->
+              <td> <input type="button" name="Anglais_final_button_ca" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_cb" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_cc" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_cd" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ce" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_cf" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_cg" value="    "> </td>
+            </tr>
+            <tr> <!-- Quatrieme ligne -->
+              <td> <input type="button" name="Anglais_final_button_da" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_db" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_dc" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_dd" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_de" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_df" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_dg" value="    "> </td>
+            </tr>
+            <tr> <!-- Cinquieme ligne -->
+              <td> <input type="button" name="Anglais_final_button_ea" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_eb" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ec" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ed" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ee" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ef" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_eg" value="    "> </td>
+            </tr>
+             <tr><!-- Sixieme ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_final_button_fc" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_fd" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_fe" value="    "> </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr><!-- Septieme ligne -->
+              <td></td>
+              <td></td>
+              <td> <input type="button" name="Anglais_final_button_gc" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_gd" value="    "> </td>
+              <td> <input type="button" name="Anglais_final_button_ge" value="    "> </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    <tr>
+      <td></td>
+      <td align="center"></td>
+      <td valign="top"><font size = +1><i>Probl&eacute;matique :</i></font></td>
+      <td><textarea name="Anglaisproblematique" rows="5" cols="40"
+                    onfocus="document.forms[Anglais].Anglaisproblematique.blur()"
+                    wrap="on">
+          </textarea></td>
+    </tr>
+    </table>
+    <br><br>
+      <font size=-1><i>Pour jouer, cliquer sur la case de d&eacute;part, puis
+      sur celle d'arriv&eacute;e.</i></font>
+    <br><br>
+    <center>
+      <table>
+        <tr>
+          <td valign="top"><i>Historique :</i>&nbsp;</td>
+          <td> <textarea name="Anglaishistorique" rows="5" cols="25"
+                         onfocus="document.forms[Anglais].Anglaishistorique.blur()"
+                         wrap="off">
+            </textarea>
+          </td>
+        </tr>
+        </table>
+    </center>
+  </form>
+
+</body>
+</html>

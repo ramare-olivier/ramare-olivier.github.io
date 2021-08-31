@@ -1,0 +1,534 @@
+function Anglais_switch(x,y){
+   var aux;
+   aux = Anglais_pos[x];
+   Anglais_pos[x] = Anglais_pos[y];
+   Anglais_pos[y] = aux;
+}  
+
+function Anglais_middle(x1, x2){
+  switch (x1){
+    case "a": return "b"; break;
+    case "b": return "c"; break;
+    case "c": switch (x2){
+                case "a": return "b"; break;
+                case "e": return "c"; break;
+                default: alert("Check!!"); break;}; break;
+    case "d": switch (x2){
+                case "b": return "b"; break;
+                case "f": return "e"; break;
+                default: alert("Check!!"); break;}; break;
+    case "e": switch (x2){
+                case "c": return "d"; break;
+                case "g": return "f"; break;
+                default: alert("Check!!"); break;}; break;
+    case "f": return "e"; break;
+    case "g": return "f"; break;
+    default: alert("Check!!"); break;}
+}
+
+function Anglais_elementary_move(x1, y1, x2, y2){
+   var x3, y3;
+   x3 = Anglais_middle(x1,x2);
+   y3 = Anglais_middle(y1,y2);
+   Anglais_switch(Anglais_code(x1, y1), Anglais_code(x2,y2));
+   Anglais_mycoloring(x1, y1, intermediatecolor);
+   Anglais_mycoloring(x2, y2, intermediatecolor);
+   Anglais_mycoloring(x3, y3, intermediatecolor);
+   setTimeout(function(){
+        Anglais_mycoloring(x1, y1, initialcolor);
+        Anglais_mycoloring(x2, y2, initialcolor);
+        Anglais_mycoloring(x3, y3, initialcolor);}, 400);
+   Anglais_selectedstart = -1;
+}
+
+function Anglais_move(x, y) {
+  if(Anglais_selectedstartx == -1){
+    Anglais_selectedstartx = x;
+    Anglais_selectedstarty = y;
+    Anglais_message="";
+    Anglais_mycoloring(x, y, selectedcolor);
+  } else if (Anglais_selectedstartx == x & Anglais_selectedstarty == y) {
+    Anglais_message="";
+    Anglais_selectedstartx = -1;
+    Anglais_mycoloring(x, y, initialcolor);
+  } else if( (Anglais_selectedstart==1 & num == 3)|
+             (Anglais_selectedstart==3 & num == 1)){
+    Anglais_elementary_move(1,3);
+    Anglais_message="a";
+  } else if( (Anglais_selectedstart==4 & num == 6)|
+             (Anglais_selectedstart==6 & num == 4)){
+    Anglais_elementary_move(4,6);
+    Anglais_message="b";
+  } else if( (Anglais_selectedstart==7 & num == 9)|
+             (Anglais_selectedstart==9 & num == 7)){
+    Anglais_elementary_move(7,9);
+    Anglais_message="c";
+  } else if( (Anglais_selectedstart==1 & num == 7)|
+             (Anglais_selectedstart==7 & num == 1)){
+    Anglais_elementary_move(1,7);
+    Anglais_message="A";
+  } else if( (Anglais_selectedstart==2 & num == 8)|
+             (Anglais_selectedstart==8 & num == 2)){
+    Anglais_elementary_move(2,8);
+    Anglais_message="B";
+  } else if( (Anglais_selectedstart==3 & num == 9)|
+             (Anglais_selectedstart==9 & num == 3)){
+    Anglais_elementary_move(3,9);
+    Anglais_message="C";
+  } else {
+    Anglais_message="Impossible !";
+  };
+  Anglais_display();
+}
+
+function newAnglaisgame() {
+  var i, j;alert(lettres[0]+" "+lettres[0]);
+  for( i=0; i<7; i++){
+    for( j=0; j<7; j++){
+      if(sol_Anglais(Anglais_code(lettres[i],lettres[j]))==1){
+      Anglais_mycoloring(lettres[i], lettres[j], initialcolor);};};};
+  for( i=0; i<7; i++){
+    for( j=0; j<7; j++){
+      Anglais_mycoloring(lettres[i], lettres[j], initialcolor);};};
+  Anglais_selectedstartx = -1;
+  Anglais_message = "";
+  Anglais_history = 0;
+  document.forms["Anglais"].Anglaishistorique.value = "";
+  Anglais_display();   
+}
+function Anglais_display() {
+  for (var i = 0; i<49; i++)  {
+       if(Anglais_pos[i] == 1){
+          document.forms["Anglais"].elements[i+1].value = " xxx "}
+       else { document.forms["Anglais"].elements[i+1].value = "  .  "}}
+   if(Anglais_message != ""){
+     if(Anglais_history == 7){
+       Anglais_message = "\r" + Anglais_message;
+       Anglais_history = 0};
+     document.forms["Anglais"].Anglaishistorique.value
+       = document.forms["Anglais"].Anglaishistorique.value + Anglais_message + ", ";
+     Anglais_history++;
+   }
+   document.forms["Anglais"].Anglaishistorique.scrollTop = document.forms["Anglais"].Anglaishistorique.scrollHeight;
+   Anglais_win();
+}
+function Anglais_win() {  
+  var ok=1, i;
+  for(i = 0; i < 49, i++){
+    if(Anglais_pos[i] != Anglais_pos_final[i]){
+      ok = 0;
+      break;}}
+  if(ok == 1){
+      if (confirm('You did it! Do you want to restart?')) newAnglaisgame();}
+}
+function Anglais_move(x, y) {alert(x+" "+y);
+  if(Anglais_selectedstartx == -1){
+    Anglais_selectedstartx = x;
+    Anglais_selectedstarty = y;
+    Anglais_message="";
+    Anglais_mycoloring(x, y, selectedcolor);
+  } else if (Anglais_selectedstartx == x & Anglais_selectedstarty == y) {
+    Anglais_message="";
+    Anglais_selectedstartx = -1;
+    Anglais_mycoloring(x, y, initialcolor);
+  } else  {
+    Anglais_message="Impossible !";
+  };
+  Anglais_display();
+}
+
+function Anglais_elementary_move(x1, y1, x2, y2){
+   var x3, y3;
+   x3 = Anglais_middle(x1,x2);
+   y3 = Anglais_middle(y1,y2);
+   Anglais_switch(Anglais_code(x1, y1), Anglais_code(x2,y2));
+   Anglais_mycoloring(x1, y1, intermediatecolor);
+   Anglais_mycoloring(x2, y2, intermediatecolor);
+   Anglais_mycoloring(x3, y3, intermediatecolor);
+   setTimeout(function(){
+        Anglais_mycoloring(x1, y1, initialcolor);
+        Anglais_mycoloring(x2, y2, initialcolor);
+        Anglais_mycoloring(x3, y3, initialcolor);}, 400);
+   Anglais_selectedstartx = -1;
+}
+
+
+
+
+ switch (x){
+    case "a": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_aa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_ab.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_ac.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_ad.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ae.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_af.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_ag.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_ah.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ai.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_aj.style.background=mycolor; break;
+             default: break;}; break;
+    case "b": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ba.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_bb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_bc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_bd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_be.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_bf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_bg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_bh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_bi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_bj.style.background=mycolor; break;
+             default: break;}; break;
+    case "c": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ca.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_cb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_cc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_cd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ce.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_cf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_cg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_ch.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ci.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_cj.style.background=mycolor; break;
+             default: break;}; break;
+    case "d": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_da.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_db.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_dc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_dd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_de.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_df.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_dg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_dh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_di.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_dj.style.background=mycolor; break;
+             default: break;}; break;
+    case "e": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ea.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_eb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_ec.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_ed.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ee.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_ef.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_eg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_eh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ei.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_ej.style.background=mycolor; break;
+             default: break;}; break;
+    case "f": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_fa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_fb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_fc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_fd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_fe.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_ff.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_fg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_fh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_fi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_fj.style.background=mycolor; break;
+             default: break;}; break;
+    case "g": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ga.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_gb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_gc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_gd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ge.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_gf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_gg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_gh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_gi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_gj.style.background=mycolor; break;
+             default: break;}; break;
+    case "h": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ha.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_hb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_hc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_hd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_he.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_hf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_hg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_hh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_hi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_hj.style.background=mycolor; break;
+    case "i": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ia.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_ib.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_ic.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_id.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_ie.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_if.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_ig.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_ih.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ii.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_ij.style.background=mycolor; break;
+             default: break;}; break;
+    case "j": switch (y){
+             case "a": document.forms["Anglais"].Anglais_final_button_ja.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_final_button_jb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_final_button_jc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_final_button_jd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_final_button_je.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_final_button_jf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_final_button_jg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_final_button_jh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_final_button_ji.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_final_button_jj.style.background=mycolor; break;
+             default: break;}; break;
+    default: break;
+    }
+
+
+ switch (x){
+    case "a": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_aa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_ab.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_ac.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_ad.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ae.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_af.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_ag.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_ah.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ai.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_aj.style.background=mycolor; break;
+             default: break;}; break;
+    case "b": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ba.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_bb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_bc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_bd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_be.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_bf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_bg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_bh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_bi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_bj.style.background=mycolor; break;
+             default: break;}; break;
+    case "c": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ca.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_cb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_cc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_cd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ce.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_cf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_cg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_ch.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ci.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_cj.style.background=mycolor; break;
+             default: break;}; break;
+    case "d": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_da.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_db.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_dc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_dd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_de.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_df.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_dg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_dh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_di.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_dj.style.background=mycolor; break;
+             default: break;}; break;
+    case "e": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ea.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_eb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_ec.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_ed.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ee.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_ef.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_eg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_eh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ei.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_ej.style.background=mycolor; break;
+             default: break;}; break;
+    case "f": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_fa.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_fb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_fc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_fd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_fe.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_ff.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_fg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_fh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_fi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_fj.style.background=mycolor; break;
+             default: break;}; break;
+    case "g": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ga.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_gb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_gc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_gd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ge.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_gf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_gg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_gh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_gi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_gj.style.background=mycolor; break;
+             default: break;}; break;
+    case "h": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ha.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_hb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_hc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_hd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_he.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_hf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_hg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_hh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_hi.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_hj.style.background=mycolor; break;
+    case "i": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ia.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_ib.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_ic.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_id.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_ie.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_if.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_ig.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_ih.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ii.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_ij.style.background=mycolor; break;
+             default: break;}; break;
+    case "j": switch (y){
+             case "a": document.forms["Anglais"].Anglais_button_ja.style.background=mycolor; break;
+             case "b": document.forms["Anglais"].Anglais_button_jb.style.background=mycolor; break;
+             case "c": document.forms["Anglais"].Anglais_button_jc.style.background=mycolor; break;
+             case "d": document.forms["Anglais"].Anglais_button_jd.style.background=mycolor; break;
+             case "e": document.forms["Anglais"].Anglais_button_je.style.background=mycolor; break;
+             case "f": document.forms["Anglais"].Anglais_button_jf.style.background=mycolor; break;
+             case "g": document.forms["Anglais"].Anglais_button_jg.style.background=mycolor; break;
+             case "h": document.forms["Anglais"].Anglais_button_jh.style.background=mycolor; break;
+             case "i": document.forms["Anglais"].Anglais_button_ji.style.background=mycolor; break;
+             case "j": document.forms["Anglais"].Anglais_button_jj.style.background=mycolor; break;
+             default: break;}; break;
+    default: break;
+    }
+
+
+<!--
+-->
+var Anglais_diamant = [9,9,0,0,0,9,9,
+                       9,9,0,1,0,9,9,
+                       0,0,1,1,1,0,0,
+                       0,1,1,0,1,1,0,
+                       0,0,1,1,1,0,0,
+                       9,9,0,1,0,9,9,
+                       9,9,0,0,0,9,9];
+
+var Anglais_arc_court = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,0,0,0,0,
+                       0,1,1,0,1,1,0,
+                       0,1,1,1,1,1,0,
+                       9,9,0,1,0,9,9,
+                       9,9,0,0,0,9,9];
+
+var Anglais_arc_long = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       1,0,0,0,0,0,1,
+                       1,1,0,1,0,1,1,
+                       0,1,0,1,0,1,0,
+                       9,9,1,1,1,9,9,
+                       9,9,0,1,0,9,9];
+
+var Anglais_verre = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,1,0,1,0,0,
+                       0,0,1,0,1,0,0,
+                       0,0,1,1,1,0,0,
+                       9,9,0,1,0,9,9,
+                       9,9,1,1,1,9,9];
+
+var Anglais_maison = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,1,0,0,0,
+                       0,0,1,0,1,0,0,
+                       0,1,0,0,0,1,0,
+                       9,9,1,0,1,9,9,
+                       9,9,1,0,1,9,9];
+
+var Anglais_arcades = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,1,0,1,0,1,0,
+                       1,0,1,0,1,0,1,
+                       1,0,1,0,1,0,1,
+                       9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9];
+
+var Anglais_Yo = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       1,1,0,0,0,1,1,
+                       0,0,1,0,1,0,0,
+                       0,0,1,0,1,0,0,
+                       9,9,0,1,0,9,9,
+                       9,9,0,1,0,9,9];
+
+var Anglais_spirale = [9,9,1,0,0,9,9,
+                       9,9,1,0,0,9,9,
+                       0,0,0,1,0,1,1,
+                       0,0,1,0,1,0,0,
+                       1,1,0,1,0,0,0,
+                       9,9,0,0,1,9,9,
+                       9,9,0,0,1,9,9 ];
+
+var Anglais_troupe = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       1,1,1,1,0,0,0,
+                       1,1,1,1,0,0,0,
+                       1,1,1,1,0,0,0,
+                       9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9]
+
+var Anglais_troupe_final = [9,9,-1,-1,-1,9,9,
+                       9,9,-1,-1,-1,9,9,
+                       -1,-1,-1,-1,-1,-1,-1,
+                       -1,-1,-1,-1,-1,1,-1,
+                       -1,-1,-1,-1,-1,-1,-1,
+                       9,9,-1,-1,-1,9,9,
+                       9,9,-1,-1,-1,9,9]
+
+var Anglais_fenetre = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,0,0,0,0,
+                       0,0,1,1,1,0,0,
+                       0,0,1,0,1,0,0,
+                       9,9,1,1,1,9,9,
+                       9,9,1,1,1,9,9]
+
+var Anglais_fenetre_final = [9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9,
+                       0,0,0,0,0,0,0,
+                       0,0,0,0,0,0,0,
+                       0,0,0,1,0,0,0,
+                       9,9,0,0,0,9,9,
+                       9,9,0,0,0,9,9]
+
+var Anglais_deux_absents = [9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9,
+                    1,1,1,1,1,1,1,
+                    1,1,0,1,0,1,1,
+                    1,1,1,1,1,1,1,
+                    9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9];
+
+
+var Anglais_bassin = [9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9,
+                    1,1,1,0,1,1,1,
+                    1,1,0,0,0,1,1,
+                    1,1,1,0,1,1,1,
+                    9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9];
+
+var Anglais_salle = [9,9,0,1,0,9,9,
+                    9,9,0,0,0,9,9,
+                    1,1,1,1,1,1,1,
+                    1,1,1,1,1,1,1,
+                    1,1,1,1,1,1,1,
+                    9,9,1,1,1,9,9,
+                    9,9,1,1,1,9,9];
+var Anglais_pos_final2 = [9,9,0,0,0,9,9,
+                          9,9,0,0,0,9,9,
+                          0,0,0,0,0,0,0,
+                          0,0,0,1,0,0,0,
+                          0,0,0,0,0,0,0,
+                          9,9,0,0,0,9,9,
+                          9,9,0,0,0,9,9];

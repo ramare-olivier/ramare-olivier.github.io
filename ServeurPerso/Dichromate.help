@@ -1,0 +1,158 @@
+
+Dichromate -- package to compute Dichromatic polynomials.
+
+              --- written by O.Ramare ramare@NONONONmath.univ-lille1.fr
+              --- based on an algorithm by O.Ramare and D.Tanre.
+              --- Main revision: November 11 2000.
+              --- Last revision: November 11 2004.
+
+Description:
+
+
+This script offers you three functions: Dichromate::DiChromatic,
+Dichromate::RectDiChromatic and Dichromate::RectTutte.
+
+ -- Dichromate::DiChromatic asks for one argument which is a graph,
+    i.e. a list of two components: the set of vertices and the list
+    of edges, repetitions and loops being allowed. Thus
+    Dichromate::DiChromatic([{1,2,3},[[1,1],[1,2],[2,3],[3,1]]]) refers to
+    the dichromatic polynomial of the complete graph on three
+    vertices, with an additionnal loop around vertex 1.
+    Multiple edges are also allowed.
+    The algorithm is fairly simple and thus highly non efficient
+    since it only relies on the deletion/gluing property.
+
+ -- Dichromate::RectDiChromatic is a much more efficient version, but
+    only applies to 'tower' graphs build as follows: start with a graph
+    G on r vertices x1,...,xr. Pile s copies of G, with vertices
+    say x1j,...,xrj. We also add the vertices xij,x1(j+1) if
+    1<= j<= s-1. Call G(s) this tower, and H(r,s) this tower
+    when G is simply a chain of length r. Then
+    Dichromate::RectDiChromatic(G,s)=Dichromate::DiChromatic(G(s)),
+    and in particular
+    Dichromate::RectDiChromatic(G,1)=Dichromate::DiChromatic(G),
+    though the computations performed are definiteley not the same:
+    Dichromate::RectDiChromatic(G,1) uses some sort of cluster expansion
+    while Dichromate::DiChromatic(G) uses the deletion-gluing mechanism.
+
+    The first argument of Dichromate::RectDiChromatic is either
+    a graph G, either an integer r, meaning G is the chain on
+    r vertices.
+    The second argument is s the height of the tower.
+    If first argument is an integer, then (r,s) is replaced by
+    (min(r,s),max(r,s)). If s is larger than r^2, then the full
+    generating series is computed (see afterwards), except if third
+    argument is TRUE.
+    Finally, s can take the value 'All', in
+    which case the series sum(s>=1,Dichromate::DiChromatic(G(s)) X^(s-1))
+    which turns out to be rational is computed. Missing second argument
+    is understood as 'All'.
+    There is an optionnal fourth argument which takes the values TRUE or
+    FALSE (the default) and which is used when the number of vertices
+    of the graph is larger than the square of the number of copies
+    (i.e. r^2 > s in the notations above). For in this, by default,
+    Dichromate::RectDiChromatic computes the whole series and then
+    extracts the proper coefficient. If third argument is TRUE, then
+    it forces Dichromate::RectDiChromatic to compute the polynomial
+    without using the full series.
+
+    Variables used are 'DiChromateq' and 'DiChromatev'. See
+    paragraph below. And hold(X) for the series.
+
+    The algorithm involved is due to O.Ramare and D.Tanre and is indeed
+    quite efficient.
+
+ -- Dichromate::RectTutte behaves just like Dichromate::RectDiChromatic
+    except that it computes the Tutte polynomial, variables being
+    'DiChromatex' and 'DiChromatey' which will appears as the
+    symbols specified in 'DiChromateqvxy' if they are not set in
+    any way. Remember that the Tutte polynomial T is obtained from
+    the dichromatic Z(q,v) one by a change of variables as follows
+
+    T(x,y)=(x-1)^(-k) (y-1)^(-h) Z((x-1)(y-1),(y-1)
+       where k is the number of connected components
+         and h (usually rs) is the number of vertices of the graph.
+    Variables used are 'DiChromatex' and 'DiChromatey'. See
+    paragraph below. And hold(X) for the series.
+
+ -- The variables are 'DiChromateq', 'DiChromatev', 'DiChromatex'
+    and 'DiChromatey', the latter one being here only for checking
+    purposes. You can set these variables if you want special
+    values, and for instance set 'DiChromatev:=-1' to get the
+    chromatic polynomial of the graph. Since these names are
+    too long for convenient output, there are replaced upon
+    displaying by 'q', 'v', 'x' and 'y', well in fact by the
+    members of 'DiChromateqvxyDefault' whose initial value
+    '[hold(q),hold(v),hold(x),hold(y)]' you can change.
+
+    The five variables 'DiChromateq', 'DiChromatev', 'DiChromatex',
+    'DiChromatey' and 'DiChromateqvxyDefault' are global.
+    There exist some other global variables, but they all have a name
+    prefixed by 'Dichromate::' like 'DiChromate::One'.
+
+ -- The chromatic polynomial is obtained by setting Dichomatev to -1
+    and asking for the dichromatic polynomial.
+
+ -- Beware the output may be huge and computation time fairly forbidding.
+    I computed the series for the chromatic polynomial of towers of graph
+    with a base having 5 vertices, and the series for the dichromatic
+    polynomial of towers of graph with a base having 4 vertices. Required
+    storage is also quite impressive, except for the simpler
+    Dichromate::DiChromatic.
+
+ -- Parsing of arguments is seldomly handled via the testargs process
+    due to the fact that the arguments can have several forms.
+    The main time is however taken by the computation of the polynomial
+    itself.
+
+ -- Examples:
+
+----------------------------------------------------------------------
+
+>> Dichromate::RectDiChromatic(2,hold(All));
+
+        2      2  2      2  3                    2        2      3    2  4
+(q v + q  - X q  v  - X q  v ) / (- 3 X q v - X q  - 4 X v  - X v  + X  v
+
+      2  5      2    3      2    4    2  2  2    2  2  3
+   + X  v  + 2 X  q v  + 2 X  q v  + X  q  v  + X  q  v  + 1 )
+
+-----------------------------------------------------------------------
+
+>> DiChromatev:=-1;
+
+                                    -1
+
+
+>> Dichromate::RectDiChromatic(2,hold(All));
+
+                                       2
+                                  q - q
+                          ----------------------
+                                           2
+                          3 X - 3 X q + X q  - 1
+
+-----------------------------------------------------------------------
+
+
+>> delete(DiChromatev); Dichromate::RectDiChromatic([{1,2,3},[[1,2],[2,3],[3,1]]],1);
+
+                         3        2      2        3
+                        q  + 3 q v  + 3 q  v + q v
+
+-----------------------------------------------------------------------
+
+>> Dichromate::DiChromatic([{1,2},[[1,2]]]);
+
+                                        2
+                                 q v + q
+
+-----------------------------------------------------------------------
+
+>> Dichromate::RectTutte(2,2);
+
+                                       2    3
+                              x + y + x  + x
+
+
+

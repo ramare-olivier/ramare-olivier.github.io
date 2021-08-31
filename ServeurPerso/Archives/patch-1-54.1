@@ -1,0 +1,116 @@
+10c10
+< ;; 2-Nov-00|1.53|~/modes/mupad.el.Z|
+---
+> ;; 7-Nov-00|1.54|~/modes/mupad.el.Z|
+11a12
+> ;; Patch level 1.
+19c20
+< ;; Till 07-July-2000, combined efforts/comments of
+---
+> ;; Till 07-November-2000, combined efforts/comments of
+75,76c76,77
+< ;"netscape file:/usr/local/MuPAD/mupad_html_help/Automated/index.html"
+< (concat mupad-directory "bin/manual")
+---
+> ;"netscape file:/usr/local/MuPAD/mupad_html_help/Automated/index.html&"
+> (concat mupad-directory "bin/manual")
+78c79
+< put for instance \"netscape file:/usr/local/MuPAD/mupad_html_help/index.html\""
+---
+> put for instance \"netscape file:/usr/local/MuPAD/mupad_html_help/index.html&\""
+443c444
+<    '(mupad-find-user-global-var (1 mupad-user-def))
+---
+>    '(mupad-find-user-global-var (1 mupad-user-def))))
+445c446
+<    "Expressions to highlight in MuPAD (shell) mode.")))
+---
+>    "Expressions to highlight in MuPAD mode.")
+1532c1532
+<   (set (make-local-variable font-lock-defaults)
+---
+>   (set (make-local-variable 'font-lock-defaults)
+2214c2214
+<     (mupad-electric-terminate-line)
+---
+>     (mupad-electric-terminate-line (point))
+2216c2216
+<     (mupad-electric-terminate-line)
+---
+>     (mupad-electric-terminate-line (point))
+2226,2227c2226,2227
+<   (mupad-electric-terminate-line)
+<   (mupad-electric-terminate-line)
+---
+>   (mupad-electric-terminate-line (point))
+>   (mupad-electric-terminate-line (point))
+2230c2230
+<   (mupad-electric-terminate-line)
+---
+>   (mupad-electric-terminate-line (point))
+2278c2278
+<         (mupad-electric-terminate-line)
+---
+>         (mupad-electric-terminate-line (point))
+2297c2297
+<           (mupad-electric-terminate-line)
+---
+>           (mupad-electric-terminate-line (point))
+2315c2315
+<           (mupad-electric-terminate-line)
+---
+>           (mupad-electric-terminate-line (point))
+2317c2317
+<     (mupad-electric-terminate-line)
+---
+>     (mupad-electric-terminate-line (point))
+2319,2320c2319,2320
+<     (mupad-electric-terminate-line)
+<     (mupad-electric-terminate-line)
+---
+>     (mupad-electric-terminate-line (point))
+>     (mupad-electric-terminate-line (point))
+2323c2323
+<     (mupad-electric-terminate-line)
+---
+>     (mupad-electric-terminate-line (point))
+2396,2404c2396
+<   (let (next-indent only-spacep)
+<     (mupad-remove-trailing-spaces)
+<     (setq only-spacep (mupad-only-spacep))
+<     ;(print (list "only-spacep = " only-spacep))
+<     (mupad-insert-indent (mupad-tell-indent))
+<     (unless only-spacep (insert-char ?  1))
+<            ;--> in case of thendo with point between then and do.
+<     (setq next-indent (mupad-tell-indent t))
+<     (unless only-spacep (if (= (char-syntax (preceding-char )) ? )(delete-char -1)))
+---
+>   (if (mupad-within-comment (or beg (mupad-get-safe-place)))
+2406c2398,2408
+<     (mupad-insert-indent next-indent)))
+---
+>     (let (next-indent only-spacep)
+>       (mupad-remove-trailing-spaces)
+>       (setq only-spacep (mupad-only-spacep))
+>       ;(print (list "only-spacep = " only-spacep))
+>       (mupad-insert-indent (mupad-tell-indent))
+>       (unless only-spacep (insert-char ?  1))
+>              ;--> in case of thendo with point between then and do.
+>       (setq next-indent (mupad-tell-indent t))
+>       (unless only-spacep (if (= (char-syntax (preceding-char )) ? )(delete-char -1)))
+>       (insert-char ?\n 1)
+>       (mupad-insert-indent next-indent))))
+2817c2819
+<       (mupad-terminate-line))
+---
+>       (mupad-electric-terminate-line))
+3435c3437
+<     (mupad-electric-terminate-line)
+---
+>     (mupad-electric-terminate-line (point))
+3640c3642
+< ;; mupad.el ends here.    3629 lines
+\ No newline at end of file
+---
+> ;; mupad.el ends here.    3640 lines
+\ No newline at end of file

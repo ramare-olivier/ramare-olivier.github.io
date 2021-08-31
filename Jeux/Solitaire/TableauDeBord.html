@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Use the DOCTYPE string above if you want :hover to work!! -->
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <link  rel="stylesheet" href="../../style.css" type="text/css" />  
+
+   <TITLE>Olivier Ramar&eacute; : Le jeu du Solitaire ++</TITLE>
+
+
+<!-- 
+<SCRIPT LANGUAGE="javascript" data-main="SolitaireMain" SRC="require.js">
+ -->
+<SCRIPT LANGUAGE="javascript" src="TableauDeBord.js">
+<!-- -------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------- -->
+</script>
+</head>
+
+<body style="background-color:grey;">
+
+
+<form>
+  <table>
+<!-- --------------------------------------------------------------------- -->
+    <tr>
+      <td id="BaseHash">
+        <script language="javascript">
+        document.write("<input type=\"button\" style=\"width:250px;background-color:#FFFFCC\""
+        +"onClick=\"display_base_hash()\" value=\""
+        +message[28][language]+"\">");
+        </script>
+      </td>
+      <td id="display_base_hash">
+      </td>
+    </tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr>
+      <td id="PasDeDescente">
+        <script language="javascript">
+          build_longueur_pas_descente();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr>
+      <td id="RemonterDeTant">
+        <script language="javascript">
+          build_remonter_de_tant();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr><td id="NbDerivationsParLigne">
+        <script language="javascript">
+          build_nb_derivations_displayed_per_line();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr><td id="PMaxDescente">
+       <script language="javascript">
+          build_max_descente();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr><td id="ShowTimeOne">
+       <script language="javascript">
+          build_show_time_one();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr><td id="ShowTimeTwo">
+       <script language="javascript">
+          build_show_time_two();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr><td id="ShowTimeThree">
+       <script language="javascript">
+          build_show_time_three();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr><td id="ShowTimeFour">
+       <script language="javascript">
+          build_show_time_four();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr><td id="ShowBranches">
+       <script language="javascript">
+          build_show_branches();
+        </script>
+    </td></tr>
+<!-- --------------------------------------------------------------------- -->
+    <tr></tr>
+<!-- --------------------------------------------------------------------- -->
+  </table>
+</form>
+
+
+</body>
+</html>

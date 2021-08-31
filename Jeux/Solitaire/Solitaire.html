@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Use the DOCTYPE string above if you want :hover to work!! -->
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../../spip-reset.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-typo.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-clear.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-layout.css" type="text/css" />
+
+<link rel="stylesheet" href="../../MiseEnPage.css" type="text/css" />
+
+   <script language="javascript"  src="../../MiseEnPage.js"></script>
+
+
+   <TITLE>Olivier Ramar&eacute; : Le jeu du Solitaire ++</TITLE>
+
+<!-- 
+<SCRIPT LANGUAGE="javascript" data-main="SolitaireMain" SRC="require.js">
+ -->
+<SCRIPT LANGUAGE="javascript" SRC="SolitaireMain.js">
+<!-- -------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------- -->
+</script>
+</head>
+<a name="Top" class="dontmention"></a>
+
+<body class="pas_surlignable page_rubrique"
+      onLoad="language=0;newchoiceplateau(PlateauMaximal);">
+
+<div class="page content wrapper">
+<strong class="h1" id="logo">Olivier Ramar&eacute; : Solitaire ++</strong>
+
+<script language="javascript">
+  BandeauGeneral(5, "../../", 2);
+</script>
+
+<dl id="MenuDroit"> 
+<dt>Navigation</dt>
+<dd><a href="#Top">Retour au d&eacute;but</a></dd>
+<dd><a href="Solitaire-en.html">English version 
+    <img src="../../trucs/drapeau_20UK.jpg" width="40px" class="InTheMiddle"></a></dd>
+</dl>
+
+<applet code='PegSolApplet.class' codebase='java'
+        name='JavaLibrary'
+        ' width='0' height='0' MAYSCRIPT>
+</applet>
+
+<center>
+<img src="../../trucs/construction.gif" width="70px"></fig>
+</center>
+
+<center>
+<blockquote>
+<i>
+Des programmes plus pr&eacute;cis !
+<br/>
+Cette page offre un certain nombre de routine qui permettent d'&eacute;tudier
+des probl&egrave;mes pr&eacute;cis. Dans le temps, ce nombre de routines
+augmentera. Le probl&egrave;me principal &eacute;tant en ce moment de
+convertir mes programmes personnels &eacute;crits en C et notamment GTK en
+Java. La base de pr&eacute;sentation est en javascript et la voici~!
+Cette version est brid&eacute;e : aucun probl&egrave;me de plus de 10
+mouvements ne peut &ecirc;tre r&eacute;solue. Je mettrai en place un
+certificat pour d&eacute;brider l'automate plus tard :)
+</i>
+</blockquote>
+</center>
+<br/>
+<br />
+<div style="width:90%;font-size:16px;padding:5px 5px 5px 5px;font-family:Georgia;background:#A9F5A9;color:blue;">
+<div style="font-variant:small-caps;">
+Il vous faut tout d'abord d&eacute;terminer un plateau, puis demander les
+pr&eacute;calculs. Ce script calculera alors une base de caract&eacute;ristiques
+(en g&eacute;n&eacute;ral au nombre de quatre), ainsi que certains potentiels
+particuli&egrave;rement simples (seize potentiels de type Fibonacci, et
+quatre potentiels de comptage) que j'appelle ici &laquo;&eacute;l&eacute;mentaires&raquo;.
+<br/><br/>
+Vous pouvez alors d&eacute;terminer une position de d&eacute;part et une
+position d'arriv&eacute;e : il s'agit du probl&egrave;me &agrave;
+&eacute;tudier.
+</div>
+<ul>
+  <li><span style="font-variant:small-caps;">&laquo;Montrer les
+  caract&eacute;ristiques&raquo;</span> montre les
+  caract&eacute;ristiques choisies.
+  </li>
+  <li><span style="font-variant:small-caps;">&laquo;Comparer les
+  caract&eacute;ristiques&raquo;</span> donne, pour les
+  caract&eacute;ristiques choisies, la parit&eacute; de la diff&eacute;rence du
+  nombre de pions de la position initiale sur les cases grises et du nombre de
+  pions de la position finale sur les cases grises aussi. Si une de ces
+  diff&eacute;rences est non nulle, le probl&egrave;me est impossible, c'est
+  (une extension) de la th&eacute;orie du docteur Reiss.
+  </li>
+  <li><span style="font-variant:small-caps;">&laquo;Deltas des potentiels
+  &eacute;l&eacute;mentaires&raquo;</span> donne, pour chaque potentiel &eacute;l&eacute;mentaire
+  la diff&eacute;rence du nombre de pions de la position initiale o&ugrave; chaque
+  pion est affect&eacute; du poids d&eacute;termin&eacute; par le
+  potentiel &eacute;l&eacute;mentaire et le m&ecirc;me nombre, mais
+  calcul&eacute; sur la position finale. Si une de ces
+  diff&eacute;rences est strictement n&eacute;gative, le probl&egrave;me est
+  impossible ; c'est
+  une partie de la th&eacute;orie de Beasley - Berlekamp - Conway.
+  </li>
+  <li><span style="font-variant:small-caps;">&laquo;D&eacute;river&raquo;</span>
+  est un petit automate dans une version tr&egrave;s primitive qui essaie de
+  passer de la positon initiale &agrave; la position finale. Il n'est pas
+  recommend&eacute; de l'utiliser si le nombre de coups est sup&eacute;rieur
+  &agrave; douze. Qui plus est le r&eacute;sultat final est donn&eacute;
+  sous une forme quelque peu cryptique en appuyant sur
+    <span style="font-variant:small-caps;">&laquo;Montrer!&raquo;</span>
+    comme une suite de coups : ee+ef->eg
+  signifiant que l'on prend le pion sur la case ee (ligne e, colonne e),
+  celui sur la case ef et qu'on en ajoute un sur la case eg.
+    Le
+    bouton <span style="font-variant:small-caps;">&laquo;PlayIt!&raquo;</span>
+    propose une approche plus graphique !
+  </li>
+  <li>Le <span style="font-variant:small-caps;">&laquo;Tableau de bord&raquo;</span>
+  est destin&eacute; aux gurus !!
+  </li>
+</ul>
+</div>
+
+
+
+<!-- -------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------- -->
+<br />
+<br />
+<br />
+<i><font size=+1>D&eacute;terminer un plateau ici!</font></i>
+<br />
+<br />
+<!-- -------------------------------------------------------------------- --> 
+
+<form id="Plateau_Graphique">
+  <table class="jeu">
+    <tr valign="bottom">
+      <td>
+        <table class="jeu">
+            <SCRIPT LANGUAGE="javascript" type="text/javascript" >
+              <!-- ----------------------------------------------------- -->  
+              <!-- ----------------------------------------------------- -->  
+              for(var x = 0; x < PlateauMaximal.hauteur; x++){
+                document.write("<tr>");
+                for(var y = 0; y < PlateauMaximal.largeur; y++){
+                   if(PlateauMaximal.Table[PlateauMaximal.xytocode(x,y)]!=9){
+                      document.write("<td><input type=\"button\"  id=\"Plateau_Graphique_button_"+lettres[x]+lettres[y]+"\" value=\"    \" onClick=\"window.Plateau_Graphique_select("+x+","+y+",PlateauMaximal)\"></td>");}
+                   else {
+                      document.write("<td></td>");
+                   };};
+                document.write("</tr>");
+              };
+              <!-- ----------------------------------------------------- -->  
+              <!-- ----------------------------------------------------- -->
+            </SCRIPT>
+          </table>
+      </td>
+      <td>
+        <form id="Commandes">
+          <table class="jeu">
+            <tr><td>
+                <select id="Preset" onClick="window.Plateau_Graphique_preset()" 
+                        style="width:210px;font-size:16px;font-style:bold;margin-right:50px;background:#A9F5A9;color:blue;border:none">
+                  Un plateau classique ... 
+     	          <option value="c1">Solitaire anglais</option>
+	              <option value="c2">Solitaire fran&ccedil;ais</option>
+	              <option value="c3">Grand solitaire</option>
+	              <option value="c4">Cour carr&eacute;e</option>
+	              <option value="c5">Le Patio</option>
+	              <option value="c6">Solitaire de Wiegleb</option>
+	              <option value="c7">Les Cellules</option>
+                </select>
+            </td></tr>
+            <tr><td>
+                <input type="button" id="OteColonne"
+                       style="width:250px;background-color:#FFFFCC"
+                       onClick="window.Plateau_Graphique_ote_colonne()"
+                       value="&Ocirc;ter la colonne la plus &agrave droite">
+                </td></tr>
+            <tr><td>
+                <input type="button" id="AjouteColonne" 
+                       style="width:250px;background-color:#FFFFCC"
+                       onClick="window.Plateau_Graphique_ajoute_colonne()"
+                       value="Ajouter la colonne la plus &agrave droite">
+                </td></tr>
+            <tr><td>
+                <input type="button" id="OteLigne" 
+                       style="width:250px;background-color:#FFFFCC"
+                       onClick="window.Plateau_Graphique_ote_ligne()"
+                       value="&Ocirc;ter la ligne du bas">
+                </td></tr>
+            <tr><td>
+                <input type="button" id="AjouteLigne" 
+                        style="width:250px;background-color:#FFFFCC"
+                      onClick="window.Plateau_Graphique_ajoute_ligne()"
+                       value="Ajouter la ligne du bas">
+                </td></tr>
+            <tr><br />&nbsp;</tr>
+            <tr><br />&nbsp;</tr>
+            <tr><br />&nbsp;</tr>
+            <tr><br />&nbsp;</tr>
+            <tr><td>
+                <input type="button" id="VerrouPlateau" 
+                       style="width:250px;background-color:#FFFF99"
+                       onClick="window.Plateau_Graphique_toggle_verrou()"
+                       value="Verouiller le plateau">
+                </td></tr>
+          </table>
+        </form>
+      </td>
+      <td>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <form id="Go">
+          <table align="center" class="jeu">
+            <tr><td>
+              Et quand vous avez fini :
+            </td></tr>
+            <tr><td>
+              <input type="button" id="Precalculs"
+                     style="width:150px;background-color:#CCCC33"
+                     onClick="window.Plateau_Graphique_set_plateau()"
+                     value="Pr&eacute;calculs !">
+            </td></tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="right">
+  <form>
+    <table style="font-variant:small-caps;font-family:Georgia;font-size:12px;font-style:italic;background-color:#FBF5E6" class="jeu">
+      <tr><td id="nbcases">
+      </td></tr>
+      <tr><td id="nbcoups">
+      </td></tr>
+      <tr><td id="nbcarac">
+      </td></tr>
+    </table>
+  </form>
+</div>
+
+<div align="right">
+  <form>
+    <table style="font-variant:small-caps;font-family:Georgia;font-size:12px;font-style:italic" class="jeu">
+      <tr>
+        <td id="display_carac">
+        </td>
+        <td id="Caracteristiques">
+        </td>
+      </tr>
+      <tr>
+        <td id="display_pot_elem">
+        </td>
+        <td id="Pot_Elem">
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td id="ShowTab">
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<!-- ------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------ -->
+<br />
+<br />
+<br /> 
+<i><font size=+1>&Eacute;tude d'un probl&egrave;me ...</font></i>
+
+<br />
+<br />
+<!-- ------------------------------------------------------------------------ -->
+<div>
+
+  <form name="Etude_Graphique">
+    <table class="jeu">
+      <tr>
+        <td>
+          <table id="etude_position_initiale" class="fondgris">
+            <tr><td>
+                <font style="font-weight:bold;font-size:300%">?</font>
+            </td></tr>
+          </table>
+        </td>
+        <td>
+          <table id="commandes_sur_pos_ini">
+            <tr><td id="cleaner"></td></tr>
+            <tr><td id="vide_ini"></td></tr>
+            <tr><td id="plein_ini"></td></tr>
+          </table>
+        </td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <hr style="width:1cm;height:10px;background-color:blue"/>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+          <table id="etude_position_finale" class="fondgris">
+            <tr><td>
+                <font style="font-weight:bold;font-size:300%">?</font>
+            </td></tr>
+          </table>
+        </td>
+        <td>
+          <table id="commandes_sur_pos_fin">
+          </table>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <form id="Informations">
+    <table class="jeu">
+      <tr>
+        <td id="display_derivations">
+        </td>
+        <td id="derivations">
+        </td>
+      </tr>
+      <tr>
+        <td id="play_derivation">
+        </td>
+        <td id="restore_ini">
+        </td>
+        <td id="show_path">
+        </td>
+      </tr>
+    </table>
+  </form>
+  <form id="Actions">
+    <table class="jeu">
+      <tr>
+        <td id="compare_carac">
+        </td>
+        <td id="compared_carac" style="background-color:white">
+        </td>
+      </tr>
+      <tr>
+        <td id="compare_pot_elem">
+        </td>
+        <td id="compared_pot_elem" style="background-color:white">
+        </td>
+      </tr>
+      <tr>
+        <td id="deriver">
+        </td>
+        <td >
+        </td>
+      </tr>
+      <tr>
+        <td id="deriverviajava">
+        </td>
+        <td id="derivedviajava" style='background-color:orange;font-size:18px;'>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+
+</div>
+
+<div align="right" >
+  <div id="derived" align="left" style="background-color:white;font-size:12px;width:13cm">
+  
+  </div>
+</div>
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+
+</div> <!-- .page .content .wrapper -->
+
+<div id="TemporaryWindow">
+</div>
+
+
+</body>
+</html>

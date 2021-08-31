@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+ <head>
+    <script language="javascript">
+      function pausecomp (ms) {
+        ms += new Date().getTime();
+        while (new Date() < ms){}}
+
+      function GoToWork(){
+        pausecomp(1000);
+        document.getElementById("MailBox").innerHTML = "First message! "; 
+        for(var x = 0; x < 3; x++){       
+           pausecomp(1000); 
+           document.getElementById("MailBox").innerHTML += " -- "+x;}}
+
+      function GoToWorkAgain(){
+        pausecomp(1000);
+        document.getElementById("MailBox2").innerHTML = "First message! "; 
+        for(var x = 0; x < 3; x++){       
+           setTimeout(function(){
+                document.getElementById("MailBox2").innerHTML += " -- "+x;},
+                                2)}}
+    </script>
+</head>
+<body >
+
+<form><table>
+    <tr>
+      <td><input type="button" onClick="GoToWork()" value="Go"></td>
+      <td id="MailBox"></td>
+    </tr>
+    <tr>
+      <td><input type="button" onClick="GoToWorkAgain()" value="With
+      setTimeout"></td>
+      <td id="MailBox2"></td>
+    </tr>
+  </table></form>
+
+</body>
+</html>

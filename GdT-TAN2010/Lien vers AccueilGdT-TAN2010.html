@@ -1,0 +1,572 @@
+<html>      <!-- -*- html -*- -->
+
+<head>
+  <title>TANyAH 2010 (Lille)
+</title>
+</head>
+
+
+<body BACKGROUND="http://math.univ-lille1.fr/~ramare/trucs/fond-ens.jpg"
+      text="#000033" link="#BB000" vlink="#BB0000" alink="#EE0000">
+
+
+<!-- ============================================-->
+<!-- Mathematics is being rendered by MathJax    -->
+<!-- ============================================-->
+<!-- See http://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
+<!--==================================================================================-->
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!--Use of $..$ for inlined mathematics: but not, ['\(','\)'] -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$']]}
+});
+</script>
+<script type="text/javascipt" src="http://cdn.mathjax.org/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- ============================================-->
+<!-- End of the inclusion linked to MathJax      -->
+<!-- ============================================-->
+
+<script language="javascript"> LogoTANYA(); </script>
+
+
+<script language="javascript"> BandeauGeneral(3, "../", 0); </script>
+<script language="javascript"> GDTMenu(); </script>
+
+
+<center>
+  <i>Le groupe de travail/ s&eacute;minaire se r&eacute;unit le mardi de 10h30 à 11h30 en salle
+     de s&eacute;minaire du M3, au troisi&egrave;me &eacute;tage.</i>
+</center>
+<p>
+<center>
+  <small>Pour tous renseignements, contacter
+         Herv&eacute; Queffelec
+         <a href=mailto:queffREMOVE-THIS@math.univ-lille1.fr>
+            <img src="http://math.univ-lille1.fr/~ramare/trucs/lettre-noel.jpg"
+         heigth=28 width=52 border=NO align=center>
+         </a>
+         ou 
+         Martine Queffelec
+         <a href=mailto:martineREMOVE-THIS@math.univ-lille1.fr>
+            <img src="http://math.univ-lille1.fr/~ramare/trucs/lettre-noel.jpg"
+         heigth=28 width=52 border=NO align=center>
+         </a>
+         ou 
+         Olivier Ramar&eacute;
+         <a href=mailto:ramareREMOVE-THIS@math.univ-lille1.fr>
+            <img src="http://math.univ-lille1.fr/~ramare/trucs/lettre-noel.jpg"
+         heigth=28 width=52 border=NO align=center>
+         </a>
+  </small>
+</center>
+
+<br><br>
+
+<blockquote>  <!-- Pour ajouter un bord a gauche et a droite -->
+<p>
+  
+  <br><small><i>
+  Ce site sera tenu &agrave; jour, mais pourrait avoir quelques jours
+  de retard pour le titre et/ou les r&eacute;sum&eacute;s des
+  expos&eacute;s.</i> </small>
+</p>
+
+
+
+<br><br>
+<h1>Programme :</h1>
+
+<ul>
+  <li><b>20 Septembre 2010</b>:
+    <i>Tous</i>:
+        R&eacute;union de concertation
+    <br>
+      <font size=-1>
+    </font>
+    <p>R&eacute;union pour d&eacute;cider de ce que nous allons
+    &eacute;tudier, pr&eacute;senter et plus
+    g&eacute;n&eacute;ralement faire cette ann&eacute;e.</p>
+  </li>
+  <li><b>11 Octobre 2010</b>:
+    <i>Martine Queff&eacute;lec</i>:
+        Sur le th&eacute;or&egrave;me ergodique de Wiener et Wintner, I
+    <br>
+      <font size=-1>
+    </font>
+    <p>La th&eacute;orie ergodique intervient naturellement en th&eacute;orie
+    des nombres o&ugrave; elle fournit des r&eacute;sultats statistiques sur les
+    d&eacute;veloppements des nombres r&eacute;els par exemple, l'outil
+    principal &eacute;tant le th&eacute;or&egrave;me ergodique de Birkhoff. On se
+    propose de d&eacute;montrer ici une version pond&eacute;r&eacute;e de ce
+    th&eacute;or&egrave;me, version moins connue, due &agrave; Wiener et Wintner et d'en
+    tirer quelques applications. On commencera par pr&eacute;senter les
+    &eacute;l&eacute;ments de th&eacute;orie spectrale dont on aura besoin pour la suite. </p>
+  </li>
+  <li><b>25 Octobre 2010</b>:
+    <i>Martine Queff&eacute;lec</i>:
+        Sur le th&eacute;or&egrave;me ergodique de Wiener et Wintner, II
+    <br>
+      <font size=-1>
+        Voici les <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2010/Note-7-10-2010.pdf">notes
+        (version du 07/10/2010)</a> attenantes, pour ce qu'elles valent~! 
+    </font>
+    <p>Suite et fin de la d&eacute;monstration, et discussion sur les extensions possibles. </p>
+  </li>
+  <li><b>8 Novembre 2010</b>:
+    <i>Olivier Ramar&eacute;</i>:
+        Une &eacute;galit&eacute; du grand crible pour les entiers sans
+        facteurs carr&eacute;s
+    <br>
+      <font size=-1>
+        
+    </font>
+    <p>
+     <!--HEVEA command line is: /usr/bin/hevea 08-11-2010.tex -->
+<!--CUT DEF section 1 --><P>
+L&#X2019;objet de cet expos&#XE9; est de montrer comment manipuler la suite
+des entiers sans facteurs carr&#XE9;s. Notre pr&#XE9;texte, qui a
+son int&#XE9;r&#XEA;t propre, est de prouver que, pour tout <I>N</I>&#X2265; 2, tout
+&#X3B5;&#X2208;]0,1/6] et tout <I>Q</I>&#X2264; <I>N</I><SUP>1&#X2212;2&#X3B5;</SUP>, nous avons
+</P><TABLE CLASS="display dcenter"><TR VALIGN="middle"><TD CLASS="dcell">
+</TD><TD CLASS="dcell"><TABLE CLASS="display"><TR><TD CLASS="dcell" ALIGN="center">&nbsp;</TD></TR>
+<TR><TD CLASS="dcell" ALIGN="center"><FONT SIZE=6>&#X2211;</FONT></TD></TR>
+<TR><TD CLASS="dcell" ALIGN="center"><I>q</I>&#X2264;&#XA0;<I>Q</I></TD></TR>
+</TABLE></TD><TD CLASS="dcell"><TABLE CLASS="display"><TR><TD CLASS="dcell" ALIGN="center">&nbsp;</TD></TR>
+<TR><TD CLASS="dcell" ALIGN="center"><FONT SIZE=6>&#X2211;</FONT></TD></TR>
+<TR><TD CLASS="dcell" ALIGN="center"><I>a</I>mod<SUP>*</SUP>&#XA0;<I>q</I></TD></TR>
+</TABLE></TD><TD CLASS="dcell">&#X23AA;<BR>
+&#X23AA;<BR>
+&#X23AA;</TD><TD CLASS="dcell">
+</TD><TD CLASS="dcell"><TABLE CLASS="display"><TR><TD CLASS="dcell" ALIGN="center">&nbsp;</TD></TR>
+<TR><TD CLASS="dcell" ALIGN="center"><FONT SIZE=6>&#X2211;</FONT></TD></TR>
+<TR><TD CLASS="dcell" ALIGN="center"><I>n</I>&#X2264;&#XA0;<I>N</I></TD></TR>
+</TABLE></TD><TD CLASS="dcell">&#XB5;<SUP>2</SUP>(<I>n</I>)<I>e</I>(<I>na</I>/<I>q</I>)
+</TD><TD CLASS="dcell">&#X23AA;<BR>
+&#X23AA;<BR>
+&#X23AA;</TD><TD CLASS="dcell"><TABLE CLASS="display"><TR><TD CLASS="dcell" ALIGN="left">2</TD></TR>
+<TR><TD CLASS="dcell" ALIGN="left"><BR>
+<BR>
+</TD></TR>
+<TR><TD CLASS="dcell" ALIGN="left">&nbsp;</TD></TR>
+</TABLE></TD><TD CLASS="dcell">=(6/&#X3C0;<SUP>2</SUP>)<I>N</I><SUP>2</SUP>+<FONT COLOR=red><I>O</I></FONT>(<I>N</I><SUP>2&#X2212;&#X3B5;</SUP>).
+</TD></TR>
+</TABLE><!--CUT END -->
+    </p>
+  </li>
+  <li><b>15 Novembre 2010</b>:
+    <i>Olivier Ramar&eacute;</i>:
+        Une &eacute;galit&eacute; du grand crible pour les entiers sans
+        facteurs carr&eacute;s, suite
+    <br>
+      <font size=-1>
+        
+    </font>
+    <p>
+     <!--CUT END -->
+    </p>
+  </li>
+  <li><b>29 Novembre 2010</b>:
+    <i>Martine Queff&eacute;lec</i>:
+        Le th&eacute;or&egrave;me de Birkhoff
+    <br>
+      <font size=-1>
+        
+    </font>
+    <p>
+    Nous pr&eacute;sentons ici la preuve du th&eacute;or&egrave;me (classique)
+    de Birkhoff, sur la convergence presque partout des moyennes de Cesaro
+    dans un espace dynamique.
+    </p>
+  </li>
+
+  <li><b>16 D&eacute;vembre 2010</b>:
+    <i>Olivier Ramar&eacute;</i>:
+        Une th&eacute;or&egrave;me de Birkhoff sur les entiers sans facteurs carr&eacute;s
+    <br>
+      <font size=-1>
+        
+    </font>
+    <p>
+    Dans le dernier expos&eacute; de cette s&eacute;rie, nous montrerons que la suite
+<center>
+(1/N) sum_{n <= N} mu^2(n) f(T^nx)
+</center><br>
+converge pour presque tout x, vers une fonction de x qui est dans L1, et ce
+    pour f born&eacute;e et dans L1. 
+    </p>
+  </li>
+
+  <li><b>11 Janvier 2011</b>:
+    <i>Olivier Ramar&eacute;</i>:
+        La m&eacute;thode de Balasubramanian pour obtenir une r&eacute;gion sans z&eacute;ros
+    <br>
+      <font size=-1>
+        Voici les <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2010/Note-11-01-2011.pdf">notes
+        (version du 11/01/2011)</a> attenantes, pour ce qu'elles valent~! 
+    </font>
+    <p>
+      Balasubramanian a obtenu en 1976 la r&eacute;gion sans z&eacute;ros
+      classique pour la fonction zeta de Riemann <i>sans</i> comparer les valeurs
+      en 1+it et en 1+2it. Nous pr&eacute;senterons cette m&eacute;thode. 
+
+      <br><br>
+      <H4>Nous discuterons aussi du programme futur !</H4>
+    </p>
+  </li>
+
+  <li><b>18 Janvier 2011</b>:
+    <i>Nathan Ng</i>:
+        Le 4i&egrave;me moment de la fonction zeta de Riemann
+    <br>
+      <font size=-1>
+    </font>
+    <p>
+      Les moments de la fonction zeta sont des moyennes int&eacute;grales de
+      puissance de la fonction zeta.  Ils sont utiles pour obtenir des
+      estimations de la densit&eacute; des z&eacute;ros de zeta.  En 1928,
+      Ingham a prouv&eacute; une formule asymptotique pour le quatri&egrave;me
+      moment de la fonction zeta sur la droite critique.  Dans cet
+      expos&eacute;, nous allons voir une preuve simple de ce
+      th&eacute;or&egrave;me due &agrave; Ramachandra.
+      <br><br>
+    </p>
+  </li>
+
+  <li><b>25 Janvier 2011</b>:
+    <i>Gautami Bhowmik</i>:
+        Fonction g&eacute;n&eacute;ratrice de Goldbach
+    <br>
+      <font size=-1>
+    </font>
+      <!--HEVEA command line is: /usr/bin/hevea 21-01-2011.tex -->
+    <p>
+      Nous consid&#XE9;rons la fonction zeta associ&#XE9;e &#XE0; la
+      fonction de Goldbach
+    </P><TABLE CLASS="display dcenter"><TR VALIGN="middle"><TD CLASS="dcell">
+          <I>G</I>(<I>n</I>)=</TD><TD CLASS="dcell"><TABLE CLASS="display"><TR><TD CLASS="dcell" ALIGN="center">&nbsp;</TD></TR>
+            <TR><TD CLASS="dcell" ALIGN="center"><FONT SIZE=6>&#X2211;</FONT></TD></TR>
+            <TR><TD CLASS="dcell" ALIGN="center"><I>k</I><SUB>1</SUB>+<I>k</I><SUB>2</SUB>=<I>n</I></TD></TR>
+        </TABLE></TD><TD CLASS="dcell">&#X39B;(<I>k</I><SUB>1</SUB>)&#X39B;(<I>k</I><SUB>2</SUB>)
+      </TD></TR>
+    </TABLE><P>
+      et nous &#XE9;tudions plus particuli&#XE8;rement les
+      propri&#XE9;t&#XE9;s asymptotiques de sa fonction sommatoire
+      <I>g</I>(<I>x</I>)=&#X2211;<SUB><I>n</I>&#X2264; <I>x</I></SUB> <I>G</I>(<I>n</I>)
+      sous l&#X2019;hypoth&#XE8;se de Riemann.
+      <br><br>
+    </p>
+  </li>
+
+  <li><b>1er F&eacute;vrier 2011</b>:
+    <i>Gautami Bhowmik</i>:
+        Fonction g&eacute;n&eacute;ratrice de Goldbach, II
+    <br>
+      <font size=-1> Voici <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2010/Goldbach4.2.10.pdf">
+        l'article</a> de r&eacute;f&eacute;rence.
+    </font>
+    </font>
+
+  </li>
+
+  <li><b>8 F&eacute;vrier  2011</b>:
+    <i>Olivier Ramar&eacute;</i>:
+        &Agrave; propos de la taille de L(1,chi)
+    <br>
+      <font size=-1>
+    </font>
+      
+    <p>
+      Nous rappellerons les r&eacute;sultats connus sur les majorations
+      et minorations de L(1,chi), puis nous d&eacute;montrerons rapidement que
+      L(1, chi) >> 2^omega(q) / sqrt(q) pour tout caract&egrave;re r&eacute;el
+      impair chi.
+    </p>
+  </li>
+
+  <li><b>15 F&eacute;vrier  2011</b>:
+    <i>Gautami Bhowmik</i>:
+        Fonction g&eacute;n&eacute;ratrice de Goldbach, III
+    <br>
+      <font size=-1> Voici <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2010/BoundG3.pdf">
+        l'article</a> de r&eacute;f&eacute;rence.
+    </font>
+      
+    <p>
+      Cette fois nous consid&eacute;rons la fonction g&eacute;n&eacute;ratrice
+associ&eacute;e &agrave; la fonction de Goldbach pour r nombres premiers,
+<br>
+$$
+G_r(n) = \sum_{k_1+k_2+ ...k_r=n} \Lambda(k_1) \Lambda(k_2) ... \Lambda(k_r)
+$$
+<br>
+et nous obtenons un r&eacute;sultat Omega de sa fonction sommatoire
+<br>
+$$
+g(x) = \sum_{n \le x} G_r(n)
+$$
+<br>
+sous l'hypoth&egrave;se de Riemann .
+    </p>
+  </li>
+
+  <li><b>1er Mars  2011</b>:
+    <i>Olivier Ramar&eacute;</i>:
+        Th&eacute;or&egrave;mes d'oscillation &agrave; la Landau
+    <br>
+      <font size=-1> Voici <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2010/TheoremeDOscillation-2.pdf">
+        les notes</a>.
+    </font>
+      
+    <p>
+      L'objet de cet expos&eacute; est de pr&eacute;senter deux
+      th&eacute;or&egrave;mes concernant les transform&eacute;es de Mellin,
+      lesquels donnent lieu &agrave; des th&eacute;or&egrave;mes d'oscillation
+      pour les termes restes de fonctions sommatoires de fonctions
+      multiplicatives.  Le premier est le c&eacute;l&egrave;bre
+      th&eacute;or&egrave;me de Landau de 1905 et le second est d&ucirc;
+      &agrave; Kaczorowski &amp; Szydlo en 1997.
+    </p>
+  </li>
+
+  <li><b>8 Mars  2011</b>:
+    <i>Nicole Raulf</i>:
+       La fonction zeta de Dedekind
+    <br>
+      <font size=-1> 
+        
+    </font>
+      
+    <p>
+      Nous allons discuter de la fonction zeta de Dedekind, de
+        son &eacute;quation fonctionnelle et de la formule du nombre de
+        classes.
+    </p>
+  </li>
+
+  <li><b>17 Mars  2011</b>:
+    <i>Nicole Raulf</i>:
+       La fonction zeta de Dedekind -- Suite
+    <br>
+      <font size=-1> 
+        
+    </font>
+      
+    <p>
+      Nous poursuivons l'expos&eacute; pr&eacute;c&eacute;dent et obtiendrons
+      le prolongement de la fonction zeta de Dedekind &agrave; tout le plan
+      complexe, ainsi que son &eacute;quation fonctionnelle &agrave; partir de
+      la repr&eacute;sentation de Hecke en termes de fonctions $\theta$. 
+    </p>
+  </li>
+
+  <li><b>29 Mars  2011</b>:
+    <i>Nathan Ng</i>:
+       Introduction aux fonctions $L$ d'Artin et au th&eacute;or&egrave;me de
+       Chebotarev - I
+    <br>
+      <font size=-1> 
+        
+    </font>
+      
+    <p>
+      Dans ce premier expos&eacute;, je vais expliquer
+      comment definir la substitution de Frobenius
+      (sans la th&eacute;orie des nombres alg&eacute;briques) puis
+      &eacute;noncer le th&eacute;or&egrave;me de Chebotarev.
+    </p>
+  </li>
+
+  <li><b>5 Avril  2011</b>:
+    <i>Nathan Ng</i>:
+       Introduction aux fonctions $L$ d'Artin et au th&eacute;or&egrave;me de
+       Chebotarev - II
+    <br>
+      <font size=-1> 
+        
+    </font>
+      
+    <p>
+      Dans ce second expos&eacute;, je vais donner la d&eacute;finition des
+      fonctions $L$ d'Artin et d&eacute;tailler quelques exemples.
+    </p>
+  </li>
+
+ 
+  <li><b>12 Avril  2011</b>:
+    <i>Nathan Ng</i>:
+       Introduction aux fonctions $L$ d'Artin et au th&eacute;or&egrave;me de
+       Chebotarev - III
+    <p>
+      Dans ce troisi&egrave;me expos&eacute;, je  continue la
+      pr&eacute;sentation des
+      propri&eacute;t&eacute;s des fonctions $L$ d'Artin.
+    </p>
+    <i>Habiba Kadiri</i>:
+       Versions effectives du th&eacute;or&egrave;me de densit&eacute; de Chebotarev (I)
+    <br>
+      <font size=-1> 
+       
+    </font>
+      
+    <p>
+      Nous pr&eacute;sentons ici les r&eacute;sultats de Lagarias et Odlyzko
+        ("Effective versions of the Chebotarev Density theorem") pour la
+        fonction psi associ&eacute;e &agrave; une classe de conjugaison
+        fix&eacute;e dans $\mathrm{Gal}(L/K)$, o&ugrave; $L$ est une extension
+        galoisienne d'un corps de nombre K. Nous comparons ces
+        r&eacute;sultats aux th&eacute;or&egrave;mes des nombres 
+        premiers en progression arithm&eacute;tique, et donnons une esquisse
+        de la structure de la preuve.  
+        <br>
+        Autre r&eacute;f&eacute;rence bibliographique : 
+        "Quelques applications du th&eacute;or&egrave;me de densit&eacute; de
+        Chebotarev", J.P. Serre, 1981.
+    </p>
+  </li>
+
+  <li><b>19 Avril  2011</b>:
+    <i>Habiba Kadiri</i>:
+        Versions effectives du th&eacute;or&egrave;me de densit&eacute; de Chebotarev (II)
+    <br>
+      <font size=-1> 
+        
+    </font>
+      
+    <p>
+      Nous approximons $\psi$ avec une transform&eacute;e de Mellin F de
+      combinaisons lin&eacute;aires de fonctions $L'/L$, o&ugrave; $L$ sont
+      des fonctions d'Artin de $L/K$. Nous montrons qu'en fait nous pouvons
+      prendre des fonctions $L$ de Hecke de $L/E$, o&ugrave; $E$ est une
+      sous-extension ab&eacute;lienne de $L/K$. Nous &eacute;tablissons une
+      formule explicite pour $L'/L$, des bornes dans toutes les r&eacute;gions
+      du plan (proche du p&ocirc;le $s=1$, dans $\Re s<0$, dans la bande critique),
+      et une borne pour la densit&eacute; des z&eacute;ros non triviaux.
+    </p>
+  </li>
+
+  <li><b>26 Avril  2011</b>:
+    <i>Habiba Kadiri</i>:
+       Versions effectives du th&eacute;or&egrave;me de densit&eacute; de Chebotarev (III)
+    <br>
+      <font size=-1> 
+        
+    </font>
+      
+    <p>
+      Nous utilisons l'argument classique en int&eacute;grant le long d'un
+      contour rectangulaire et obtenons une formule explicite pour $\psi$ en
+      fonction des z&eacute;ros des fonctions de Hecke. Nous faisons la preuve
+      dans le cas o&ugrave; HRG est connue. Pour le cas inconditionnel, nous
+      citons les r&eacute;sultats de r&eacute;gions sans z&eacute;ros
+      (prouv&eacute;s par Lagarias &amp; Odlyzko, et par Stark). 
+    </p>
+  </li>
+
+  <li><b>3 Mai  2011</b>:
+    <i>Tout le monde</i>:
+    &Agrave; propos du ph&eacute;nom&egrave;ne de Deuring-Heilbronn
+    <br>
+      <font size=-1> 
+        
+    </font>
+      
+    <p>
+      Il s'agit d'une discussion informelle sur le ph&eacute;nom&egrave;ne  de
+      Deuring Heilbronn, et notamment sur sa mise en place effective via la
+      m&eacute;thode de Tur&aacute;n .
+    </p>
+  </li>
+
+  <li><b>10 Mai  2011</b>:
+    <i>Bruno Martin</i>:
+    Sur le nombre d'entiers premiers &agrave; un entier fix&eacute;
+    <br>
+      <font size=-1> 
+        Voici <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2010/Note-10-05-2011.pdf">
+        les notes</a>
+    </font>
+      
+    <p>
+      Je pr&eacute;senterai et donnerai la d&eacute;monstration d'un
+      r&eacute;sultat d'Erd&ouml;s  datant de 1946 concernant la quantit&eacute;
+$$
+E_k(x)=\sum_{\substack{1\le n\le x\\ (n,k)=1}} 1 -x \frac{\phi(k)}{k}.
+$$ 
+    </p>
+  </li>
+
+  <li><b>17 Mai  2011, 11h05</b>:
+    <i>Bruno Martin</i>:
+    Sur la taille des coefficients des polyn&ocirc;mes cyclotomiques (d'apr&egrave;s un article de Vaughan)
+    <br>
+      <font size=-1> Voici <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2010/Note-17-05-2011-3.pdf">
+        les notes (version du 25/05/2011)</a> 
+    </font>
+      
+    <p>
+      Je pr&eacute;senterai la preuve de Vaughan du r&eacute;sultat (optimal
+      en un sens &agrve; pr&eacute;ciser) suivant : il existe une infinit&eacute;
+      d'entiers $n$ pour lesquels la hauteur du polyn&ocirc;me cyclotomique d'ordre
+      $n$ exc&egrave;de $\exp\Bigl( n^{\log 2/\log_2 n}\Bigr)$. 
+    </p>
+  </li>
+
+
+  <li><b>24 Mai  2011, 11h05</b>:
+    <i>Bruno Martin</i>:
+    Sur la taille des coefficients des polyn&ocirc;mes cyclotomiques, II
+    <br>
+      <font size=-1>
+    </font>
+      
+    <p>
+      
+    </p>
+  </li>
+
+
+</ul>
+
+
+
+<br><br>
+Les ann&eacute;es pr&eacute;c&eacute;dentes :
+<ul>
+  <li> <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2009/AccueilGdT-TAN2009.html">
+        2009/2010</a>.
+  <li> <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2004/AccueilGdT-TAN2004.html">
+        2003/2004</a>.
+  <li> <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2003/AccueilGdT-TAN2003.html">
+        2002/2003</a>.
+  <li> <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN2002/AccueilGdT-TAN2002.html">
+        2001/2002</a>.
+  <li> <a href="http://math.univ-lille1.fr/~ramare/GdT-TAN/programme2.html">
+        1999/2000</a>.
+</ul>
+
+
+<br><br><br>
+
+</blockquote>
+<BLOCKQUOTE CLASS="quote">
+------------------<br><EM>Des parties de ce document ont &#XE9;t&#XE9; traduites de L<sup>A</sup>T<sub>E</sub>X par </EM><A HREF="http://hevea.inria.fr"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A></BLOCKQUOTE>
+<!-- ============================================-->
+<!-- Acknowledgement that we use MathJax          -->
+<!-- ============================================-->
+<div align="right">
+<a href="http://www.mathjax.org/">
+  <img title="Powered by MathJax"
+       src="http://www.mathjax.org/badge.gif"
+       border="0" alt="Powered by MathJax" />
+</a>
+</div>
+<!-- ============================================-->
+<!-- End of Acknowledgement that we use MathJax   -->
+<!-- ============================================-->
+</body>
+
+</html>
+

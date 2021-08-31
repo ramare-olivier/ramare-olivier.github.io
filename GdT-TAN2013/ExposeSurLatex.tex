@@ -1,0 +1,934 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+\setbeamercolor{structure}{fg=CadetBlue }
+% version standard
+%\definecolor{grisbleu}{rgb}{0.50,0.00,0.00}
+\usepackage{beamerthemesplit}
+%\usepackage {eulervm}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[english,francais]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ucs}
+\usepackage{pifont}
+\usecolortheme{rose}
+\newcount\opaqueness
+\usetheme[secheader]{Boadilla}
+\useoutertheme{infolines}
+\useinnertheme[shadow]{rounded}
+%\usecolortheme{dolphin}
+\usepackage[scaled=.70]{helvet}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\DeclareGraphicsExtensions{.jpeg,.pdf}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[upright]{fourier}
+\hypersetup{pdfnewwindow=false}
+\usepackage{verbatim} 
+\usepackage{pst-all}
+\usepackage{pst-plot}
+\usetikzlibrary{shapes}% shapes pour ellipses
+\DeclareGraphicsRule{*}{mps}{*}{} % Figures MetaPost
+\newtheorem{thm}{Th\'eor\`eme :}
+\newtheorem{lem}{Lemme :}
+\newtheorem{defi}{D\'efinition :}
+\newtheorem{cor}{Corollaire :}
+\newtheorem{pre}{Preuve :}
+\newtheorem{pro}{Proposition :}
+\newtheorem{rem}{Remarque :}
+\newcommand{\goes}{\rightarrow}
+\DeclareMathOperator{\Log}{Log} 
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\Li}{Li}
+\newcommand{\mff}{\mathfrak{f}}
+\newcommand{\mfg}{\mathfrak{g}}
+\newcommand{\mfh}{\mathfrak{h}}
+\newcommand{\mfH}{\mathfrak{H}}
+\newcommand{\mcc}{\mathfrak{c}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\C}{\mathfrak{C}}
+\newcommand{\lbar}{\gamma}
+\newcommand{\D}{\mathfrak{D}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\F}{\mathscr{F}}
+\newcommand{\Fcal}{\mathcal{F}}
+\newcommand{\A}{\mathcal{A}}
+%\newcommand{\B}{\mathcal{B}}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\Gg}{\mathscr{G}}
+\newcommand{\Hh}{\mathscr{H}}
+\newcommand{\Kk}{\mathscr{K}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\HHcal}{\mathscr{H}}
+\newcommand{\HHHcal}{\mathscr{H}^{(2)}}
+\newcommand{\gM}{\mathfrak{M}}
+\newcommand{\gH}{\mathfrak{H}}
+\newcommand{\gK}{\mathfrak{K}}
+\newcommand{\gL}{\mathfrak{L}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\myf}{\mathfrak{f}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Acal}{\mathcal{A}}
+\newcommand{\Ocal}{\mathcal{O}}
+\newcommand{\Kcal}{\mathcal{K}}
+\newcommand{\Qcal}{\mathcal{Q}}
+\newcommand{\Ucal}{\mathcal{U}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\vp}{\varphi}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\Z}[1]{\mathbb{Z}/#1\mathbb{Z}}
+\newenvironment{dem}{\medbreak\noindent{\sl Preuve. }}%
+{\hfill $\diamond\diamond\diamond$\par\medbreak}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newenvironment{king}
+{\rule{1ex}{1ex}%
+    \hspace{\stretch{1}}}
+    {\hspace{\stretch{1}}%
+        \rule{1ex}{1ex}}
+\DeclareMathOperator{\pgcd}{pgcd} \DeclareMathOperator{\ppcm}{ppcm}
+%\usetheme{Warsaw}
+%\usetheme{Berlin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Dessins avec Pstricks]{\textbf{\Huge{Dessins avec Pstricks}}}
+\author[Sumaia \textsc{SAAD EDDIN}]{\large{Sumaia \textsc{SAAD EDDIN}}}
+
+\institute{\includegraphics[scale=0.17]{ss}}
+\date{08 Octobre 2013}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\titlepage}
+%\section[Outline]{}
+%\frame{\tableofcontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\tableofcontents}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Qu'est-ce que PSTricks}
+\frame{\frametitle{\textbf{\huge{Qu'est-ce que {\color{red}PSTricks}}?}}
+\begin{itemize}
+\item {\color{red}PSTricks} est une extension de LaTeX qui permet d'utiliser la majeure partie des possibilités de {\color{red}PostScript}.\pause
+\item {\color{red}PSTricks} est un outil de préparation de dessins.\pause
+\item {\color{red}PSTricks} est ensemble de commandes directement utilisables depuis {\color{red}LATEX}.\pause
+\item {\color{red}PSTricks} peut être chargé via 
+\end{itemize}
+ \begin{block}{\textbf{Code source :}}
+ $\backslash usepackage \{pst-all \}$
+ \end{block}
+}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Origine de syst\`eme de coordonnées}
+\frame{\frametitle{\textbf{\huge{Origine de syst\`eme de coordonnées}}}
+L'origine du système de coordonnées utilisés par {\color{red}PSTricks} est le point courant de {\color{red} Latex}
+
+\begin{block}{\textbf{Code source :}}
+Bonjour ${\color{Green}\backslash psline(2,1)}$ 
+\end{block}
+\begin{block}{\textbf{Résultat :}}
+Bonjour \psline(2,1) 
+\end{block}
+\pause
+
+\begin{block}{\textbf{Code source :}}
+Bonjour ${\color{Green}\backslash psline(2,1)}$ ${\color{Green}\backslash psline(1,1)}$
+\end{block}
+\begin{block}{\textbf{Résultat :}}
+Bonjour \psline(2,1) \psline(1,1) 
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Dimensions des objets PSTricks}
+\frame{\frametitle{\textbf{\huge{Dimensions des objets PSTricks}}}
+\begin{block}{\textbf{Remarque }}
+Les objets graphiques créés par {\color{red}PSTricks} n'ont pas de dimension propre, c'est-\`a-dire que {\color{red}LATEX} ne leur réserve aucun
+espace.
+\end{block}
+\pause
+
+\begin{block}{\textbf{Code source :}}
+Bonjour ${\color{Green}\backslash psline(2,1)}$ les amis!
+\end{block}
+\begin{block}{\textbf{Résultat :}}
+Bonjour \psline(2,1) les amis! 
+\end{block}
+
+
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Réserver de l'espace à un dessin}
+\frame{\frametitle{\textbf{\huge{Réserver de l'espace à un dessin}}}
+
+Pour réserver de l'espace à un dessin, on utilisera
+l'environnement {\color{red}\textbf{pspicture}} :
+\begin{block}{\textbf{Syntaxe}}
+$\backslash begin{\color{red}\{pspicture\}} {\color{orange}(x_0 , y_0 )(x_1 , y_1 )}\\
+\backslash end {\color{red}\{pspicture\}}$
+\end{block}
+\pause
+où 
+\begin{itemize}
+\item ${\color{orange}(x_0, y_0)}$ est le point bas gauche.
+\item ${\color{orange}(x_1 , y_1)}$ est le point haut droit
+du rectangle délimitant la figure.
+\end{itemize}
+\pause
+\begin{block}{\textbf{Remarque :}}
+Si $(x_0 , y_0 )$ est omis, il est remplacé par $(0, 0)$.
+\end{block} 
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Exemple}
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+Bonjour\\
+$\backslash begin{\color{red}\{pspicture\}} (0 , 0 )(2.1 , 1.1 )\\
+{\color{Green}\backslash psline}{\color{black}(2,1)}\\
+{\color{black}\backslash end} {\color{red}\{pspicture\}}$\\
+{\color{black}les amis!}
+\end{block}
+\begin{block}{\textbf{Résultat :}}
+Bonjour
+\begin{pspicture}(0,0)(2.1,1.1)
+\psline(2,1)
+\end{pspicture}
+les amis!
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{\Large{Quelle est la différence entre {\color{red}Pspicture} et {\color{red}Pspicture*}}}}
+\begin{block}{\textbf{Code source :}}
+Bonjour\\
+$\backslash begin{\color{red}\{pspicture\}} (0 , 0 )(2.1 , 1.1 )\\
+{\color{Green}\backslash psline}{\color{black}(3,1)}\\
+{\color{black}\backslash end }{\color{red}\{pspicture\}}$\\ {\color{black}les amis!}
+\end{block}
+\begin{block}{\textbf{Résultat :}}
+Bonjour
+\begin{pspicture}(0,0)(2.1,1.1)
+\psline(3,1)
+\end{pspicture}
+les amis!
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{\Large{Quelle est la différence entre {\color{red}Pspicture} et {\color{red}Pspicture*}}}}
+\begin{block}{\textbf{Code source :}}
+Bonjour\\
+$\backslash begin{\color{red}\{pspicture*\}} (0 , 0 )(2.1 , 1.1 )\\
+{\color{Green}{\backslash psline}}{\color{black}(3,1)}\\
+{\color{black}\backslash end} {\color{red}\{pspicture*\}}$\\
+{\color{black}les amis!}
+\end{block}
+\begin{block}{\textbf{Résultat :}}
+Bonjour
+\begin{pspicture*}(0,0)(2.1,1.1)
+\psline(3,1)
+\end{pspicture*}
+les amis!
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Unité}
+\frame{\frametitle{\textbf{\huge{Unité :}}}
+L'unité graphique de {\color{red}Pstricks} est {\color{red}$1$ cm} par défaut. 
+\begin{itemize}
+\item Si on veut la changer, on écrit (par exemple) avant le $\backslash begin{\color{red}\{pspicture \}}$ :\\
+\begin{block}{\textbf{Syntaxe}}
+${\color{Green}\backslash psset}\{{\color{Green}xunit}=2cm,{\color{Green}yunit}=0.5cm\}$
+\end{block}
+\pause
+\item Si les {\color{red}{deux unités graphiques sont les mêmes}}, on peut
+écrire :
+\begin{block}{\textbf{Syntaxe}}
+${\color{Green}\backslash psset}\{ {\color{Green}unit}=2cm\}$
+\end{block}
+\pause
+\item Si {\color{red}{toutes les lignes ont pour épaisseur $2.5$ pt}}, on peut écrire :
+\begin{block}{\textbf{Syntaxe}}
+${\color{Green}\backslash psset}\{{\color{Green}linewidth}=2.5pt\}$
+\end{block}
+\end{itemize}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{}
+\textbf{Les unités utilisable sont :}
+\begin{itemize}
+\item \textbf{millimètre :} mm
+\item \textbf{centimètre :} cm
+\item \textbf{pouce :} in
+\item \textbf{point :} pt (0,35 mm)
+\item \textbf{largeur d'un $m$ :} em
+\item \textbf{hauteur d'un $x$ :} ex
+\end{itemize}
+}
+%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Grilles}
+\frame{\frametitle{\textbf{\huge{Grilles :}}}
+On peut dessiner des grilles. 
+\begin{block}{\textbf{Syntaxe}}
+${\color{Green}\backslash psgrid} (x_1, y_1)(x_2, y_2)$
+\end{block}
+\pause
+\begin{block}{\textbf{Code source :}}
+$\backslash begin{\color{red}\{pspicture\}}(-1,-1)(2,1)\\
+{\color{Green}\backslash psgrid}(-1, -1)(2, 1)\\
+\backslash end{\color{red}\{pspicture\}}$
+\end{block}
+\begin{center}
+\begin{pspicture}(-1,-1)(2,1)
+\psgrid(-1,-1)(2,1)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{}
+\begin{block}{\textbf{Remarque :}}
+Si la commande ${\color{Green}\backslash psgrid}$ est donnée sans argument, elle
+occupe toute la figure. 
+\end{block}
+\pause
+\begin{block}{\textbf{Code source :}}
+$\backslash begin{\color{red}\{pspicture\}}(-1,-1)(2,1)\\
+\backslash {\color{Green}psgrid} \\
+\backslash end{\color{red}\{pspicture\}}$
+\end{block}
+\begin{center}
+\begin{pspicture}(-1,-1)(2,1)
+\psgrid(-1,-1)(2,1)
+\end{pspicture}
+\end{center}
+
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Options}
+\frame{\frametitle{}
+\textbf{Il y a plusieurs options :} 
+\begin{itemize}
+\item {\color{Green}unit}=${\color{orange}unit}$ \qquad par défaut : ${\color{orange}1cm}$\\
+Longueur du côté du carreau unité.
+\pause
+\item {\color{Green}gridwidth}=${\color{orange}dim}$ \qquad par défaut : ${\color{orange}0.8pt}$\\
+Épaisseur des lignes principales
+\pause
+\item {\color{Green}gridcolor}=${\color{orange}color}$ \qquad  par défaut : {\color{orange}black}\\
+Couleur des lignes principales.
+\pause
+\item {\color{Green}griddots}=${\color{orange}num}$ \qquad par défaut : ${\color{orange}0}$ \\
+Si $num > 0$, les lignes sont en pointillés, avec $num$
+points par graduation.
+\pause
+\item {\color{Green}gridlabels}=${\color{orange}dim}$ \qquad  par défaut : ${\color{orange}10pt}$\\
+Taille des nombres utilisés pour graduer.
+\pause
+\item {\color{Green}gridlabelcolor}=${\color{orange}color}$ \qquad par défaut : {\color{orange}black}\\
+Couleur des nombres utilisés pour graduer.
+\pause
+\item {\color{Green}subgriddiv}=${\color{orange}int}$ \qquad  par défaut : ${\color{orange}5}$\\
+Nombre de sous-graduations de la grille.
+\end{itemize}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\frame{\frametitle{}
+\begin{itemize}
+\item {\color{Green}subgridwidth}=${\color{orange}dim}$ \qquad par défaut : ${\color{orange}0.4pt}$\\
+Épaisseur des lignes secondaires.
+\pause
+\item {\color{Green}subgridcolor}=${\color{orange}color}$ \qquad  par défaut : {\color{orange}gray}\\
+Couleur des lignes secondaires.
+\pause
+\item {\color{Green}subgriddots}=${\color{orange}num}$ \qquad par défaut : ${\color{orange}0}$\\
+Comme $griddots$, pour les sous-graduations.
+\end{itemize}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Exemple}
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+\backslash psset\{{\color{Green}gridwidth}= 1pt,{\color{Green} gridcolor}= red, {\color{Green}gridlabels} = 7pt, {\color{Green}gridlabelcolor}= green,\\
+ {\color{Green}subgriddiv}= 3, {\color{Green}subgridwidth}= 0.1pt, {\color{Green}subgridcolor}= orange\} \\
+\backslash begin \{{\color{red}pspicture}\}(3,2)\\
+\backslash psgrid\\
+\backslash end \{{\color{red}pspicture}\}
+\end{block}
+\psset{ gridwidth= 1pt, gridcolor= red, gridlabels = 7pt, gridlabelcolor= green,
+ subgriddiv= 3, subgridwidth= 0.1pt, subgridcolor= orange}
+ \vspace{1cm}
+\begin{pspicture}(3,2)
+\psgrid
+\end{pspicture}
+\hspace{1cm}
+\vspace{1cm}
+\begin{pspicture}(0,0)(3,2)
+\psgrid[griddots=5,gridlabels=0, subgriddiv=1](3,2)
+\end{pspicture}
+\hspace{1cm}
+\vspace{1cm}
+\begin{pspicture}(0,0)(3,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=blue](0,0)(3,2)
+\end{pspicture}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Les Lignes }
+\frame{\frametitle{\textbf{\huge{Les droites :}}}
+\begin{block}{\textbf{Syntaxe}}
+\backslash begin \{{\color{red}pspicture}\}(3,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels=7cm ](0,0)(3,2)\\
+{\color{Green}\backslash psline}{\color{black}(2,1)}\\
+{\color{black}\backslash end} \{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(3,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels = 7pt](0,0)(3,2)
+\psline(2,1)
+\psline(2,1)(1,2)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\frame{\frametitle{\textbf{\huge{Les courbes :}}}
+Pour une courbe passant par des points donnés :
+\begin{block}{\textbf{Code source :}}
+\backslash begin \{{\color{red}pspicture}\}(3,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels = 7pt](0,0)(3,2)\\
+{\color{Green}\backslash pscurve}{\color{black}(0,0)(1,2)(2,1)(3,1)(2,0)(1,0.5)}\\
+{\color{black}\backslash end} \{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(3,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels = 7pt](0,0)(3,2)
+\pscurve(0,0)(1,2)(2,1)(3,1)(2,0)(1,0.5)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+\backslash begin \{{\color{red}pspicture}\}(3,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels = 7pt](0,0)(3,2)\\
+{\color{Green}\backslash pscurve} {\color{blue}[showpoints=true]}{\color{black}(0,0)(1,2)(2,1)(3,1)(2,0)(1,0.5)}\\
+{\color{black}\backslash end} \{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(3,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels = 7pt](0,0)(3,2)
+\pscurve[showpoints=true](0,0)(1,2)(2,1)(3,1)(2,0)(1,0.5)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Options}
+\frame{\frametitle{\textbf{\huge{Options :}}}
+{\color{blue}[opt]} est une option qui permet de modifier les caractéristiques des objets représentés.
+\begin{itemize}
+\item \textbf{\'{E}paisseur :} ${\color{blue}[\text{linewidth=largeur}]}$ modifie l'épaisseur de la ligne.
+\pause
+\item \textbf{Style :} pointillés, $\cdots$ \\
+${\color{blue}[\text{linestyle=dashed}]}$ trace la ligne en traitillés et\\
+${\color{blue}[\text{linestyle=dotted}]}$, en pointillés.
+On peut combiner les deux.
+\item \textbf{ Couleur :} 
+${\color{blue}[\text{linecolor=couleur}]}$ pour colorier l'objet avec une couleur.\\
+${\color{blue}[\text{fillstyle=solid}]}$ permet de remplir l'objet par la couleur sollicitée au moyen de la commande ${\color{blue}[\text{fillcolor=couleur}]}$.
+\pause
+\item \textbf{Points :} On peut changer le style d'affichage des points (par défaut, un disque noir).\\
+Les $10$ styles sont :\\
+{\color{blue}(square, square*, *, triangle, triangle*, diamond, diamond*, pentagon, pentagon*)}.
+\pause
+\item \textbf{Longueur des fl\`eches :} ${\color{blue}[\text{arrowlength=longueur}]}$ permet de changer la longueur des flèches.
+\end{itemize}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{exemple}
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(5,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray,gridlabels = 7pt](0,0)(8,2)\\
+{\color{Green}{\backslash psline}[{\color{blue}linewidth}{\color{black}=2pt,} {\color{blue}linecolor}{\color{black}=orange}]{\color{black}(0,0)(2,1)}}\\
+{\color{Green}\backslash psline}[{\color{blue}linestyle}{\color{black}=dashed,} {\color{blue}linecolor}{\color{black}=blue}]{\color{black}(2,1)(4,0)}\\
+{\color{Green}\backslash psline}[{\color{blue}linestyle}{\color{black}=dotted,} {\color{blue}linecolor}{\color{black}=red}]{\color{black}(4,0)(6,1)}\\
+{\color{Green}\backslash psline}[{\color{blue}linestyle}{\color{black}=dashed,} {\color{blue}dash}{\color{black}=1pt\ 3pt\ 5pt\ 3pt,} {\color{blue}linecolor}{\color{black}=green}]{\color{black}(6,1)(8,0)}\\
+{\color{Green}\backslash psline}[{\color{blue}linecolor}{\color{black}=red}]{\color{black}\{->\}}{\color{black}(8,0)(8,2)}\\
+\backslash end\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(5,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray,gridlabels = 7pt](0,0)(8,2)
+\psline[linewidth=2pt, linecolor=orange](0,0)(2,1)
+\psline[linestyle=dashed, linecolor=blue](2,1)(4,0)
+\psline[linestyle=dotted, linecolor=red](4,0)(6,1)
+\psline[linestyle=dashed, dash=1pt 3pt 5pt 3pt, linecolor=green](6,1)(8,0)
+\psline[linecolor=red]{->}(8,0)(8,2)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{}
+\begin{center}
+\begin{pspicture}(0,0)(6,6)
+\psline[linewidth=2pt]{-*}(1,6)(2,6)
+\psline[linewidth=2pt]{-}(3,6)(4,6)
+\psline[arrowlength=3, linewidth=2pt]{->}(2.5,5)(2.5,3)
+\pscurve[linecolor=red, linewidth=2pt]{|-|}(1,2)(2.5,1)(4,2)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{\huge{Options :}}}
+\begin{itemize}
+\item \textbf{Double trait :} \textbf{{\color{blue}doubleline=true}}
+\item \textbf{Hachures :}
+Pour les figures fermées, on peut définir le type de
+remplissage :
+\begin{itemize}
+\item \textbf{{\color{blue}fillstyle}=valeur} : motif de remplissage, valeur
+pouvant être :
+\begin{itemize}
+\item[-] \textbf{crosshatch} : hachures croisées à $45^\circ$ ,
+\item[-] \textbf{hlines} : hachures simple à  $45^\circ$,
+\item[-] \textbf{vlines} : hachures simple à  $-45^\circ$,
+\item[-] \textbf{solid} : plein :
+\end{itemize}
+\item \textbf{{\color{blue}fillcolor}}=couleur de fond ;
+\item \textbf{{\color{blue}hatchcolor}}=couleur des hachures ;
+\item \textbf{{\color{blue}hatchwidth}}=épaisseur du trait ;
+\item \textbf{{\color{blue}hatchsep}}=espacement des traits ;
+\item \textbf{{\color{blue}hatchangle}}=angle des traits.
+\end{itemize}
+\end{itemize}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Exemple}
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+ \backslash begin\{{\color{red}pspicture}\}(10,2)\\
+ \backslash psgrid[{\color{blue}subgriddiv}=0,{\color{blue}gridcolor}=lightgray,
+{\color{blue}gridlabelcolor}=lightgray](0,0)(10,2)\\
+\backslash pscircle[{\color{blue}fillstyle}=crosshatch, fillcolor=red, {\color{blue}hatchcolor}=green,  {\color{blue}hatchwidth}=1pt](1,1)\{1\}\\
+\backslash pscircle[{\color{blue}fillstyle}=hlines, {\color{blue}fillcolor}=red, {\color{blue}hatchcolor}=red,  {\color{blue}hatchwidth}=1.5pt](3,1)\{1\}\\
+\backslash pscircle[{\color{blue}fillstyle}=vlines, {\color{blue}hatchcolor}=orange,  {\color{blue}hatchwidth}=3pt](5,1)\{1\}\\
+\backslash pscircle[{\color{blue}fillstyle}=solid,{\color{blue}fillcolor}=yellow, {\color{blue}linecolor}=red](7,1)\{1\}\\
+\backslash pscircle[{\color{blue}doubleline}=true,{\color{blue}linecolor}=blue ](9,1)\{1\}\\
+\backslash end\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(10,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(10,2)
+\pscircle[fillstyle=crosshatch, fillcolor=red, hatchcolor=green,  hatchwidth=1pt](1,1){1}
+\pscircle[fillstyle=hlines, fillcolor=red, hatchcolor=red,  hatchwidth=1.5pt](3,1){1}
+\pscircle[fillstyle=vlines, hatchcolor=orange,  hatchwidth=3pt](5,1){1}
+\pscircle[fillstyle=solid,fillcolor=yellow, linecolor=red](7,1){1}
+\pscircle[doubleline=true,linecolor=blue ](9,1){1}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Figues usuelles}
+\frame{\frametitle{\textbf{\huge{Figues usuelles :}}}
+\begin{itemize}
+\item Rectangles, polygones, etc.
+\item Paraboles.
+\item Cercles, disques et ellipses.
+\item Secteurs et arcs.
+\end{itemize}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Rectangles et polygones}
+\frame{\frametitle{\textbf{\huge{Rectangles :}}}
+\begin{block}{\textbf{Syntaxe}}
+\textbf{{\color{Green}\backslash psframe[opt]$(x_0 ,y_0 )(x_1 ,y_1 )$}} permet de tracer un
+rectangle dont dont les extrémités de la diagonale ont
+pour coordonnées $(x_0 ,y_0 )$ et $(x_1 ,y_1 )$.
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(10,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels=7pt](0,0)(10,2)\\
+{\color{Green}\backslash psframe}{\color{black}[linecolor=red](0,0)(3,2)}\\
+{\color{Green}\backslash psframe}{\color{black}[framearc=0.5,linewidth=1.5pt, linecolor=blue](4,0)(7,2)}\\
+{\color{Green}\backslash psframe}{\color{black}[linecolor=green, linewidth=3pt](8,0)(10,2)}\\
+{\color{black}\backslash end} \{{\color{red}pspicture}\}
+\end{block}
+\vspace{1cm}
+\begin{center}
+\begin{pspicture}(10,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels=7pt](0,0)(10,2)
+\psframe[linecolor=red](0,0)(3,2)
+\psframe[framearc=0.5,linewidth=1.5pt, linecolor=blue](4,0)(7,2)
+\psframe[linecolor=green, linewidth=3pt](8,0)(10,2)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{\huge{Polygones :}}}
+\begin{block}{\textbf{Syntaxe}}
+{\color{Green}\backslash pspolygon[opt]$(x_0 ,y_0 )(x_1 ,y_1 )\cdots (x_n, y_n)$} permet de tracer un polygone.
+\end{block}
+\pause 
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(5,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(5,2)\\
+{\color{Green}\backslash pspolygon}{\color{black}[linecolor=red, fillstyle=solid,fillcolor=yellow](0,0)(4,1)(0,2)(1,1)}\\
+{\color{Green}\backslash pspolygon}{\color{black}[fillstyle=solid,fillcolor=green, linecolor=blue,linewidth=1.5pt](3,1)(2,1.25)(1.5,1)(2,0.75)}\\
+\backslash end\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(5,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels=7pt](0,0)(5,2)
+\pspolygon[linecolor=red, fillstyle=solid,fillcolor=yellow](0,0)(4,1)(0,2)(1,1)
+\pspolygon[fillstyle=solid,fillcolor=green, linecolor=blue,linewidth=1.5pt](3,1)(2,1.25)(1.5,1)(2,0.75)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Cercles, disques et ellipses}
+\frame{\frametitle{\textbf{\huge{Cercle, disques et ellipses :}}}
+\begin{block}{\textbf{Syntaxe}}
+\begin{itemize}
+\item {\color{Green}\backslash pscircle[opt]$(x_0 ,y_0 )\{r\}$} permet de tracer le cercle de coordonnées $(x_0, y_0)$ et de rayon $r$.
+\item \textbf{La version étoilée} dessine le disque (en noir).
+\item {\color{Green} \backslash psellipse[opt]$(x_0 ,y_0 )(r_x ,r_y )$} permet de tracer l'ellipse de centre de coordonnées $(x_0 , y_0 )$ et de rayon horizontal $r_x$ et de rayon vertical $r_y$.
+\end{itemize}
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(12,4)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(12,4)\\
+\backslash pscircle(1,1){1}\\
+{\color{Green}\backslash pscircle*}{\color{black}(4,1){1}} \\
+{\color{Green}\backslash psellipse}{\color{black}(7,1)(1.5,1)}\\
+{\color{Green}\backslash psellipse}{\color{black}[fillstyle=vlines, hatchcolor=yellow](10.5,1.5)(1,1.5)}\\
+{\color{black}\backslash end} \{{\color{red}pspicture}\}
+\end{block}
+\begin{pspicture}(12,3)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(12,3)
+\pscircle[linecolor=red, linewidth=2pt](1,1){1}
+\pscircle*(4,1){1}
+\psellipse(7,1)(1.5,1)
+\psellipse[fillstyle=vlines, hatchcolor=yellow](10.5,1.5)(1,1.5)
+\end{pspicture}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Secteurs et arcs}
+\frame{\frametitle{\textbf{\huge{Secteurs :}}}
+\begin{block}{\textbf{Syntaxe}}
+{\color{Green}\backslash pswedge$(x_0 ,y_0 )\{r\}\{a\}\{b\}$} permet de tracer le secteur de centre de coordonnées $(x_0, y_0)$ de rayon $r$ depuis l'angle $a$ jusqu'à l'angle $b$. 
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(4,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(4,2)\\
+{\color{Green}\backslash pswedge}{\color{black}[fillstyle=hlines,hatchangle=135, hatchcolor=red]
+(1,1)\{1\}\{0\}\{120\}}\\
+{\color{Green}\backslash pswedge}{\color{black}[fillstyle=hlines,hatchangle=90, hatchcolor=yellow]
+(1,1)\{1\}\{120\}\{200\}}\\
+{\color{Green}\backslash pswedge}{\color{black}[fillstyle=hlines,hatchangle=0,hatchcolor=green]
+(1,1)\{1\}\{200\}\{260\}}\\
+{\color{Green}\backslash pswedge}{\color{black}[fillstyle=hlines,hatchangle=45,hatchcolor=blue ]
+(1,1)\{1\}\{260\}\{360\}}\\
+{\color{Green}\backslash pswedge}{\color{black}[fillstyle=solid,fillcolor=yellow] (3,0)\{1\}\{0\}\{120\}}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(4,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(4,2)
+\pswedge[fillstyle=hlines,hatchangle=135,hatchcolor=red]
+(1,1){1}{0}{120}
+\pswedge[fillstyle=hlines,hatchangle=90,hatchcolor=yellow]
+(1,1){1}{120}{200}
+\pswedge[fillstyle=hlines,hatchangle=0,hatchcolor=green]
+(1,1){1}{200}{260}
+\pswedge[fillstyle=hlines,hatchangle=45,hatchcolor=blue ]
+(1,1){1}{260}{360}
+\pswedge[fillstyle=solid,fillcolor=yellow] (3,0){1}{0}{120}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{\huge{Arcs :}}}
+\begin{block}{\textbf{Syntaxe}}
+\begin{itemize}
+\item {\color{Green}\backslash psarc$(x_0 ,y_0 )\{r\}\{a\}\{b\}$} permet de tracer l'arc de centre de coordonnées $(x_0, y_0)$ de rayon $r$ depuis l'angle $a$ jusqu'à l'angle $b$. 
+\item Pour dessiner un arc dans le sens indirect, on utilise : {\color{Green}\backslash psarc $(x_0 ,y_0 )\{r\}\{a\}\{b\}$}.
+\end{itemize}
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(10,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(10,2)\\
+{\color{Green}\backslash psarc}{\color{black}[linecolor=red](5,0)\{1\}\{0\}\{120\}}\\
+{\color{Green}\backslash psarc}{\color{black}[linecolor=blue]\{o->\}(3,0)\{1\}\{0\}\{120\}}\\
+{\color{Green}\backslash psarcn}{\color{black}[linecolor=orange]\{->\}(8,1)\{1\}\{0\}\{135\}}\\
+{\color{Green}\backslash pscircle}{\color{black}(1,1)\{1\}}\\
+{\color{Green}\backslash}{\color{black} psline(0,0)(2,2)}\\
+{\color{Green}\backslash pswedge}{\color{black}[fillstyle=solid,fillcolor=yellow]%
+(1,1)\{1\}\{0\}\{45\}}\\
+{\color{Green}\backslash pswedge}{\color{black}[fillstyle=solid,fillcolor=white]%
+(1,1)\{0.5\}\{0\}\{45\}}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(10,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray](0,0)(10,2)
+\psarc[linecolor=red](5,0){1}{0}{120}
+\psarc[linecolor=blue]{o->}(3,0){1}{0}{120}
+\psarcn[linecolor=orange]{->}(8,1){1}{0}{135}
+\pscircle(1,1){1}
+\psline(0,0)(2,2)
+\pswedge[fillstyle=solid,fillcolor=yellow]%
+(1,1){1}{0}{45}
+\pswedge[fillstyle=solid,fillcolor=white]%
+(1,1){0.5}{0}{45}
+\pswedge[fillstyle=hlines,hatchcolor=Green]%
+(1,1){1}{110}{160}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Repère}
+\frame{\frametitle{\textbf{\huge{Un repère :}}}
+\begin{block}{\textbf{Syntaxe}}
+{\color{Green}\backslash psaxes}\{$(x_{\min},y_{\min} )(x_{\max},y_{\max} )$\}\\
+{\color{black}ou} \\
+{\color{Green}\backslash psaxes\{fleche\}}\{$(x_{\min},y_{\min} )(x_{\max},y_{\max} )$\}\\
+\end{block}
+\pause
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(0,0)(3,2)\\
+{\color{Green}\backslash psaxes}\{->\}{\color{black}(0,0)(3,2)}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(0,0)(3,2)
+\psaxes{->}(0,0)(3,2)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{\huge{L'axe « horizontal » seul :}}}
+\begin{block}{\textbf{Syntaxe}}
+Pour avoir ce seul axe {\color{Green}\textbf{xAxis}}, on demande de ne pas afficher l'autre axe \textbf{yAxis} avec la l'instruction {\color{Green}\textbf{yAxis=false}}.
+\end{block}
+\pause
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(0,0)(3,2)\\
+{\color{Green}\backslash psaxes[yAxis=false]}\{->\}{\color{black}(0,0)(3,2)}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(0,0)(3,2)
+\psaxes[yAxis=false]{->}(0,0)(3,2)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{}
+\begin{block}{\textbf{Syntaxe}}
+\begin{itemize}
+\item Si on préfère la virgule, on utilise l'option {\color{blue}\textbf{comma}}.
+\item Les options {\color{blue}$Dx =$ valeur} et {\color{blue}$Dy =$ valeur} permettent de définir le pas entre deux graduations.
+\item Les options {\color{blue}$Ox =$ valeur} et {\color{blue}$Oy =$ valeur} permettent de donner la valeur initiale de graduation.
+\end{itemize}
+\end{block}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(0,0)(8,2)\\
+\backslash psaxes[comma, Oy=1, Dy= 0.7, Dx=2]\{->\}(0,0)(8,2)\\
+\backslash end\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(0,0)(8,2)
+\psaxes[comma, Oy=1, Dy= 0.7, Dx=2]{->}(0,0)(8,2)
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{(Dé)Placer des objets}
+\frame{\frametitle{\textbf{\huge{(Dé)Placer des objets :}}}
+\begin{block}{\textbf{Syntaxe}}
+\backslash rput[{\color{orange} point\ de\  reference}]\{{\color{orange}angle}\}$(x_0 , y_0 )$\{{\color{orange}objet}\}
+\end{block}
+\pause
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(5,2)\\
+\backslash psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels=7pt]\\
+\backslash psframe[linecolor=blue](2,.75)\\
+{\color{Green}\backslash rput}{\color{black}(1,0)\{\backslash psframe[linecolor=red](2,.75)\}}\\
+{\color{Green}\backslash rput}{\color{black}\{45\}(3,0)\{\backslash psframe(2,.75)\}}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(5,2)
+\psgrid[subgriddiv=0,gridcolor=lightgray,
+gridlabelcolor=lightgray, gridlabels=7pt]
+\psframe[linecolor=blue](2,.75)
+\rput(1,0){\psframe[linecolor=red](2,.75)}
+\rput{45}(3,0){\psframe(2,.75)}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Placer des labels}
+\frame{\frametitle{\textbf{\huge{Placer des labels :}}}
+\begin{block}{\textbf{Syntaxe}}
+\backslash uput[{\color{orange} sep. \ label}]\{{\color{orange}angle}\}(x , y )\{{\color{orange}texte}\}
+\end{block}
+\pause
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(5,4)\\
+\backslash pspolygon(1,3)(2,1)(4,2)\\
+{\color{Green}\backslash uput}[ul]{\color{black}(1,3)}\{$A$\} \ \backslash uput[d]{\color{black}(2,1)}\{$B$\} \
+{\color{Green}\backslash uput}{\color{black}[r](4,2)}\{$C$\}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(5,4)
+\pspolygon(1,3)(2,1)(4,2)
+\uput[ul](1,3){$A$}
+\uput[d](2,1){$B$}
+\uput[r](4,2){$C$}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Graphiques et courbes}
+\frame{\frametitle{\textbf{\huge{Graphiques et courbes}}}
+\begin{block}{\textbf{Syntaxe}}
+{\color{blue}\backslash package\{pstricks-add\}}
+\end{block}
+\pause
+\begin{block}{\textbf{Syntaxe}}
+Pour tracer, sur l'intervalle $[x_{\min} ;x_{\max}]$, la courbe
+représentative de la fonction , la commande de base est : {\color{blue}\backslash psplot}[{\color{orange}algebraic=true}]
+\end{block}
+
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Exemple}
+\frame{\frametitle{\textbf{\Large{Courbe d'equation $y=x^2-1.$}}}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(-1,-2)(4,3)\\
+\backslash psset\{algebraic=true\}\\
+\backslash psaxes\{->\}(0,0)(-1,-2)(4,3)\\
+{\color{blue}\backslash psplot}\{-1\}\{2\}\{x^2-1\}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(-2,-1)(4,3)
+\psset{algebraic=true}
+\psaxes{->}(0,0)(-2,-1)(4,3)
+\psplot{-1}{2}{x^2-1}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\frame{\frametitle{\textbf{{Courbe d'equation $y=\cos 2x$}}}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{{\color{red}pspicture}\}(-0.5,-1.5)(8.5,1.5)\\
+\backslash psset\{algebraic=true\}\\
+\backslash psaxes\{->\}(0,0)(0,-1)(7,1)\\
+{\color{blue}\backslash psplot[linecolor=blue]}\{0\}\{7\}\{cos(2*x)\}\\
+{\color{black}\backslash end}\{{\color{red}pspicture}\}
+\end{block}
+\begin{center}
+\begin{pspicture}(-0.5,-1.5)(8.5,1.5)
+\psset{algebraic=true}
+\psaxes{->}(0,0)(0,-1)(7,1)
+\psplot[linecolor=blue]{0}{7}{cos(2*x)}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{{Comment représenter l'intégrale $\int_{-1}^{2} \left((x^2-1)-(x+1)\right)\, dx$}}}
+\begin{block}{\textbf{Code source :}}
+\backslash begin\{pspicture\}(-2.5,-1.5)(3.5,4.5)\\
+\backslash psset\{algebraic=true\}\\
+\backslash psaxes\{->\}(0,0)(-2.5,-1.5)(3.5,4.5)\\
+\backslash psplot\{-1.5\} \{2.25\} \{$x^2-1$\}\\
+\backslash psplot\{-2\}\{3\} \{$x+1$\}\\
+\backslash pscustom[fillstyle=hlines,hatchcolor=blue  ]\{\backslash psplot\{-1\}\{2\}\{$x^2-1$\} \backslash psplot\{-1\}\{2\}\{$x+1$\}\} \\
+\backslash end\{pspicture\}
+\end{block}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{{Comment représenter l'intégrale $\int_{-1}^{2} \left((x^2-1)-(x+1)\right)\, dx$}}}
+\begin{center}
+\begin{pspicture}(-2.5,-1.5)(3.5,4.5)
+\psset{algebraic=true}
+\psaxes{->}(0,0)(-2.5,-1.5)(3.5,4.5)
+\psplot{-1.5}{2.25}{x^2-1}
+\psplot{-2}{3}{x+1}
+\pscustom[fillstyle=hlines, hatchcolor=blue]{%
+\psplot{-1}{2}{x^2-1}\psplot{-1}{2}{x+1}}
+\end{pspicture}
+\end{center}
+}
+
+ % % % % %
+\frame{\frametitle{\textbf{{Exemple : Comment représenter  les courbes des fonctions $x^ne^{-x}$, pour $n\in {0, 1, 2, 3}$ sur $[0, 2]$}}}
+\begin{center}
+\psset{algebraic=true,unit=3cm}
+\begin{pspicture}(0,0)(2,1)
+\psaxes(0,0)(0,0)(2,1)
+\multido{\n=0+1}{4}{%
+\psplot{0.001}{2}{x^\n*2.718^(-x)}}
+\rput(2.3,0.135){{\footnotesize $n=0$}}
+\rput(2.3,0.3){{\footnotesize $n=1$}}
+\rput(2.3,0.6){{\footnotesize $n=2$}}
+\rput(2.3,1.1){{\footnotesize $n=3$}}
+\end{pspicture}
+\end{center}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\frame{\frametitle{\textbf{{Courbe d'equation $y=\sin x /x.$}}}
+\psset{xunit=0.5,yunit=3}
+\begin{pspicture}(-12.5,-0.75)(12.5,1.5)
+   \psaxes[Dx=3,Dy=.5]{->}(0,0)(-12,-.5)(12,1.25)
+   \psplot[linewidth=2pt,plotpoints=500,linecolor=red]%
+      {-12}{12}{ x RadtoDeg sin x div }
+   \uput{0.25}[-75](0,0){$0$}
+   \rput[l](5,1){$\displaystyle x\longmapsto \frac{\sin x}{x}$}
+\end{pspicture}
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\end{document}

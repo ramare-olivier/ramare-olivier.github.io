@@ -1,0 +1,620 @@
+body {
+    font-family: "ff-dagny-web-pro-2","Helvetica Neue",Arial,sans-serif;
+    font-style: normal;
+    font-weight:400;
+    line-height:1.4;
+}
+
+#navbar{z-index:10;}
+#MenuDroit{z-index:5;}
+
+li.paper span.ou {
+    font-style:normal;
+    font-size: 9pt;
+    color:#606060;
+}
+.someword {
+    font-weight: bold; 
+    font-variant: small-caps;
+}
+.titrearticle {
+    font-weight: bold;
+    font-size:11pt;
+}
+.auteurthese {
+    font-weight: bold;
+    font-size:16pt;
+    color:#264409;
+}
+.someword:hover {
+    font-weight : bold; 
+    font-style : italic;
+    font-variant : small-caps;
+    font-size : larger;
+    padding-left:4px;
+    padding-right:4px;
+}
+.somecourse {
+    font-family: "trebuchet ms",arial,tahoma,verdana, serif;
+    font-variant : small-caps;
+    font-size: larger;
+}
+
+.somecourse:hover {
+    font-family: "trebuchet ms",arial,tahoma,verdana, serif;
+    font-weight : bold; 
+    font-style : italic;
+    font-variant : small-caps;
+    font-size : larger;
+    padding-left:4px;
+    padding-right:4px;
+}
+.megaword {
+    color: #669966;
+    font-weight : bold; 
+    font-variant : small-caps;
+}
+.megaword:hover {
+    font-weight : bold; 
+    font-style : italic;
+    font-variant : small-caps;
+    font-size : larger;
+    padding-left:4px;
+    padding-right:4px;
+}
+.somepub {
+           color: #660000;
+}
+
+a.somepub:hover {
+           padding-left:4px;
+           padding-right:4px;
+    font-variant : small-caps;
+}
+
+.somemusic {
+    color: #669966;
+    font-variant : small-caps;
+}
+.somemusic:hover {
+    color: blue;
+    background-color: yellow;
+    font-weight : bold; 
+    font-style : italic;
+    font-variant : small-caps;
+}
+/*---------- tooltip -----------*/
+a.tt{
+    position: relative;
+    z-index: 24;
+    color: #3CA3FF;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.tt span{     
+    position: absolute;
+    visibility: hidden;
+}
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.tt:hover{ 
+    z-index:26; 
+    color: #aaaaff;    
+}
+a.tt:hover span.tooltip{
+    padding: 15px 0 0 0;
+    width: 400px;
+    color: #993300;
+    text-align: center;
+    filter: alpha(opacity:90);
+    KHTMLOpacity: 0.90;
+    MozOpacity: 0.90;
+    opacity: 0.90;
+}
+a.tt:hover span.top{
+    border-right:5px solid blue;
+    border-left:5px solid blue;
+    border-top:5px solid blue;
+    padding-left: 2px;
+    padding-bottom: 5px;
+    display: block;
+    background: #00FFFF;
+    visibility: visible;
+    position: relative;
+    font-family: "Times New Roman", Georgia, serif;
+    font-variant: small-caps;
+    font-weight:bold;
+    text-align: left;
+    text-decoration: underline;
+    right: 120px;
+    bottom: 90px;
+}
+a.tt:hover span.middle{ /* different middle bg for stretch */
+    border-right:5px solid blue;
+    border-left:5px solid blue;
+    background: #00FFFF;
+    visibility: visible;
+    display: block;
+    font-family: Geneva, Arial, Verdana, sans-serif;
+    font-style: oblique;
+    position: relative;
+    right: 120px;
+    bottom: 90px;
+}
+a.tt:hover span.bottom{
+    border-right:5px solid blue;
+    border-left:5px solid blue;
+    border-bottom:5px solid blue;
+    padding-right: 2px;
+    padding-top: 2px;
+    display: block;
+    background: #00FFFF;
+    visibility: visible;
+    position: relative;
+    font-family: "Times New Roman", Georgia, serif;
+    font-variant: small-caps;
+    font-weight:bold;
+    font-style: italic;
+    text-align: right;
+    right: 120px;
+    bottom: 90px;
+}
+
+
+img.InTheMiddletop {
+    margin-top:-80px;
+    vertical-align:middle;
+    text-align:center;
+} 
+img.InTheMiddle {
+    vertical-align:middle;
+    text-align:center;
+} 
+img.InTheTop
+{
+vertical-align:top;
+} 
+
+img.InTheMiddleWithPadding
+{
+padding: 2px 2px 1px 2px;
+background-color: #FFFFFF;
+vertical-align:middle;
+} 
+/*------------------------------*/
+
+#monmenu {
+    font-family: "trebuchet ms",arial,tahoma,verdana, serif;
+    font-size: 110%;
+    font-weight:bold;
+}
+
+div.monmenu dl, 
+div.monmenu dt, 
+div.monmenu dd
+{ margin-bottom:15px; margin-top:5px;padding-bottom:5px; padding-top:5px;
+ }
+
+/*------------------------------*/
+
+#TemporaryWindow{ position:fixed; right: 10px; top:10px; 
+             padding-right:6px; padding-left:6px; padding-top:2px; padding-bottom:0px;
+             font-family: "Times New Roman", Georgia, serif; font-variant: small-caps;}
+
+#MenuDroit dl { margin: 0; padding: 0; }
+#MenuDroit dt { margin: 0; padding: 0; }
+#MenuDroit dd { margin: 0; padding: 0; }
+
+span.math {font-variant: normal;}
+
+#MenuDroit { position:fixed; right: 10px; bottom:10px; border: 1px solid black; 
+             padding-right:6px; padding-left:6px; padding-top:2px; padding-bottom:0px;
+             background-color:#f9f8c2;
+             font-family: "Times New Roman", Georgia, serif; font-variant: small-caps;}
+/* Quand on met une ancre on ne veut pas de couleur: */
+
+a.dontmention { color:black; }
+
+/* Pour completer la ligne 63 de spip-typo.css */
+table.fondgris tbody tr td { background: #EEE; }
+
+table.jeu tbody tr { padding: 0;}
+table.jeu tbody tr td { padding: 0; margin-right:0;}
+
+a.discreet:link {text-decoration:none;color:inherit;}
+a.discreet:visited {text-decoration:none;color:inherit;}
+a.discreet:hover {
+    padding-left:3pt;
+    color:inherit;
+    font-size:18pt;}
+a.discreet:active {text-decoration:none;color:inherit;font-style:oblique;}
+
+.Abstract, .verydiscreet {
+    font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-size:9pt;
+    color:#606060;
+}
+
+.totheright {float:right;width:320px;}
+.totheright-small {float:right;width:100px;}
+.Abstract:hover, .verydiscreet:hover{font-style:oblique;}
+a.Abstract:link, a.verydiscreet:link { text-decoration:none;color:inherit;}
+a.Abstract:visited, a.verydiscreet:visited {text-decoration:none;color:inherit;}
+a.Abstract:hover, a.verydiscreet:hover {
+    padding-left:4pt;
+    font-weight:bold;
+    color:blue;}
+a.Abstract:active, a.verydiscreet:active {text-decoration:none;color:inherit;font-style:oblique;}
+li.paper {
+    border-bottom:2px solid grey;
+    position:relative;
+    cursor:pointer;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background:#EED;
+    color:#264409;
+    margin: .2em 0;
+    overflow: hidden;
+}
+li.preprint {   
+    background:#F3F3D3;
+}
+
+li.paper:hover{
+    margin: 2px 2px 2px 2px;
+}
+
+li.paper span.numero {
+    position:absolute;
+    right:20px;
+    top: 9px;
+}
+li.paper span.numeropreprint {
+    position:absolute;
+    right:20px;
+    top: 9px;
+}
+li.paper span.bidule {
+    position:absolute;
+    right:5px;
+    top: 9px;
+}
+
+li.paper div.resumecontent {
+    display:none;
+    font-style:oblique;
+    font-size: smaller;
+    border:2px solid #DDDDDD;
+    margin-bottom:1em;
+    padding:0.8em;
+    background:none repeat scroll 0 0 #E6EFC2;
+    border-color: #F9F9EE;
+    color:#264409;}
+
+/*------------------------------*/
+ol.cours li {list-style-type: lower-roman;
+             list-style-position: inside;}
+/*------------------------------*/
+
+.eulerentoiledefond {background-image:url(../trucs/euler.jpeg);}
+/*------------------------------*/
+/*---  TME-EMT ---*/
+
+div.half-col{float: left;
+             width:50%;}
+
+div.clear{clear:both;}
+
+ul.tme-emt-main-menu 
+{ /*background-color: #D7D5BA;*/
+  background-color: #E3E9DD;
+  list-style:none; padding-right:15px;margin-right:10px;width:480px;}
+
+li.tme-emt-main-menu-item:hover
+{ 
+  } 
+
+li.tme-emt-main-menu-item
+{ font-variant: small-caps;
+  font-size: 18px; padding-left:5px; padding-top:5px; padding-bottom:5px; 
+  } 
+
+li.tme-emt-main-biblio-item
+{ padding-left:5px; }
+li.tme-emt-main-biblio-item:hover,
+li.tme-emt-main-biblio-item:hover a:link,
+li.tme-emt-main-biblio-item:hover a:visited,
+li.tme-emt-main-biblio-item:hover a:active
+{ background-color: #D7D5BA;
+  color:#681515;
+  } 
+
+li.tme-emt-main-booklet-item,
+li.tme-emt-main-booklet-item a
+{ color:#088A29; padding-left:5px; margin-top:4px; padding-bottom:10px;
+  }
+
+li.tme-emt-main-booklet-item:hover,
+li.tme-emt-main-booklet-item:hover a:link,
+li.tme-emt-main-booklet-item:hover a:active
+{ } 
+
+ul.tme-emt-second-menu
+{ font-size: 16px; background-color: #EEEEDD; margin-left:8px;
+  color:black;font-style:normal;
+  padding-top:5px; padding-bottom:5px; padding-left:5px; padding-right:5px;}
+
+li.tme-emt-second-menu-item a:link,
+li.tme-emt-second-menu-item a:visited,
+li.tme-emt-second-menu-item a:active
+{ font-style:oblique; color: black; 
+  background-color: #EEEEDD; } 
+
+li.tme-emt-second-menu-item:hover,
+li.tme-emt-second-menu-item:hover a:link,
+li.tme-emt-second-menu-item:hover a:visited,
+li.tme-emt-second-menu-item:hover a:active
+					{ color:#9C2525;
+  } 
+
+/*----------------------------------------------------------------*/
+
+span.devteam{ color:#9C2525; }
+span.playcapture{ color:#9C2525; }
+div.explanation{ background-color:#ffdab9; 
+                 padding-left:6px;
+                 padding-right:6px;
+                 margin-left:4px;
+                 margin-right:4px;
+                 border: 1px solid black; }
+
+ol li.roundup {
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+span.thema{background-color:#DBDBB9; display:block; width:100%;
+           font-size:larger;
+    -webkit-border-radius: 8px 8px 0px 0px;
+    -moz-border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
+    box-sizing: border-box;
+    padding-top:10px; padding-bottom:10px;padding-left:10px;}
+
+span.ExceptionalTalk{background-color:#fffccc;
+                     font-size:larger;
+                     font-style : italic;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
+                     font-variant : small-caps;
+                     padding:10px;}
+
+span.UsualTalk{/*background-color:#E5E7B6;*/
+               background-color:#EDEEBB;
+               /*background-color:#F3F5BD;*/
+    -webkit-border-radius: 8px 8px 0px 0px;
+    -moz-border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
+               display:block; 
+               font-size:larger;
+               padding:6px;}
+
+
+/*----------------------------------------------------------------*/
+
+li.bibentry span.authoryear {
+    font-weight : bold; 
+    font-variant : small-caps;
+    font-size : 12pt;
+ }
+
+li.bibentry span.authoryear:hover {
+    color: #FF3333;
+    font-weight : bold; 
+    font-style : italic;
+    font-variant : small-caps;
+    font-size : larger;
+    padding-left : 6px;
+    padding-right : 6px;
+    padding-bottom : 6px;padding-top : 6px;
+ }
+
+li.bibentry span.title {
+    font-size : 12pt;
+    font-style : oblique;}
+li.bibentry span.title:hover {
+    font-size : 14pt;
+    font-style : normal;
+    font-weight : bold; 
+    padding-bottom : 6px;padding-top : 6px;
+}
+li.bibentry span.refs { 
+    font-size : 12pt;
+    font-style : oblique;}
+
+span.FullRef { 
+    }
+
+span.FullRef span.TheRef
+{ 
+  visibility:hidden;
+  position:fixed; top: 10px; left:150px; 
+  border-width:thick;
+  border-style: ridge;
+  border-color: #6F0F0F;
+  padding-right:9px; padding-left:9px; padding-top:6px; padding-bottom:6px;
+  font-family: "Times New Roman", Georgia, serif; 
+  font-size : 14pt;
+  background: white;
+}
+span.FullRef:hover span.TheRef{ 
+    visibility: visible;
+}
+
+span.FullRef span.TheRef span.AuthorYear
+{ 
+  font-size : 15pt;
+  color:#9C2525;
+  }
+
+div.section 
+{ font-size:170%;
+  padding-top:20px; padding-bottom:20px;
+  margin-top:8px;
+  margin-bottom:6px;
+}
+
+blockquote.outer-thm 
+{ padding-right:50px; padding-left:20px;padding-top:6px;
+  }
+div.thm 
+{ font-style: oblique; 
+  background: #FBFBF5;
+  border: 1px solid black; 
+  padding-right:6px; padding-left:10px; padding-top:10px; padding-bottom:10px;}
+span.THM
+{ font-family: "Times New Roman", Georgia, serif; 
+  font-variant:small-caps;
+  font-style: italic;
+  font-weight: bold;
+ }
+
+
+/* div.oddselection { background: #F7F7EC; } */
+div.oddselection { 
+    background: #F4F4E9;
+    padding: 3px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 1px #888888;
+}
+div.oddselectionaround { 
+    background: #F4F4E9;
+    padding: 3px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 1px #888888;           
+ }
+div.oddselectionbord {background: #FAFAEE;  margin-left:50px; }
+
+div.discret { font-style: oblique; color: gray; float:right;}
+
+ul.liens { 
+  padding-left:30px;
+ }
+
+ul.liens li { 
+  list-style-type:circle;
+ }
+
+ul.liens li ul { 
+  padding-left:50px;
+ }
+
+ul.liens li ul li { 
+  list-style-type:square;
+ }
+
+ul.progs { 
+  padding-left:15px;
+ }
+
+ul.progs li { 
+  list-style-type:circle;
+ }
+
+blockquote.enonce { 
+    font-size : 12pt;
+    font-style : oblique;}
+
+ul.inthm { /* for list inside a thm */
+    margin-left:30px;
+    list-style-type:square;
+}
+
+center.titrecours{
+    font-family: "Times New Roman", Georgia, serif;
+    font-variant: small-caps;
+    font-size : 16pt;
+    font-style : oblique;
+    color: #6F3F0B;
+}
+
+span.moinsimportant {
+    font-size : 12pt;
+    color : #999966;
+}
+
+span.kindofblink {
+    font-variant: small-caps;
+    font-style : oblique;
+    font-size : 12pt;
+    color : #997766;
+}
+
+table.simple {
+   border-collapse:collapse;
+   padding:0;
+    margin:0;
+}
+table.simple th {
+   padding:0;
+    margin:0;
+}
+table.simple td {
+   padding:0;
+   text-align:left;
+   vertical-align:top;
+    margin:0;
+}
+
+table.simple thead {
+    padding:0;
+    margin:0;
+}
+
+table.simple tbody {
+    padding:0;
+    margin:0;
+}
+
+table.simple tfoot {
+    padding:0;
+    margin:0;
+}
+span.cv a:link, span.cv a:visited {
+   font-variant: small-caps;
+   color: #52527a;
+   font-style : oblique;
+   font-size : 12pt;
+}
+
+span.cv a:focus, span.cv a:active, span.cv a:hover {
+   background-color:#EDEEBB;
+   color: #52527a;
+   font-variant: small-caps;
+   font-style : normal;
+   font-size : 14pt;
+   padding:2px;
+}
+
+div.uswenous {
+    margin-left:5%;
+    width:180pt; 
+}
+
+
+span.rotate {
+    display:inline-block;
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+
+}
+
+

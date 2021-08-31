@@ -1,0 +1,213 @@
+body {
+    background-color: #FFCC66;
+    color: #000033;
+}
+
+
+.someword {
+    font-weight : bold; 
+    font-variant : small-caps;
+}
+
+.someword:hover {
+    color: #FF3333;
+    font-weight : bold; 
+    font-style : italic;
+    font-variant : small-caps;
+    font-size : larger;
+}
+
+.somemusic {
+    color: #669966;
+    font-variant : small-caps;
+}
+.somemusic:hover {
+    color: blue;
+    background-color: yellow;
+    font-weight : bold; 
+    font-style : italic;
+    font-variant : small-caps;
+}
+
+
+a:visited { color: #BB0000;}
+a:active { color: #357EC7;}
+
+/*---------- tooltip -----------*/
+a.tt{
+    position: relative;
+    z-index: 24;
+    color: #3CA3FF;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.tt span{     
+    position: absolute;
+    visibility: hidden;
+}
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.tt:hover{ 
+    z-index:26; 
+    color: #aaaaff;    
+}
+a.tt:hover span.tooltip{
+    padding: 15px 0 0 0;
+    width: 400px;
+    color: #993300;
+    text-align: center;
+    filter: alpha(opacity:90);
+    KHTMLOpacity: 0.90;
+    MozOpacity: 0.90;
+    opacity: 0.90;
+}
+a.tt:hover span.top{
+    border-right:5px solid blue;
+    border-left:5px solid blue;
+    border-top:5px solid blue;
+    padding-left: 2px;
+    padding-bottom: 5px;
+    display: block;
+    background: #00FFFF;
+    visibility: visible;
+    position: relative;
+    font-family: "Times New Roman", Georgia, serif;
+    font-variant: small-caps;
+    font-weight:bold;
+    text-align: left;
+    text-decoration: underline;
+    right: 100px;
+    bottom: 100px;
+}
+a.tt:hover span.middle{ /* different middle bg for stretch */
+    border-right:5px solid blue;
+    border-left:5px solid blue;
+    background: #00FFFF;
+    visibility: visible;
+    display: block;
+    font-family: Geneva, Arial, Verdana, sans-serif;
+    font-style: oblique;
+    position: relative;
+    right: 100px;
+    bottom: 100px;
+}
+a.tt:hover span.bottom{
+    border-right:5px solid blue;
+    border-left:5px solid blue;
+    border-bottom:5px solid blue;
+    padding-right: 2px;
+    padding-top: 2px;
+    display: block;
+    background: #00FFFF;
+    visibility: visible;
+    position: relative;
+    font-family: "Times New Roman", Georgia, serif;
+    font-variant: small-caps;
+    font-weight:bold;
+    font-style: italic;
+    text-align: right;
+    right: 100px;
+    bottom: 100px;
+}
+
+/* Menu */
+
+#monmenu {
+    font-family: "trebuchet ms",arial,tahoma,verdana, serif;
+    font-size: 150%;
+    font-weight:bold;
+}
+
+#monmenu ul ul {
+    display: none; 
+    position: absolute; 
+    left: 164px; 
+    top: -1px; 
+    margin:0px; 
+    padding: 0px; 
+    border: 2px solid black;
+}
+#monmenu ul.niveau1 li.top {
+    list-style-type: none; 
+    position: relative; 
+    width: 400px; 
+    background-color: #66FFFF; 
+    padding: 2px; 
+    margin: 0px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+#monmenu ul.niveau1 li.middle {
+    list-style-type: none; 
+    position: relative; 
+    width: 400px; 
+    background-color: #66FFFF; 
+    padding: 2px; 
+    margin: 0px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+#monmenu ul.niveau1 li.bottom {
+    list-style-type: none; 
+    position: relative; 
+    width: 400px; 
+    background-color: #66FFFF; 
+    padding: 2px; 
+    margin: 0px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#monmenu li {
+    list-style-type: none; 
+    position: relative; 
+    width: 400px; 
+    background-color: #66FFFF; 
+    padding: 2px; 
+    margin: 0px;
+    border-left: 2px solid black;
+    /* border-right is not required but shows ??? Anyway, it works ... !! */
+}
+#monmenu li:hover, #monmenu li.sfhover {
+    background-color: #FFFF70;
+    z-index: 25;
+}
+#monmenu li a {text-decoration:none;}
+#monmenu ul ul.niveau2court {
+    display: none; 
+    position: absolute; 
+    left: 370px; 
+    top: -1px; 
+    margin:0px; 
+    padding: 0px; 
+    border: 2px solid black;
+}
+#monmenu ul ul.niveau2court li {
+    list-style-type: none; 
+    position: relative; 
+    width: 90px; 
+    background-color: #66FFFF; 
+    padding: 2px; 
+    margin: 0px;}
+#monmenu ul ul.niveau2court li:hover, #monmenu ul ul.niveau2court li.sfhover {
+    background-color: #FFFF70;
+    z-index: 25;
+}
+#monmenu li:hover ul.niveau2, #monmenu li:hover ul.niveau2court, 
+#monmenu li li:hover ul.niveau3, #monmenu li.sfhover ul.niveau2, 
+#monmenu li.sfhover ul.niveau2court, #monmenu li li.sfhover ul.niveau3 {display: block}
+
+#monmenu li:hover ul.niveau2, #monmenu li.sfhover ul.niveau2 {
+    z-index:26;}
+
+#monmenu li:hover ul.niveau3, #monmenu li.sfhover ul.niveau3 {
+    z-index:27;}
+
+#monmenu li.plus {
+    background-position:right; 
+    background-image: url(illustrations/fdroite.gif); 
+    background-repeat: no-repeat; 
+    border-bottom: 1px solid #B0B0B0;
+}
+

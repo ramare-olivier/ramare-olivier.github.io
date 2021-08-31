@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<!-- Use the DOCTYPE string above if you want :hover to work!! -->
+
+<HTML>
+
+<HEAD>
+   <TITLE>Un petit livre</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Description" CONTENT="Un texte destiné à un public large
+   concernant la répartition des nombres premiers. Nous y détaillons
+   notamment l'utilisation d'une forme bilinéaire pour étudier les nombres
+   premiers."> 
+    <META NAME="keywords" CONTENT="nombre premier, fonction de Moebius,
+	vulgarisation, mathématiques">
+    <link  rel="stylesheet" href="../style.css" type="text/css" /> 
+ 
+</HEAD>
+<BODY BACKGROUND="http://math.univ-lille1.fr/~ramare/trucs/fond-ens.jpg"
+TEXT="#000033" 
+LINK="#BB000" 
+VLINK="#BB0000" 
+ALINK="#EE0000">
+
+<?php
+  include 'compteur.php3';
+?>
+
+
+<CENTER>
+  <H2>Variations modernes sur la suite des nombres premiers </H2>
+  <H3>De la densit&eacute; des sin(p) lorsque p parcourt l'ensemble des
+  nombres premiers.</H3>
+</CENTER>
+
+<BR>
+<BR>
+<blockquote>
+<FONT SIZE=+1><i> Voici donc un livre, plut&ocirc;t destin&eacute;
+&agrave; un public de non sp&eacute;cialistes.  On y traite de nombres
+premiers, et surtout d'une m&eacute;thode introduite par la math&eacute;maticien
+russe I. M. Vinogradov vers 1937 pour les &eacute;tudier. Depuis, cette
+m&eacute;thode a bien s&ucirc;r &eacute;t&eacute; am&eacute;lior&eacute;e de
+nombreuses fa&ccedil;ons, mais l'id&eacute;e centrale reste de loin la plus
+forte. Disons ici rapidement que cette approche introduit des formes
+bilin&eacute;aires. Et bien que centrale et maintenant ancienne, cette id&eacute;e  ne semble pas
+avoir r&eacute;ussi &agrave; sortir du cercle des sp&eacute;cialistes. 
+Aussi les ouvrages de vulgarisation s'en tiennent-ils souvent au
+th&eacute;or&egrave;me des nombres premiers, arrivent parfois &agrave;
+atteindre leur r&eacute;partition dans les progressions arithm&eacute;tiques,
+tournent d&eacute;finitivement bride devant les m&eacute;thodes de cribles
+et n'imaginent m&ecirc;me pas la suite. Ce sc&eacute;nario (que je caricature
+un peu, je l'admets !)  comporte
+bien des variantes, et une option usuelle consiste &agrave; abandonner les
+nombres premiers pour se tourner vers la fonction zeta de Riemann.
+Ici, nous ne traiterons ni du th&eacute;or&egrave;me des nombres premiers, ni
+de la fonction zeta, deux outils dont nous n'aurons nul besoin
+<font size=-1>(non que la fonction zeta n'ait pas
+d'int&eacute;r&ecirc;t ! L'erreur est de confondre son &eacute;tude avec celle
+des nombres premiers)<font size=+1>,
+mais nous aborderons
+directement la technique de Vinogradov, avec un l&eacute;ger d&eacute;tour
+vers la th&eacute;orie du crible. 
+Le pr&eacute;texte de notre voyage est de
+montrer que la suite des sin(p) o&ugrave; p est un nombre premier est belle et
+bien dense dans l'intervalle [-1,1], toute comme celle des sin(n). Le texte en
+lui-m&ecirc;me peut se d&eacute;couper pour se mettre sous la forme d'un
+probl&egrave;me, c'&eacute;tait d'ailleurs l'id&eacute;e initiale, mais le
+r&eacute;sultat &eacute;tait un peu trop long.
+<br>
+<br>
+<BLINK>Troisi&egrave;me &eacute;dition</BLINK> : 
+Je me suis finalement dirig&eacute; vers une &eacute;dition ... sans maison
+d'&eacute;dition ! La premi&egrave;re version de ce livre posait des
+probl&egrave;me d'impression et de mise en page. Ne sont donc plus propos&eacute;es que
+trois versions.
+ Le projet global consiste bien s&ucirc;r en l'obtention de livres qui ne
+soient ni des livres de cours dans leur format didactique habituel, ni des
+livres destin&eacute;s &agrave; des chercheurs, mais des promenades de haut
+niveau dans un format aussi peu imposant que possible. Parce qu'il me semble
+important de sortir les connaissances des laboratoires, et d'en garantir un
+acc&egrave;s aussi facile que possible.
+<br>
+<br><CENTER>
+Par cons&eacute;quent n'h&eacute;sitez pas &agrave; copier et imprimer ce
+texte, ou, sous forme plus lapidaire :  Pillez, pillez, il en
+restera toujours quelque chose :-) ! 
+<br>
+</font></CENTER>
+</blockquote>
+<br>
+<br>
+<br>
+
+
+Les formats :
+<ul>
+<li> Une 
+<a href="http://www.lulu.com/content/607716">
+version livre<a>, dont la couverture est affich&eacute;e ci-dessous, pour 7
+euros 80 livraison (lente) incluse, ou 13 euros 
+90 en livraison plus rapide. Je me suis allou&eacute; des royalties de 1 euro (&agrave; peu
+pr&egrave;s) pour avoir un retour. Vous pouvez d'ailleurs vous contenter de
+t&eacute;l&eacute;charger le livre pour 1 euro 60, ce qui me semble
+raisonnable.
+<br>
+
+<li> Et
+     voici <a href="petitlivrea4.pdf">
+	 une version en A4</a>. Ce texte n'est pas pr&eacute;vu pour cela, ce
+	 qui rend toute la mise en page inadapt&eacute;e. Mais c'est tout &agrave;
+     fait lisible ! 
+	 </li>
+
+<li>
+  Jean-Fran&ccedil;ois Burnol a &eacute;crit une version plus
+  &eacute;l&eacute;mentaire du chapitre 5 et que <a href="triangleFourier.pdf">voici</a>.
+  Elle est maintenant incorpor&eacute;e au dit chapitre, mais cette version est un peu plus
+  d&eacute;taill&eacute;e.
+</li>
+</ul>
+</i>
+<br>
+
+
+Que faire si vous aimez ce livre ou la d&eacute;marche ?
+<ul>
+<li> R&eacute;f&eacute;rencez cette page et faites-la conna&icirc;tre.</li>
+<li> &Eacute;crivez en un autre. </li>
+<li> Traduisez-le ! (oui, je r&ecirc;ve un peu ...)</li>
+<li> Dites-le moi !</li>
+</ul>
+</i>
+<br>
+<blockquote><FONT SIZE=+1><i>
+Les commentaires/remarques et autres corrections sont bienvenus ! 
+Utilisez mon adresse professionnelle (elle se trouve sur la page 
+http://math.univ-lille1.fr/~ramare/) et s'il vous plait, faites
+d&eacute;buter le sujet par "[PetitLivre]".
+</i></font></blockquote>
+<center>
+<br>
+<blockquote><FONT SIZE=+1>
+J'allais oublier les remerciements, apr&egrave;s deux ans d'essais
+infructueux ! X. Caruso, N. Garnier et L.G. Vidiani m'ont
+&eacute;t&eacute; des lecteurs / relecteurs / commentateurs
+pr&eacute;cieux ! 
+</font></blockquote>
+</center>
+<center>
+<H3>
+Qu'en est-il des droits divers et vari&eacute;s ? A priori je garde mon droit
+d'auteur, l'utilisation personnelle est illimit&eacute;e mais toute
+utilisation commerciale demande qu'on en discute.
+</H3>
+</center>
+<br>
+
+<br>
+<FONT SIZE=+1>
+<H3>Errata / todo et autres peut-mieux-faire :
+</H3></font>
+<ul>
+<li> Les versions dat&eacute;es 2004 contiennent une erreur
+<b>&eacute;norme</b> qui a surv&eacute;cu aux diverses passes et je
+remercie grandement St&eacute;phane Louboutin de me l'avoir signal&eacute;e !! Il
+y est
+dit, mais &eacute;videmment pas utilis&eacute;, que la s&eacute;rie de Fourier d'une
+fonction p&eacute;riodique continue convergeait toujours vers cette fonction
+!!! Ce qui est notoirement faux, archi faux et un probl&egrave;me classique en
+analyse harmonique. Certaines conditions simples suffisent pour
+assurer la convergence de la s&eacute;rie de Fourier d'une fonction
+f int&eacute;grable:
+
+<ul>
+<li> si au point x, f admet une limite &agrave; droite f(x+) et une limite
+&agrave; gauche f(x-), et si il existe aussi des d&eacute;riv&eacute;es &agrave; droite et &agrave; gauche,alors la s&eacute;rie de Fourier au point x converge vers
+(f(x+)+f(x-))/2</li>
+
+<li> si on sait que les +- n-i&egrave;me coefficients de Fourier sont O(1/|n|)
+(c'est le cas si f est de variation totale born&eacute;e sur [-pi,+pi])  alors
+la s&eacute;rie de Fourier de f au point x converge
+vers (f(x+)+f(x-))/2 d&egrave;s que f(x+) et f(x-) existent</li>
+
+<li> si la s&eacute;rie des coefficients de Fourier est sommable
+(\sum |c_n| < \infty) alors f est presque partout &eacute;gale
+&agrave; la somme de sa s&eacute;rie de Fourier (qui est une fonction
+continue, donc en fait f est &eacute;gale &agrave; cette fonction,
+sauf qu'on l'a peut-&ecirc;tre modifi&eacute;e sur un ensemble de
+mesure nulle)</li>
+</ul>
+
+
+ En particulier 1. ou 2. montrent qu'il y a convergence
+en tout point lorsque f est de classe C1 par morceaux. Si
+f est C1 par morceaux ET continue, on peut par ailleurs montrer
+a priori que la s&eacute;rie de ses coefficients de Fourier est sommable.
+
+
+</li>
+<li> Les versions dat&eacute;es du premier janvier 2007 contiennent une erreur
+au lemme 3.5 : la majoration est 2 fois celle indiqu&eacute;e. Le
+th&eacute;or&egrave;me 3.5 demande alors une v&eacute;rification &agrave;
+partir de 76000 et non 19000 mais cela ne pose pas plus de probl&egrave;mes.
+</li>
+</ul>
+
+
+<br>
+<br>
+<CENTER><a
+href="http://www.lulu.com/content/607716" width=1cm heigth=1cm></a>
+</center>
+
+
+<table width="100%" border="0">  
+  <tbody>
+    <tr>
+      <td valign="top" align="left">
+        
+<!-- Begin Motigo Webstats counter code -->
+<a id="mws4632751" href="http://webstats.motigo.com/">
+<img width="80" height="15" border="0" alt="Free counter and web stats" src="http://m1.webstats.motigo.com/n80x15.gif?id=AEawrw2sS6AAnEkqgpdl2iXqlwdw" /></a>
+<script src="http://m1.webstats.motigo.com/c.js?id=4632751&i=3" type="text/javascript"></script>
+<!-- End Motigo Webstats counter code -->
+
+
+      
+      <td valign="top" align="left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br><br>
+<div align="right">
+<i>
+Cette page a &eacute;t&eacute; visit&eacute;e 
+<?php
+  get_compteur("../php/compteurs/compteur-livre.txt");
+?>
+ fois depuis le 25 octobre 2010.
+<!--
+<?php echo date("F j, Y, g:i a", filemtime("PetitLivre.html")); ?> :)
+-->
+</i>
+</div>
+
+</HTML>

@@ -1,0 +1,25 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'booklet.blg'
+[161] biber:322> INFO - === jeu. nov.  5, 2020, 11:15:50
+[252] Biber.pm:415> INFO - Reading 'booklet.bcf'
+[370] Biber.pm:943> INFO - Found 209 citekeys in bib section 0
+[386] Biber.pm:4256> INFO - Processing section 0
+[421] Utils.pm:75> INFO - Globbing data source 'Local-TME-EMT.bib'
+[421] Utils.pm:91> INFO - Globbed data source 'Local-TME-EMT.bib' to Local-TME-EMT.bib
+[484] Biber.pm:4455> INFO - Looking for bibtex format file 'Local-TME-EMT.bib' for section 0
+[545] bibtex.pm:1653> INFO - LaTeX decoding ...
+[2852] bibtex.pm:1471> INFO - Found BibTeX data source 'Local-TME-EMT.bib'
+[2874] Utils.pm:293> WARN - Duplicate entry key: 'Bordelles*05' in file 'Local-TME-EMT.bib', skipping ...
+[2931] Utils.pm:293> WARN - Possible typo (case mismatch) between datasource keys: 'Kotnik-vandeLune*04' and 'Kotnik-VanDeLune*04' in file 'Local-TME-EMT.bib'
+[3238] Utils.pm:293> WARN - year field '1983/84' in entry 'Dress*83' is not an integer - this will probably not sort properly.
+[3994] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_OFhj/Local-TME-EMT.bib_10348.utf8, line 17268, warning: 435 characters of junk seen at toplevel
+[3994] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_OFhj/Local-TME-EMT.bib_10348.utf8, line 18793, warning: 24 characters of junk seen at toplevel
+[3994] Utils.pm:293> WARN - I didn't find a database entry for 'Kadiri-Faber*18' (section 0)
+[3994] Utils.pm:293> WARN - I didn't find a database entry for 'Kadiri*18' (section 0)
+[4227] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[4227] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[4227] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[4227] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[4445] bbl.pm:652> INFO - Writing 'booklet.bbl' with encoding 'UTF-8'
+[4523] bbl.pm:755> INFO - Output to booklet.bbl
+[4523] Biber.pm:128> INFO - WARNINGS: 7

@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Use the DOCTYPE string above if you want :hover to work!! -->
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" href="../../spip-reset.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-typo.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-clear.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-layout.css" type="text/css" />
+
+<link rel="stylesheet" href="../../MiseEnPage.css" type="text/css" />
+
+   <script language="javascript"  src="../../MiseEnPage.js"></script>
+   <script language="javascript"  src="../Biblio/RefToCitation.js"></script>
+   <script language="javascript"  src="../Biblio/RefToAuthorYear.js"></script>
+   <script language="javascript"  src="../Biblio/RefToYear.js"></script>
+   <script language="javascript"  src="../Biblio/RefToTitle.js"></script>
+   <script language="javascript"  src="../Biblio/RefToRefs.js"></script>
+<!-- ============================================-->
+<!-- Mathematics is being rendered by MathJax    -->
+<!-- ============================================-->
+<!-- See http://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
+<!--==================================================================================-->
+<!--Use of $..$ for inlined mathematics: but not, ['\(','\)'] -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: [ "input/TeX", "output/HTML-CSS" ],
+  extensions: [ "tex2jax.js", "jsMath2jax.js" ],
+  tex2jax: {inlineMath: [['$','$']]},
+  TeX: {
+          extensions: ["AMSmath.js", "AMSsymbols.js"],
+        }
+});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- ============================================-->
+<!-- End of the inclusion linked to MathJax      -->
+<!-- ============================================-->
+
+   <TITLE>Olivier Ramar&eacute;</TITLE>
+</HEAD>
+
+<a name="Top" class="dontmention"></a>
+
+<BODY class="pas_surlignable page_rubrique">
+<div class="page content wrapper">
+<strong class="h1" id="logo">The TME-EMT project</span></strong>
+
+<!-- =============================================================== -->
+<!-- ====== COHERENT with Architecture_TME_EMT of MiseEnPage.js ==== -->
+<!-- =============================================================== -->
+<script language="javascript">
+  <!-- Le premier 2 ci-dessous designe "Le projet TME-EMT" -->
+  <!-- Le premier 6 ci-dessous designe le sujet, ici "Applications" -->
+  <!-- Le premier 0 ci-dessous designe le titre,
+  ici "Explicit bounds for class numbers" -->
+  BandeauGeneral(2, "../../", [6, 0]);
+</script>
+<!-- =============================================================== -->
+	
+<dl id="MenuDroit"> 
+<dt>Navigation</dt>
+<dd><a href="#Top">Back to top</a></dd>
+<dd><a href="#Size">Size</a></dd>
+<dd><a href="#Zero">Zeroes and zero-free regions</a></dd>
+</dl>
+
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- ========   CONTENT OF THE PAPER =============================== -->
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<center>
+<hr width="100%" size=10 color="blue">
+</center>
+<center>
+<font size=+2>
+  <!-- =====  TITLE HERE ========= -->
+  Bounds on the Dedekind zeta-function
+</font>
+</center>
+<center>
+<hr width="30%" size=3 color="lightblue">
+</center>
+
+<!-- =====  CONTENT HERE ========= -->
+
+<!-- ========================================================= -->
+<!-- =====  YOU CAN ALSO ADD ANCHORS  ======================== --> 
+<!-- =====  AND MODIFY THE SIDE MENU MenuDroit ABOVE ========= --> 
+<!-- ========================================================= -->
+
+<br>
+<div class="section">
+  <a name="Size"></a>
+1. Size 
+</div>
+
+The knowledge on the general Dedekind zeta is less accomplished than
+the one of the Riemann zeta-function, but we still have interesting
+results. Theorem 4 of <script language="javascript">bibref("Rademacher*59")</script> gives
+the convexity bound. See also section 4.1 of
+<script language="javascript">bibref("Trudgian*13")</script>.
+<br>
+<span class="THM">Theorem (1959)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+In the strip $-\eta\le \sigma\le 1+\eta$, $0 < \eta\le 1/2$, the Dedekind zeta
+function $\zeta_K(s)$ belonging to the algebraic number field $K$ of degree
+$n$ and discriminant $d$ satisfies the inequality
+$$
+|\zeta_K(s)|\le 3 \left|\frac{1+s}{1-s}\right|
+\left(\frac{|d||1+s|}{2\pi}\right)^{\frac{1+\eta-\sigma}{2}}
+\zeta(1+\eta)^n.
+$$
+</div></blockquote>
+
+<br>
+<!-- =============================================================== -->
+<div class="section">
+  <a name="Zero"></a>
+2. Zeroes and zero-free regions 
+</div>
+
+We denote by $N_K(T)$ the number of zeros $\rho$, of the Dedekind
+zeta-function of the number field $K$ of degree $n$ and discriminant
+$d_K$,
+zeros that lie in the critical strip
+$0 < \Re \rho = \sigma < 1$ and which verify $|\Im \rho|\le T$.
+After a first result in
+<script language="javascript">bibref("Kadiri-Ng*12")</script>,
+we find in
+<script language="javascript">bibref("Trudgian*14-1")</script>
+The following result.
+
+<br>
+<span class="THM">Theorem (1959)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+ When $T\ge1$, we have
+ $N_K(T)=\frac{T}{\pi}\log\Bigl(|d_K|\Big(\frac{T}{2\pi e}\Bigr)^n\Bigr)
+ +O^*\bigl(0.316(\log |d_K|+n\log T)+5.872 n+3.655\bigr)$ .
+</div></blockquote>
+
+In
+<script language="javascript">bibref("Kadiri*12")</script>,
+a zero-free region is proved.
+
+<br>
+<span class="THM">Theorem (1959)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+Let $K$ be a number field of degree $n$ over $\mathbb{Q}$ and of
+discriminant $d \ge 2$. The associated Dedekind
+zeta-function $\zeta_K$ has no zeros in the region
+$$
+\sigma\ge 1-\frac{1}{12.55\log|d_K|+n(9.69\log|t|+3.03)+58.63}, |t|\ge1
+$$
+and at most one zero in the region
+$$
+\sigma\ge 1-\frac{1}{12.74\log|d_K|}, |t|\le 1.
+$$
+The exceptional zero, if it exists, is simple and real.
+</div></blockquote>
+See
+<script language="javascript">bibref("Ahn-Kwon*14")</script>
+for a result for Hecke $L$-series.
+
+
+
+
+
+<center>
+<hr width="100%" size=10 color="blue">
+</center>
+<div align="right" class="lastmodif">
+  <!-- ==== LAST UPDATE HERE ======= -->
+  Last updated on February 14th, 2017, by Olivier Ramar&eacute;
+</div>
+
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- ====================  END       =============================== -->
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+
+</div><!-- .page .content .wrapper -->
+
+<div id="TemporaryWindow">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Use the DOCTYPE string above if you want :hover to work!! -->
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" href="../../spip-reset.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-typo.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-clear.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-layout.css" type="text/css" />
+
+<link rel="stylesheet" href="../../MiseEnPage.css" type="text/css" />
+
+   <script language="javascript"  src="../../MiseEnPage.js"></script>
+   <script language="javascript"  src="../Biblio/RefToCitation.js"></script>
+   <script language="javascript"  src="../Biblio/RefToAuthorYear.js"></script>
+   <script language="javascript"  src="../Biblio/RefToYear.js"></script>
+   <script language="javascript"  src="../Biblio/RefToTitle.js"></script>
+   <script language="javascript"  src="../Biblio/RefToRefs.js"></script>
+<!-- ============================================-->
+<!-- Mathematics is being rendered by MathJax    -->
+<!-- ============================================-->
+<!-- See http://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
+<!--==================================================================================-->
+<!--Use of $..$ for inlined mathematics: but not, ['\(','\)'] -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: [ "input/TeX", "output/HTML-CSS" ],
+  extensions: [ "tex2jax.js", "jsMath2jax.js" ],
+  tex2jax: {inlineMath: [['$','$']]},
+  TeX: {
+          extensions: ["AMSmath.js", "AMSsymbols.js"],
+        }
+});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- ============================================-->
+<!-- End of the inclusion linked to MathJax      -->
+<!-- ============================================-->
+
+   <TITLE>Olivier Ramar&eacute;</TITLE>
+</HEAD>
+
+<a name="Top" class="dontmention"></a>
+
+<BODY class="pas_surlignable page_rubrique">
+<div class="page content wrapper">
+<strong class="h1" id="logo">The TME-EMT project</span></strong>
+
+<!-- =============================================================== -->
+<!-- ====== COHERENT with Architecture_TME_EMT of MiseEnPage.js ==== -->
+<!-- =============================================================== -->
+<script language="javascript">
+  BandeauGeneral(2, "../../", [2, 1]);
+</script>
+<!-- =============================================================== -->
+ 
+	
+<dl id="MenuDroit"> 
+<dt>Navigation</dt>
+<dd><a href="#Top">Back to top</a></dd>
+<dd><a href="#emt">Explicit truncated  Perron formula</a></dd>
+<dd><a href="#lsb">L${}^2$-means</a></dd>
+</dl>
+
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- ========   CONTENT OF THE PAPER =============================== -->
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<center>
+<hr width="100%" size=10 color="blue">
+</center>
+<center>
+<font size=+2>
+   <!-- =====  TITLE HERE ========= -->
+  Tools on Mellin transforms
+</font>
+</center>
+<center>
+<hr width="30%" size=3 color="lightblue">
+</center>
+
+<!-- =====  CONTENT HERE ========= -->
+
+
+<div class="section">
+  <a name="emt"></a>
+1. Explicit truncated Perron formula
+</div>
+
+
+Here is Theorem 7.1 of
+<script type="text/javascript">bibref("Ramare*07a")</script>.
+
+<br>
+<span class="THM">Theorem (2007)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+Let $F(z)=\sum_{n}a_n/n^z$ be a Dirichlet series that converges absolutely
+  for $\Re z>\kappa_a$, and let $\kappa>0$ be strictly larger than 
+  $\kappa_a$. For $x\ge1$ and $T\ge1$, we have
+$$
+    \sum_{n\le x}a_n
+    =\frac1{2i\pi}\int_{\kappa-iT}^{\kappa+iT}F(z)\frac{x^zdz}z
+    +\mathcal{O}^*\left(
+      \int_{1/T}^{\infty}
+      \sum_{|\log(x/n)|\le u}\frac{|a_n|}{n^\kappa}
+      \frac{2x^\kappa du}{T u^2}
+    \right).
+$$
+</div></blockquote>
+See
+<script type="text/javascript">bibref("Ramare*14-6")</script>
+for different versions.
+
+
+
+
+<div class="section">
+  <a name="lsb"></a>
+2. L${}^2$-means
+</div>
+
+We start with a majorant principle taken for instance from
+<script type="text/javascript">bibref("Montgomery*94")</script>,
+chapter 7, Theorem 3.
+<br>
+<span class="THM">Theorem</span>
+<blockquote class="outer-thm">
+<div class="thm">
+  Let $\lambda_1,\cdots,\lambda_N$ be $N$ real numbers, and suppose
+  that $|a_n|\le A_n$ for all $n$. Then
+  $$
+  \int_{-T}^T\Bigl|\sum_{1\le n\le N}a_n e(\lambda_n t)\Bigr|^2dt
+  \le 3
+  \int_{-T}^T\Bigl|\sum_{1\le n\le N}A_n e(\lambda_n t)\Bigr|^2dt
+  $$.
+</div></blockquote>
+The constant 3 has furthermore been shown to be optimal in
+<script type="text/javascript">bibref("Logan*88")</script>
+where the reader will find an intensive discussion on this
+question. The next lower estimate is also proved there:
+<br>
+<span class="THM">Theorem</span>
+<blockquote class="outer-thm">
+<div class="thm">
+  Let $\lambda_1,\cdots,\lambda_N$ be $N$ be real numbers, and suppose
+  that $a_n\ge 0$ for all $n$. Then
+  $$
+  \int_{-T}^T\Bigl|\sum_{1\le n\le N}a_n e(\lambda_n t)\Bigr|^2dt
+  \ge
+  T \sum_{n\le N}a_n^2.
+  $$.
+</div></blockquote>
+
+
+We follow the idea of Corollary 3 of
+<script type="text/javascript">bibref("Montgomery-Vaughan*74")</script>
+but rely on
+<script type="text/javascript">bibref("Preissmann*84")</script> to get the following.
+<br>
+<span class="THM">Theorem (2013)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+  Let $(a_n)_{n\ge1}$ be a series of complex numbers that are such that
+  $\sum_n n|a_n|^2 < \infty$ and $\sum_n |a_n| < \infty$. We have, for $T\ge0$,
+  \begin{equation*}
+    \int_0^T\Bigl|
+    \sum_{n\ge1} a_{n}n^{it}
+    \Bigr|^{2}dt = 
+    \sum_{n\le N}|a_n|^2 \bigl(T+\mathcal{O}^*(2\pi c_0(n+1))\bigr),
+  \end{equation*}
+  where $c_0=\sqrt{1+\frac23\sqrt{\frac{6}{5}}}$. Moreover, when $a_n$ is
+  real-valued, the constant $2\pi c_0$ may be reduced to $\pi c_0$.
+</div></blockquote>
+This is Lemma 6.2 from <script type="text/javascript">bibref("Ramare*13d")</script>.
+
+<br>
+Corollary 6.3 and 6.4 of
+<script type="text/javascript">bibref("Ramare*13d")</script>
+contain explicit versions of a Theorem of
+<script type="text/javascript">bibref("Gallagher*70")</script>
+
+<br>
+<span class="THM">Theorem (2013)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+  Let $(a_n)_{n\ge1}$ be a series of complex numbers that are such that
+  $\sum_n n|a_n|^2 < \infty$ and $\sum_n |a_n| < \infty$. We have, for $T\ge0$,
+  $$
+  \sum_{q\le Q}\frac{q}{\varphi(q)}
+  \sum_{\substack{\chi\mod q,\\ \text{$\chi$ primitive}}}
+  \int_{-T}^T
+    \biggl|\sum_{n}a_n \chi(n)n^{it}\biggr|^2dt
+    \le
+    7
+    \sum_{n}|a_n|^2( n+ Q^2\max(T, 3) ).
+  $$
+</div></blockquote>
+
+<br>
+<span class="THM">Theorem (2013)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+  Let $(a_n)_{n\ge1}$ be a series of complex numbers that are such that
+  $\sum_n n|a_n|^2 < \infty$ and $\sum_n |a_n| < \infty$. We have, for $T\ge0$,
+  $$
+  \sum_{q\le Q}\frac{q}{\varphi(q)}
+  \sum_{\substack{\chi\mod q,\\ \text{$\chi$ primitive}}}
+  \int_{-T}^T
+    \biggl|\sum_{n}a_n \chi(n)n^{it}\biggr|^2dt
+    \le
+    \sum_{n}|a_n|^2( 43n+ \tfrac{33}{8} Q^2\max(T, 70) ).
+  $$
+</div></blockquote>
+
+
+<!-- ========================================================= -->
+<!-- =====  YOU CAN ALSO ADD ANCHORS  ======================== --> 
+<!-- =====  AND MODIFY THE SIDE MENU MenuDroit ABOVE ========= --> 
+<!-- ========================================================= -->
+
+
+
+<center>
+<hr width="100%" size=10 color="blue">
+</center>
+<div align="right" class="lastmodif">
+  <!-- ==== LAST UPDATE HERE ======= -->
+  Last updated on July 14th, 2013, by Olivier Ramar&eacute;
+</div>
+
+
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+<!-- ====================  END       =============================== -->
+<!-- =============================================================== -->
+<!-- =============================================================== -->
+
+</div><!-- .page .content .wrapper -->
+
+<div id="TemporaryWindow">
+</div>
+
+</body>
+</html>

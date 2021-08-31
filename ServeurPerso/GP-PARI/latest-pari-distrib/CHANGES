@@ -1,0 +1,207 @@
+This package was developped alongside PARI/GP for a long time.
+The original pari.el was written by Annette Hoffman.
+Modified by David Carlisle (JANET: carlisle AT uk.ac.man.cs).
+Modified by Karim Belabas (belabas AT math.u-bordeaux.fr) for gp 2.xxx.
+Modified by Olivier Ramare (ramare AT math.univ-lille1.fr).
+
+=================
+FROM 2.55 to 2.99
+=================
+This version and later ones require the emacs version being at least 20.3.
+If you are used to versions of pari.el below 2.55, we recommend you read
+the README file since a good number of changes have occured in between. Rapidly
+speaking, fontification is now handled by font-lock and not by hilit19, and
+customization is systematically handle by 'custom.el, so that a good number
+of switches have disappeared from the menu-bar. Indentation has appeared
+with the neat effect that C-i/TAB is *not* completion anymore. Completion
+is got by M-i. Variables are now in "positive form", so that for instance
+gp-no-fontify has been replaced by gp-fontifyp and so on. Also, the
+distribution consists of 9 files:
+   pari.el                : the main engine
+   pari-messages.el       : messages
+   pari-fontification.el  : support for font-lock
+   pari-help.el           : info and help, browser
+   pari-completion.el     : completion
+   sli-tools.el           : indentation, version 0.97 or higher
+   pari-conf.el.in        : system dependent variables
+   Makefile               : makefile to create pari-conf.el and to install
+                            the distribution
+   pariemacs-<version>.txt: this file
+=================
+FROM 3.00 to 3.02
+=================
+From version 3.00 onwards, further simplifications have occurred:
+completion files have been completely removed, since the dabbrev mode
+(dynamical abbreviation mode) of emacs is largely enough (M-/ will
+complete word according to words found around, or in nearby buffers).
+
+Also, the distribution consists now of 12 files:
+   pari.el                : the main engine
+   pari-messages.el       : messages
+   pari-fontification.el  : support for font-lock
+   pari-help.el           : info and help, browser
+   pari-completion.el     : completion
+   pari-history.el        : history for shell commands
+   sli-tools.el           : indentation, version 0.97 or higher
+   pari-conf.el.in        : system dependent variables
+   Makefile               : makefile to create pari-conf.el and to install
+                            the distribution
+   CHANGES                : this file
+   README                 : notes on how to install and use pariemacs;
+                            essentially what was called pariemacs-<version>.txt.
+   COPYING                : the GPL license that applies.
+=================
+FROM 3.02 to 3.03
+=================
+-- Modification of the prompt pattern to take care of break>.
+-- Initial message explaining somewhat the levels of loading.
+-- Enhanced the messages concerning lisp functions by adding more
+   cross-references.
+-- Removed call to obsolete font-lock-unset-default in
+   gp-make-gp-prompt-pattern.
+-- Added a menu-item to get the prompt to display time in format (HH:MM:SS).
+-- Face gp-error used in override mode.
+-- font-lock-keywords-only set to t in gp-mode.
+-- Removed gp-search-forward-string-delimiter in pari-fontification.el.
+-- The character " in plots does not trigger string coloring in next
+   input.
+-- Parisize increased to 10000 in process Simple PARI (for the browser).
+-- A menu-bar item has been added to toggle the timer.
+-- The word "time = " for the timer gets a special colour.
+-- The prompt is in bold face now.
+-- Buffers linked with the browser are now invisible because
+   their names gp-functions-list-buffer-name, 
+               gp-function-description-buffer-name,
+               gp-browser-buffer-name, gp-pari-simple-buffer-name
+   now starts with a space.
+-- Copyright extended to 2009 :)
+-- Loading a file when last line is not empty does not lead to a mistake.
+-- Prompt can be changed even if the last line contains something.
+-- Global variables should be at beginning of line.
+-- All words in ?11 except 
+   read readvec install 
+   are now colored in gp-control-statement.
+-- Modified the regexp used in gp-find-global-var for speed
+   (it could be so slow on long buffer that it stopped everything).
+=================
+FROM 3.03 to 3.04
+=================
+-- Changed read-input to read-string
+-- Changed last-command-char to last-command-event
+=================
+FROM 3.04 to 3.05
+=================
+-- Introduced gp-flag-for-emacs in pari-conf.el
+=================
+FROM 3.05 to 3.06
+=================
+-- Corrected gp-flag-for-emacs in pari-conf.el
+=================
+FROM 3.06 to 3.07
+=================
+-- gp-ask-name-wisely corrected to accomodate emacs 24 
+   (thanks to Kevin Ryde, Australia)
+=================
+FROM 3.07 to 3.08
+=================
+-- gp-script-mode makes 'block-comment-start and 'block-comment-end buffer local.
+-- function-variable gp-indent-comment defined and set to 'indent-for-tab-command.
+-- gp-call-gphelp has been modified. 
+   Uses an explicit temporary buffer is OUTPUT-BUFFER is nil.
+   Uses 'ansi-color-apply-on-region to remove special characters otherwise.
+-- gp-get-apropos handles "\_" properly (i.e. corrects gphelp output)
+   Buffer *gp-menu* is now marked unmodified.
+-- gp-get-man-entry
+   Buffer *gp-help* is now marked unmodified.
+-- gp-meta-cmd-general is corrected: auxiliary prompt is not stiffened anymore.
+   As a result Help on Subject "euler" (instead of "Euler") works:)
+-- gp-make-browser uses gp-flag-for-emacs now.
+-- gp-make-browser kills the process and sits awhile
+   before killing the buffer to avoid questions. This does not mend fully
+   the problem though.
+-- gp-browser-buffer-name is now declared not modified at beginning.
+-- Adding of gp-environment in gp-script-mode (modif de gp-init-menu-bar)
+-- Modified some messages concerning the menu-bar and the order in the menu-bar.
+-- Maid and Tutor are introduced in the menu-bar. 
+   C-c C-c is switched to gp-maid and not to gp-run-gp as previously.
+   This is consistant with the emacs-ism that says C-c C-c should be 
+   "Do the next obvious thing". First try to close expressions, and second 
+   evaluate the file. README file modified accordingly.
+-- Kevin Ryde: setting default for gp-flag-for-emacs to "--emacs"
+   (supported from version 2.3.0 onwards and not 2.6.1 as previously claimed).
+-- Kevin Ryde: help string of gp-auto-indent modified.
+=================
+FROM 3.07 to 3.10
+=================
+-- Makefile modified, target pari.el-in was missing.
+-- Introduction of pari.cfg-default, corresponding modification of README.
+-- Modification of maketarfile.sh.
+-- Kevin Ryde: comment-start-skip modified in gp-learn-sexp.
+-- Kevin Ryde: gp-call-gphelp quotes its `word' parameter with
+   shell-quote-argument, instead of just "" double quotes.
+-- KR & OR: gp-send-region cleans last-line like gp-run-gp.
+-- KR: gp-indent-level declared safe-local-variable.
+-- KR: gp-make-prompt-pattern uses with-temp-buffer instead of messing with
+   the *Messages* buffer.
+-- KR: gp-locked-yank now propagates a C-u argument to the normal yank.
+-- KR & OR: 'pari-mode-hook 'gp-script-mode-hook moved down in gp-script-mode,
+   though they are not yet the last thing as should be.
+   run-hooks changed to run-mode-hooks for 'gp-script-mode-hook in
+   gp-script-mode. These changes have not been made in pari-mode.
+-- KR: gp-get-shell uses process-environment and setenv for portability.
+-- KR: gp-stiffen-prompt and gp-background modified to get a cleaner signal
+   when gp refuses to start.
+-- OR: adding of forvec, parfor, sum, parsum, apply, parapply, forsubgroup,
+   forstep, fordiv, forell to gp-structures.
+   Adding of parapply, parfor, parsum, sum, vector, parvector,
+   to pari-fontification-keywords.
+-- OR: gp-maid "works" when inside comments and has been generally reworked.
+-- OR: off-topic: sli-get-safe-[back/for]ward-place has now 
+   match-[beginning/end] and not -- the reverse!
+-- OR: gp-locked-mouse-2 incorporates the possibility of a universal argument.
+=================
+FROM 3.10 to 3.11
+=================
+-- KR: tick boxes for trust/lock-mode.
+-- KR: improvement of the menu items : dynamical setting of the language.
+   A bug remains: the last item appears in both languages.
+-- KR: removed (run-hooks 'gp-script-mode-hook) in 'gp-script-mode.
+-- KR: In gp-mode and gp-script-mode, case-fold-search is now left as
+   the global default rather than set to case sensitive in gp-learn-sexp.
+-- KR: overriding, in gp-script-mode, comment-start-skip to adapt 
+   to emacs 24 `fill-paragraph-handle-comment'
+-- OR: new boolean customizable control gp-binds-Clp. When t, 
+   pari-fontification.el binds C-l to gp-update-fontification in both gp-mode
+   and gp-script-mode.
+=================
+FROM 3.11 to 3.12
+=================
+-- KR: Removal of the bug concerning the dynamical setting of the language.
+-- KR: gp-displace-input now uses delete-region rather than kill-region.
+-- KR: gp-match-string does not extend a string across non gp-mode-output text
+   (by stopping at next-single-property-change).
+   Introduction of gp-search-doublequote.
+-- KR: Previously, in gp-mode, if point is at the very start of the line, then
+   the various commands which copy a command with gp-copy-input get the previous  
+   command, not the one on the line which point is on. This is now corrected.
+=================
+FROM 3.12 to 3.13
+=================
+-- KR: gphelp 2.7.4 prints backslashed underscores from its "gphelp -k" which 
+   get into gp-c-array for completions of M-? etc. Cleaned in gp-cpl-init.
+-- KR: In gp-mode or gp-script-mode, M-? `gp-get-man-entry' only offers a word
+       at point if point is at the end of the word. Now it works also when
+       point is at the start or in the middle.
+       New function gp-word-or-operator-at-point,
+       New constant gp-word-or-operator-at-point-regexp,
+       gp-ask-name-wisely changes from macro to function.
+-- KR: When an M-? gp-get-man-entry is given an unknown name, it adds it to
+       gp-c-array for future completions, but it should not. Cleaned.
+=================
+FROM 3.13 to 3.14
+=================
+-- KR: Use PTY for gp-browser-help and add a set-process-query-on-exit-flag 
+       specification.
+-- KR: Option -utf8 for gphelp is supported.
+       New function gp-call-gphelp-olist is a rename of gp-call-gphelp since
+       the meaning of the last option changes (list of args rather than a string).

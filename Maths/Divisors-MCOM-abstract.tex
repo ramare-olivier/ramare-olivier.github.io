@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts} %\usepackage{eufrak} included
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs} % pour \mathscr{A} etc
+
+\usepackage{latexsym}%utilisation des symboles LaTeX pour avoir un beau LaTeX
+\usepackage{enumerate}
+\usepackage[french]{babel}
+\def\Mscr{\mathcal{M}}
+
+\usepackage{epsfig}
+%\usepackage{eepic}
+%\usepackage[dvips]{graphics}
+%\usepackage{floatflt}
+%\setlength{\hoffset}{-0.6cm}
+%\setlength{\oddsidemargin}{0cm}
+%\setlength{\textwidth}{16.8cm}
+%\setlength{\marginparsep}{0cm}
+%\setlength{\marginparwidth}{0.5cm}
+
+%\usepackage[active,displaymath,textmath,sections,auctex]{preview}
+
+%\setlength{\voffset}{0cm}
+%\setlength{\topmargin}{0cm}
+%\setlength{\headheight}{0cm}
+%\setlength{\headsep}{0cm}
+%\setlength{\textheight}{25.4cm}
+%\setlength{\topskip}{0cm}
+%\setlength{\footskip}{1.2cm}
+%\pagestyle{empty}
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{defi}{Definition}
+
+\newenvironment{dem}{\medbreak\noindent{\sc Proof : }}%
+{\hfill $\diamond\diamond\diamond$\par\medbreak}
+
+\let\ve=\varepsilon
+\def\gM{\mathfrak{M}}
+\def\gN{\mathfrak{N}}
+\def\Acal{\mathcal{A}}
+\def\Bcal{\mathcal{B}}
+\def\Gcal{\mathcal{G}}
+\def\Fscr{\mathscr{F}}
+\def\Hcal{\mathcal{H}}
+\def\Kcal{\mathcal{K}}
+\def\Kscr{\mathscr{K}}
+\def\Ocal{\mathcal{O}}
+\def\Pcal{\mathcal{P}}
+\def\Qcal{\mathcal{Q}}
+\def\Ucal{\mathcal{U}}
+\newcommand{\Z}[1]{\mathbb{Z}/#1\mathbb{Z}}
+\let\vp=\varphi
+\let\about=\simeq
+\def\goes{\mathrel{\rightarrow}}
+\def\order{\asymp}%{\smile\atop\frown}
+\newcommand{\Log}{\mathop{\textrm{Log}}}
+\def\1{1\!\!1}
+%\def\modK{\mathrel{\,\text{mod}^*_K}}
+\newcommand{\mode}{\textrm{mod}^*}
+\newcommand{\va}{\mathrel{\rightarrow}}
+
+\arraycolsep=1.4pt
+
+
+%%% Enlever le commentaire pour avoir un espacement double :
+%\usepackage{setspace}
+%\setstretch{1.5}   % version de travail
+%\setstretch{2.0}  % version correcteur
+
+\title{Plouf
+  %\footnote{MSC 2000 : primaire 11P05, 11Y50 ; secondaire 11B13}
+  %\footnote{Mots cl\'es : Probl\`eme de Waring}
+}
+\author{
+}
+
+
+\usepackage{verbatim}
+
+\begin{document}
+%\bibliographystyle{plain}
+%\bibliography{Local}
+We first report on computations made using the GP/PARI package that show
+  that the error term $\Delta(x)$ in the divisor problem is
+  $=\Mscr(x,4)+\Ocal^*(0.35\, x^{1/4}\Log x)$ when $x$ ranges $[1\,081\,080,
+  10^{10}]$, where $\Mscr(x,4)$ is a smooth approximation. The remaining part
+  (and in facct most) of the paper is devoted to showing that $|\Delta(x)|\le
+  0.397\, {x^{1/2}}$ when $x\ge 5\,560$ and that $|\Delta(x)|\le 0.764\,
+  {x^{1/3}\Log x}$ when $x\ge 9\,995$. Several other bounds are also proposed.
+  We also formulate a positivity conjecture concerning $\Delta(x)$.
+\end{document}

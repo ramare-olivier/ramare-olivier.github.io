@@ -1,0 +1,41 @@
+;; Object Maths/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Maths/"
+  :tables (list 
+   (semanticdb-table "PetitLivre.html"
+    :major-mode 'html-mode
+    :tags '(("Un petit livre" section nil nil [423 461]) ("Variations modernes sur la suite des nombres premiers" section (:members (("Variations modernes sur la suite des nombres premiers" section (:members (("De la densit&eacute; des sin(p) lorsque p parcourt l'ensemble des
+  nombres premiers." section (:members (("version livre<a>, dont la couverture est affich&eacute;e ci-dessous, pour 7
+euros 80 livraison (lente) incluse, ou 13 euros 
+90 en livraison plus rapide. Je me suis allou&eacute; des royalties de 1 euro (&agrave; peu
+pr&egrave;s) pour avoir un retour. Vous pouvez d'ailleurs vous contenter de
+t&eacute;l&eacute;charger le livre pour 1 euro 60, ce qui me semble
+raisonnable.
+<br>
+
+<li> Et
+     voici
+	 <a href=\"http://math.univ-lille1.fr/~ramare/Maths/PetitLivreA4.pdf\">
+	 une version en A4" section nil nil [3836 4283]) ("une version en A4" section nil nil [4283 4644]) ("voici" section nil nil [4644 5564]))) nil [678 5564]) ("Qu'en est-il des droits divers et vari&eacute;s ? A priori je garde mon droit
+d'auteur, l'utilisation personnelle est illimit&eacute;e mais toute
+utilisation commerciale demande qu'on en discute." section nil nil [5564 5807]) ("Errata / todo et autres peut-mieux-faire :" section nil nil [5807 5810]))) nil [612 615]))) nil [461 467]))
+    :file "PetitLivre.html"
+    :pointmax 8060
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "contenu.html"
+    :major-mode 'html-mode
+    :tags '(("Olivier Ramar&eacute; : Textes math&eacute;matiques" section nil nil [94 169]) ("Olivier Ramar&eacute;" section (:members (("Olivier Ramar&eacute;" section (:members (("On S'nirel'man's constant" section nil nil [2130 2352]) ("Explicit bounds on exponential sums and the scarcity of squarefree binomial
+  coefficients" section nil nil [2352 2643]) ("Primes in Arithmetic Progressions" section nil nil [2643 2882]) ("A Tur&aacute;n-Kubilus inequality for integer matrices" section nil nil [2882 3139]) ("Algebra of Matrix Arithmetic" section nil nil [3139 3364]) ("Nombre de racines d'un polyn&ocirc;me entier modulo q" section nil nil [3364 3652]) ("On sums of Seven Cubes" section nil nil [3652 3910]) ("A Purely Analytical Lower Bound for L(1,chi)" section nil nil [3910 4080]) ("Approximate Formulae for L(1,chi)" section nil nil [4080 4289]) ("Sur un th&eacute;or&egrave;me de Mertens" section nil nil [4289 4512]) ("Short effective intervals containing primes" section nil nil [4512 4748]) ("Additive properties of dense subsets of sifted sequences" section nil nil [4748 5030]) ("Almost periodicity of some error terms in prime number theory" section nil nil [5030 5292]) ("M&eacute;moire d'habilitation &agrave; diriger des recherches" section nil nil [5292 5690]) ("Analyse de Fourier des fractions continues &agrave; quotients restreints" section nil nil [5690 5952]) ("Approximate Formulae for L(1,chi), II" section nil nil [5952 6166]) ("An explicit seven cubes theorem" section nil nil [6166 6375]) ("An asymptotic seven cubes Theorem" section nil nil [6375 6554]) ("Fibonacci numbers and trigonometric identities" section nil nil [6554 6752]) ("Eigenvalues in the large sieve inequality" section nil nil [6752 6932]) ("A stronger model for peg solitaire" section nil nil [6932 7206]) ("Explications &agrave; propos du th&eacute;or&egrave;me de Plunnecke-Ruzsa" section nil nil [7206 7407]) ("Le th&eacute;or&egrave;me de Brun-Tichmarsh par le crible de Selberg" section nil nil [7407 7600]) ("L'in&eacute;galit&eacute; du grand crible par la fonction de Selberg" section nil nil [7600 7793]) ("Caract&egrave;res de Dirichlet, sommes de Gauss et th&eacute;or&egrave;me de
+  Bombieri-Davenport" section nil nil [7793 8015]) ("Une r&eacute;gion sans z&eacute;ros pour zeta" section nil nil [8015 8185]) ("Moyennes de fonctions multiplicatives positives : la m&eacute;thode de convolution" section nil nil [8185 8392]) ("Moyennes de fonctions multiplicatives positives" section nil nil [8392 8564]) ("Le th&eacute;or&egrave;me de Mertens sur la distribution des nombres premiers
+  en progressions arithm&eacute;tiques et la non-annulation des fonctions L en 1" section nil nil [8564 8847]) ("Cent et un ans apr&egrave;s Hadamard et  De la Vall&eacute;e Poussin" section nil nil [8847 9238]) ("&Eacute;tat des lieux" section nil nil [9238 9388]) ("M&eacute;moire d'habilitation &agrave; diriger des recherches" section nil nil [9388 9786]) ("Le th&eacute;or&egrave;me de Brun-Titchmarsh : une approche moderne" section nil nil [9786 9976]) ("Variations modernes sur la suite des nombres premiers" section nil nil [9976 10448]) ("Propri&eacute;t&eacute;s de densit&eacute; de l'ensemble des entiers tels que
+ psi(r)-r>0." section nil nil [10448 10451]))) nil [308 311]))) nil [169 175]))
+    :file "contenu.html"
+    :pointmax 10628
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

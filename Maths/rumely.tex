@@ -1,0 +1,2411 @@
+% **************************************************************************
+% * The TeX source for AMS journal articles is the publisher's TeX code    *
+% * which may contain special commands defined for the AMS production      *
+% * environment.  Therefore, it may not be possible to process these files *
+% * through TeX without errors.  To display a typeset version of a journal *
+% * article easily, we suggest that you either view the HTML version or    *
+% * retrieve the article in DVI, PostScript, or PDF format.                *
+% **************************************************************************
+%Author Package file for use with AMS-Tex 2.1
+% Date: 26-JAN-1995
+%   \pagebreak: 0   \newpage: 0   \displaybreak: 0
+%   \eject: 19   \bye: 0   \break: 0   \allowbreak: 0
+%   \allowdisplaybreak: 0   \allowdisplaybreaks: 0
+%   \allowlinebreak: 0   \allowmathbreak: 0
+%   \smallpagebreak: 0   \medpagebreak: 0   \bigpagebreak: 0
+%   \smallbreak: 0   \medbreak: 0   \bigbreak: 0   \goodbreak: 0
+%   \linebreak: 0   \mathbreak: 0   \newline: 0
+%   \magnification: 1   \mag: 0
+%   \baselineskip: 0   \normalbaselineskip: 0
+%   \hsize: 0   \vsize: 0   \pagewidth: 0   \pageheight: 0
+%   \hoffset: 0   \voffset: 0   \hcorrection: 0   \vcorrection: 0
+%   \parindent: 0   \parskip: 0
+%   \vfil: 0   \vfill: 19   \vskip: 4
+%   \smallskip: 62   \medskip: 13   \bigskip: 11
+%   \sl: 2   \def: 0   \let: 0   \redefine: 0   \predefine: 0
+%   \tolerance: 0   \pretolerance: 0
+%   \font: 0   \end: 0   \noindent: 29
+%   ASCII 13 (Control-M Carriage return): 0
+%   ASCII 10 (Control-J Linefeed): 0
+%   ASCII 12 (Control-L Formfeed): 0
+%   ASCII 0 (Control-@): 0
+% Special characters: 0
+%
+%
+\input amstex
+\controldates{22-OCT-1995,22-OCT-1995,22-OCT-1995,20-NOV-1995}
+\documentstyle{mcom} % {amsppt}
+\issueinfo{65}{213}{JAN}{1996}
+%\keyedby{ramare/xxx}
+%\keyedby{mcom669e/lbd}
+
+% Version of the 15th June 1994
+%\NoBlackBoxes
+\let\thm\proclaim
+\let\ethm\endproclaim
+\let\rem\remark
+\let\endrem\endremark
+\let\dfn\definition
+\let\enddfn\enddefinition
+\let\num\rom
+\let\cal\Cal
+\define\<{\!}
+%\loadeurm
+%\define\sans{\eurm}
+
+\let\sl\it
+\define\la{\Lambda}
+\define\bn{\bigskip\noindent}
+%\define\fin{\enddemo$\diamond\diamond\diamond$} 
+\define\fin{\csname enddemo\endcsname$\diamond\diamond\diamond$} 
+\define\dif{\partial}
+\define\s{\sigma}
+\define\k{\kappa}
+\define\e{\varepsilon}
+
+%\magnification=\magstep1
+%\centerline {\bf 
+
+\topmatter
+\title Primes in arithmetic progressions\endtitle  \vskip.25in
+\author %\centerline{
+Olivier Ramar\'e and Robert Rumely\endauthor %}
+
+\address %Olivier Ramar\'e,
+D\'epartement de Math\'ematiques,
+Universit\'e de Nancy I,
+URA 750,
+54506 Van-\linebreak
+doeuvre Cedex,
+France\endaddress%}
+
+\address%{Robert Rumely
+Department of Mathematics,
+University of Georgia,
+Athens, Georgia 30602
+\endaddress%}
+\date February 26, 1993 and, in revised form, January 24, 1994, June 27, 1994,
+and January 10, 1995\enddate
+\subjclass Primary 11N13, 11N56, 11M26; Secondary 11Y35, 11Y40,
+11--04\endsubjclass
+\abstract Strengthening work of Rosser, Schoenfeld, and McCurley, we
+establish explicit Chebyshev-type estimates in the prime number
+theorem for arithmetic progressions, for all moduli $k \le 72$ and
+other small moduli.
+\endabstract
+\endtopmatter
+
+%\vskip-.25in
+\document
+
+\head 1. Introduction\endhead
+
+\smallskip In many applications it is useful to have explicit error
+bounds in the prime number theorem for arithmetic progressions. 
+Furthermore, in numerical work, such estimates for small moduli are
+often the most critical.  Let us recall the usual notation, where 
+$x \ge 0$  is real:
+$$
+\align
+\theta(x;k,l) &= \sum\Sb p\equiv l(k)\\ p\le x\endSb \ln(p),\quad
+\text{ where } p \text{ denotes a prime number};\\
+\psi(x;k,l) &= \sum\Sb n \equiv l(k)\\ n\le x\endSb
+\Lambda(n), \quad \text{ where } \Lambda(n) \text{ is Von Mangoldt's
+function}.
+\endalign
+$$ 
+Here we obtain estimates of the type
+$$ 
+(1 - \epsilon) \frac{x}{\varphi(k)} \le \theta (x; k, l) \le
+\psi(x; k, l) \le (1 + \epsilon) \frac{x}{\varphi(k)}
+$$ for all moduli $k \le 72$, all composite $k \le 112$, and 48
+other moduli; $\varphi(k)$  denotes Euler's function.
+\smallskip
+
+To obtain such estimates for the progression with modulus 1, Rosser
+and Schoenfeld (\cite{8, 9, 11}) developed an analytic
+method which combines a numerical verification of the Riemann
+Hypothesis to a given height together with an explicit asymptotic
+zero-free region. McCurley (\cite{3, 4, 5, 6})
+adapted this method to progressions with modulus  $k >
+1$.  However, except for 
+$k = 3$,  he got poor numerical results because of the paucity of
+numerical work on the Generalized Riemann Hypothesis.  Recently, the
+second author \cite{10} did such computations, and we get reasonably
+good results for all moduli accessible from his list.  In fact, the
+results are better than one would expect, owing to a smoothing process
+implicit in the method, explained in\pagebreak\ \S4.4.
+%\smallskip
+
+Our main theoretical result is Theorem 4.3.2, which provides an easy
+way to get applications like Theorem 1 below.  In Theorem 3.6.2 we
+also establish a zero-free region for Dirichlet
+$L$-functions, valid for heights  $|t| \ge 1000$, which improves
+somewhat on the region found by McCurley \cite{4}.
+%\smallskip
+
+Finally, we mention that this paper is an important step in a
+forthcoming paper by the first author, in which it is proved that
+{\it every} even integer can be written as a sum of at most 
+$6$  primes.
+%\smallskip
+
+Our main numerical result is the following:
+%\vfill\eject
+
+\proclaim{Theorem 1}  For any triple  $(k,\varepsilon,x_0)$  given
+by Table $1$ \rom{(}see \rom{\S5)}, and any  $l$  prime to  $k$, we have
+$$
+\align &\max\limits_{1\le y\le x} |\theta(y;k,l) -
+\frac{y}{\varphi(k)}|
+\le
+\varepsilon \frac{x}{\varphi(k)}\quad \text{for } x \ge x_0 , \\
+&\max\limits_{1\le y\le x} |\psi(y;k,l) - \frac{y}{\varphi(k)}|
+\le
+\varepsilon \frac{x}{\varphi(k)}\quad \text{for } x \ge x_0 .
+\endalign
+$$ For example, if  $k = 1$,  
+$$
+\gather
+\varepsilon = 0.000213  
+\text{\ \  for\ \  }  x_0 = 10^{10} , \quad
+\varepsilon = 0.000015 \text{\ \  for\ \  } x_0 = 10^{13} ,\\
+\varepsilon = 0.000001 \text{\ \  for\ \  } x_0 = 10^{30} .
+\endgather
+$$ If $k \le 13$, one can take
+$$
+\align
+\varepsilon &= 0.004560 \text{\ \  for\ \  } x_0 = 10^{10} , 
+\quad \varepsilon = 0.002657 \text{\ \  for\ \  } x_0 = 10^{13} , \\
+\varepsilon &= 0.002478 \text{\ \  for\ \  } x_0 = 10^{30} ,\quad  
+\varepsilon = 0.002020 \text{\ \  for\ \  } x_0 = 10^{100} . 
+\endalign
+$$ If  $k \le 72$, one can take
+$$
+\align
+\varepsilon &= 0.023269 \text{\ \  for\ \  } x_0 = 10^{10} ,\quad 
+\varepsilon = 0.011310 \text{\ \ for\ \  } x_0 = 10^{13} , \\
+\varepsilon &= 0.010484 \text{\ \  for\ \  } x_0 = 10^{30} , \quad
+\varepsilon = 0.008672 \text{\ \  for\ \  } x_0 = 10^{100} .
+\endalign
+$$
+\endproclaim
+%\noindent 
+We have supplemented these analytic results with a
+tabulation up to  $10^{10}$, obtaining surprisingly uniform bounds:
+
+\proclaim{Theorem 2}  For all moduli $k$ in Table $1$, and all $l$
+prime to $k$, uniformly for 
+$1 \le x \le 10^{10}$,
+$$
+\align
+\max\limits_{1\le y\le x}\left| \theta(y;k,l) -
+\frac{y}{\varphi(k)}\right| &\le 2.072
+\sqrt{x} ,\\
+\max\limits_{1\le y\le x}\left| \psi(y;k,l) -
+\frac{y}{\varphi(k)}\right| &\le 1.745
+\sqrt{x}  .
+\endalign
+$$ 
+In particular, for a bound of the type in Theorem $1$ when  $x_0 \le x
+\le 10^{10}$, one can take
+$$
+\varepsilon = 2.072 \varphi(k)/\sqrt{x}_0 .
+$$ 
+Sharper bounds for individual moduli are given in Table $2$
+\rom{(}see \rom{\S5)}. 
+Especially, for  $k=5$  or $k \ge 7$, the constant  $1.745$  in the
+error  bound for  $\psi(x;k,l)$  can be replaced by  $1.000$, and
+for  $k=1$  it can be replaced by  $\sqrt{2}$\pagebreak.
+\endproclaim
+%\medskip
+
+%\vfill\eject
+
+\head 2. Numerical results about the GRH\endhead
+\smallskip
+
+Throughout the paper,  $p$  always stands for a prime and the 
+$\gcd$  of  $k$  and  $l$  is written  $(k,l)$. 
+
+The letter $\rho$ always denotes a nontrivial zero of a Dirichlet 
+$L$-function, i.e., a zero with $0<\Re \rho<1$. We will always write
+$\rho=\beta+i\gamma$. 
+%\smallskip 
+
+Given a Dirichlet $L$-function $L(s,\chi)$, the set of its zeros
+with  $0 < \beta < 1$  will be denoted by
+$\Cal Z(\chi)$. Thus, if $\chi^{\prime}$ is induced by $\chi$, then
+$\Cal Z(\chi^{\prime})=\Cal Z(\chi)$.
+%\smallskip
+
+Given a nonnegative real number $H$, we will say that $L(s,\chi)$ 
+satisfies $\operatorname{GRH}(H)$, the Generalized Riemann Hypothesis to height
+$H$,  if all its nontrivial zeros with
+$|\gamma|\le H$ verify $\beta=\frac12$. 
+%\smallskip
+
+It is possible to prove or disprove  $\roman{GRH}(H)$ for any given $H$ and
+$L(s, \chi)$ with only a finite amount of computation. Rumely [10]
+did such computations, obtaining: 
+
+\proclaim{Theorem 2.1.1}
+%\smallskip
+
+$\circ$ Every $L$-function associated with a Dirichlet character of 
+conductor $k\le13$ satisfies $GRH(10000)$.
+%\smallskip
+
+$\circ$ Every $L$-function associated with a Dirichlet character of 
+conductor in the sets
+$$
+\align &\{k\le72\},\\ &\{k\le112,k\text{\ not\ prime}\},\\
+&\{116,117,120,121,124,125,128,132,140,143,144,\\ &\ \ \ \ \ 
+156,163,169,180,216,243,256,360,420,432\} \endalign
+$$ satisfies $GRH(2500)$.
+\endproclaim
+
+Sharper results for individual moduli, together with bounds for the
+sums
+$$
+\sum\Sb |\text{Im}(\rho)|\le H \\ \rho \in \Cal Z(\chi) \endSb
+\frac{1}{|\rho|}
+$$ may be found in Tables 1 and 5 of \cite{10}; these results were
+used in computing Table 1 below.  The following facts about the
+Riemann zeta function were also used:
+$$
+\align &\zeta(s) \text{ satisfies GRH(545439823.215)} \\ &\hskip1in
+\text{(van de Lune, te Riele, and Winter
+\cite{2})};\\  &\text{for } H = 12030, \sum_{|\text{Im}(\rho)| \le H}
+\frac{1}{|\rho|} \le 9.056 \\ &\hskip1in \text{(R. S. Lehman, cf.
+Rosser and Schoenfeld [9])} .
+\endalign
+$$
+%\vfill\eject
+\head 3. Zero-free regions for $L$-functions\endhead
+
+This part follows McCurley \cite{4} and some  evaluations are taken
+directly from McCurley's paper without being re-established. We
+employ a device due to Stechkin \cite{12} to widen the zero-free
+region.
+%\bigskip
+
+
+Let $s=\s+it$ and $s_1=\s_1+it$ be complex numbers with 
+$|t| \ge 1000$  satisfying
+$$
+\left\{\aligned
+&1<\sigma\le\frac{1+\sqrt{2}}2\le\sigma_1\le\frac{1+\sqrt{5}}2,\\ 
+&\sqrt{\sigma(\sigma-1)}+\sqrt{\sigma_1(\sigma_1-1)}=1
+\endaligned\right.
+\leqno(3.1)
+$$ and put $\k(\s)=\frac{1+\frac45\sqrt{\s-1}}{\sqrt{5}}$. Note that
+$1/\sqrt{5} \le \k(\s)\le0.61004$, and that $\s\ge\k(\s)\s_1$. 
+%\smallskip 
+
+These assumptions on $\sigma$ and $\sigma_1$ will hold throughout
+the paper.
+
+We define the auxiliary function
+$$ f(t,\chi)=\Re\left(\sum_{n\ge1}\la(n)\left(\frac1{n^{\s}}-
+\frac{\k(\s)}{n^{\s_1}}\right) \frac{\chi(n)}{n^{it}}\right)
+\leqno(3.2)
+$$ and introduce constants
+$$
+\left\{\aligned
+\e_1&=0.0067,\\
+\e_2&=10^{-6},
+\endaligned\right. \qquad
+\left\{\aligned &a_0=11.1859355312082048,\\ &a_1=19.073344004352,\\
+&a_2=11.67618784,\\ &a_3=4.7568,\\ &a_4=1,\\ &A=a_1+a_2+a_3+a_4 =
+36.506331844352 .
+\endaligned\right.
+\leqno(3.3)
+$$
+\subhead 3.1. A device of Stechkin\endsubhead
+\proclaim{Lemma 3.1.1 \rom{(Stechkin)}} Let $z$ be a complex number with 
+$0\le\Re z\le1$. Put 
+$$ F(s,z)=\Re\big\{\frac1{s-z}+\frac1{s-(1-\bar{z})}\big\}. 
+$$ Then
+$$ F(s,z)\ge \kappa(\sigma)F(s_1,z).
+$$ Moreover, if $\Im z= \Im s$ and $\frac12\le\Re z\le1$, and if  
+$S(\sigma) = -\frac{1}{\sigma} +
+\kappa(\sigma)\left(\frac{1}{\sigma_1} +
+\frac{1}{\sigma_1-1}\right)$, then 
+$$ -\Re\left(\frac{1}{s-(1-\bar{z})}\right) + \kappa(\sigma)F(s_1,z)
+\le S(\sigma) .
+$$
+\endproclaim
+%\vfill\eject
+
+\demo{Proof}  The first inequality is implicit in Stechkin
+\cite{12}:  see the top line on p.132 of the English translation. 
+For the second inequality, note that when  $\Im z = \Im s = t$, then,
+writing  $z = \beta + it$, the left side of the inequality becomes
+$$ -\frac{1}{\sigma-1+\beta} +
+\kappa(\sigma)\left(\frac{1}{\sigma_1-\beta} +
+\frac{1}{\sigma_1-1+\beta}\right) .
+$$
+For  $\frac{1}{2} \le \beta \le 1$, both terms are increasing
+with 
+$\beta$.  Taking  $\beta = 1$  we obtain the result.
+\qed\enddemo
+%\fin
+%\medskip
+
+As will be seen later, we will only need to consider  $\sigma$  in
+the interval  $[1,1.062]$.  Although we will not use this, it can be
+shown that on  $[1,1.062]$
+$$ S(\sigma) = 2\sqrt{\Delta} + \frac{86}{25}\Delta + \Cal
+O(\Delta^{3/2}) ,
+$$ where  $\Delta = \sigma - 1$  and the implied constant can be
+taken as 18.  Furthermore, throughout the interval,
+$$ 2\sqrt{\Delta} + 3\Delta \le S(\sigma) \le 2\sqrt{\Delta} +
+5\Delta .
+$$
+
+\subhead 3.2. Handling the $\Gamma$-factor\endsubhead
+\proclaim{Lemma 3.2.1} If $0\le a\le2$, $\e_1=0.0067$ and 
+$\e_2=10^{-6}$, then for  $|t| \ge 1000$
+$$
+\frac12\Re\left\{
+\frac{\Gamma^{\prime}}{\Gamma}\big(\frac{s+a}{2}\big) -
+\k(\s)\frac{\Gamma^{\prime}}{\Gamma}\big(\frac{s_1+a}{2}\big)\right\}
+\le\frac{1-\k(\s)}2\left(\ln\left(\frac{|t|}2\right)+\e_1-10\e_2
+\right). 
+$$
+\endproclaim
+
+\demo{Proof}  We follow Lemma 2 of McCurley (\cite{4}).  Since 
+$\Re\left(\frac{\Gamma'}{\Gamma} (z)\right)$  is invariant under 
+$z \rightarrow \bar{z}$, we have for  $z = x+iy$, with  $x > 0$:
+$$
+\Re \frac{\Gamma'}{\Gamma}\left(\frac{z+a}{2}\right) =
+\ln\left(\frac{|y|}{2}\right) + \frac{1}{2} \ln\left| 1 +
+\left(\frac{x+a}{y}\right)^2\right| - \frac{x+a}{(x+a)^2+y^2} +
+\Theta(y) \leqno(3.2.1)
+$$ where  $|\Theta(y)| \le \frac{1}{|y|} \cdot \left[\frac{\pi}{2} -
+\arctan\left(\frac{x+a}{|y|}\right)\right] \le
+\left|\frac{\pi}{2y}\right|$.  We apply this, taking  $z = s, s_1$. 
+Using  $\sigma \ge \kappa(\sigma)\sigma_1$,  we find
+$$
+\left\{
+\aligned &-\frac{\sigma+a}{(\sigma+a)^2+t^2} + \kappa(\sigma)
+\frac{\sigma_1+a}{(\sigma_1+a)^2+t^2} \le 0, \\
+&\frac{1}{4}\ln\left|1 + \left(\frac{\sigma+a}{t}\right)^2\right|
+\le \frac{2.58}{t^2}, \\ &\frac{1}{2} (1+\kappa(\sigma)) \Theta(t)
+\le \frac{1.26453}{|t|} .
+\endaligned
+\right.
+$$ These facts, together with  $(1-\kappa(\sigma))/2 \ge 0.19498$,
+yield the result.
+\qed\enddemo%\fin
+
+\subhead 3.3. Approximating $f(t,\chi)$\endsubhead
+Here the character which is the argument of $f(t,\cdot)$
+is assumed to  be primitive. 
+
+\proclaim{Lemma 3.3.1} If $\chi_0$ is the trivial character and 
+$$ E(\sigma)=1.08699 + 1.40018\sqrt{\sigma-1} + 1.86576(\sigma-1) +
+2.32244(\sigma-1)^{3/2} , 
+$$ then for  $1 < \sigma \le 1.062$,
+$$  f(0,\chi_0)\le\frac1{\s-1}-E(\sigma) .
+$$
+\endproclaim
+
+\demo{Proof} We follow McCurley's Lemma 3 ([4]). We have for any
+complex number 
+$z$
+$$ -\frac{\zeta^{\prime}}{\zeta}(z)=\frac1{z-1}-\frac{\ln(\pi)}2 +
+\frac{\Gamma^{\prime}}{2\Gamma}\big(\frac{z+2}2\big)
+-\sum_{\rho\in\Cal Z(\chi_0)}\frac{1}{z-\rho},
+\leqno(3.3.1)
+$$ where $\sum_{\rho}$ is to be understood as
+$\lim_{T\rightarrow\infty}\sum_{\rho,|\gamma|\le T}$. We use (3.3.1)
+for $z=\s$. Since for any zero of $\zeta$, we have
+$|\gamma|\ge10\ge\s-\beta$, we see that
+$$
+\frac{\s-\beta}{(\s-\beta)^2+\gamma^2}\ge \frac{1-\beta}{(1-\beta)^2
++\gamma^2}.
+\leqno(3.3.2)
+$$ It follows that
+$$
+\align f(0,\chi_0)
+&=-\frac{\zeta^{\prime}}{\zeta}(\s)+\kappa(\s)\frac{\zeta^{\prime}}
+{\zeta}(\s_1)
+\\ &\le\frac1{\s-1}-\frac{\ln(\pi)}2+
+{\Gamma^{\prime}\over2\Gamma}\big(\frac{\s+2}2\big)
+-\Re\left(\sum_{\rho\in\Cal Z(\chi_0)}\frac{1}{1-\rho}\right) +
+\kappa(\s)\frac{\zeta^{\prime}} {\zeta}(\s_1).
+\endalign
+$$ We recall McCurley's estimate (taken from the proof of Lemma 3 of
+\cite{4})
+$$ {\Gamma^{\prime}\over2\Gamma}\big(\frac{\s+2}2\big)
+\le 1-{C_0\over2}-\ln (2)+({\pi^2\over8}-1)(\s-1),
+$$ where $C_0 \cong 0.5772156649$ denotes Euler's constant. Further,
+by (Landau \cite{1, \S76, pp. 316\--317}), 
+$$
+\sum_{\rho}
+\frac{1}{1-\rho} = \sum_{\rho}\frac1{\rho}=-\frac12\ln(\pi)-\ln
+(2)+1+\frac{C_0}{2}. 
+\leqno(3.3.3)
+$$ Thus, we can take
+$$ E(\sigma) = C_0 - \left(\frac{\pi^2}{8} - 1\right)(\sigma-1) +
+\kappa(\sigma)\left(-\frac{\zeta'}{\zeta}(\sigma_1)\right) .
+\leqno(3.3.4)
+$$
+
+We now estimate  $-(\zeta'/\zeta)(\sigma_1)$, which is a decreasing,
+nonnegative function of  $\sigma_1$.  As 
+$\sigma\rightarrow 1^+$, $\sigma_1$  approaches  $(1+\sqrt{5})/2$ 
+from below.  Writing  $\Delta = \sigma - 1$, we have
+$$
+\sigma_1 = \frac{1+\sqrt{5}\sqrt{1-(\frac{8}{5})\Delta^{1/2} +
+(\frac{4}{5})\Delta -
+\left(\frac{4}{5}\right)\Delta^{3/2} + ((\frac{4}{5})\Delta^2 +
+(\frac{1}{5})\Delta^{5/2}) -
+\dots}}{2} .
+$$ For  $0 \le \Delta \le 0.062$  the series inside the radical is
+alternating, with decreasing terms.  Thus
+$$
+\sigma_1 \le \frac{1 + \sqrt{5}\sqrt{1 - (\frac{8}{5})\Delta^{1/2} +
+(\frac{4}{5})\Delta}}{2} .
+$$ Upon expanding and using  $\Delta \le 0.062$,  we obtain
+$$
+\align
+\sigma_1 &\le \frac{1 + \sqrt{5}\left(1 -
+\frac{1}{2}\left(\frac{8}{5}\Delta^{1/2} - \frac{4}{5}\Delta\right)
+- \frac{1}{8}\left(\frac{8}{5}\Delta^{1/2} -
+\frac{4}{5}\Delta\right)^2\right)}{2} \\ &\le \frac{1 + \sqrt{5} (1 -
+(\frac{4}{5})\Delta^{1/2}+(\frac{4}{25})\Delta)}{2} .
+\endalign
+$$ It follows that
+$$ (1+\sqrt{5})/2 - \sigma_1 \ge
+\left(\frac{2}{\sqrt{5}}\right)\Delta^{1/2} -
+\left(\frac{2}{5\sqrt{5}}\right)\Delta .
+$$ When  $-(\zeta'/\zeta)(\sigma_1)$  is developed as a Taylor series
+about  $(1+\sqrt{5})/2$, its coefficients alternate in sign.  The
+first four coefficients satisfy
+$$ B_0 \ge 1.13991, \quad -B_1 \ge 2.48089, \quad B_2 \ge 4.20397, 
+\quad -B_3 \ge 6.84664; 
+$$ these values were obtained by expressing the coefficients in
+terms of the derivatives of the zeta function, which were computed
+using Euler-Maclaurin summation.  Thus,
+$$
+\aligned -(\zeta'/\zeta)(\sigma_1) &\ge 1.13991 + 2.48089
+\left(\frac{2\sqrt{\Delta}}{\sqrt{5}} -
+\frac{2}{5\sqrt{5}}\Delta\right) \\ &\qquad\qquad\ \  + 4.20397
+\left(\frac{2\sqrt{\Delta}}{\sqrt{5}} -
+\frac{2}{5\sqrt{5}}\Delta\right)^2 +
+6.84664(0.84988\sqrt{\Delta})^3\\   &\ge 1.13991 +
+2.21897\sqrt{\Delta} + 2.91938\Delta + 2.85764\Delta^{3/2} .
+\endaligned
+$$ (Here we have again used that  $0 \le \Delta \le 0.062$.) 
+Inserting this  in (3.3.4) yields
+$$ E(\sigma) \ge 1.08699 + 1.40018\Delta^{1/2} + 1.86576\Delta +
+2.32244\Delta^{3/2}
+$$ and for the purposes of the lemma we can replace  $E(\sigma)$  by
+its bound.
+\qed\enddemo%\fin
+
+\proclaim{Lemma 3.3.2} If $\chi$ is a character of conductor 
+$k$, then for  $|t| \ge 1000$ and $\varepsilon_1 = 0.0067$,
+%\medskip
+$$\align
+f(t,\chi)\le&\frac{1-\k(\s)}{2}(\ln\left(\frac{k|t|}{2\pi}\right)
++\e_1)\\
+&-\Sigma^{\prime}\
+\Re\big\{\frac1{s-\rho}+\frac1{s-(1-\bar{\rho})}
+-\frac{\k(\s)}{s_1-\rho}-\frac{\k(\s)}{s_1-(1-\bar{\rho})}\big\},
+\endalign
+$$
+\medskip
+\noindent where $\Sigma^{\prime}$ denotes a sum over the zeros of
+$L(s,\chi)$ with
+$\beta\ge1/2$ and where the zeros with $\beta=1/2$ have a weight
+$\frac12$. 
+\endproclaim
+%\medskip
+
+\demo{Proof} We consider separately the cases $k=1$ and $k>1$.
+
+First suppose  $k = 1$. Using (3.3.1) with $z=s$, $s_1$, we get
+$$
+\aligned f(t,\chi_0) =&\  \Re\left\{{1\over s-1}-{\k(\s)\over
+s_1-1}\right\} +
+{1\over2}\Re\left\{{\Gamma^{\prime}\over\Gamma}\left({s+2\over2}
+\right) -\k(\s){\Gamma^{\prime}\over\Gamma}\left({s_1+2\over2}\right)
+\right\}\\  &\quad\quad -{1-\k(\s)\over2}\ln(\pi)
+-\frac{1}{2}\sum_{\rho\in\Cal
+Z(\chi_0)}\left(F(s,\rho)-\kappa(\sigma)F(s_1,\rho)\right).
+\endaligned\leqno(3.3.5)
+$$ By the functional equation of  $\zeta(s)$, the last sum can be
+rewritten
+$$
+\Sigma^{\prime} \ \Re\left(\frac{1}{s-\rho} +
+\frac{1}{s-(1-\bar{\rho})} -
+\frac{\kappa(\sigma)}{s_1-\rho} -
+\frac{\kappa(\sigma)}{s_1-(1-\bar{\rho})}\right),
+$$ where the notation is as in the statement of the lemma.
+
+Lemma 3.2.1, together with
+$$
+\Re\left\{{1\over s-1}-{\k(\s)\over s_1-1}\right\}\le{\s-1\over t^2}
+\le\varepsilon_2
+$$ and  $(1 - \kappa(\sigma))/2 \ge 0.19498$,  yields the result.
+
+Now suppose  $k > 1$. The proof is similar to the previous one,
+apart from the absence of the pole at  $s=1$. Following McCurley's
+Lemma 5 (\cite{4}), we have
+%\smallskip
+$$
+\align f(t,\chi)&=\frac{1-\k(\s)}{2}\ln\left(\frac{k}{\pi}\right)
++{1\over2}\Re\left\{{\Gamma^{\prime}\over\Gamma}\left({s+a\over2}\right)
+-\k(\s){\Gamma^{\prime}\over\Gamma}\left({s_1+a\over2}\right)\right\}\\
+&\ \ -\Sigma^{\prime}\left(F(s,\rho)-\k(\s)F(s_1,\rho)\right)
+\endalign
+$$
+%\medskip
+\noindent with $a=(1-\chi(-1))/2$, and Lemma 3.2.1 gives the
+required estimate.\qed\enddemo
+%\fin
+%\medskip
+%\vfill\eject
+
+Using Lemmas 3.1.1 and 3.3.2, we get
+%\medskip
+
+\proclaim{Lemma 3.3.3} If $\chi$ is a character of conductor $k$, 
+then for  $|t| \ge 1000$ and $\varepsilon_1 = 0.0067$
+$$  f(t,\chi)\le\frac{1-\k(\s)}{2}(\ln\left(\frac{k|t|}{2\pi}\right)
++\e_1) 
+$$ and if $t=\gamma$ is the ordinate of a zero $\rho=\beta+i\gamma$
+with  $\beta > \frac{1}{2}$,  then 
+$$  f(t,\chi)\le\frac{1-\k(\s)}{2}(\ln\left(\frac{k|t|}{2\pi}\right)
++\e_1) -\frac{1}{\s-\beta} + S(\sigma) .
+$$
+\endproclaim
+%\medskip
+\subhead 3.4. The default to primitivity\endsubhead
+Let $\chi$ be a primitive character of conductor $k$  and let
+$\chi_m$ be the primitive character associated with $\chi^m$, of
+conductor $k_m$. For a prime  $p$  dividing  $k$  we put
+%\medskip
+$$
+\left\{
+\aligned &c_p(\s)=\frac1{p^{\s}-1}-\frac{\k(\s)}{p^{\s_1}-1},\\ 
+&D_p(k,\s,\chi)=a_0c_p(\s)+\sum\Sb 1\le m\le4\\ p\nmid k_m\endSb
+a_m\left(\frac{1-\k(\s)}2v_p(\frac{k}{k_m})-c_p(\s)\right),
+\endaligned\right.
+\leqno(3.4.1)
+$$
+%\medskip\noindent 
+where $v_p(x)$ is the $p$-adic valuation of $x$  with 
+$v_p(p) = 1$.  We seek a  lower bound for
+%\medskip
+$$ D(k,\s,\chi)=\sum_{p|k}\ln (p) D_p(k,\s,\chi). 
+$$ This bound will be  $D^*(k,\sigma)$, defined below:  put
+$$
+\cases D^*_2(\s)=5.99\ c_2(\s),\\ D^*_3(\s)=5.467\ c_3(\s),\\
+D^*_p(\s)=a_0\ c_p(\s),\text{\ \ for\ \ }p\ge5,
+\endcases \leqno(3.4.2)
+$$ and 
+$$  D^*(k,\s)=\sum_{p|k}\ln (p) \ D^*_p(\s). \leqno(3.4.3)
+$$
+
+\proclaim{Lemma 3.4.1} The quantity $c_p(\s)$ is positive, and decreases as $p$
+increases or as $\s$ increases.
+\endproclaim
+
+\demo{Proof} Easy.\qed
+\enddemo
+%\fin
+
+\proclaim{Lemma 3.4.2} We have
+$$
+\left\{\aligned &\frac{1-\k(\s)}{c_2(\s)}-1\ge-0.298,\\
+&\frac{1-\k(\s)}{2c_3(\s)}-1\ge-0.328,\\ &\frac{1-\k(\s)}2-c_5(\s)
+\ge 0 .
+\endaligned\right.
+$$
+\endproclaim
+
+\demo{Proof} If $\s^-\le\s\le\s^+$, then
+$$
+\frac{1-\k(\s^+)}2-c_5(\s^-)\le\frac{1-\k(\s)}2-c_5(\s)\le
+\frac{1-\k(\s^-)}2-c_5(\s^+). 
+$$ Cutting the interval  $[1,(1+\sqrt{2})/2]$ into 10000 parts yields
+the third inequality in the lemma.  The two other inequalities may be
+obtained similarly.\qed
+\enddemo
+%\fin
+
+\proclaim{Lemma 3.4.3} For each prime  $p \mid k$, we have
+$D_p(k,\s,\chi)\ge D^*_p(\s)$. 
+\endproclaim
+
+\demo{Proof} If  $p \ge 5$, then  $c_5(\sigma) \ge c_p(\sigma)$, so
+by Lemma 3.4.2 and the fact that  $k_1 = k$, we see that for each
+prime dividing  $k$,
+$$
+\align D_p(\kappa,\sigma,\chi) &= a_0c_p(\sigma) + \sum^4\Sb m=2 \\
+p\nmid k_m\endSb a_m \left(\frac{1-\kappa(\sigma)}{2}
+v_p\left(\frac{k}{k_m}\right) - c_p(\sigma)\right) \\ &\ge
+a_0c_p(\sigma) = D^*_p(\sigma) .
+\endalign
+$$ The proof is analogous for  $p = 2$  and  $p = 3$.  Note that
+when 
+$p = 2$, if  $p \nmid k_m$,  then  $v_p\left(\frac{k}{k_m}\right)
+\ge 2$.  The constant in  $D^*_2(\sigma)$  is  $a_0 -
+0.298(a_2+a_3+a_4)$, and the one in  $D^*_3(\sigma)$  is  $a_0 -
+0.328(a_2+a_3+a_4)$.\qed
+\enddemo
+%\fin
+
+Combining Lemmas 3.4.1 and 3.4.2 gives the desired result:
+
+\proclaim{Corollary 3.4.4}  For  $1 \le \sigma \le (1 +
+\sqrt{2})/2$, we have  $D(k,\sigma,\chi) \ge D^*(k,\sigma)$. 
+Furthermore, on this interval  $D^*(k,\sigma)$  is a decreasing
+function of 
+$\sigma$, with  
+$$ a_0 \sum_{p|k} \frac{\ln(p)}{p-1} \ \ge\  D^*(k,\sigma) \ \ge\  0
+.
+$$
+\endproclaim
+
+We finally need to go from an imprimitive character to a primitive
+one.
+%\bigskip
+
+\proclaim{Lemma 3.4.5} The notations being as above, we have
+$$ f(0,\chi_0)=f(0,\chi^0)+\sum_{p|k}\ln(p) c_p(\s),
+$$ and
+$$ f(t,\chi_m)\ge f(t,\chi^m)-\sum_{p|k\atop p\nmid k_m}\ln(p)
+c_p(\s).
+$$
+\endproclaim
+
+\demo{Proof} We have for any real number $t$,
+$$ f(t,\chi_m)=f(t,\chi^m)+
+\sum_{p|k\atop p\nmid k_m}\ln (p)\sum_{n\ge1}
+\Re\left({\chi_m(p^n)\over p^{int}}\right)
+\left({1\over p^{n\s}}-{\k(\s)\over p^{n\s_1}}\right).
+$$ If $\chi_m=\chi_0$ and $t=0$, then $\chi_m(p^n)/p^{int}=1$,
+otherwise its real part is  $\ge -1$.\qed
+\enddemo
+%\fin
+\subhead 3.5. A positivity argument\endsubhead
+The trigonometric polynomial
+$$P(\theta)=\sum_{m=0}^4a_m\cos(m\theta)$$
+is also given by
+$$P(\theta)=8(0.9126+\cos\theta)^2(0.2766+\cos\theta)^2
+$$  and thus is nonnegative. We have
+$$
+\sum_{m=0}^{4}a_m f(mt,\chi^m)=
+\sum_{n\ge1}\Lambda(n)\left({1\over n^{\s}}-{\k(\s)\over
+n^{\s_1}}\right)P(\arg( \chi(n)n^{-it}))\ge0.
+\leqno(3.5.1)
+$$ Recalling Lemma 3.4.5, we then get
+$$
+\sum_{m=0}^{4}a_m f(mt,\chi_m)\ge a_0\sum_{p|k}\ln (p) c_p(\s)
+-\sum_{m=1}^4a_m\sum\Sb p\mid k\\ p\nmid k_m\endSb \ln (p)c_p(\s).
+\leqno(3.5.2)
+$$
+
+\proclaim{Lemma 3.5.1}  We have
+$$ a_0f(0,\chi_0)+\sum_{m=1}^{4}a_m
+\left(f(mt,\chi_m)+\frac{1-\k(\s)}{2}\ln\left(\frac{k}{k_m}\right)
+\right) \ge D^*(k,\s).
+$$
+\endproclaim
+
+\demo{Proof} By the definition of  $D^*(k,\sigma)$, the
+inequality in the lemma follows from (3.5.2) if we have
+$$
+\aligned a_0 \sum_{p\mid k} &\ln(p)c_p(\sigma) - \sum^4_{m=1} a_m
+\sum\Sb p\mid k \\ p\nmid k_m\endSb \ln(p)c_p(\sigma) \\ &\ge
+\sum_{p\mid k} \ln(p)D^*_p(\sigma) - \sum^4_{m=1}
+a_m\left(\frac{1-\kappa(\sigma)}{2}\right)
+\ln\left(\frac{k}{k_m}\right) .
+\endaligned \leqno(3.5.3)
+$$ However, by Lemma 3.4.3 we have, prime by prime,
+$$ a_0c_p(\sigma) + \sum\Sb 1\le m \le 4 \\ p\mid k, p\nmid k_m\endSb
+a_m\left(\frac{1-\kappa(\sigma)}{2}v_p
+\left(\frac{k}{k_m}\right) - c_p(\sigma)\right) \ge D^*_p(\sigma)
+$$ which certainly implies (3.5.3).
+\qed
+\enddemo
+\subhead 3.6. The zero-free region\endsubhead
+Inserting the bounds from Lemmas 3.3.1 and 3.3.3 in the expression
+from Lemma 3.5.1, if  $t$  is taken to be the ordinate of a zero 
+$\beta + i\gamma$  with  $\beta > 1/2$, and $|\gamma| \ge 1000$,
+we find that
+$$
+\aligned
+&a_0\left[\frac{1}{\sigma-1} - E(\sigma)\right] +
+a_1\left[\left(\frac{1-\kappa(\sigma)}{2}\right)
+(\ln\left(\frac{k|\gamma|}{2\pi}\right) + \varepsilon_1) -
+\frac{1}{\sigma-\beta} + S(\sigma)\right] \\
+&\qquad\quad+ \sum^4_{m=2}
+a_m\left[\left(\frac{1-\kappa(\sigma)}{2}\right)
+(\ln\left(\frac{k_m|m\gamma|}{2\pi}\right) + \varepsilon_1) +
+\left(\frac{1-\kappa(\sigma)}{2}\right)
+\ln\left(\frac{k}{k_m}\right)\right]  \\
+&\qquad \ge
+D^*(k,\sigma) .\endaligned\tag3.6.1 $$
+ Recalling that  $\kappa(\sigma) =
+\frac{1+\frac{4}{5}\sqrt{\s-1}}{\sqrt{5}}$, we can rewrite this as
+$$ u - \alpha u\sqrt{\sigma-1} - \frac{w}{\sigma-\beta} +
+\frac{1}{\sigma-1} - G \ge 0,\leqno(3.6.2)
+$$ where
+$$
+\left\{
+\aligned u &= \frac{1}{a_0} \frac{5-\sqrt{5}}{10} \sum^4_{m=1}
+a_m(\ln
+\left(\frac{km|\gamma|}{2\pi}\right) + \varepsilon_1),\\
+\alpha &= (\sqrt{5} + 1)/5 \cong 0.647213595,\\ w &= a_1/a_0 \cong
+1.705118356,\\ G &= E(\sigma)  - wS(\sigma) +
+\frac{D^*(k,\sigma)}{a_0} .
+\endaligned  \right.  \leqno(3.6.3)
+$$ Put  $x = \sqrt{w} - 1 \cong 0.305801806$.  A near-optimal value
+for  $\sigma$   in (3.6.2) is  $\sigma = 1 + x/u$.  Using this, and
+the fact that 
+$|\gamma| \ge 1000$, we find that  $1 \le \sigma \le 1.062$,
+validating the bounds used in our estimates for  $E(\sigma)$  and 
+$S(\sigma)$.  Inserting $\sigma = 1 + x/u$ in (3.6.2) and replacing 
+$G$  by any lower bound  $\overline{G} = \overline{G}(\sigma)$, we
+find
+$$ u - \alpha u\sqrt{x/u} - \frac{w}{1-\beta+x/u} + \frac{u}{x} -
+\overline{G} \ge 0 . 
+$$ Solving for  $1 - \beta$  and using  $(1 + 1/x) = \sqrt{w}/x$ 
+gives
+$$ 1 - \beta \ge \frac{w}{\frac{u\sqrt{w}}{x} - \alpha\sqrt{xu} -
+\overline{G}} - \frac{x}{u} .
+$$ Using  $w - \sqrt{w} = x\sqrt{w}$  and cross-multiplying by 
+$u/x^2$  yields
+$$
+\frac{u}{x^2} (1-\beta) \ge
+\frac{1+\frac{\alpha\sqrt{x}}{\sqrt{wu}} + \frac{1}{u\sqrt{w}}
+\overline{G}}{1 - \frac{\alpha x\sqrt{x}}{\sqrt{wu}} -
+\frac{x}{u\sqrt{w}} \overline{G}} .
+$$ Finally, using  $x = \sqrt{w} - 1$, we obtain
+$$ 1 - \beta \ge \frac{1}{\frac{u}{x^2} - \frac{(\alpha/x)\sqrt{u/x}
++ (1/x^2)\overline{G}}{1 + (\alpha/\sqrt{w})\sqrt{x/u} +
+(1/(x\sqrt{w}))(x/u)\overline{G}}} . \leqno(3.6.4)
+$$ Note that
+$$
+\frac{u}{x^2} = R \ln(k|\gamma|/C_1),\leqno(3.6.5)
+$$ where
+$$
+\left\{
+\aligned R  &= \frac{1}{x^2} \frac{A}{a_0} \frac{5-\sqrt{5}}{10}
+\cong 9.645908801,\\ C_1 &= 2\pi \exp\left(-\varepsilon_1 - (1/A)
+\sum^4_{m=2} a_m\ln(m)\right) \cong 4.171838431 .
+\endaligned \right. \leqno(3.6.6) 
+$$
+
+An especially useful choice for the lower bound  $\overline{G}$  in
+(3.6.4) occurs when  $D^*(k,\sigma)$  is replaced by a constant
+lower bound  $\overline{D}$, giving
+$$
+\overline{G} = \overline{G}(\sigma) = E(\sigma) - wS(\sigma) +
+\frac{\overline{D}}{a_0} . \leqno(3.6.7)
+$$ In particular, we can always take  $\overline{D} = 0$, or, if for
+some  $H \ge 1000$ we are interested only in zeros  $\beta +
+i\gamma$  with  $|\gamma| \ge H$, then by Corollary 3.4.4 we can
+take  $\overline{D}$  to be the value of  $D^*(k,\sigma)$ 
+corresponding to  $H$.  As will be seen,  $\overline{G} \ge 0$   
+on  $[1, 1.062]$.
+
+Writing  $\Delta = x/u$, and taking  $\overline{G}$  as in (3.6.7),
+put
+$$
+\align G_1(\Delta) &= \frac{\alpha}{x} \sqrt{\frac{1}{\Delta}} +
+\frac{1}{x^2} \overline{G}(1 + \Delta) , \\ G_2(\Delta) &= 1 +
+\frac{\alpha}{\sqrt{w}} \sqrt{\Delta} +
+\frac{1}{x\sqrt{w}} \cdot \Delta \cdot \overline{G}(1 + \Delta) .
+\endalign
+$$ Then  $G_1(\Delta)/G_2(\Delta)$  is the fraction in the
+denominator of (3.6.4).
+\proclaim{Lemma 3.6.1}  For each  $\overline{D} \ge 0$, the
+functions  $G_1(\Delta)/G_2(\Delta)$ and 
+$\overline{G}(1+\Delta)$  as given by $(3.6.7)$ are nonnegative and
+decreasing on   $[0,0.062]$.
+\endproclaim
+
+\demo{Proof}  First suppose  $\overline{D} = 0$.  Note that
+$$ E(\sigma) = 1.08699 + 1.40018\sqrt{\Delta} + 1.86576\Delta +
+2.32244\Delta^{3/2}
+$$ and that (after some manipulations)
+$$ S(\sigma) = -\frac{1}{1+\Delta} + \frac{\left(1 +
+\frac{4}{5}\sqrt{\Delta}\right)\sqrt{1 -
+\frac{8}{5}\sqrt{\Delta^2+\Delta} +
+\frac{4}{5}\left(\Delta^2+\Delta\right)}}{\left(1 -
+\sqrt{\Delta^2+\Delta}\right)^2}.
+$$ It follows that the derivatives of 
+$\overline{G}(1+\Delta)$, $G_1(\Delta)$  and 
+$G_2(\Delta)$  are sums and quotients of various terms monotonic on 
+$[0,0.062]$.  Thus, on any given subinterval, rigorous upper bounds
+for  $\overline{G}^{\prime}(1+\Delta)$
+ and  $G^{\prime}_1(\Delta)$, and a rigorous lower bound for 
+$G^{\prime}_2(\Delta)$, can be obtained.  Dividing  $[0,0.062]$ 
+into subintervals of length $0.001$, it was found that 
+$\overline{G}^{\prime}(1+\Delta) < 0$ and  
+$G^{\prime}_1(\Delta) < 0$  throughout the interval, and 
+$G^{\prime}_2(\Delta) > 0$  on  $[0,0.057]$.
+
+Graphically it is clear that  $G_2(\Delta)$  has a maximum at about 
+$0.0590$  and then slowly decreases.  To deal with the interval 
+$[0.057, 0.062]$, multiply through by 
+$\sqrt{\Delta}$.  The derivatives of 
+$\sqrt{\Delta}
+\cdot G_1(\Delta)$  and  $\sqrt{\Delta} \cdot G_2(\Delta)$  are sums
+and quotients of mono-\linebreak
+tonic terms.  Dividing  $[0,0.062]$  into
+subintervals of length  $0.001$, it was found that
+\linebreak 
+  $(\sqrt{\Delta}
+\cdot G_1(\Delta))' < 0$  on  $[0.047,0.062]$  and  $(\sqrt{\Delta}
+\cdot G_2(\Delta))' > 0$  throughout  $[0,0.062]$.
+
+Combining these facts yields the monotonicity of 
+$G_1(\Delta)/G_2(\Delta)$.  Its non-\linebreak
+negativity and that of 
+$\overline{G}(1+\Delta)$ follow by evaluation at  $\Delta = 0.062$.
+
+Now let  $\overline{D} \ge 0$  be arbitrary; let  $g_1(\Delta)$,
+$g_2(\Delta)$  denote  $G_1(\Delta)$  and  $G_2(\Delta)$  when 
+$\overline{D} = 0$.  By the discussion above, it follows that  $g_2
+\cdot g'_1 - g_1\cdot g'_2 < 0$ and  $g'_1 < 0$  on  $[0,0.062]$. 
+Applying the quotient rule to  $G_1(\Delta)/G_2(\Delta)$, it is
+easily seen that for  $G_1(\Delta)/G_2(\Delta)$  to be decreasing, it
+suffices to have
+$$ g'_2 + \frac{x}{\sqrt{w}} g_1 > 0 .
+$$ This was checked by the same means as before.\qed
+\enddemo
+%\fin
+
+\proclaim{Theorem 3.6.2}  If  $\chi$  is a character of conductor 
+$k$, and  $R = 9.645908801$, then any zero  $\beta + i\gamma$  of 
+$L(s,\chi)$  with 
+$|\gamma| \ge 1000$  satisfies
+$$ 1 - \beta \ge \frac{1}{R \ln\left(\frac{k|\gamma|}{4.1718}\right)
+- 3.2356 \sqrt{\ln\left(\frac{k|\gamma|}{4.1718}\right)}} \ .
+$$
+\endproclaim
+
+\demo{Proof}  When  $\beta > \frac{1}{2}$, the result follows from
+(3.6.4), taking  $\overline{G} = 0$  (which is permissible by Lemma
+3.6.1); here  $3.2356 \le
+\alpha\sqrt{R/x}/(1+(\alpha/\sqrt{w})\sqrt{0.062})$.  It is easy to
+check that the bound is decreasing in  $k$  and  $|\gamma|$; when 
+$k = 1$  and  $|\gamma| = 1000$, it is less than  $0.02194$.  Thus
+the inequality holds when  $\beta \le \frac{1}{2}$  as well.
+\qed
+\enddemo
+%\fin
+
+%\vfill\eject 
+\par
+Taking  $\overline{D} = D^*(k,\sigma)$  in (3.6.7), we
+obtain a result better suited to the needs of this paper: recall that
+$\alpha = (\sqrt{5} + 1)/5$, $w = a_1/a_0$ and $x = \sqrt{w} - 1$.
+
+\proclaim{Theorem 3.6.3}  If  $\chi$  is a character of conductor 
+$k$, and  $H \ge 1000$, then any zero  $\beta + i\gamma$  of 
+$L(s,\chi)$  with  $|\gamma| \ge H$  satisfies
+$$ 1 - \beta \ge \frac{1}{R\ln(k|\gamma|/C_1(\chi))},
+$$ where
+$$ C_1(\chi) = C_1(\chi,H) = C_1 \cdot \exp\left(\frac{1}{R} \cdot
+\frac{\frac{\alpha}{x}\sqrt{\frac{1}{\Delta}} + \frac{1}{x^2}
+\overline{G}(1+\Delta)}{1 + \frac{\alpha}{\sqrt{w}} \sqrt{\Delta} +
+\frac{1}{x\sqrt{w}} \cdot \Delta \cdot
+\overline{G}(1+\Delta)}\right)
+$$ with  $\Delta = 1/(xR \cdot \ln(kH/C_1))$, $\overline{G}$  given
+by $(3.6.7)$, and 
+$\overline{D} = D^*(k,1+\Delta)$  by $(3.4.3)$.
+\endproclaim
+
+\demo{Proof}  When  $\beta > \frac{1}{2}$, the result follows from
+(3.6.4) and Lemma 3.6.1.  To see that it holds for  $\beta \le
+\frac{1}{2}$, one can use the upper bound  $11.624 \ge
+\frac{1}{x^2}\left(E(\sigma) - wS(\sigma)\right)$, the upper and
+lower bounds for  $D^*(k,\sigma)$  from Corollary 3.4.4, and the
+fact that  $|\gamma| \ge 1000$  to show that
+$$ R\ln(k|\gamma|/C_1(\chi)) \ge 15.\quad\qed$$
+\enddemo
+%\fin
+
+\bn {\bf Some examples :}
+$$
+\alignat4  &\text{For } k=1, \quad &|\gamma|&\ge545000000,  \quad
+&1-\beta\ge 1/(R\cdot\ln(k|\gamma|/38.31)).&&&\\   &\text{For } k=3,
+\quad &|\gamma|&\ge10000,  \quad &1-\beta\ge
+1/(R\cdot\ln(k|\gamma|/20.92)).&&& \\   &\text{For } k=12, \quad
+&|\gamma|&\ge10000, \quad &1-\beta\ge
+1/(R\cdot\ln(k|\gamma|/29.68)).&&& \\   &\text{For } k=17, \quad
+&|\gamma|&\ge2500,  \quad &1-\beta\ge
+1/(R\cdot\ln(k|\gamma|/20.90)).&&&\\   &\text{For } k=420, \quad
+&|\gamma|&\ge2500, \quad  &1-\beta\ge
+1/(R\cdot\ln(k|\gamma|/56.59)).&&&
+\endalignat 
+$$
+\head 4. $L$-functions, $\psi(X;k,l)$ and 
+$\theta(X;k,l)$\endhead
+
+\smallskip Before drawing consequences from Theorem 3.6.3, we need
+some  lemmas. 
+%\smallskip 
+
+{\sl In the following, we assume that the
+$L$-function under examination has no zero satisfying}
+$$
+\left\{\aligned &|\gamma|\ge H\ge1000,\\ &\beta > 1 - \frac{1}{R
+\ln(k|\gamma|/C_1(\chi))}
+\endaligned\right.
+\leqno(4.1)
+$$ {\sl for some positive constants $R$ and $C_1(\chi)$  such that}
+$$  R\cdot\ln\left(\frac{kH}{C_1(\chi)}\right)\ge2.
+\leqno(4.2)
+$$
+When  $R = 9.645908801$, then taking  $k=1$  and  $\gamma
+= 1000$  in Theorem 3.6.2 shows we can always use  $C_1(\chi) =
+9.14$; Theorem 3.6.3 gives sharper results.
+
+\subhead 4.1. Preparatory lemmas\endsubhead
+We restate McCurley's results before using them. 
+
+First\pagebreak\ of all, let us note the following consequence of McCurley  [5]
+:
+
+\proclaim {Lemma 4.1.1 \rom{(McCurley)}} If $\chi$ is a 
+Dirichlet character of conductor $k$, if  $T \ge 1$ is a real
+number, and if $N(T,\chi)$ denotes the number of zeros
+$\beta+i\gamma$ of
+$L(s,\chi)$ in the rectangle $0<\beta<1$, $|\gamma| \le T$, then
+$$ |N(T,\chi)-\frac T{\pi}\ln\left(\frac {kT}{2 \pi e}\right)|\le C_2
+\ln
+\ (kT)\  +C_3 
+$$  with $C_2=0.9185$ and $C_3=5.512$.
+\endproclaim
+
+Our values of $C_2$ and $C_3$ correspond to the choice 
+$\eta=\frac12$ in McCurley's notation and are undoubtedly not
+optimal.  (Note that our  $C_2$  is his  $C_1$, and our  $C_3$  is
+his  $C_2$.)  If 
+$k > 1$, Lemma 4.1.1 follows immediately from (\cite{5, Theorem
+2.1}).  When 
+$k = 1$, it follows from the theorem of Rosser cited in (\cite{5,
+formula 2.17}). 
+%\bigskip
+
+\proclaim {Lemma 4.1.2} If  $k$  is the conductor of  $\chi$, and  
+$L(s,\chi)$ satisfies $GRH(H)$ for some  $H \ge 1$, then
+$$
+\sum\Sb |\gamma |\le H\\ \rho\in \Cal Z(\chi)\endSb \frac 1{|\rho|} 
+\le \tilde E(H),
+$$ with
+$$
+\tilde E(H)=
+\frac 1{2\pi}
+\ln ^2 (H) +\frac {\ln \left(\frac k{2\pi}\right)}{\pi}\ln (H) + C_2
++ 2\left( 
+\frac {\ln \left(\frac k{2\pi e}\right)}{\pi} + C_2 \ln (k) + C_3
+\right).
+\leqno(4.1.1)
+$$
+\endproclaim
+
+\demo{Proof} We consider what happens for $|\gamma|\le 1$ and for
+$|\gamma| >1$.
+%\smallskip 
+
+For $|\gamma|\le 1$, using GRH(1), we have 
+$$
+\sum\Sb |\gamma |\le1\\ \rho\in\Cal Z(\chi)\endSb \frac 1{|\rho|} 
+\le 2 N(1,\chi). \leqno(4.1.2)
+$$
+
+For $|\gamma|>1$, one gets
+$$
+\align
+\sum\Sb 1<|\gamma |\le H\\ \rho\in\Cal Z(\chi)\endSb \frac 1{|\rho|} 
+&\le
+\sum\Sb 1<|\gamma |\le H\\ \rho\in\Cal Z(\chi)\endSb \bigg ( 
+\int_{|\gamma|}^{H} \frac {dt}{t^2} + \frac 1H \bigg ) \\  &=
+\int_{1}^{H} \frac {N(t,\chi)-N(1,\chi)}{t^2} dt + \frac
+{N(H,\chi)-N(1,\chi)}H,
+\endalign
+$$ thus
+$$
+\sum\Sb 1<|\gamma |\le H\\ \rho\in\Cal Z(\chi)\endSb  \frac
+1{|\rho|} \le \int_{1}^{H} \frac {N(t,\chi)}{t^2} dt +\frac
+{N(H,\chi)}H -\frac {N(1,\chi)}1. \leqno(4.1.3)
+$$
+%\indent 
+Now we easily finish the proof on using Lemma 4.1.1.\qed
+\enddemo
+%\fin
+%\smallskip
+
+\proclaim{Lemma 4.1.3} Let $\chi$ be a character with conductor 
+$k$, let $m\ge 1$ be an integer and $x$, $x_0$ be two real numbers
+such that $x\ge x_0\ge1$ and $2R\ln^2(kH/C_1(\chi))\ge\operatorname{Log}(x_0)$.
+Then
+$$
+\sum\Sb | \gamma | \ge H \\ \rho \in \Cal Z(\chi) \endSb 
+\frac {x^{\beta}}{|\gamma|^{m+1}} +\sum\Sb | \gamma|\ge H \\ \rho
+\in \Cal Z(\bar\chi) \endSb 
+\frac {x^{\beta}}{|\gamma|^{m+1}}
+\le x(\tilde A+\tilde B)+\sqrt x (\tilde C+\tilde D),
+$$ where, with  $C_2 = 0.9185$ and $C_3 = 5.512$, we have
+$$
+\left\{\aligned
+\tilde A &=\dsize \int_{H}^{\infty}
+\bigg \{\frac {\ln \left(\frac{kt}{2\pi}\right)}{\pi}+\frac{C_2}t
+\bigg
+\} 
+\frac {\exp \big \{- \frac {\ln (x_0)}{R\ln(kt/C_1(\chi))} \big \}} 
+{t^{m+1}}dt, \\
+\tilde B &=\frac1{H^{m+1}}\exp\big\{- \frac{\ln
+(x_0)}{R\ln(kH/C_1(\chi))}\big\} 2(C_2\ln (kH)+C_3),
+\\
+\tilde C &=\frac1{\pi mH^m}(\ln \left(\frac {kH}{2\pi}\right)+\frac
+1m ),
+\\
+\tilde D &=\frac 1{H^{m+1}} (2C_2 \ln (kH) +2C_3+\frac{C_2}{m+1}).
+\endaligned\right.
+\leqno(4.1.4)
+$$
+\endproclaim
+
+%\smallskip
+\demo{Proof} The functional equation of the $L$-functions enables us
+to  write 
+$$
+\sum\Sb | \gamma | \ge H \\ \rho \in \Cal Z(\chi) \endSb 
+\frac {x^{\beta}}{|\gamma|^{m+1}} +\sum\Sb | \gamma|\ge H \\ \rho
+\in \Cal Z(\bar\chi) \endSb 
+\frac {x^{\beta}}{|\gamma|^{m+1}} =\sum\Sb | \gamma | \ge H \\ \rho
+\in \Cal Z(\chi) \endSb \left(\frac
+{x^{1-(1-\beta)}}{|\gamma|^{m+1}}  +\frac
+{x^{1-\beta}}{|\gamma|^{m+1}}\right).
+\leqno(4.1.5)
+$$  One of $\beta$ and $1-\beta$ is at most $\frac 12$, the other is
+less than 
+$$  1-\frac 1{R\ln(k|\gamma|/C_1(\chi))}.
+$$ We can split our upper bound in two pieces. For the first,
+$$
+\sum\Sb|\gamma|\ge H\\ \rho\in\Cal
+Z(\chi)\endSb\frac1{|\gamma|^{m+1}},\leqno\text{\rm (i)}
+$$
+an integration by parts assures that this sum is bounded by
+$\tilde C+\tilde D$. For the second,
+$$ 
+\tilde{S}(x) = \sum\Sb | \gamma|\ge H \\ \rho \in \Cal Z(\chi)
+\endSb \frac x{|\gamma|^{m+1}}
+\exp \big \{-\frac{\ln (x)}{R\ln(k|\gamma|/C_1(\chi))} \big \},
+\leqno\text{\rm (ii)}
+$$ we have $\tilde{S}(x)/x \le \tilde{S}(x_0)/x_0$, hence it remains
+to evaluate $\tilde{S}(x_0)/x_0$. Let us define
+$$
+\varphi_m(t)=\frac 1{t^{m+1}}
+\exp \big\{-\frac{\ln (x_0)}{R\ln(kt/C_1(\chi))}\big \} $$  and
+integrate it by parts:
+$$
+\frac{\tilde{S}(x_0)}{x_0} =
+\sum\Sb | \gamma|\ge H \\ \rho \in \Cal Z(\chi) \endSb
+\dsize\int_{|\gamma|}^{\infty}-\varphi_m^\prime(t)dt
+=\dsize\int_{H}^{\infty}
+(N(t,\chi)-N(H,\chi))\left(-\varphi_m^\prime(t)\right)dt.
+\leqno(4.1.6)
+$$  But
+$$
+\frac{\varphi_m^\prime(t)}{\varphi_m(t)}=
+\frac{m+1}{t\ln^2(kt/C_1(\chi))}
+\left[ -\ln^2(kt/C_1(\chi)) +\frac {\ln (x_0)}{(m+1)R} \right] 
+$$  and our hypothesis gives us $-\varphi_m^\prime(t)\ge0$ for $t\ge
+H$.
+
+Lemma 4.1.1 gives us an upper bound for $N(t,\chi)$ and we integrate
+back by\linebreak
+parts.\qed
+\enddemo
+%\fin
+
+\proclaim {Lemma 4.1.4} If $k$ is the conductor of $\chi$, and
+$L(s,\chi)$ satisfies $GRH(1)$, we have
+$$
+\sum\Sb \rho\in \Cal Z(\chi)\endSb \frac 2{|\rho(2-\rho)|} \le
+3.94\ln (k)+12.7.
+$$
+\endproclaim
+
+\demo{Proof} The contribution to the sum of the zeros with
+$|\gamma|\le1$ is at most $\frac83 N(1,\chi)$. The contribution of
+the remaining ones is not more than
+$$ 4\int_{1}^{\infty}\frac{N(t,\chi)-N(1,\chi)}{t^3}dt
+=-2N(1,\chi)+4\int_{1}^{\infty}\frac{N(t,\chi)}{t^3}dt, $$ and on
+using Lemma 4.1.1, we obtain the result.\qed
+\enddemo
+\subhead 4.2. Computing $\tilde A$\endsubhead
+The constant  $\tilde{A}$  is the dominant term in Lemma $4.1.3$. 
+However, the integral defining 
+$\tilde{A}$  converges slowly, and care is needed in evaluating it. 
+This was forcefully brought home to us when we initially sought to
+compute  $\tilde{A}$  using the pre-programmed numerical integration
+of PARI.  Lionel Reboul of the University of Lyon kindly verified
+the values by independent computations with MAPLE.  To our surprise,
+the values were the same for 
+$\ln(x_0) \ge 40$, but they were not close for small 
+$x_0$  (for instance  $0.032$  instead of  $0.034$).
+
+We will first give a simple lemma (Lemma 4.2.1) which gives a rather
+good upper bound for  $\tilde{A}$.  Then we will describe a way for
+accurately computing  $\tilde{A}$  advocated by Rosser, Schoenfeld,
+and McCurley, which involves transforming the given integral to a
+sum of rapidly convergent incomplete Bessel integrals.  
+%\smallskip
+
+For  $m \ge 2$  let us define $h_m(t)$ by
+$$ h_m(t)=
+\frac{1}{\pi(m-1)t^{m-1}}(\ln\big(\frac{kt}{2\pi}\big)+\frac1{m-1})+
+\frac{C_2}{mt^m}.
+\leqno(4.2.1)
+$$
+%\indent
+
+\proclaim{Lemma 4.2.1} We have, under the hypothesis of Lemma $4.1.3$,
+but with in addition $R\ln^2(kH/C_1(\chi))\ge\ln (x_0)$ and
+$m\ge2$, 
+$$
+\left\{\aligned &\tilde A\le \frac{h_m(H)}{H}\exp(-\frac{\ln
+(x_0)}{R\ln(kH/C_1(\chi))}),\\  &\tilde A\ge
+h_{m+1}(H)\exp(-\frac{\ln (x_0)}{R\ln(kH/C_1(\chi))}).
+\endaligned
+\right.
+$$
+\endproclaim
+
+\demo{Proof} Let us define
+$$  g_m(t)=\frac{\ln(\frac{kt}{2\pi})}{\pi t^m}+\frac{C_2}{t^{m+1}}.
+\leqno(4.2.2)
+$$
+
+Then, we readily see that $h^{\prime}_m(t)=-g_m(t)$. We also have 
+$$
+\aligned \tilde A=&\int_H^{\infty}g_m(t)\exp(-\frac{\ln
+(x_0)}{R\ln(kt/C_1(\chi))})\frac{dt}t\\
+ =&
+\frac{h_m(H)}{H}\exp(-\frac{\ln (x_0)}{R\ln(kH/C_1(\chi))})\\
+&-\int_H^{\infty}
+\left(\ln^2(kt/C_1(\chi))-\frac{\ln (x_0)}{R}\right) \exp(-\frac{\ln
+(x_0)}{R\ln(kt/C_1(\chi))})\frac{h_m(t)dt}{t^2\ln^2(kt/C_1(\chi))}\\
+\le&\frac{h_m(H)}H\exp(-\frac{\ln (x_0)}{R\ln(kH/C_1(\chi))}); 
+\endaligned
+$$  the last inequality holds because our hypothesis ensures that 
+$$
+\left(\ln^2(kH/C_1(\chi))-\frac{\ln (x_0)}{R}\right)\ge0. 
+$$
+%\smallskip 
+
+For the other inequality, we write
+$$
+\tilde A=\int_H^{\infty}g_{m+1}(t)\exp(-\frac{\ln
+(x_0)}{R\ln(kt/C_1(\chi))})dt \leqno(4.2.3)
+$$  and an integration by parts yields the result. 
+\qed
+\enddemo
+
+We now turn to the accurate computation of  $\tilde{A}$.  Define
+$$
+\left\{\aligned &K_n(z,w)=\frac12\int_w^{\infty}u^{n-1}\exp[-\frac
+z2(u+\frac1u)]du,\\  &U_{m}=\sqrt{\frac{Rm}{\ln
+(x_0)}}\ln\big(\frac{kH}{C_1(\chi)}\big),\\  &z_m=2\sqrt{\frac{m\ln
+(x_0)}{R}}.
+\endaligned\right.
+\leqno(4.2.4)
+$$  Then simple algebraic manipulations yield
+
+\proclaim{Lemma 4.2.2} There holds
+$$
+\align
+\tilde A=&\frac{2}{\pi}\frac{\ln
+(x_0)}{Rm}\left(\frac{k}{C_1(\chi)}\right)^m K_2(z_m,U_m)\\ 
+&+\frac{2}{\pi}\ln\left(\frac{C_1(\chi)}{2\pi}\right)
+\sqrt{\frac{\ln (x_0)}{Rm}}\left(\frac{k}{C_1(\chi)}\right)^m
+K_1(z_m,U_m)\\  &+2C_2\sqrt{\frac{\ln (x_0)}{R(m+1)}}
+\left(\frac{k}{C_1(\chi)}\right)^{m+1} K_1(z_{m+1},U_{m+1}). 
+\endalign
+$$
+\endproclaim
+
+The tails in the integrals  $K_1$  and  $K_2$  can be estimated as
+follows.  Write
+$$  \operatorname{erfc}(x)=\frac2{\sqrt{\pi}}\int_{x}^{\infty}e^{-t^2}dt.
+\leqno(4.2.5)
+$$ 
+
+\proclaim{Lemma 4.2.3 \rom{(Rosser and Schoenfeld)}} Put
+$y=\frac{\sqrt{w}-1/\sqrt{w}}{\sqrt{2}}$ for $w\ge1$. Then 
+$$  K_1(z,w)<\frac{e^{-z}}{2z}
+\big\{(1+\frac{3\sqrt{2}}8y)e^{-zy^2}
++(\frac{3}{8\sqrt{z}}+\sqrt{z})\sqrt{\frac{\pi}{2}}
+\operatorname{erfc}(y\sqrt{z})\big\},
+$$  and
+$$
+\align  K_2(z,w)<\frac{e^{-z}}{2z}
+\big\{&[\frac{35\sqrt{2}}{64}y^3+2y^2+(\frac{105}{128z}+
+\frac{15}{8})\sqrt{2}y+2+\frac2z]  e^{-zy^2}\\
+&\qquad\qquad\qquad+(\frac{105}{128z}+\frac{15}{8}+z)\sqrt{\frac{\pi}{2z}}
+\operatorname{erfc}(y\sqrt{z})\big\}.
+\endalign
+$$
+\endproclaim
+
+\proclaim{Lemma 4.2.4}  Assume $z > 0$.
+\smallskip The integrand in $K_1(z,w)$ is decreasing in
+$u$ for $u\ge1$. 
+%\smallskip 
+
+The integrand in $K_2(z,w)$ is increasing for $1\le
+u\le\frac{1+\sqrt{1+z^2}}{z}$ and decreasing in $u$ afterwards.
+\endproclaim
+
+Lemma 4.2.3 is accurate if  $w$  is large.  Thus,  $K_1$  and 
+$K_2$  can be computed by integrating numerically from  $w$  to some
+finite bound and then using Lemma 4.2.3.  In computing Table 1, this
+method was used in conjunction with Simpson's rule to get a sharp
+rigorous upper bound for  $\tilde{A}$  (within 1\%).  It should also
+be noted that R. Terras \cite{13} has given a rapid continued
+fraction algorithm for computing integrals like  $K_1$ and $K_2$. 
+Although this algorithm does not produce a rigorous error bound, we
+have used it to give an independent check on the numerical
+integrations.
+\subhead 4.3. Estimating $\psi$ and $\theta$ through
+$L$-functions\endsubhead
+We are now in a position to prove Theorem 1. To do so we want to use
+Theorem 3.6 of McCurley [5]. But in that theorem, the notation $\Cal
+Z(\chi)$ denotes the set of zeros of
+$L(s,\chi)$ with $0\le\beta<1$, so it is necessary to pay careful
+attention to the distinction between conductor and modulus. In
+\cite{5}, the zeros with $\beta=0$ are removed with some cumbersome
+arguments (cf. \cite{5, (3.25), (3.26), (3.27) and (3.38)}). The
+troubles caused by the use of imprimitive characters can also be
+seen in (\cite{5, (3.15)}).
+%\smallskip
+
+However, it is possible to work from the beginning with primitive
+characters only. If $\chi$ is a character modulo $k$, let $\chi_1$
+be its associated primitive character. Given $l$ prime to
+$k$, consider further
+$$ w_k(l,n)=\frac1{\varphi(k)}\sum_{\chi\mod
+k}\chi_1(n)\bar{\chi}(l).
+$$ If $K$ is the largest divisor of $k$ coprime to $n$, we have
+$$ w_k(l,n)=\cases
+\frac{\varphi(K)}{\varphi(k)}&\text{if}\ n\equiv l\pmod{K},\\
+0&\text{otherwise,}\endcases$$
+which can be proved as follows:$$
+\align
+\varphi(k)w_k(l,n)=&\sum_{d|k}\ \ \sum_{\chi\!\mod\!^*
+d}\chi(n)\bar{\chi}(l) \\  =&\sum_{d|K}\ \ \sum_{\chi\!\mod\!^*
+d}\chi(n)\bar{\chi}(l)=\sum_{\chi\!\mod\! K}\chi(n)\bar{\chi}(l),
+\endalign
+$$ where $\sum_{\chi\!\mod\!^*d}$ is a summation over the primitive
+characters modulo $d$. We now consider
+$$
+\psi^*(x;k,l)=\sum_{n\le x}w_k(l,n)\Lambda(n).
+$$ We have \ \ $\psi(x;k,l)\le\psi^*(x;k,l)\le\psi(x;k,l)+f(k)\ln
+(x)$
+\ for
+$x\ge1$\ \  with
+$$ f(k)=\sum_{p|k}{1\over p-1}.\leqno(4.3.1)
+$$ We remark that $f(k)\le3.5$ if $k$ has less than 12000 prime
+factors, which is true if $k\le\exp(127000)$, and in any case
+$f(k) = \Cal O(\ln(\ln(\ln(k))))$. Thus, we can work with 
+$\psi^*$ instead of $\psi$ with a small loss. Now McCurley's
+analysis (\cite{5, \S 3}) goes through with characters replaced by
+primitive characters since $\psi^*$ is also an increasing function.
+More precisely, McCurley's $m(\chi)$  now becomes the order of the
+zero of $L(s,\chi_1)$ at $s = 0$,  i.e. $m(\chi) = 0$ if
+$\chi(-1)=-1$ or $\chi$ is the principal character, and $m(\chi) =
+1$ otherwise.  In McCurley's notation, this yields
+$|d_2|\le1/2$. Following the proof of Lemma 3.5 of \cite{5}, we find
+further that if $L(s,\chi)$ satisfies GRH(1) and
+$\chi$ is not principal, then
+$$  |b(\chi)|\le1.57+\sum_{\rho\in\Cal
+Z(\chi)}\frac{2}{|\rho(2-\rho)|},
+$$  which, with Lemma 4.1.4 together with $|b(\chi_0)|=\ln (2\pi)$
+yields\ ``{\sl If every L-function of modulus k satisfies $\roman{GRH}(1)$,
+then $|d_1+d_2|\le3.94\ln(k) +12.7$}" instead of Lemma 3.5 of
+\cite{5}. Finally, the right-hand side of (\cite{5, (3.21)}) becomes
+$$  (\delta x)^m\left[\frac{\ln(2)}2+\frac{\ln (2x)}{2}+3.94\ln
+(k)+12.7\right].
+$$  An additional error term comes from replacing $\psi^*$ by $\psi$.
+The upper bound we get this way is an increasing function of $x$, so
+we can introduce the maximum  $\max\limits_{1\le y\le x}$  which is
+useful in practice.  Thus we get
+
+\proclaim{Theorem 4.3.1 \rom{(McCurley)}}
+Let $x \ge 1$ be a real number, $k \ge 1$ an integer,
+$m$ a positive integer, $\delta$ a real number with 
+$0<\delta<\frac{x-2}{mx}$, and $H$ a positive real number. Put
+$$A(m,\delta)=\frac 1{\delta^m}\sum_{j=0}^{m}\binom mj 
+(1+j\delta)^{m+1}.$$
+Suppose that for each  $\chi$  with modulus 
+$k$,  $L(s,\chi)$  satisfies $GRH(1)$. Then
+$$
+\align
+\frac {\varphi(k)}x \max_{1\le y \le x}|\psi(y;k,l)-
+\frac y{\varphi(k)}| <&  A(m,\delta)
+    \sum_{\chi}
+    \sum\Sb \rho \in \Cal Z(\chi) \\ |\gamma|> H \endSb
+    \frac {x^{\beta-1}}{|\rho(\rho+1)...(\rho+m)|} \\
+\ &+  (1+\frac {m\delta}2)
+    \sum_{\chi}
+    \sum\Sb \rho \in \Cal Z(\chi) \\ |\gamma|\le H \endSb
+    \frac {x^{\beta-1}}{|\rho|} + \frac{m\delta}{2}+\tilde R,
+\endalign
+$$ where $\sum_{\chi}$ denotes the summation over all characters
+modulo
+$k$,
+$$
+\tilde R=
+\frac {\varphi(k)}x
+      \big[(f(k)+0.5)\ln (x)+4\ln (k)+13.4\big],
+\leqno(4.3.2)
+$$ and $f(k)$ is given by $(4.3.1)$\pagebreak.
+\endproclaim
+\bn
+
+We also wish to allow
+$\theta$ instead of $\psi$ which can be done by recalling Theorem
+$6$ of Rosser and Schoenfeld ([9]) :
+$$ 0\le\psi(x;k,l)-\theta(x;k,l)\le\psi(x)-\theta(x)\le 1.0012\sqrt
+x+3x^{\frac13}
+\text{\ \ for\ \ }x>0.
+\leqno(4.3.3)
+$$ Collecting our results, we finally get
+\bigskip
+%\vfill\eject
+
+\proclaim{Theorem 4.3.2}
+Let  $k \ge 1$  be an integer, and let  $H \ge 1000$  be a real
+number such that every  $L$-function with modulus  $k$  satisfies 
+$GRH(H)$.  Put  $C = C_1(\chi_0,H)$, where  $\chi_0$  is the trivial
+character, and let 
+$x_0$  be a real number such that  $R \cdot \ln^2(H/C) \ge
+\ln(x_0)$.  Let 
+$m
+\ge 2$  be an integer, and let  $\delta > 0$  be a real number such
+that  $0 < \delta < (x_0-2)/(mx_0)$.
+%\smallskip 
+
+Then for any  $x \ge x_0$  we have
+$$
+\align
+\frac {\varphi(k)}x \max_{1\le y \le x}|\psi(y;k,l)-\frac
+y{\varphi(k)}&| \le \frac{(1+(1+\delta)^{m+1})^m}{\delta^m} 
+\frac{\varphi(k)}{2}((\tilde A+\tilde B)+\frac{1}{\sqrt{x_0}}(\tilde
+C+\tilde D))\\ &\quad + (1+\frac
+{m\delta}2)\frac{\varphi(k)}{\sqrt{x_0}}\tilde
+E(H)+\frac{m\delta}2+\tilde R,
+\endalign
+$$  where $\tilde A$, $\tilde B$, $\tilde C$, $\tilde D$ are those
+of Lemma $4.1.3$ with  $C_1(\chi)$  replaced by  $C$  and with 
+$\tilde A$ estimated by Lemma $4.2.1$, 
+$\tilde{E}(H)$  given by Lemma $4.1.2$, and  $\tilde R$  given by
+$(4.3.2)$ with  $x = x_0$.
+%\smallskip 
+
+If  $\tilde{\Delta} = \varphi(k)(1.0012x^{-1/2}_0 + 3x^{-2/3}_0)$,
+and 
+$\tilde{Z}$  denotes the error bound above, then  $\tilde{Z} +
+\tilde{\Delta}$  is an upper bound for
+$$
+\frac{\varphi(k)}{x} \max\limits_{1\le y\le x} \left|
+\theta(y;k,l) - \frac{y}{\varphi(k)}\right| .
+$$
+\endproclaim
+%\smallskip
+
+\demo{Proof} We use Theorem 4.3.1 and evaluate the sums over the
+zeros by appealing to Lemmas 4.1.2 and 4.1.3. We also remark (cf.
+[8]) that 
+$$  A(m,\delta)\le\frac{(1+(1+\delta)^{m+1})^m}{\delta^m}.\quad\qed
+\leqno(4.3.4)
+$$
+\enddemo
+
+Theorem 4.3.2 has been stated in such a way as to make its
+implementation as simple as possible, and to minimize the numerical
+input required.  For a stronger version which yields slightly better
+results, see Theorem 5.1.1 below.
+
+\subhead 4.4. Heuristic control of the values of $m$, $\delta$ and
+$\varepsilon$\endsubhead
+Let  $\varepsilon_k(m,\delta)$  denote the expression  $\tilde{Z} +
+\tilde{\Delta}$ in Theorem 4.3.2, and let  $\varepsilon_k$  be its
+minimum value as 
+$m$  and  $\delta$  vary.  This optimization is achieved in practice
+by first minimizing over  $\delta$ (with  $m$  held fixed) using any
+standard minimization algorithm, and then minimizing over  $m$.
+
+In this section we aim to heuristically estimate the optimal values
+of  $m$  and  $\delta$ and the order of magnitude of 
+$\varepsilon_k$, together with their dependence on  $k$  and  $H$. 
+Under the hypothesis of Theorem 4.3.2, we note that in the formula
+for  $\tilde{Z} + \tilde{\Delta}$:
+\roster
+\item"(1)"  $(1 + (1 + \delta)^{m+1})^m/\delta^m$  is equivalent to 
+$2^m/\delta^m$\pagebreak\  if  $m\delta$  tends to  $0$. 
+\item"(2)"  $(\tilde{A} +
+\tilde{B} + (\tilde{C} + \tilde{D})/\sqrt{x_0})$  can be
+approximated by  $\ln\left(\frac{kH}{2\pi}\right)/(\pi mH^m)$  for
+large  $H$  and  $x_0$.
+\item"(3)" $(1+m\delta/2)\tilde E(H) x_0^{-1/2}$ is asymptotic to
+$x_0^{-1/2}\frac{\ln^2(kH)}{2\pi}$ as $H$ goes to infinity and
+$\delta$ to 0. For large $x_0$ it is negligible.
+\item"(4)" $\tilde R$ is $\Cal O(k\ln(kx_0)/x_0)$ when $x_0$ goes to
+infinity. For $x_0$ large it is negligible.
+\item"(5)"  For large  $x_0$, $\tilde{\Delta}$  is negligible.
+\endroster
+
+Hence our $\varepsilon_k$ can be approximated by 
+$$ f(m,\delta)=\frac{m\delta}{2}
++\frac{\varphi(k)}{2}\left(\frac2{\delta H}\right)^m
+\frac{\ln\left(\frac{kH}{2\pi}\right)}{\pi m}.
+\leqno(4.4.1)
+$$
+
+We reduce this expression once more; numerically, it happens that
+the values of $m$ are almost always near $7$. We replace the term
+$\left(\frac2{\delta H}\right)^m\frac 1m$ by
+$\left(\frac2{\delta H}\right)^m\frac 1{\bar m}$, where $\bar m$ is
+an estimation of the value of $m$ and we finally consider 
+$$
+\bar f(m,\delta)=\frac{a}{(\delta B)^m}+\frac{m\delta}{2}
+\leqno(4.4.2)
+$$  with
+$$ 
+a=\frac{\varphi(k)}2\frac{\ln\left(\frac{kH}{2\pi}\right)}{\pi\bar
+m} \text{\ \ \ and\ \ \ } B=\frac H2.
+\leqno(4.4.3)
+$$
+
+We now let $m$ vary continuously. Then $$
+\frac{\dif \bar f}{\dif\delta}=\frac{\dif\bar f}{\dif m}=0 $$ yields
+$$
+\left\{\aligned &\frac{a}{(\delta B)^m}=\frac{\delta}2,\\
+&\frac{a}{(\delta B)^m}\ln(\delta B)=\frac{\delta}2,
+\endaligned\right.
+$$  hence
+$$
+\gather
+\delta=\frac{2e}{H}
+\text{,\ \ }\qquad m=\ln(aH/e)
+\text{,\ \ }\\
+\bar f(m,\delta)=(m+1)\frac{\delta}2 =
+\ln\left(\frac{H\varphi(k)}{2\pi \bar m}
+\ln\left(\frac{kH}{2\pi}\right)\right)\cdot \frac{e}{H} .
+\tag4.4.4\endgather
+$$
+
+It is striking that in this approximation, $\delta$ depends neither
+on $m$ nor on $k$. We have verified this numerically ($\delta$ is
+almost constant). The other striking thing is that
+$\bar f(m,\delta)$ (our $\varepsilon_k$) depends on $k$ mainly
+through
+$\ln(\varphi(k))$; we find numerically that our
+$\varepsilon_k$'s increase very slowly when $k$ increases. This is
+rather surprising since there are $\varphi(k)$ sums to evaluate, so
+we might have expected $\varepsilon_k$ to depend on $k$ by a
+multiplicative factor $\varphi(k)$.
+%\vfill\eject
+
+\head 5. Numerical estimates for $\theta$ and $\psi$\endhead
+
+In this section, we present the numerical estimates one can deduce
+from the results in \S\S2, 3, and 4.  Since the analytic
+bounds only become useful for
+$x_0\ge10^{10}$, we have supplemented them with a tabulation for low
+heights. 
+%\smallskip 
+
+The following notation is used throughout:
+$$
+\cases
+\aligned &\varepsilon(\theta,x,k) \,=\max_{(l,k) = 1}
+\frac{\varphi(k)}{x}
+\max\limits_{1\le y\le x}|\theta(y;k,l)-y/\varphi(k)|,
+\\  &\varepsilon(\psi,x,k)=\max_{(l, k)=1}
+\frac{\varphi(k)}{x}
+\max\limits_{1\le y\le x}|\psi(y;k,l)-y/\varphi(k)| .
+\endaligned\endcases\leqno(5.1)
+$$ 
+%\smallskip 
+
+The computations for the tables were performed on PCs using the
+Intel 80486 processor. The 80486-DX was used in Extended Precision
+mode, where it calculates with an 80-bit word having a 1-bit sign, a
+15-bit exponent, and a 64-bit mantissa. It carries approximately
+19.2 decimal digits of accuracy, and can represent numbers over the
+range $10^{-4392}$ to $10^{4392}$. In Tables 1 and 2, the results
+are reported to 6 digits of accuracy, and were rounded up in their
+last digit. 
+%\smallskip
+
+As a verification, independent computations were done using the
+calculator GP of PARI, and some randomly chosen values were checked,
+with satisfying agreement.
+
+\subhead 5.1. Asymptotic results for  $x_0 \ge 10^{10}$\endsubhead
+\proclaim{Theorem 1} For any triple $(k,\varepsilon,x_0)$ given by
+Table $1$, 
+$$
+\left\{\aligned &\varepsilon(\theta,x,k)\le\varepsilon
+\text{\ \ for\ \ }x\ge x_0,\\ &\varepsilon(\psi,x,k)\le\varepsilon
+\text{\ \ for\ \ }x\ge x_0.
+\endaligned\right.
+$$
+\endproclaim
+
+Table 1 contains the best known bounds for all the moduli covered by
+Rumely's $L$-series calculations.  The bounds were computed using a
+strong form of Theorem 4.3.2, which broke the error term into its
+contributions from each individual $L$-series, and replaced the
+estimates for  $\tilde{E}(H)$  by tabulated values:
+%\par
+%\bigskip
+
+\proclaim{Theorem 5.1.1}  Let  $k \ge 1$  be an integer.  For each
+character  $\chi$  modulo  $k$, let  $H_{\chi} \ge 1000$  be such
+that  $L(s,\chi)$  satisfies GRH$(H_{\chi})$; we suppose  $H_{\chi}
+= H_{\bar{\chi}}$  for all  $\chi$, and put  $C_1(\chi) =
+C_1(\chi,H_{\chi})$.  Let  $x_0 \ge 10$  be a real number such that
+for each  $d$  dividing  $k$, and each  $\chi$  with conductor 
+$d$,  $2R\cdot \ln^2(dH_{\chi}/C_1(\chi)) \ge \ln(x_0)$.  Let 
+$m$  be a positive integer, and let  $\delta > 0$  be a real number
+such that  $0 < \delta < (x_0 - 2)/(mx_0)$.  For each  $\chi$  with
+conductor  $d$, let  $\tilde{A_{\chi}}$, $\tilde{B_{\chi}}$,
+$\tilde{C_{\chi}}$, $\tilde{D_{\chi}}$  be the constants from Lemma
+$4.1.3$ computed using  $d$  and  $H_{\chi}$; let 
+$\tilde{E_{\chi}}$  be a tabulated bound for 
+$\mathop{\sum}\Sb \rho\in Z(\chi) \\ |\beta|\le H_{\chi} \endSb
+1/|\rho|$.  Let  $\tilde{R}$  be as in Theorem $4.3.1$.
+%\vfill\eject
+
+Then for  $x \ge x_0$ 
+$$
+\align
+\varepsilon(\psi,x,k) \le \frac{1}{2} A(m,\delta) &\cdot
+\sum_{\chi} \left[\tilde{A}_{\chi} + \tilde{B}_{\chi} +
+(\tilde{C}_{\chi} + \tilde{D}_{\chi})/\sqrt{x}_0\right] \\ &+
+\frac{(1 + m\delta/2)}{\sqrt{x_0}} \cdot \left(\sum_{\chi}
+\tilde{E}_{\chi}\right) + m\delta/2 + \tilde{R} .
+\endalign
+$$
+
+{\pageinsert
+\centerline{{\smc Table 1.} \rom{Analytic epsilons for $x \ge
+x_0$}}
+\par 
+\rom{The values reported are  $\varepsilon =
+\max(\varepsilon(\theta,x_0,k), \varepsilon(\psi,x_0,k))$, and have
+been rounded up in the last decimal place (our notation is as in
+(5.1) of the paper).  }
+\smallskip
+%%\bigskip
+{\hskip-.3in {\sevenpoint\vbox{\offinterlineskip
+\halign{\strut \hfil \quad$#$ & 
+ \quad$#$\hfil &
+ \quad$#$\hfil &
+\quad$#$\hfil &\quad$#$\hfil&
+%%\hskip.7truein $#$ &
+%%\quad$#$\hfil &
+%xxxxxxx
+\hskip.2truein $#$ &
+\hfil \quad $#$ &
+\quad $#$ \hfil & 
+\quad$#$\hfil &
+\quad$#$\hfil & \quad $#$ \hfil \cr 
+\underline{k} & \hfil\underline{\quad 10^{10}\quad}\hfil&
+\hfil\underline{\quad 10^{13}\quad}\hfil &
+\hfil\underline{\quad 10^{30}\quad}\hfil & \hfil\underline{\quad
+10^{100}\ }\hfil & %%&
+\underline{k} &
+\hfil\underline{\quad 10^{10}\quad} \hfil&
+\hfil\underline{\quad 10^{13}\quad} \hfil&
+\hfil\underline{\quad 10^{30}\quad}\hfil & \hfil\underline{\quad
+10^{100}\ }\hfil\cr
+\noalign{\smallskip}      1 & 0.000213 & 0.000015 & 0.000001 &
+0.000001 & %%& 
+46 & 0.012682 & 0.009592 & 0.009012 & 0.007046 \cr 2 &
+0.000213 & 0.000015 & 0.000001 & 0.000001 & %%& 
+47 & 0.018044 &
+0.010720 & 0.010012 & 0.008148 \cr 3 & 0.002238 & 0.001951 &
+0.001813 & 0.001310 & %%& 
+48 & 0.011080 & 0.008876 & 0.008319 &
+0.006373 \cr 4 & 0.002238 & 0.001943 & 0.001809 & 0.001324 & %%& 
+49 &
+0.017015 & 0.010461 & 0.009773 & 0.007891 \cr 5 & 0.002785 &
+0.002250 & 0.002105 & 0.001606 & %%& 
+50 & 0.012214 & 0.009447 &
+0.008851 & 0.006861 \cr 6 & 0.002238 & 0.001951 & 0.001813 &
+0.001310 & %%& 
+51 & 0.014479 & 0.009803 & 0.009191 & 0.007312 \cr 7 &
+0.003248 & 0.002406 & 0.002258 & 0.001770 & %%& 
+52 & 0.012671 &
+0.009058 & 0.008475 & 0.006656 \cr 8 & 0.002811 & 0.002257 &
+0.002116 & 0.001634 & %%& 
+53 & 0.019206 & 0.010734 & 0.010011 &
+0.008188 \cr 9 & 0.003228 & 0.002380 & 0.002235 & 0.001759 & %%& 
+54 &
+0.011579 & 0.009061 & 0.008492 & 0.006572 \cr 10 & 0.002785 &
+0.002250 & 0.002105 & 0.001606 & %%& 
+55 & 0.016306 & 0.010159 &
+0.009493 & 0.007591 \cr 11 & 0.004125 & 0.002590 & 0.002421 &
+0.001954 & %%& 
+56 & 0.012961 & 0.009462 & 0.008865 & 0.006969 \cr 12 &
+0.002781 & 0.002241 & 0.002099 & 0.001610 & %%& 
+57 & 0.015636 &
+0.010300 & 0.009640 & 0.007691 \cr 13 & 0.004560 & 0.002657 &
+0.002478 & 0.002020 & %%& 
+58 & 0.014102 & 0.010007 & 0.009398 &
+0.007440 \cr 14 & 0.003248 & 0.002406 & 0.002258 & 0.001770 & %%& 
+59 &
+0.020659 & 0.011057 & 0.010299 & 0.008451 \cr 15 & 0.008634 &
+0.007628 & 0.007088 & 0.005045 & %%& 
+60 & 0.010879 & 0.008740 &
+0.008182 & 0.006204 \cr 16 & 0.008994 & 0.007938 & 0.007392 &
+0.005393 & %%& 
+61 & 0.021073 & 0.011080 & 0.010315 & 0.008475 \cr 17 &
+0.010746 & 0.008587 & 0.008047 & 0.006203 & %%& 
+ 62 & 0.014535 &
+0.010088 & 0.009468 & 0.007527 \cr 18 & 0.003228 & 0.002380 &
+0.002235 & 0.001759 & %%& 
+ 63 & 0.015473 & 0.010048 & 0.009409 &
+0.007510 \cr 19 & 0.011892 & 0.009442 & 0.008852 & 0.006838 & %%&
+  64 &
+0.014938 & 0.010019 & 0.009400 & 0.007530 \cr 20 & 0.008501 &
+0.007465 & 0.006950 & 0.005024 & %%&
+  65 & 0.018025 & 0.010412 &
+0.009697 & 0.007837 \cr 21 & 0.009708 & 0.008143 & 0.007582 &
+0.005625 & %%& 
+ 66 & 0.011685 & 0.008844 & 0.008276 & 0.006357 \cr 22 &
+0.004125 & 0.002590 & 0.002421 & 0.001954 & %%&
+  67 & 0.022414 &
+0.011252 & 0.010451 & 0.008620 \cr 23 & 0.012682 & 0.009592 &
+0.009012 & 0.007046 & %%& 
+68 & 0.014691 & 0.009884 & 0.009272 &
+0.007412 \cr 24 & 0.008173 & 0.007107 & 0.006615 & 0.004775 & %%&
+  69 &
+0.017285 & 0.010536 & 0.009835 & 0.007944 \cr 25 & 0.012214 &
+0.009447 & 0.008851 & 0.006861 & %%&
+  70 & 0.012809 & 0.009431 &
+0.008821 & 0.006862 \cr 26 & 0.004560 & 0.002657 & 0.002478 &
+0.002020 & %%&
+  71 & 0.023269 & 0.011310 & 0.010484 & 0.008672 \cr 27 &
+0.011579 & 0.009061 & 0.008492 & 0.006572 & %%&
+  72 & 0.012665 &
+0.009118 & 0.008546 & 0.006759 \cr 28 & 0.009908 & 0.008298 &
+0.007741 & 0.005800 & %%&
+  74 & 0.015830 & 0.010323 & 0.009668 &
+0.007768 \cr 29 & 0.014102 & 0.010007 & 0.009398 & 0.007440 & %%&
+  75 &
+0.016346 & 0.010341 & 0.009659 & 0.007724 \cr 30 & 0.008634 &
+0.007628 & 0.007088 & 0.005045 & %%&
+  76 & 0.015819 & 0.010331 &
+0.009671 & 0.007751 \cr 31 & 0.014535 & 0.010088 & 0.009468 &
+0.007527 & %%& 
+ 77 & 0.020600 & 0.010854 & 0.010076 & 0.008235 \cr 32 &
+0.011103 & 0.008857 & 0.008300 & 0.006399 & %%& 
+ 78 & 0.012621 &
+0.009108 & 0.008514 & 0.006625 \cr 33 & 0.011685 & 0.008844 &
+0.008276 & 0.006357 & %%&
+ 80 & 0.014527 & 0.009700 & 0.009085 &
+0.007218 \cr 34 & 0.010746 & 0.008587 & 0.008047 & 0.006203 & %%&
+  81 &
+0.019611 & 0.010834 & 0.010094 & 0.008264 \cr 35 & 0.012809 &
+0.009431 & 0.008821 & 0.006862 & %%&
+ 82 & 0.016744 & 0.010524 &
+0.009843 & 0.007953 \cr 36 & 0.009544 & 0.007900 & 0.007372 &
+0.005563 & %%&
+  84 & 0.012721 & 0.009304 & 0.008703 & 0.006792 \cr 37 &
+0.015830 & 0.010323 & 0.009668 & 0.007768 & %%&
+ 85 & 0.021395 &
+0.010990 & 0.010205 & 0.008353 \cr 38 & 0.011892 & 0.009442 &
+0.008852 & 0.006838 & %%&
+  86 & 0.017180 & 0.010598 & 0.009904 &
+0.008025 \cr 39 & 0.012621 & 0.009108 & 0.008514 & 0.006625 & %%&
+  87 &
+0.019865 & 0.010903 & 0.010152 & 0.008278 \cr 40 & 0.010833 &
+0.008627 & 0.008084 & 0.006183 & %%&
+  88 & 0.016484 & 0.010131 &
+0.009474 & 0.007646 \cr 41 & 0.016744 & 0.010524 & 0.009843 &
+0.007953 & %%&
+  90 & 0.012817 & 0.009413 & 0.008809 & 0.006884 \cr 42 &
+0.009708 & 0.008143 & 0.007582 & 0.005625 & %%&
+  91 & 0.023159 &
+0.011148 & 0.010314 & 0.008484 \cr 43 & 0.017180 & 0.010598 &
+0.009904 & 0.008025 & %%&
+  92 & 0.017508 & 0.010574 & 0.009872 &
+0.008009 \cr 44 & 0.011798 & 0.008871 & 0.008310 & 0.006440 & %%&
+ 93 &
+0.020727 & 0.011013 & 0.010245 & 0.008375 \cr 45 & 0.012817 &
+0.009413 & 0.008809 & 0.006884 & %%&
+  94 & 0.018044 & 0.010720 &
+0.010012 & 0.008148 \cr}}}
+}
+\bigskip
+\bigskip
+\endinsert}
+
+
+{\topinsert
+\centerline{{\smc Table 1} \rom{(continued)}}
+%\vfill\eject
+\vskip2pc
+{\hskip-.3in {\sevenpoint\vbox{\offinterlineskip
+\halign{\strut \hfil \quad$#$ & 
+ \quad$#$\hfil &
+ \quad$#$\hfil &
+\quad$#$\hfil &\quad$#$\hfil&
+%\hskip.7truein $#$ &
+\hskip.2truein $#$ &
+%\quad$#$\hfil &
+\hfil \quad $#$ &
+\quad $#$ \hfil & 
+\quad$#$\hfil &
+\quad$#$\hfil & \quad $#$ \hfil \cr 
+\underline{k} & \hfil\underline{\quad 10^{10}\quad}\hfil&
+\hfil\underline{\quad 10^{13}\quad}\hfil &
+\hfil\underline{\quad 10^{30}\quad}\hfil & \hfil\underline{\quad
+10^{100}\ }\hfil & %%&
+\underline{k} &
+\hfil\underline{\quad 10^{10}\quad} \hfil&
+\hfil\underline{\quad 10^{13}\quad} \hfil&
+\hfil\underline{\quad 10^{30}\quad}\hfil & \hfil\underline{\quad
+10^{100}\ }\hfil\cr
+\noalign{\smallskip}          95 & 0.023180 & 0.011282 & 0.010444 &
+0.008570 &%%&  
+144 & 0.018241 & 0.010486 & 0.009772 & 0.007976 \cr 96
+& 0.014710 & 0.009886 & 0.009271 & 0.007395 & %%& 
+150 & 0.016346 &
+0.010341 & 0.009659 & 0.007724 \cr 98 & 0.017015 & 0.010461 &
+0.009773 & 0.007891 & %%& 
+ 154 & 0.020600 & 0.010854 & 0.010076 &
+0.008235 \cr 
+99 & 0.020644 & 0.010823 & 0.010051 & 0.008238 & %%&  
+156
+& 0.018025 & 0.010363 & 0.009653 & 0.007827 \cr 
+100 & 0.016476 &
+0.010310 & 0.009631 & 0.007737 & %%&  
+162 & 0.019611 & 0.010834 &
+0.010094 & 0.008264 \cr 
+102 & 0.014479 & 0.009803 & 0.009191 &
+0.007312 & %%&  
+163 & 0.044431 & 0.012935 & 0.011505 & 0.009799 \cr 104
+& 0.018292 & 0.010424 & 0.009715 & 0.007922 & %%& 
+ 168 & 0.017995 &
+0.010459 & 0.009740 & 0.007882 \cr 105 & 0.017707 & 0.010434 &
+0.009708 & 0.007787 & %%&
+  169 & 0.042497 & 0.012769 & 0.011383 &
+0.009670 \cr 106 & 0.019206 & 0.010734 & 0.010011 & 0.008188 & %%& 
+170
+& 0.021395 & 0.010990 & 0.010205 & 0.008353 \cr 108 & 0.015635 &
+0.010079 & 0.009441 & 0.007589 & %%&
+  174 & 0.019865 & 0.010903 &
+0.010152 & 0.008278 \cr 110 & 0.016306 & 0.010159 & 0.009493 &
+0.007591 & %%&
+  180 & 0.018004 & 0.010482 & 0.009763 & 0.007903 \cr 111
+& 0.023287 & 0.011261 & 0.010425 & 0.008589 & %%&
+  182 & 0.023159 &
+0.011148 & 0.010314 & 0.008484 \cr 112 & 0.018184 & 0.010498 &
+0.009777 & 0.007942 & %%&
+  186 & 0.020727 & 0.011013 & 0.010245 &
+0.008375 \cr 114 & 0.015636 & 0.010300 & 0.009640 & 0.007691 & %%&
+  190
+& 0.023180 & 0.011282 & 0.010444 & 0.008570 \cr 116 & 0.020143 &
+0.010962 & 0.010209 & 0.008353 & %%&
+  198 & 0.020644 & 0.010823 &
+0.010051 & 0.008238 \cr 117 & 0.023222 & 0.011135 & 0.010306 &
+0.008499 & %%&
+  210 & 0.017707 & 0.010434 & 0.009708 & 0.007787 \cr 118
+& 0.020659 & 0.011057 & 0.010299 & 0.008451 & %%&
+  216 & 0.023480 &
+0.011154 & 0.010324 & 0.008542 \cr 120 & 0.014495 & 0.009785 &
+0.009169 & 0.007257 & %%&
+  222 & 0.023287 & 0.011261 & 0.010425 &
+0.008589 \cr 121 & 0.031939 & 0.012053 & 0.010963 & 0.009223 & %%&
+ 234
+& 0.023222 & 0.011135 & 0.010306 & 0.008499 \cr 122 & 0.021073 &
+0.011080 & 0.010315 & 0.008475 & %%&
+  242 & 0.031939 & 0.012053 &
+0.010963 & 0.009223 \cr 124 & 0.021008 & 0.011055 & 0.010285 &
+0.008436 & %%&
+ 243 & 0.043836 & 0.012879 & 0.011458 & 0.009740 \cr 125
+& 0.029581 & 0.011885 & 0.010860 & 0.009072 & %%&
+ 250 & 0.029581 &
+0.011885 & 0.010860 & 0.009072 \cr 126 & 0.015473 & 0.010048 &
+0.009409 & 0.007510 &%%& 
+256 & 0.036558 & 0.012394 & 0.011179 &
+0.009461 \cr 128 & 0.022035 & 0.011123 & 0.010336 & 0.008526 & %%&
+ 286
+& 0.033703 & 0.012101 & 0.010952 & 0.009218 \cr 130 & 0.018025 &
+0.010412 & 0.009697 & 0.007837 & %%&
+ 326 & 0.044431 & 0.012935 &
+0.011505 & 0.009799 \cr 132 & 0.016320 & 0.010123 & 0.009461 &
+0.007593 & %%&
+ 338 & 0.042497 & 0.012769 & 0.011383 & 0.009670 \cr 134
+& 0.022414 & 0.011252 & 0.010451 & 0.008620 & %%&
+ 360 & 0.028267 &
+0.011631 & 0.010644 & 0.008854 \cr 138 & 0.017285 & 0.010536 &
+0.009835 & 0.007944 & %%&
+ 420 & 0.027757 & 0.011602 & 0.010617 &
+0.008766 \cr 140 & 0.017989 & 0.010523 & 0.009796 & 0.007898 & %%&
+ 432
+& 0.039660 & 0.012542 & 0.011234 & 0.009519 \cr 142 & 0.023269 &
+0.011310 & 0.010484 & 0.008672 & %%&
+ 486 & 0.043836 & 0.012879 &
+0.011458 & 0.009740 \cr 143 & 0.033703 & 0.012101 & 0.010952 &
+0.009218 \cr}}}
+}
+%\vfill\eject
+\endinsert}
+
+If   $\tilde{\Delta} = \varphi(k)(1.0012 x^{-1/2}_0 + 3x^{-2/3}_0)$,
+and  $\tilde{Z}$  denotes the above bound for 
+$\varepsilon(\psi,x,k)$, then
+$$
+\varepsilon(\theta,x,k) \le \tilde{Z} + \tilde{\Delta} .
+$$
+\endproclaim
+
+If  $k$  is not of the form  $k = 2k'$  with  $k'$  odd, and  $k
+\ne 1$, then the values reported in Table 1 are the minimal values
+of the expression 
+$\tilde{Z} +
+\tilde{\Delta}$  in Theorem 5.1.1, when  $2
+\le m
+\le 14$  and 
+$\delta$  ranges over its allowable values.  The minima were found
+using Brent's golden section/parabolic interpolation algorithm
+(\cite{7, p. 283}).  It should be noted that as  $x_0$  and the 
+$H_{\chi}$  vary, different terms in the expression become dominant. 
+Heuristically the best estimate is obtained using GRH data to
+height  $H \cong 4e\pi\cdot\sqrt{x_0}/(\varphi(k)\cdot\ln(x_0))$. 
+The values in Table 1 are minima over the following data sets:
+%\smallskip
+
+\roster
+\item"{(A)}" Rumely's $L$-series and zeta data, using $T = 2500$ data
+for
+$k
+\le 13$,
+\item"{(B)}" Rumely's $L$-series and zeta data, using $T = 5000$ data
+for $k
+\le 13$,
+\item"{(C)}" Rumely's $L$-series and zeta data,
+\item"{(D)}" Rumely's $L$-series data $+$ Lehman's zeta data, with $T
+= 12030$\pagebreak, 
+\item"{(E)}" Rumely's $L$-series data $+$ vdL, teR, Winter zeta data
+to
+$T = 10^5$, 
+\item"{(F)}" Rumely's $L$-series data $+$ vdL, teR, Winter zeta data
+to
+$T = 10^6$, 
+\item"{(G)}" Rumely's $L$-series data $+$ vdL, teR, Winter zeta data
+to
+$T = 10^7$, 
+\item"{(H)}" Rumely's $L$-series data $+$ vdL, teR, Winter zeta data
+to
+$T = 545439823$.
+\endroster
+%\bigskip
+
+If  $k = 2k'$  with  $k'$  odd, and if  $N$  is the order of 2 in 
+$(\Bbb Z/k'\Bbb Z)^{\times}$, then for  $(k,l) = 1$
+$$
+\gather |\psi(x;k,l) - \psi(x;k',l)| \le (1/N)\ln(x) +
+\ln(2) , \\ |\theta(x;k,l) - \theta(x;k',l)| \le \ln(2) .
+\endgather
+$$ For the values of  $x_0$  considered in Table 1, these
+inequalities yield estimates for 
+$\varepsilon(\theta,x,k)$, $\varepsilon(\psi,x,k)$  better than
+those provided by Theorem 5.1.1 directly, and are the ones reported. 
+It will be observed that the bounds for 
+$k$  and  $k'$  in Table 1 are always the same:  the additional term
+in the error estimate was swallowed up when the values were rounded
+up to the nearest  $10^{-6}$.
+
+Finally, when  $k = 1, 2$ the  $x_0 = 10^{10}$  entry in Table 1 is
+derived from the main table of Rosser and Schoenfeld (\cite{9}),
+which gives 
+$\varepsilon(\psi,e^{23},1) = 0.00020211$; this improves on the
+value  $0.000272$  given by Theorem 5.1.1.
+
+\subhead 5.2. Estimates over the range  $0 - 10^{10}$\endsubhead
+In Table 2 we compare  $|\psi(x;k,l) - x/\varphi(k)|$  and 
+$|\theta(x;k,l) - x/\varphi(k)|$  with  $\sqrt{x}$, reporting the
+maximum ratio for  $0 < x \le 10^{10}$  for each  $k$.  Tabulations
+over the subintervals 
+$[10^n,10^{n+1}]$  show that the results are remarkably stable and
+uniform over the entire range, so that Table 2 gives a good
+representation of the true error.  The only exception is for very
+small moduli  $(k \le 6)$  where the initial primes distort the
+error estimates; more accurate asymptotic values are given at the
+end of the table for these moduli.  Let 
+$N(k,l)$  be the number of solutions to  $a^2 \equiv l
+\pmod{k}$ with $0 \le a < k$.  The function 
+$(x-N(k,l)\sqrt{x})/\varphi(k)$  usually gives a better
+approximation to  $\theta(x;k,l)$  than 
+$x/\varphi(k)$; we have also tabulated the maximal ratios 
+$|\theta(x;k,l) - (x-N(k,l)\sqrt{x})/\varphi(k)|\sqrt{x}$.
+
+We can summarize the main results of Table 2 as follows:
+
+\proclaim{Theorem 5.2.1}  For all the moduli in Table $1$, uniformly
+over the range  $0 \le x \le 10^{10}$, the following bounds hold:
+$$
+\align |\theta(x;k,l) - x/\varphi(k)| &\le 2.072\sqrt{x}, \\
+\left|\theta(x;k,l) -
+\frac{x-N(k,l)\sqrt{x}}{\varphi(k)}\right| &\le 1.174\sqrt{x},\\
+|\psi(x;k,l) - x/\varphi(k)| &\le 1.745\sqrt{x} .
+\endalign
+$$ 
+If  $k=5$, $k \ge 7$  or  $x \ge 224$, then
+$$ 
+|\psi(x;k,l) - x/\varphi(k)| \le \sqrt{x} ;
+$$ 
+for  $k = 1, 3, 4$  this holds if  $x \ge 14$.
+\endproclaim
+
+\proclaim{Corollary 5.2.2}  For these moduli, over the range  $0 < x
+\le 10^{10}$,
+$$
+\varepsilon(\theta,x,k) \le 2.072 \frac{\varphi(k)}{\sqrt{x}} ,
+\quad \varepsilon(\psi,x,k) \le 1.745 \frac{\varphi(k)}{\sqrt{x}} ;
+$$ for  $k =5$ or\pagebreak\ $k \ge 7$, $\varepsilon(\psi,x,k) \le
+\varphi(k)/\sqrt{x}$.
+\endproclaim
+%\bn
+
+%\vfill\eject
+\centerline{{\smc Table 2.} \rom{Tabulations $0-10^{10}$}}
+\smallskip
+\roster
+%\widestnumber\itemitem{\quad ASYMPTOTIC :}
+\item"{}"  $k$  :  \ \ The modulus. 
+\item"{}"  $\theta  : \ \ \,\,
+\operatornamewithlimits{\text{max}}\limits_{(l,k)=1} 
+\operatornamewithlimits{\text{max}}\limits_{(0,10^{10}]}
+|\theta(x;k,l) - x/\varphi(k)|/\sqrt{x}$
+\item"{}"  $\theta\# : \ \,
+\operatornamewithlimits{\text{max}}\limits_{(l,k)=1} 
+\operatornamewithlimits{\text{max}}\limits_{(0,10^{10}]}
+|\theta(x;k,l) - (x-N(k,l)\sqrt{x})/\varphi(k)|/\sqrt{x}$, 
+\itemitem{}  \hskip.5in where
+$N(k,l)$  is the number of solutions to $a^2 \equiv l
+\pmod{k}$ 
+\item"{}"  $\psi :\ \  
+\operatornamewithlimits{\text{max}}\limits_{(l,k)=1} 
+\operatornamewithlimits{\text{max}}\limits_{(0,10^{10}]}
+|\psi(x;k,l) -x/\varphi(k)|/\sqrt{x}$ 
+\endroster
+\smallskip
+
+\noindent Except for the $\psi$-values for a few small moduli, the
+bounds for
+$\theta$,
+$\theta\#$ and
+$\psi$ are remarkably good throughout the range
+$0-10^{10}$. All values have been rounded up in the last decimal
+place.
+\smallskip
+
+\hskip.25in{\sevenpoint\vbox{\offinterlineskip
+\halign{\strut \hfil \quad$#$ & 
+\quad$#$\hfil &
+\quad$#$\hfil & 
+\quad$#$\hfil &
+%\hskip.7truein$#$ &
+\hskip.2truein$#$ &
+%\quad$#$\hfil &
+\quad\hfil$#$ &
+\quad$#$ \hfil & 
+\quad$#$\hfil & \hfil \quad$#$  \cr 
+\underline{k} & \hfil\underline{\quad\theta\quad}\hfil&
+\hfil\underline{\quad\theta\#\quad} \hfil&
+\hfil\underline{\quad\psi\quad}\hfil  & &
+\underline{k} &
+\hfil\underline{\quad\theta\quad} \hfil&
+\hfil\underline{\quad\theta\#\quad} \hfil&
+\hfil\underline{\quad\psi\quad}\hfil\cr
+\noalign{\smallskip}  1 & 2.052818 & 1.052818 & 1.414214^* && 39 &
+0.769446 & 0.666830 & 0.668572 \cr 2 & 2.071193 & 1.071193 &
+1.744754^* && 40 & 1.076203 & 0.813546 & 0.816561 \cr 3 & 1.798158 &
+1.053542 & 1.070833^* && 41 & 0.818620 & 0.818620 & 0.817634 \cr 4 &
+1.780719 & 1.034832 & 1.118034^* && 42 & 1.130693 & 0.863011 &
+0.813182 \cr 5 & 1.412480 & 0.912480 & 0.886346^* && 43 & 0.832936 &
+0.785317 & 0.784932 \cr 6 & 1.798158 & 1.173049 & 1.322876^* && 44 &
+0.873277 & 0.873277 & 0.871473 \cr 7 & 1.105822 & 0.829249 &
+0.779283 && 45 & 0.844820 & 0.844820 & 0.844864 \cr 8 & 1.817557 &
+1.000000 & 0.926535 && 46 & 0.973114 & 0.882205 & 0.881655 \cr 9 &
+1.108042 & 0.899812 & 0.788900 && 47 & 0.744386 & 0.787865 &
+0.790079 \cr 10 & 1.412480 & 0.912480 & 0.961267^* && 48 & 1.096688
+& 0.870037 & 0.876180 \cr 11 & 0.976421 & 0.885771 & 0.878823 && 49
+& 0.744132 & 0.696513 & 0.697158 \cr 12 & 1.735502 & 1.000000 &
+0.906786^* && 50 & 0.821890 & 0.832182 & 0.762408 \cr 13 & 0.892444
+& 0.741007 & 0.737610 && 51 & 0.817323 & 0.770458 & 0.771552 \cr 14
+& 1.105822 & 0.829249 & 0.897528 && 52 & 0.884117 & 0.837232 &
+0.837318 \cr 15 & 1.097307 & 0.769689 & 0.760264 && 53 & 0.829958 &
+0.791497 & 0.725979 \cr 16 & 1.253606 & 0.771116 & 0.773805 && 54 &
+0.881762 & 0.789677 & 0.794864 \cr 17 & 1.001057 & 0.876057 &
+0.873548 && 55 & 0.795133 & 0.795133 & 0.798504 \cr 18 & 1.108042 &
+0.899812 & 0.824180 && 56 & 0.981635 & 0.828677 & 0.833854 \cr 19 &
+1.001556 & 0.911763 & 0.911536 && 57 & 0.834201 & 0.834201 &
+0.833807 \cr 20 & 1.276501 & 0.776501 & 0.800391 && 58 & 0.793283 &
+0.744371 & 0.745533 \cr 21 & 1.130693 & 0.863011 & 0.805421 && 59 &
+0.710444 & 0.724352 & 0.710444 \cr 22 & 0.976421 & 0.885771 &
+0.879312 && 60 & 1.056320 & 0.749787 & 0.748270 \cr 23 & 0.973114 &
+0.882205 & 0.880877 && 61 & 0.719386 & 0.715829 & 0.717979 \cr 24 &
+1.703144 & 1.000000 & 0.744935 && 62 & 0.771883 & 0.838550 &
+0.845276 \cr 25 & 0.821890 & 0.832182 & 0.764098 && 63 & 0.847851 &
+0.736979 & 0.750188 \cr 26 & 0.892444 & 0.744403 & 0.744403 && 64 &
+0.842522 & 0.781042 & 0.779800 \cr 27 & 0.881762 & 0.789677 &
+0.795451 && 65 & 0.753091 & 0.753091 & 0.753171 \cr 28 & 1.039662 &
+0.764535 & 0.775919 && 66 & 0.797466 & 0.779343 & 0.788725 \cr 29 &
+0.793283 & 0.744371 & 0.745590 && 67 & 0.708427 & 0.738730 &
+0.731833 \cr 30 & 1.097307 & 0.769689 & 0.760264 && 68 & 0.803940 &
+0.803940 & 0.805077 \cr 31 & 0.771883 & 0.838550 & 0.845276 && 69 &
+0.740573 & 0.732708 & 0.733806 \cr 32 & 1.015064 & 0.866076 &
+0.860459 && 70 & 0.865028 & 0.782493 & 0.779932 \cr 33 & 0.797466 &
+0.779343 & 0.788725 && 71 & 0.750488 & 0.750488 & 0.750488 \cr 34 &
+1.001057 & 0.876057 & 0.874371 && 72 & 1.062100 & 0.754145 &
+0.765297 \cr 35 & 0.865028 & 0.782493 & 0.779932 && 74 & 0.867916 &
+0.816491 & 0.815422 \cr 36 & 1.163674 & 0.830341 & 0.829482 && 75 &
+0.729046 & 0.684061 & 0.685155 \cr 37 & 0.867916 & 0.816491 &
+0.815422 && 76 & 0.771532 & 0.768761 & 0.702507 \cr 38 & 1.001556 &
+0.911763 & 0.911624 && 77 & 0.690677 & 0.690677 & 0.690677 \cr }}}
+%\vfill\eject
+\pagebreak
+
+{\pageinsert
+\centerline{{\smc Table 2} \rom{(continued)}}
+\hskip.25in{\eightpoint\vbox{\offinterlineskip
+\halign{\strut \hfil \quad$#$ & 
+\quad$#$\hfil &
+\quad$#$\hfil & 
+\quad$#$\hfil &
+%\hskip.7truein$#$ &
+\hskip.2truein$#$ &
+\quad\hfil$#$ &
+\quad$#$ \hfil & 
+\quad$#$\hfil & \hfil \quad$#$  \cr 
+\underline{k} & \hfil\underline{\quad\theta\quad}\hfil&
+\hfil\underline{\quad\theta\#\quad} \hfil&
+\hfil\underline{\quad\psi\quad}\hfil  & &
+\underline{k} &
+\hfil\underline{\quad\theta\quad} \hfil&
+\hfil\underline{\quad\theta\#\quad} \hfil&
+\hfil\underline{\quad\psi\quad}\hfil\cr
+\noalign{\smallskip}  78 & 0.769446 & 0.666830 & 0.668572 && 130 &
+0.753091 & 0.753091 & 0.753171 \cr 80 & 0.806030 & 0.774123 &
+0.773105 && 132 & 0.834519 & 0.762402 & 0.763278 \cr 81 & 0.757028 &
+0.757028 & 0.757028 && 134 & 0.708427 & 0.738730 & 0.731833 \cr 82 &
+0.818620 & 0.818620 & 0.817634 && 138 & 0.740573 & 0.732708 &
+0.733806 \cr 84 & 0.811175 & 0.805972 & 0.805906 && 140 & 0.737551 &
+0.764606 & 0.769112 \cr 85 & 0.694146 & 0.694146 & 0.694146 && 142 &
+0.750488 & 0.750488 & 0.750488 \cr 86 & 0.832936 & 0.785317 &
+0.784932 && 143 & 0.713437 & 0.713437 & 0.713437 \cr 87 & 0.688240 &
+0.759668 & 0.688240 && 144 & 0.753220 & 0.680366 & 0.680366 \cr 88 &
+0.780273 & 0.742456 & 0.741766 && 150 & 0.729046 & 0.684061 &
+0.685155 \cr 90 & 0.844820 & 0.844820 & 0.844864 && 154 & 0.690677 &
+0.690677 & 0.690677 \cr 91 & 0.688707 & 0.688707 & 0.688707 && 156 &
+0.789471 & 0.789471 & 0.790208 \cr 92 & 0.728679 & 0.720354 &
+0.719766 && 162 & 0.757028 & 0.757028 & 0.757028 \cr 93 & 0.691390 &
+0.758056 & 0.691390 && 163 & 0.719154 & 0.719154 & 0.719154 \cr 94 &
+0.744386 & 0.787865 & 0.790048 && 168 & 0.699889 & 0.674579 &
+0.674416 \cr 95 & 0.698739 & 0.732484 & 0.698739 && 169 & 0.718525 &
+0.718525 & 0.718525 \cr 96 & 0.825985 & 0.744111 & 0.742971 && 170 &
+0.694146 & 0.694146 & 0.694146 \cr 98 & 0.744132 & 0.696513 &
+0.697303 && 174 & 0.688240 & 0.759668 & 0.688240 \cr 99 & 0.740587 &
+0.691390 & 0.691390 && 180 & 0.723937 & 0.723937 & 0.723937 \cr 100
+& 0.813770 & 0.813770 & 0.812489 && 182 & 0.688707 & 0.688707 &
+0.688707 \cr 102 & 0.817323 & 0.770458 & 0.771552 && 186 & 0.691390
+& 0.758056 & 0.691390 \cr 104 & 0.723333 & 0.767924 & 0.765581 &&
+190 & 0.698739 & 0.732484 & 0.698739 \cr 105 & 0.653897 & 0.653897 &
+0.653897 && 198 & 0.740587 & 0.691390 & 0.691390 \cr 106 & 0.829958
+& 0.791497 & 0.725979 && 210 & 0.653897 & 0.653897 & 0.653897 \cr
+108 & 0.764890 & 0.722346 & 0.661992 && 216 & 0.698739 & 0.698739 &
+0.698739 \cr 110 & 0.795133 & 0.795133 & 0.795133 && 222 & 0.698739
+& 0.754294 & 0.698739 \cr 111 & 0.698739 & 0.754294 & 0.698739 &&
+234 & 0.698739 & 0.698739 & 0.698739 \cr 112 & 0.740472 & 0.740472 &
+0.742195 && 242 & 0.711433 & 0.717617 & 0.711433 \cr 114 & 0.834201
+& 0.834201 & 0.834201 && 243 & 0.719154 & 0.731499 & 0.719154 \cr
+116 & 0.764606 & 0.751262 & 0.700136 && 250 & 0.709028 & 0.709827 &
+0.709028 \cr 117 & 0.698739 & 0.698739 & 0.698739 && 256 & 0.714815
+& 0.714815 & 0.714815 \cr 118 & 0.710444 & 0.724352 & 0.710444 &&
+286 & 0.713437 & 0.713437 & 0.713437 \cr 120 & 1.032367 & 0.672746 &
+0.672746 && 326 & 0.719154 & 0.719154 & 0.719154 \cr 121 & 0.711433
+& 0.717617 & 0.711433 && 338 & 0.718525 & 0.718525 & 0.718525 \cr
+122 & 0.719386 & 0.715829 & 0.716087 && 360 & 0.707926 & 0.707926 &
+0.707926 \cr 124 & 0.691390 & 0.749162 & 0.691390 && 420 & 0.688445
+& 0.688445 & 0.688445 \cr 125 & 0.709028 & 0.709827 & 0.709028 &&
+432 & 0.717112 & 0.717112 & 0.717112 \cr 126 & 0.847851 & 0.736979 &
+0.750188 && 486 & 0.719154 & 0.731499 & 0.719154 \cr 128 & 0.754709
+& 0.817209 & 0.817799 \cr}}} 
+\vskip.15in
+
+\noindent(*) The $\psi$-bounds for small $k$ and $x$ are distorted 
+by powers of 
+$p = 2, 3$. If the range $0-10^{10}$ is replaced by $1500-10^{10}$,
+the bounds are much improved, as shown below. Alternatively, a
+$\psi$-bound of 1.0 holds for $X_0 \le x \le 10^{10}$, with $X_0$ as below: 
+\bigskip
+
+{\eightpoint\settabs 11\columns
+\+ &&&&\underbar{ $k$ } & \underbar{$\psi : 1500 - 10^{10}$} &&
+\underbar{$X_0$}\cr
+\+ &&&& 1 & \quad\  0.790594 & &\ \  8 &&\cr
+\+ &&&& 2 & \quad\  0.805589 & & \! 224 &&\cr
+\+ &&&& 3 & \quad\  0.764104 & &\  14 &&\cr
+\+ &&&& 4 & \quad\  0.879669 & &\ 14 &&\cr
+\+ &&&& 5 & \quad\  0.806086 & &\ \ \, 0 &&\cr
+\+ &&&& 6 & \quad\  0.785064 & &\  62 &&\cr
+\+ &&&& 10 & \quad\  0.792735 & &\ \ \, 0 &&\cr
+\+ &&&& 12 & \quad\  0.862547 & &\ \  \, 0 &&\cr}
+%\vfill\eject
+\endinsert}
+
+Table 2 was computed by using a sieve.  First,  $\theta$  and 
+$\psi$  were computed for each arithmetic progression.  All three
+functions
+$$
+\gather [\theta(x,k,l) - x/\varphi(k)]/\sqrt{x} , \quad [\psi(x,k,l)
+- x/\varphi(k)]/\sqrt{x} , \\ [\theta(x;k,l) -
+(x-N(k,l)\sqrt{x})/\varphi(k)]/\sqrt{x}
+\endgather
+$$ are monotone decreasing between their jumps at primes or prime
+powers.  Thus, to determine their maximal absolute values over a
+given interval, it suffices to check their values at the endpoints
+of the interval, and their left and right limits at primes and prime
+powers within the interval.
+
+Considerable roundoff error can accumulate in summing  $10^9$  or
+more floating point numbers.  To assure the accuracy of the
+computations, upper and lower bounds for  $\theta$  and  $\psi$ 
+were computed by first rounding all the logarithms up and down to
+the nearest  $2^{-30}$.  After this truncation, the upper and lower
+bounds could essentially be computed by integer arithmetic, e.g.
+without roundoff error, and  $\theta$  and  $\psi$  were replaced by
+their bounds in such a way as to assure that Table 2 gave rigorous
+upper bounds.  (This choice of the truncation would have allowed the
+computation to continue as high as  $1.7 \times 10^{10}$,
+considerably beyond its actual limit of  $10^{10}$.)  Finally, the
+values were rounded up in their last digit.
+
+\head Acknowledgements\endhead
+\par
+Ramar\'e wishes first of all
+to thank his advisor J.-M. Deshouillers who, after having suggested
+this problem, gave good directions for the research.  Then we warmly
+thank L. Reboul who verified many of the computations, and
+Professors M. Balazard and A. Odlyzko for their useful comments.  We
+also wish to thank the referee, who found some errors in an earlier
+version of the paper.
+
+\Refs
+\refstyle{c}
+\ref
+\no 1
+\by E. Landau
+\book Handbuch der Lehre von der Verteilung der
+Primzahlen
+\publ with an appendix by P. Bateman, 3rd edition
+\publaddr Chelsea, New York
+\yr 1974
+\endref
+
+\ref
+\no 2
+\by J. van de Lune, H. J. J. te Riele, and D. T. Winter
+\paper On the
+zeros of the Riemann zeta function in the critical strip. \rom{IV}
+\jour Math. Comp.
+\vol 46
+\yr1986
+\pages 667--681
+\endref
+
+\ref
+\no 3
+\by K. S. McCurley 
+\paper Explicit estimates for functions of primes in
+arithmetic progressions
+\jour Ph.D. thesis, University of Illinois at
+Urbana-Champagne, 1981
+\endref
+
+\ref
+\no 4
+\bysame
+\paper Explicit zero-free regions for Dirichlet
+$L$-functions
+\jour J. Number Theory
+\vol 19
+\yr 1984
+\pages 7--32
+\endref
+
+\ref
+\no 5
+\bysame
+\paper Explicit estimates for the error term in the
+prime number theorem for arithmetic progressions
+\jour Math. Comp. \vol 42
+\yr 1984
+\pages  265--285
+\endref
+
+\ref
+\no 6
+\bysame
+\paper Explicit estimates for $\theta(X;3,l)$ and
+$\psi(X;3,l)$
+\jour Math. Comp. 
+\vol 42
+\yr 1984
+\pages 287--296
+\endref
+
+\ref
+\no 7
+\by W. Press, B. Flannery, S. Teukolsky, and W. Vetterling
+\book Numerical recipes
+\publ Cambridge Univ. Press
+\publaddr Cambridge
+\yr 1986
+\endref
+
+\ref
+\no 8
+\by J. B. Rosser
+\paper Explicit bounds for some functions of prime
+numbers
+\jour Amer. J. Math.
+\vol 63\yr 1941
+\pages 211--232
+\endref
+
+\ref
+\no 9
+\by  J. B. Rosser and L. Schoenfeld
+\paper Sharper bounds for the
+Chebyshev functions $\theta(X)$ and $\psi(X)$
+\jour Math. Comp.
+\vol29
+\yr1975
+\pages 243--269
+\endref
+
+\ref
+\no 10
+\by R. Rumely
+\paper Numerical computations concerning the ERH
+\jour Math.
+Comp.
+\vol 62
+\yr1993
+\pages 415--440
+\endref
+
+\ref
+\no 11
+\by  L. Schoenfeld
+\paper Sharper bounds for the Chebyshev functions
+$\theta(X)$ and $\psi(X)$. \rom{II}
+\jour Math. Comp.
+\vol30
+\yr1976
+\pages 337--360
+\endref
+\pagebreak
+
+\ref
+\no 12
+\by S. B. Stechkin
+\paper Rational inequalities and zeros of the
+Riemann zeta-function
+\jour Trudy Mat. Inst. Steklov.
+\vol 189
+\yr1989
+\pages110--116
+\moreref English transl. in
+Proc. Steklov Inst. Math.
+\vol 189
+\yr 1990
+\pages 127--134
+\endref
+
+\ref
+\no 13
+\by R. Terras
+\paper A Miller algorithm for an incomplete Bessel
+function
+\jour J. Comput. Phys. 
+\vol39
+\yr1981
+\pages 233--240
+\endref
+\endRefs
+%\vskip.15in
+%\noindent Olivier Ramar\'e
+%\smallskip
+%\noindent D\'epartement de Math\'ematiques, \smallskip
+%\noindent Universit\'e de Nancy I,
+%\smallskip
+%\noindent URA 750
+%\smallskip
+%\noindent 54506 Vandoeuvre CEDEX
+%\smallskip FRANCE
+%\bigskip%%
+
+%\noindent Robert Rumely
+%\smallskip
+%\bheadversity of Georgia,
+%\smallsk\endsubhead
+%\noindent Athens, Georgia 30602\smallskip US%A%%%%
+
+\enddocument
+\endinput
+25-Jan-95 14:17:14-EST,85066;000000000000
+Return-path: <rr@alpha.math.uga.edu>
+Received: from dns1.uga.edu by MATH.AMS.ORG (PMDF #7286 ) id
+ <01HM9LNKWS80GC3MWR@MATH.AMS.ORG>; Wed, 25 Jan 1995 14:16:53 EST
+Received: from alpha.math.uga.edu by dns1.uga.edu with SMTP id AA07592
+ (5.67b/IDA-1.5 for <pub-submit@math.ams.org>); Wed, 25 Jan 1995 14:16:23 -0500
+Received: by alpha.math.uga.edu id AA00207 (5.67b/IDA-1.5 for
+ pub-submit@math.ams.org); Wed, 25 Jan 1995 14:15:22 -0500
+Date: 25 Jan 1995 14:15:22 -0500
+From: Robert Rumely <rr@alpha.math.uga.edu>
+Subject: AMS-TEX paper for Mathematics of Computation
+To: pub-submit@MATH.AMS.ORG
+Message-id: <199501251915.AA00207@alpha.math.uga.edu>
+Content-transfer-encoding: 7BIT
+Content-Length: 82188
+
+Dear Sirs,
+      Below is an AMS-TEX file containing the paper "Primes in Arithmetic
+Progressions", by Olivier Ramare and Robert Rumely, which has been accepted
+for publication by Mathematics of Computation.  The reference number is 
+P-6806.  
+
+Sincerely,
+Robert Rumely
+
+
+
+

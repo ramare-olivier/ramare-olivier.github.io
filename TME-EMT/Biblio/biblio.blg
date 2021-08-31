@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: biblio.aux
+The style file: authordate1.bst
+Database file #1: Local-TME-EMT.bib
+Repeated entry---line 3563 of file Local-TME-EMT.bib
+ : @article{Bordelles*05
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 11396 of file Local-TME-EMT.bib
+ : @article{Kotnik-vandeLune*04
+ :                             ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "Carneiro-Milinovich-Soundararajan*19" isn't style-file defined
+--line 17232 of file Local-TME-EMT.bib
+Warning--I didn't find a database entry for "Kadiri-Faber*18"
+Warning--I didn't find a database entry for "Kadiri*18"
+Warning--empty school in Platt*13
+Warning--empty journal in Trudgian*12b
+Warning--empty journal in Wedeniwski*02
+You've used 207 entries,
+            2441 wiz_defined-function locations,
+            1876 strings with 32052 characters,
+and the built_in function-call counts, 83109 in all, are:
+= -- 8350
+> -- 2083
+< -- 678
++ -- 643
+- -- 556
+* -- 7037
+:= -- 13281
+add.period$ -- 849
+call.type$ -- 207
+change.case$ -- 1294
+chr.to.int$ -- 196
+cite$ -- 210
+duplicate$ -- 3257
+empty$ -- 6661
+format.name$ -- 855
+if$ -- 16989
+int.to.chr$ -- 12
+int.to.str$ -- 0
+missing$ -- 207
+newline$ -- 1059
+num.names$ -- 623
+pop$ -- 1018
+preamble$ -- 1
+purify$ -- 1501
+quote$ -- 0
+skip$ -- 3076
+stack$ -- 0
+substring$ -- 6797
+swap$ -- 633
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1636
+warning$ -- 3
+while$ -- 675
+width$ -- 0
+write$ -- 2717
+(There were 2 error messages)

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Use the DOCTYPE string above if you want :hover to work!! -->
+
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+<link rel="stylesheet" href="../../spip-reset.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-typo.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-clear.css" type="text/css" />
+<link rel="stylesheet" href="../../spip-style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../spip-layout.css" type="text/css" />
+
+<link rel="stylesheet" href="../../MiseEnPage.css" type="text/css" />
+
+   <script language="javascript"  src="../../MiseEnPage.js"></script>
+<!-- ============================================-->
+<!-- Mathematics is being rendered by MathJax    -->
+<!-- ============================================-->
+<!-- See http://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
+<!--==================================================================================-->
+<!--Use of $..$ for inlined mathematics: but not, ['\(','\)'] -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: [ "input/TeX", "output/HTML-CSS" ],
+  extensions: [ "tex2jax.js", "jsMath2jax.js" ],
+  tex2jax: {inlineMath: [['$','$']]},
+  TeX: {
+          extensions: ["AMSmath.js", "AMSsymbols.js"],
+        }
+});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- ============================================-->
+<!-- End of the inclusion linked to MathJax      -->
+<!-- ============================================-->
+
+   <TITLE>TME-EMT: Bibliography</TITLE>
+</HEAD>
+
+<a name="Top" class="dontmention"></a>
+
+<BODY class="pas_surlignable page_rubrique">
+
+<script type="text/javascript">
+  var SelectedEntry = <?php echo $_GET["SelectedEntry"] ?>;
+  shadeSelectedEntry(SelectedEntry);
+</script>
+
+<div class="page content wrapper">
+<strong class="h1" id="logo">The TME-EMT project: the bibliography</span></strong>
+
+<script language="javascript">
+  BandeauGeneral(2, "../../", [6,0]);
+</script>
+	
+<dl id="MenuDroit"> 
+<dt>Navigation</dt>
+<dd><a href="#Top">Back to top</a></dd>
+</dl>
+
+<ul>

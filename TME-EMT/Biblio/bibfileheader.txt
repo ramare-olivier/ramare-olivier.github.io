@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!-- Use the DOCTYPE string above if you want :hover to work!! -->
 
 <HTML>
@@ -20,7 +20,7 @@
 <!-- ============================================-->
 <!-- Mathematics is being rendered by MathJax    -->
 <!-- ============================================-->
-<!-- See http://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
+<!-- See https://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
 <!--==================================================================================-->
 <!--Use of $..$ for inlined mathematics: but not, ['\(','\)'] -->
 <script type="text/x-mathjax-config">
@@ -34,7 +34,7 @@ MathJax.Hub.Config({
 });
 </script>
 <script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <!-- ============================================-->
 <!-- End of the inclusion linked to MathJax      -->

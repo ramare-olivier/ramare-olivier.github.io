@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!-- Use the DOCTYPE string above if you want :hover to work!! -->
 
 <HTML>
@@ -20,7 +20,7 @@
 <!-- ============================================-->
 <!-- Mathematics is being rendered by MathJax    -->
 <!-- ============================================-->
-<!-- See http://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
+<!-- See https://www.mathjax.org/docs/1.1/start.html#putting-mathematics-in-a-web-page -->
 <!--==================================================================================-->
 <!--Use of $..$ for inlined mathematics: but not, ['\(','\)'] -->
 <script type="text/x-mathjax-config">
@@ -34,7 +34,7 @@ MathJax.Hub.Config({
 });
 </script>
 <script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <!-- ============================================-->
 <!-- End of the inclusion linked to MathJax      -->
@@ -300,20 +300,26 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On the order of magnitude of the difference between consecutive prime   numbers.</span>
      <span class="refs"> Acta Arith.,  2, 23--46.</span>
    </li>
+   <li class="bibentry" id="Cully*21"><a name="Cully*21">
+     <span class="authoryear" alt="Cully*21">Cully-Hugill, Michaela. 2021</span></a>
+<br>
+     &nbsp;&nbsp;&nbsp;<span class="title">Primes between consecutive powers.</span>
+     <span class="refs"> arXiv preprint arXiv:2107.14468.</span>
+   </li>
    <li class="bibentry" id="Daboussi-Rivat*01"><a name="Daboussi-Rivat*01">
      <span class="authoryear" alt="Daboussi-Rivat*01">Daboussi, H., &amp; Rivat, J. 2001</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit upper bounds for exponential sums over primes.</span>
      <span class="refs"> Math. Comp.,  70(233), 431--447.</span>
    </li>
-   <li class="bibentry" id="vonSterneck*02"><a name="vonSterneck*02">
+</div>
+<div class="oddselection">   <li class="bibentry" id="vonSterneck*02"><a name="vonSterneck*02">
      <span class="authoryear" alt="vonSterneck*02">Daublebsky von Sterneck, R. 1902</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Ein Analogon zur additiven Zahlentheorie.</span>
      <span class="refs"> Wien. Ber.,  111, 1567--1601.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Davenport*37-1"><a name="Davenport*37-1">
+   <li class="bibentry" id="Davenport*37-1"><a name="Davenport*37-1">
      <span class="authoryear" alt="Davenport*37-1">Davenport, H. 1937</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On some infinite series involving arithmetical functions.</span>
@@ -337,14 +343,14 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Computing the summation of the M&ouml;bius function.</span>
      <span class="refs"> Exp. Math.,  5(4), 291--295.</span>
    </li>
-   <li class="bibentry" id="Deleglise-Rivat*98"><a name="Deleglise-Rivat*98">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Deleglise-Rivat*98"><a name="Deleglise-Rivat*98">
      <span class="authoryear" alt="Deleglise-Rivat*98">Del&eacute;glise, M., &amp; Rivat, J. 1998</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Computing $\psi(x)$.</span>
      <span class="refs"> Math. Comp.,  67(224), 1691--1696.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Deshouillers-Dress*88"><a name="Deshouillers-Dress*88">
+   <li class="bibentry" id="Deshouillers-Dress*88"><a name="Deshouillers-Dress*88">
      <span class="authoryear" alt="Deshouillers-Dress*88">Deshouillers, J.-M, &amp; Dress, F. 1988</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Sommes de diviseurs et structure multiplicative des entiers.</span>
@@ -368,14 +374,14 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Th&eacute;or&egrave;mes d'oscillations et fonction de M&ouml;bius.</span>
   <a href="https://gdz.sub.uni-goettingen.de/id/PPN320141322_0013">URL</a>     <span class="refs"> S&eacute;min. Th&eacute;or. Nombres, Univ. Bordeaux I,  Exp. No 33,   33pp.   .</span>
    </li>
-   <li class="bibentry" id="Dress*93"><a name="Dress*93">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Dress*93"><a name="Dress*93">
      <span class="authoryear" alt="Dress*93">Dress, F. 1993</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Fonction sommatoire de la fonction de M&ouml;bius 1. Majorations   exp&eacute;rimentales.</span>
      <span class="refs"> Exp. Math.,  2(2).</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Dress*99"><a name="Dress*99">
+   <li class="bibentry" id="Dress*99"><a name="Dress*99">
      <span class="authoryear" alt="Dress*99">Dress, F. 1999</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Discr&eacute;pance des suites de Farey.</span>
@@ -393,7 +399,14 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On the Riemann hypothesis and the difference between primes.</span>
      <span class="refs"> Int. J. Number Theory,  11(3), 771--778.</span>
    </li>
-   <li class="bibentry" id="Duras*93"><a name="Duras*93">
+   <li class="bibentry" id="Dudek*16b"><a name="Dudek*16b">
+     <span class="authoryear" alt="Dudek*16b">Dudek, Adrian W. 2016</span></a>
+<br>
+     &nbsp;&nbsp;&nbsp;<span class="title">An explicit result for primes between cubes.</span>
+     <span class="refs"> Functiones et Approximatio Commentarii Mathematici,    55(2), 177--197.</span>
+   </li>
+</div>
+<div class="evenselection">   <li class="bibentry" id="Duras*93"><a name="Duras*93">
      <span class="authoryear" alt="Duras*93">Duras, J.-L. 1993</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Etude de la fonction nombre de fa&ccedil;ons de repr&eacute;senter un   entier comme produit de k facteurs.</span>
@@ -405,8 +418,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Grandes valeurs de la fonction {$d_k$}.</span>
      <span class="refs"> Pages  743--770 of:  Number theory in progress, Vol. 2   (Zakopane-Ko&#x15B;cielisko, 1997).  Berlin: de Gruyter.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Dusart*98"><a name="Dusart*98">
+   <li class="bibentry" id="Dusart*98"><a name="Dusart*98">
      <span class="authoryear" alt="Dusart*98">Dusart, P. 1998</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Autour de la fonction qui compte le nombre de nombres premiers.</span>
@@ -424,7 +436,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">The $k$th prime is greater than $k(\ln k+\ln\ln k-1)$ for $k\geq 2$.</span>
      <span class="refs"> Math. Comp.,  68(225), 411--415.</span>
    </li>
-   <li class="bibentry" id="Dusart*01"><a name="Dusart*01">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Dusart*01"><a name="Dusart*01">
      <span class="authoryear" alt="Dusart*01">Dusart, P. 2002</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Estimates for $\theta(x;k,\ell)$ for large values of $x$.</span>
@@ -436,8 +449,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Estimates of some functions over primes.</span>
      <span class="refs"> Ramanujan J.,  45(1), 227--251.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Dusart*07"><a name="Dusart*07">
+   <li class="bibentry" id="Dusart*07"><a name="Dusart*07">
      <span class="authoryear" alt="Dusart*07">Dusart, Pierre. 2016</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Estimates of {$\psi,\theta$} for large values of {$x$} without the   Riemann hypothesis.</span>
@@ -455,7 +467,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Majorations de la fonction sommatoire de la fonction   $\frac{\mu(n)}n$.</span>
      <span class="refs"> Univ. Bordeaux 1,  Pr&eacute;-publication(96-8).</span>
    </li>
-   <li class="bibentry" id="Kadiri-Faber*13"><a name="Kadiri-Faber*13">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Kadiri-Faber*13"><a name="Kadiri-Faber*13">
      <span class="authoryear" alt="Kadiri-Faber*13">Faber, L., &amp; Kadiri, H. 2015</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">New bounds for $\psi(x)$.</span>
@@ -467,8 +480,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Short interval results for squarefree numbers.</span>
      <span class="refs"> J. Number Theory,  35, 128--149.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Filaseta-Trifonov*96"><a name="Filaseta-Trifonov*96">
+   <li class="bibentry" id="Filaseta-Trifonov*96"><a name="Filaseta-Trifonov*96">
      <span class="authoryear" alt="Filaseta-Trifonov*96">Filaseta, M., &amp; Trifonov, O. 1996</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">The distribution of fractional parts with applications to gap   results in number theory.</span>
@@ -486,7 +498,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Vinogradov's integral and bounds for the Riemannn zeta function.</span>
      <span class="refs"> Proc. London Math. Soc.,  85, 565--633.</span>
    </li>
-   <li class="bibentry" id="Frolenkov*11"><a name="Frolenkov*11">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Frolenkov*11"><a name="Frolenkov*11">
      <span class="authoryear" alt="Frolenkov*11">Frolenkov, D. 2011</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">A numerically explicit version of the P&oacute;lya-Vinogradov   inequality.</span>
@@ -498,8 +511,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">A generalization of the P&oacute;lya--Vinogradov inequality.</span>
      <span class="refs"> Ramanujan J.,  31(3), 271--279.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Gabcke*79"><a name="Gabcke*79">
+   <li class="bibentry" id="Gabcke*79"><a name="Gabcke*79">
      <span class="authoryear" alt="Gabcke*79">Gabcke, W. 1979</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Neue Herleitung und explizite Restabschaetzung der   Riemann-Siegel-Formel.</span>
@@ -517,7 +529,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">The $10^{13}$ first zeros of the Riemann Zeta Function and zeros computations at very large height .</span>
   <a href="http://numbers.computation.free.fr/Constants/Miscellaneous/zetazeros1e13-1e24.pdf">URL</a>     <span class="refs">http://numbers.computation.free.fr/Constants/Miscellaneous/zetazeros1e13-1e24.pdf</span>
    </li>
-   <li class="bibentry" id="Graham-Kolesnik*91"><a name="Graham-Kolesnik*91">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Graham-Kolesnik*91"><a name="Graham-Kolesnik*91">
      <span class="authoryear" alt="Graham-Kolesnik*91">Graham, S. W., &amp; Kolesnik, G. 1991</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Van der Corput's Method of Exponential Sums.</span>
@@ -529,8 +542,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit bounds on exponential sums and the scarcity of squarefree   binomial coefficients.</span>
      <span class="refs"> Mathematika,  43(1), 73--107.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Granville-Soundararajan*02"><a name="Granville-Soundararajan*02">
+   <li class="bibentry" id="Granville-Soundararajan*02"><a name="Granville-Soundararajan*02">
      <span class="authoryear" alt="Granville-Soundararajan*02">Granville, A., &amp; Soundararajan, K. 2003</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">The distribution of values of $L(1,\chi)$.</span>
@@ -548,7 +560,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Large character sums: pretentious characters and the   P&oacute;lya-Vinogradov theorem.</span>
      <span class="refs"> J. Amer. Math. Soc.,  20(2), 357--384 (electronic).</span>
    </li>
-   <li class="bibentry" id="Hall-Tenenbaum*88"><a name="Hall-Tenenbaum*88">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Hall-Tenenbaum*88"><a name="Hall-Tenenbaum*88">
      <span class="authoryear" alt="Hall-Tenenbaum*88">Hall, R., &amp; Tenenbaum, G. 1988</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Divisors.</span>
@@ -560,8 +573,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">$L^2$ bounds for tails of $\zeta(s)$ on a vertical line.</span>
   <a href="https://mathoverflow.net/questions/285197/l-2-bounds-for-tails-of-zetas-on-a-vertical-line/285338">URL</a>     <span class="refs">   .</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Hiary*16b"><a name="Hiary*16b">
+   <li class="bibentry" id="Hiary*16b"><a name="Hiary*16b">
      <span class="authoryear" alt="Hiary*16b">Hiary, Ghaith A. 2016a</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">An explicit hybrid estimate for {$L(1/2+it,\chi)$}.</span>
@@ -579,7 +591,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Computations of the Mertens function and improved bounds on the   Mertens conjecture.</span>
      <span class="refs"> Math. Comp.,  87(310), 1013--1028.</span>
    </li>
-   <li class="bibentry" id="Huxley*96"><a name="Huxley*96">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Huxley*96"><a name="Huxley*96">
      <span class="authoryear" alt="Huxley*96">Huxley, M.N. 1996</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Area, Lattice Points and Exponential Sums.</span>
@@ -591,8 +604,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Integer points close to a plane curve of class $C^n$. (Points   entiers au voisinage d'une courbe plane de classe $C^n$.).</span>
      <span class="refs"> Acta Arith.,  69(4), 359--366.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Huxley-Sargos*06"><a name="Huxley-Sargos*06">
+   <li class="bibentry" id="Huxley-Sargos*06"><a name="Huxley-Sargos*06">
      <span class="authoryear" alt="Huxley-Sargos*06">Huxley, M.N., &amp; Sargos, P. 2006</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Integer points in the neighborhood of a plane curve of class $C^n$.   II. (Points entiers au voisinage d'une courbe plane de classe $C^n$.   II.).</span>
@@ -610,7 +622,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Two inequalities for the sum of the divisors functions.</span>
      <span class="refs"> Univ. u Novom Sadu Zb. Rad. Prirod.-Mat. Fak.,  7, 17--21.</span>
    </li>
-   <li class="bibentry" id="Jaeschke*93"><a name="Jaeschke*93">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Jaeschke*93"><a name="Jaeschke*93">
      <span class="authoryear" alt="Jaeschke*93">Jaeschke, G. 1993</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On strong pseudoprimes to several bases.</span>
@@ -622,8 +635,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">A note on Kadiri's explicit zero free region for Riemann zeta   function.</span>
      <span class="refs"> J. Korean Math. Soc.,  51(6), 1291--1304.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Jarnik*25"><a name="Jarnik*25">
+   <li class="bibentry" id="Jarnik*25"><a name="Jarnik*25">
      <span class="authoryear" alt="Jarnik*25">Jarn&iacute;k, V. 1925</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">&Uuml;ber die Gitterpunkte auf konvexen Kurven.</span>
@@ -641,7 +653,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Une r&eacute;gion explicite sans z&eacute;ros pour la fonction $\zeta$ de   Riemann.</span>
      <span class="refs"> Acta Arith.,  117(4), 303--339.</span>
    </li>
-   <li class="bibentry" id="Kadiri*05-2"><a name="Kadiri*05-2">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Kadiri*05-2"><a name="Kadiri*05-2">
      <span class="authoryear" alt="Kadiri*05-2">Kadiri, H. 2008</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Short effective intervals containing primes in arithmetic   progressions and the seven cube problem.</span>
@@ -653,8 +666,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">An explicit zero-free region for the Dirichlet {$L$}-functions.</span>
   <a href="http://arxiv.org/pdf/math.NT/0510570">URL</a>     <span class="refs"> Being processed...   .</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Kadiri*12"><a name="Kadiri*12">
+   <li class="bibentry" id="Kadiri*12"><a name="Kadiri*12">
      <span class="authoryear" alt="Kadiri*12">Kadiri, H. 2012</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit zero-free regions for Dedekind zeta functions.</span>
@@ -672,7 +684,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit zero density theorems for Dedekind zeta functions.</span>
      <span class="refs"> J. Number Theory,  132(4), 748--775.</span>
    </li>
-   <li class="bibentry" id="Kadiri-Lumley-Ng*18"><a name="Kadiri-Lumley-Ng*18">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Kadiri-Lumley-Ng*18"><a name="Kadiri-Lumley-Ng*18">
      <span class="authoryear" alt="Kadiri-Lumley-Ng*18">Kadiri, Habiba, Lumley, Allysa, &amp; Ng, Nathan. 2018</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit zero density for the Riemann zeta function.</span>
@@ -684,8 +697,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On the order of the Mertens function.</span>
      <span class="refs"> Experiment. Math.,  13(4), 473--481.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Kreminski*03"><a name="Kreminski*03">
+   <li class="bibentry" id="Kreminski*03"><a name="Kreminski*03">
      <span class="authoryear" alt="Kreminski*03">Kreminski, R. 2003</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Newton-Cotes integration for approximating Stieltjes (generalized   Euler) constants.</span>
@@ -703,7 +715,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Absch&auml;tzungen von Charaktersummen, Einheiten und Klassenzahlen.</span>
      <span class="refs"> G&ouml;tt. Nachr.,  2, 79--97.</span>
    </li>
-   <li class="bibentry" id="Lapkova*16"><a name="Lapkova*16">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Lapkova*16"><a name="Lapkova*16">
      <span class="authoryear" alt="Lapkova*16">Lapkova, Kostadinka. 2016</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit upper bound for an average number of divisors of quadratic   polynomials.</span>
@@ -715,8 +728,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On the average number of divisors of reducible quadratic polynomials.</span>
      <span class="refs"> J. Number Theory,  180, 710--729.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Lehman*66a"><a name="Lehman*66a">
+   <li class="bibentry" id="Lehman*66a"><a name="Lehman*66a">
      <span class="authoryear" alt="Lehman*66a">Lehman, R. Sherman. 1966a</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On the difference {$\pi (x)-{\rm li}(x)$}.</span>
@@ -734,7 +746,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On the distribution of zeros of the Riemann zeta-function.</span>
      <span class="refs"> Proc. London Math. Soc. (3),  20, 303--320.</span>
    </li>
-   <li class="bibentry" id="Levin-Fainleib*67"><a name="Levin-Fainleib*67">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Levin-Fainleib*67"><a name="Levin-Fainleib*67">
      <span class="authoryear" alt="Levin-Fainleib*67">Levin, B.V., &amp; Fainleib, A.S. 1967</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Application of some integral equations to problems of number theory.</span>
@@ -746,8 +759,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Distribution of zeros of Dirichlet $L$-functions and an explicit   formula for $\psi(t,\chi)$.</span>
      <span class="refs"> Acta Arith.,  102(3), 261--293.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Logan*88"><a name="Logan*88">
+   <li class="bibentry" id="Logan*88"><a name="Logan*88">
      <span class="authoryear" alt="Logan*88">Logan, B. F. 1988</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">An interference problem for exponentials.</span>
@@ -765,7 +777,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Majorations explicites de $|L(1,\chi)|$ (suite).</span>
      <span class="refs"> C. R. Acad. Sci. Paris,  323, 443--446.</span>
    </li>
-   <li class="bibentry" id="Louboutin*98"><a name="Louboutin*98">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Louboutin*98"><a name="Louboutin*98">
      <span class="authoryear" alt="Louboutin*98">Louboutin, S. 1998</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Majorations explicites du r&eacute;sidu au point 1 des fonctions z\^eta.</span>
@@ -777,8 +790,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit bounds for residues of Dedekind zeta functions, values of   {$L$}-functions at {$s=1$}, and relative class numbers.</span>
      <span class="refs"> J. Number Theory,  85(2), 263--282.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Louboutin*01"><a name="Louboutin*01">
+   <li class="bibentry" id="Louboutin*01"><a name="Louboutin*01">
      <span class="authoryear" alt="Louboutin*01">Louboutin, S. 2001</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit upper bounds for residues of Dedekind zeta functions and   values of {$L$}-functions at {$s=1$}, and explicit lower bounds for relative   class numbers of CM-fields.</span>
@@ -796,7 +808,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">An explicit lower bound on moduli of Dichlet {$L$}-functions at   $s=1$.</span>
      <span class="refs"> preprint.</span>
    </li>
-   <li class="bibentry" id="Louboutin*05"><a name="Louboutin*05">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Louboutin*05"><a name="Louboutin*05">
      <span class="authoryear" alt="Louboutin*05">Louboutin, S.R. 2005</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On the use of explicit bounds on residues of Dedekind zeta   functions taking into account the behavior of small primes.</span>
@@ -808,8 +821,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">An explicit lower bound on moduli of Dirichlet {$L$}-functions at   {$s=1$}.</span>
      <span class="refs"> J. Ramanujan Math. Soc.,  30(1), 101--113.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="MacLeod*69"><a name="MacLeod*69">
+   <li class="bibentry" id="MacLeod*69"><a name="MacLeod*69">
      <span class="authoryear" alt="MacLeod*69">Mac Leod, R.A. 1967</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">A new estimate for the sum $M(x)=\sum_{n\le x}\mu(n)$.</span>
@@ -827,7 +839,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Bornes effectives pour certaines fonctions concernant les nombres   premiers.</span>
      <span class="refs"> J. Th&eacute;or. Nombres Bordeaux,  8(1), 215--242.</span>
    </li>
-   <li class="bibentry" id="Maurer*95"><a name="Maurer*95">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Maurer*95"><a name="Maurer*95">
      <span class="authoryear" alt="Maurer*95">Maurer, U. 1995</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Fast Generation of Prime Numbers and Secure Public-Key   Cryptographic Parameters.</span>
@@ -839,8 +852,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit estimates for some summatory functions of primes.</span>
      <span class="refs"> Integers,  17, 18pp.  A11.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="McCurley*84-2"><a name="McCurley*84-2">
+   <li class="bibentry" id="McCurley*84-2"><a name="McCurley*84-2">
      <span class="authoryear" alt="McCurley*84-2">McCurley, K.S. 1984a</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit estimates for the error term in the prime number theorem for   arithmetic progressions.</span>
@@ -858,7 +870,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit zero-free regions for Dirichlet $L$-functions.</span>
      <span class="refs"> J. Number Theory,  19, 7--32.</span>
    </li>
-   <li class="bibentry" id="McGown*12"><a name="McGown*12">
+</div>
+<div class="oddselection">   <li class="bibentry" id="McGown*12"><a name="McGown*12">
      <span class="authoryear" alt="McGown*12">McGown, Kevin J. 2012</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Norm-Euclidean cyclic fields of prime degree.</span>
@@ -870,8 +883,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Ten lectures on the interface between analytic number theory and   harmonic analysis.</span>
      <span class="refs">CBMS Regional Conference Series in Mathematics, vol. 84.  Published for the Conference Board of the Mathematical Sciences,   Washington, DC.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Montgomery-Vaughan*73"><a name="Montgomery-Vaughan*73">
+   <li class="bibentry" id="Montgomery-Vaughan*73"><a name="Montgomery-Vaughan*73">
      <span class="authoryear" alt="Montgomery-Vaughan*73">Montgomery, H.L., &amp; Vaughan, R.C. 1973</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">The large sieve.</span>
@@ -889,7 +901,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Approximation of singular series constant and automata. With an   appendix by Gerhard Niklasch.</span>
      <span class="refs"> Manuscripta Matematica,  101(3), 385--399.</span>
    </li>
-   <li class="bibentry" id="Moree*04"><a name="Moree*04">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Moree*04"><a name="Moree*04">
      <span class="authoryear" alt="Moree*04">Moree, P. 2004</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Chebyshev's bias for composite numbers with restricted prime   divisors.</span>
@@ -901,8 +914,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">The hexagonal versus the square lattice.</span>
      <span class="refs"> Math. Comp.,  73(245), 451--473.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Moser-MacLeod*66"><a name="Moser-MacLeod*66">
+   <li class="bibentry" id="Moser-MacLeod*66"><a name="Moser-MacLeod*66">
      <span class="authoryear" alt="Moser-MacLeod*66">Moser, L., &amp; MacLeod, R. A. 1966</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">The error term for the squarefree integers.</span>
@@ -920,7 +932,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Additive number theory -- The classical bases.</span>
      <span class="refs">Graduate Texts in Mathematics, vol. 164.  Springer-Verlag, New York.</span>
    </li>
-   <li class="bibentry" id="Nicely*99"><a name="Nicely*99">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Nicely*99"><a name="Nicely*99">
      <span class="authoryear" alt="Nicely*99">Nicely, T.R. 1999</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">New maximal primes gaps and first occurences.</span>
@@ -932,8 +945,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Quelques in&eacute;galit&eacute;s effectives entre des fonctions   arithm&eacute;tiques.</span>
      <span class="refs"> Functiones et Approximatio,  39, 315--334.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Nicolas-Robin*83"><a name="Nicolas-Robin*83">
+   <li class="bibentry" id="Nicolas-Robin*83"><a name="Nicolas-Robin*83">
      <span class="authoryear" alt="Nicolas-Robin*83">Nicolas, J.-L., &amp; Robin, G. 1983</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Majorations explicites pour le nombre de diviseurs de $n$.</span>
@@ -951,7 +963,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Localization of the first zero of the Dedekind zeta function.</span>
      <span class="refs"> Math. Comp.,  70(236), 1607--1616.</span>
    </li>
-   <li class="bibentry" id="Ramare*14-1"><a name="Ramare*14-1">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Ramare*14-1"><a name="Ramare*14-1">
      <span class="authoryear" alt="Ramare*14-1">P., Akhilesh, &amp; Ramar&eacute;, O. 2017</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit averages of non-negative multiplicative functions: going   beyond the main term.</span>
@@ -963,8 +976,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">A formula for {$\pi(x)$} applied to a result of Koninck-Ivi&#x107;.</span>
      <span class="refs"> Nieuw Arch. Wiskd. (5),  1(1), 55--56.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Platt*17"><a name="Platt*17">
+   <li class="bibentry" id="Platt*17"><a name="Platt*17">
      <span class="authoryear" alt="Platt*17">Platt, David J. 2017</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Isolating some non-trivial zeros of zeta.</span>
@@ -982,7 +994,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Numerical computations concerning the GRH.</span>
   <a href="http://arxiv.org/abs/1305.3087">URL</a>     <span class="refs">Ph.D. thesis.   .</span>
    </li>
-   <li class="bibentry" id="Ramare*12-0"><a name="Ramare*12-0">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Ramare*12-0"><a name="Ramare*12-0">
      <span class="authoryear" alt="Ramare*12-0">Platt, D.J., &amp; Ramar&eacute;, O. 2017</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit estimates: from ${\Lambda}(n)$ in arithmetic progressions to   ${\Lambda}(n)/n$.</span>
@@ -994,8 +1007,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Algorithmic algebraic number theory.</span>
      <span class="refs">Encyclopedia of Mathematics and its Applications, vol. 30.  Cambridge: Cambridge University Press.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Pomerance*11"><a name="Pomerance*11">
+   <li class="bibentry" id="Pomerance*11"><a name="Pomerance*11">
      <span class="authoryear" alt="Pomerance*11">Pomerance, C. 2011</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Remarks on the P&oacute;lya-Vinogradov inequality.</span>
@@ -1013,7 +1025,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">An inequality of Vinogradov for character sums.</span>
      <span class="refs"> Shandong Daxue Xuebao Ziran Kexue Ban,  26(1), 125--128.</span>
    </li>
-   <li class="bibentry" id="Rademacher*59"><a name="Rademacher*59">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Rademacher*59"><a name="Rademacher*59">
      <span class="authoryear" alt="Rademacher*59">Rademacher, H. 1959</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On the Phragm&eacute;n-Lindel&ouml;f theorem and some applications.</span>
@@ -1025,8 +1038,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On Snirel'man's constant.</span>
      <span class="refs"> Ann. Scu. Norm. Pisa,  21, 645--706.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Ramare*01"><a name="Ramare*01">
+   <li class="bibentry" id="Ramare*01"><a name="Ramare*01">
      <span class="authoryear" alt="Ramare*01">Ramar&eacute;, O. 2001</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Approximate Formulae for $L(1,\chi)$.</span>
@@ -1044,7 +1056,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Approximate Formulae for $L(1,\chi)$, II.</span>
      <span class="refs"> Acta Arith.,  112, 141--149.</span>
    </li>
-   <li class="bibentry" id="Ramare*07a"><a name="Ramare*07a">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Ramare*07a"><a name="Ramare*07a">
      <span class="authoryear" alt="Ramare*07a">Ramar&eacute;, O. 2007</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Eigenvalues in the large sieve inequality.</span>
@@ -1056,8 +1069,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Arithmetical aspects of the large sieve inequality.</span>
      <span class="refs">Harish-Chandra Research Institute Lecture Notes, vol. 1.  New Delhi: Hindustan Book Agency.  With the collaboration of D. S. Ramana.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Ramare*10"><a name="Ramare*10">
+   <li class="bibentry" id="Ramare*10"><a name="Ramare*10">
      <span class="authoryear" alt="Ramare*10">Ramar&eacute;, O. 2012</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On long $\kappa$-tuples with few prime factors.</span>
@@ -1075,7 +1087,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">From explicit estimates for the primes to explicit estimates for the   Moebius function.</span>
      <span class="refs"> Acta Arith.,  157(4), 365--379.</span>
    </li>
-   <li class="bibentry" id="Ramare*12-4"><a name="Ramare*12-4">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Ramare*12-4"><a name="Ramare*12-4">
      <span class="authoryear" alt="Ramare*12-4">Ramar&eacute;, O. 2013c</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Some elementary explicit bounds for two mollifications of the   Moebius function.</span>
@@ -1087,8 +1100,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit estimates on the summatory functions of the Moebius   function with coprimality restrictions.</span>
      <span class="refs"> Acta Arith.,  165(1), 1--10.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Ramare*12-5"><a name="Ramare*12-5">
+   <li class="bibentry" id="Ramare*12-5"><a name="Ramare*12-5">
      <span class="authoryear" alt="Ramare*12-5">Ramar&eacute;, O. 2015</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit estimates on several summatory functions involving the   Moebius function.</span>
@@ -1106,7 +1118,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Modified truncated Perron formulae.</span>
      <span class="refs"> Ann. Blaise Pascal,  23(1), 109--128.</span>
    </li>
-   <li class="bibentry" id="Ramare-Rumely*96"><a name="Ramare-Rumely*96">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Ramare-Rumely*96"><a name="Ramare-Rumely*96">
      <span class="authoryear" alt="Ramare-Rumely*96">Ramar&eacute;, O., &amp; Rumely, R. 1996</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Primes in arithmetic progressions.</span>
@@ -1118,8 +1131,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Short effective intervals containing primes.</span>
      <span class="refs"> J. Number Theory,  98, 10--33.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Robin*83-1"><a name="Robin*83-1">
+   <li class="bibentry" id="Robin*83-1"><a name="Robin*83-1">
      <span class="authoryear" alt="Robin*83-1">Robin, G. 1983a</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Estimation de la fonction de Tchebychef $\theta$ sur le $k$-i&egrave;me   nombres premiers et grandes valeurs de la fonction $\omega(n)$ nombre de   diviseurs premiers de $n$.</span>
@@ -1137,7 +1149,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">The $n$-th prime is greater than $n\log n$.</span>
      <span class="refs"> Proc. Lond. Math. Soc., II. Ser.,  45, 21--44.</span>
    </li>
-   <li class="bibentry" id="Rosser*41"><a name="Rosser*41">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Rosser*41"><a name="Rosser*41">
      <span class="authoryear" alt="Rosser*41">Rosser, J.B. 1941</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Explicit bounds for some functions of prime numbers.</span>
@@ -1149,8 +1162,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Real roots of Dirichlet $L$-series.</span>
      <span class="refs"> Bull. Amer. Math. Soc.,  55, 906--913.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Rosser*50"><a name="Rosser*50">
+   <li class="bibentry" id="Rosser*50"><a name="Rosser*50">
      <span class="authoryear" alt="Rosser*50">Rosser, J.B. 1950</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Real roots of Dirichlet $L$-series.</span>
@@ -1168,7 +1180,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Sharper bounds for the Chebyshev Functions $\vartheta(X)$ and   $\psi(X)$.</span>
      <span class="refs"> Math. Comp.,  29(129), 243--269.</span>
    </li>
-   <li class="bibentry" id="Rumely*93"><a name="Rumely*93">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Rumely*93"><a name="Rumely*93">
      <span class="authoryear" alt="Rumely*93">Rumely, R. 1993</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Numerical Computations Concerning the ERH.</span>
@@ -1180,8 +1193,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">A sharp region where {$\pi(x)-{\rm li}(x)$} is positive.</span>
      <span class="refs"> Math. Comp.,  79(272), 2395--2405.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Schoenfeld*69"><a name="Schoenfeld*69">
+   <li class="bibentry" id="Schoenfeld*69"><a name="Schoenfeld*69">
      <span class="authoryear" alt="Schoenfeld*69">Schoenfeld, L. 1969</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">An improved estimate for the summatory function of the M&ouml;bius   function.</span>
@@ -1199,7 +1211,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On the normal density of primes in small intervals, and the   difference between consecutive primes.</span>
      <span class="refs"> Archiv Math. Naturv.,  B.47(6), 82--105.</span>
    </li>
-   <li class="bibentry" id="Siebert*76"><a name="Siebert*76">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Siebert*76"><a name="Siebert*76">
      <span class="authoryear" alt="Siebert*76">Siebert, H. 1976</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Montgomery's weighted sieve for dimension two.</span>
@@ -1211,8 +1224,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Calculation of Dirichlet {$L$}-functions.</span>
      <span class="refs"> Math. Comp.,  23, 489--497.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Stechkin*70"><a name="Stechkin*70">
+   <li class="bibentry" id="Stechkin*70"><a name="Stechkin*70">
      <span class="authoryear" alt="Stechkin*70">Stechkin, S.B. 1970</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Zeros of Riemann zeta-function.</span>
@@ -1230,7 +1242,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">The number of lattice points on a convex curve.</span>
      <span class="refs"> J. Number Theory,  6, 128--135.</span>
    </li>
-   <li class="bibentry" id="Titchmarsh*47"><a name="Titchmarsh*47">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Titchmarsh*47"><a name="Titchmarsh*47">
      <span class="authoryear" alt="Titchmarsh*47">Titchmarsh, E.C. 1947</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On the zeros of the Riemann zeta function.</span>
@@ -1242,8 +1255,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">The least inert prime in a real quadratic field.</span>
      <span class="refs"> Math. Comp.,  81(279), 1777--1797.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Trevino*15-2"><a name="Trevino*15-2">
+   <li class="bibentry" id="Trevino*15-2"><a name="Trevino*15-2">
      <span class="authoryear" alt="Trevino*15-2">Trevi&ntilde;o, Enrique. 2015a</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">The Burgess inequality and the least {$k$}th power non-residue.</span>
@@ -1261,7 +1273,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Improvements to Turing's method.</span>
      <span class="refs"> Math. Comp.,  80(276), 2259--2279.</span>
    </li>
-   <li class="bibentry" id="Trudgian*12b"><a name="Trudgian*12b">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Trudgian*12b"><a name="Trudgian*12b">
      <span class="authoryear" alt="Trudgian*12b">Trudgian, T. 2012</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">A new upper bound for $|\zeta(1+it)|$.</span>
@@ -1273,8 +1286,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">An improved upper bound for the error in the zero-counting formulae   for Dirichlet $L$-function and Dedekind zeta-function on the critical   line.</span>
      <span class="refs"> Math. Comp.,  84(293), 1439--1450.</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Trudgian*15-2"><a name="Trudgian*15-2">
+   <li class="bibentry" id="Trudgian*15-2"><a name="Trudgian*15-2">
      <span class="authoryear" alt="Trudgian*15-2">Trudgian, Tim. 2015b</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Bounds on the number of Diophantine quintuples.</span>
@@ -1292,7 +1304,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">An improved upper bound for the argument of the Riemann   zeta-function on the critical line II.</span>
      <span class="refs"> J. Number Theory,  134, 280--292.</span>
    </li>
-   <li class="bibentry" id="Lune-Riele-Winter*86"><a name="Lune-Riele-Winter*86">
+</div>
+<div class="oddselection">   <li class="bibentry" id="Lune-Riele-Winter*86"><a name="Lune-Riele-Winter*86">
      <span class="authoryear" alt="Lune-Riele-Winter*86">Van de Lune, J., te Riele, H.J.J., &amp; D.T.Winter. 1986</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On the zeros of the Riemann zeta-function in the critical strip.   IV.</span>
@@ -1304,8 +1317,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On primes in arithmetic progressions.</span>
      <span class="refs"> Acta Arith.,  11, 209--216.</span>
    </li>
-</div>
-<div class="oddselection">   <li class="bibentry" id="Vinogradov*54"><a name="Vinogradov*54">
+   <li class="bibentry" id="Vinogradov*54"><a name="Vinogradov*54">
      <span class="authoryear" alt="Vinogradov*54">Vinogradov, I.M. 2004</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">The method of trigonometrical sums in the theory of numbers.</span>
@@ -1323,7 +1335,8 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">Some Series Involving Euler's Function.</span>
      <span class="refs"> J. London Math. Soc.,  S1-2(4), 210--214.</span>
    </li>
-   <li class="bibentry" id="Watkins*00-1"><a name="Watkins*00-1">
+</div>
+<div class="evenselection">   <li class="bibentry" id="Watkins*00-1"><a name="Watkins*00-1">
      <span class="authoryear" alt="Watkins*00-1">Watkins, M. 2004</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Real zeros of real odd Dirichlet L-functions.</span>
@@ -1335,8 +1348,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">On the Riemann hypothesis.</span>
      <span class="refs">http://www.zetagrid.net/zeta/announcements.html</span>
    </li>
-</div>
-<div class="evenselection">   <li class="bibentry" id="Wolke*83"><a name="Wolke*83">
+   <li class="bibentry" id="Wolke*83"><a name="Wolke*83">
      <span class="authoryear" alt="Wolke*83">Wolke, D. 1983</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">On the explicit formula of Riemann-von Mangoldt, II.</span>
@@ -1348,7 +1360,7 @@ MathJax.Hub.Config({
      &nbsp;&nbsp;&nbsp;<span class="title">First occurence prime gaps.</span>
      <span class="refs"> Math. Comp.,  52(185), 221--224.</span>
    </li>
-</div><br><div class="discret">There are 207 references.</div>
+</div><br><div class="discret">There are 209 references.</div>
 </ul>
 
 

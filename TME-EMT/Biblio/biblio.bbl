@@ -218,6 +218,11 @@ Cohen, H., Dress, F., \& {El Marraki}, M. 2007.
   numbers.
 \newblock {\em Acta Arith.}, {\bf 2}, 23--46.
 
+\bibitem[\protect\citename{Cully-Hugill, }2021]{Cully*21}
+Cully-Hugill, Michaela. 2021.
+\newblock Primes between consecutive powers.
+\newblock {\em arXiv preprint arXiv:2107.14468}.
+
 \bibitem[\protect\citename{Daboussi \& Rivat, }2001]{Daboussi-Rivat*01}
 Daboussi, H., \& Rivat, J. 2001.
 \newblock Explicit upper bounds for exponential sums over primes.
@@ -302,6 +307,12 @@ Dress, F., \& {El Marraki}, M. 1993.
 {Dudek}, Adrian~W. 2015.
 \newblock {On the Riemann hypothesis and the difference between primes}.
 \newblock {\em {Int. J. Number Theory}}, {\bf 11}(3), 771--778.
+
+\bibitem[\protect\citename{Dudek, }2016]{Dudek*16b}
+Dudek, Adrian~W. 2016.
+\newblock An explicit result for primes between cubes.
+\newblock {\em Functiones et Approximatio Commentarii Mathematici}, {\bf
+  55}(2), 177--197.
 
 \bibitem[\protect\citename{Duras, }1993]{Duras*93}
 Duras, J.-L. 1993.

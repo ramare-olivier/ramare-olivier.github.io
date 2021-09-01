@@ -116,44 +116,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {15.1}Interval with primes, without any congruence condition}{79}{section.15.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15.2}Interval with primes, with congruence condition}{82}{section.15.2}%
+\contentsline {section}{\numberline {15.2}Interval with primes, with congruence condition}{83}{section.15.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16} Sieve bounds}{83}{chapter.16}%
+\contentsline {chapter}{\numberline {16} Sieve bounds}{85}{chapter.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {16.1}Some upper bounds}{83}{section.16.1}%
+\contentsline {section}{\numberline {16.1}Some upper bounds}{85}{section.16.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {16.2}Combinatorial sieve estimates}{84}{section.16.2}%
+\contentsline {section}{\numberline {16.2}Combinatorial sieve estimates}{86}{section.16.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{VIII\hspace {1em}Analytic Number Theory in Number Fields}{85}{part.8}%
+\contentsline {part}{VIII\hspace {1em}Analytic Number Theory in Number Fields}{87}{part.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {17} Bounds on the Dedekind zeta-function}{87}{chapter.17}%
+\contentsline {chapter}{\numberline {17} Bounds on the Dedekind zeta-function}{89}{chapter.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {17.1}Size }{87}{section.17.1}%
+\contentsline {section}{\numberline {17.1}Size }{89}{section.17.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {17.2}Zeroes and zero-free regions }{87}{section.17.2}%
+\contentsline {section}{\numberline {17.2}Zeroes and zero-free regions }{89}{section.17.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{IX\hspace {1em}Applications}{89}{part.9}%
+\contentsline {part}{IX\hspace {1em}Applications}{91}{part.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {18} Explicit bounds for class numbers}{91}{chapter.18}%
+\contentsline {chapter}{\numberline {18} Explicit bounds for class numbers}{93}{chapter.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.1}Majorising $h_K\mathcal {R}_K$}{91}{section.18.1}%
+\contentsline {section}{\numberline {18.1}Majorising $h_K\mathcal {R}_K$}{93}{section.18.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.2}Majorising $h_K$}{92}{section.18.2}%
+\contentsline {section}{\numberline {18.2}Majorising $h_K$}{94}{section.18.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.3}Using the influence of small primes}{92}{section.18.3}%
+\contentsline {section}{\numberline {18.3}Using the influence of small primes}{94}{section.18.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {18.4}The $h^-_K$ of CM-fields}{93}{section.18.4}%
+\contentsline {section}{\numberline {18.4}The $h^-_K$ of CM-fields}{95}{section.18.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {19} Primitive Roots}{95}{chapter.19}%
+\contentsline {chapter}{\numberline {19} Primitive Roots}{97}{chapter.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{X\hspace {1em}Development}{97}{part.10}%
+\contentsline {part}{X\hspace {1em}Development}{99}{part.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {20}README}{99}{chapter.20}%
+\contentsline {chapter}{\numberline {20}README}{101}{chapter.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20.1}How to write}{99}{section.20.1}%
+\contentsline {section}{\numberline {20.1}How to write}{101}{section.20.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20.2}How to contribute}{100}{section.20.2}%
+\contentsline {section}{\numberline {20.2}How to contribute}{102}{section.20.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {20.3}Adding a part or a chapter}{100}{section.20.3}%
+\contentsline {section}{\numberline {20.3}Adding a part or a chapter}{102}{section.20.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{101}{chapter*.4}%
+\contentsline {chapter}{Bibliography}{103}{chapter*.4}%

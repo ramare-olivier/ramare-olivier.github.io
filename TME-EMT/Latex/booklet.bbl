@@ -1264,6 +1264,28 @@
       \verb :/home/ramare/tex/Other/Acta/aa0202Cramer.pdf:PDF
       \endverb
     \endentry
+    \entry{Cully*21}{article}{}
+      \name{author}{1}{}{%
+        {{hash=439f07e7eeae0299df54a662452e2f3f}{%
+           family={Cully-Hugill},
+           familyi={C\bibinithyphendelim H\bibinitperiod},
+           given={Michaela},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{fullhash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{bibnamehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{authorbibnamehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{authornamehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{authorfullhash}{439f07e7eeae0299df54a662452e2f3f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2107.14468}
+      \field{title}{Primes between consecutive powers}
+      \field{year}{2021}
+    \endentry
     \entry{Daboussi-Rivat*01}{article}{}
       \name{author}{2}{}{%
         {{hash=bbd5a2e3d4bc15215d5a01d16ac0dd01}{%
@@ -1707,6 +1729,37 @@
       \field{pages}{99\bibrangedash 112}
       \range{pages}{14}
     \endentry
+    \entry{Dudek*16b}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bede67c0055b22d21e94c2b3789a535f}{%
+           family={Dudek},
+           familyi={D\bibinitperiod},
+           given={Adrian\bibnamedelima W},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Adam Mickiewicz University, Faculty of Mathematics}%
+        {Computer Science}%
+      }
+      \strng{namehash}{bede67c0055b22d21e94c2b3789a535f}
+      \strng{fullhash}{bede67c0055b22d21e94c2b3789a535f}
+      \strng{bibnamehash}{bede67c0055b22d21e94c2b3789a535f}
+      \strng{authorbibnamehash}{bede67c0055b22d21e94c2b3789a535f}
+      \strng{authornamehash}{bede67c0055b22d21e94c2b3789a535f}
+      \strng{authorfullhash}{bede67c0055b22d21e94c2b3789a535f}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Functiones et Approximatio Commentarii Mathematici}
+      \field{number}{2}
+      \field{title}{An explicit result for primes between cubes}
+      \field{volume}{55}
+      \field{year}{2016}
+      \field{pages}{177\bibrangedash 197}
+      \range{pages}{21}
+    \endentry
     \entry{Dudek*15}{article}{}
       \name{author}{1}{}{%
         {{hash=bede67c0055b22d21e94c2b3789a535f}{%
@@ -1727,6 +1780,7 @@
       \strng{authorbibnamehash}{bede67c0055b22d21e94c2b3789a535f}
       \strng{authornamehash}{bede67c0055b22d21e94c2b3789a535f}
       \strng{authorfullhash}{bede67c0055b22d21e94c2b3789a535f}
+      \field{extraname}{2}
       \field{sortinit}{D}
       \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
       \field{labelnamesource}{author}

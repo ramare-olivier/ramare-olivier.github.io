@@ -1,25 +1,25 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'booklet.blg'
-[140] biber:322> INFO - === mer. sept.  1, 2021, 16:53:00
-[201] Biber.pm:415> INFO - Reading 'booklet.bcf'
-[326] Biber.pm:943> INFO - Found 211 citekeys in bib section 0
-[342] Biber.pm:4256> INFO - Processing section 0
-[362] Utils.pm:75> INFO - Globbing data source 'Local-TME-EMT.bib'
-[362] Utils.pm:91> INFO - Globbed data source 'Local-TME-EMT.bib' to Local-TME-EMT.bib
-[424] Biber.pm:4455> INFO - Looking for bibtex format file 'Local-TME-EMT.bib' for section 0
-[486] bibtex.pm:1653> INFO - LaTeX decoding ...
-[2823] bibtex.pm:1471> INFO - Found BibTeX data source 'Local-TME-EMT.bib'
-[2846] Utils.pm:293> WARN - Duplicate entry key: 'Bordelles*05' in file 'Local-TME-EMT.bib', skipping ...
-[2901] Utils.pm:293> WARN - Possible typo (case mismatch) between datasource keys: 'Kotnik-vandeLune*04' and 'Kotnik-VanDeLune*04' in file 'Local-TME-EMT.bib'
-[3202] Utils.pm:293> WARN - year field '1983/84' in entry 'Dress*83' is not an integer - this will probably not sort properly.
-[3945] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_QLol/Local-TME-EMT.bib_16744.utf8, line 17716, warning: 435 characters of junk seen at toplevel
-[3945] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_QLol/Local-TME-EMT.bib_16744.utf8, line 19271, warning: 24 characters of junk seen at toplevel
-[3946] Utils.pm:293> WARN - I didn't find a database entry for 'Kadiri-Faber*18' (section 0)
-[3946] Utils.pm:293> WARN - I didn't find a database entry for 'Kadiri*18' (section 0)
-[4179] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[4179] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[4179] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[4179] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[4391] bbl.pm:652> INFO - Writing 'booklet.bbl' with encoding 'UTF-8'
-[4468] bbl.pm:755> INFO - Output to booklet.bbl
-[4468] Biber.pm:128> INFO - WARNINGS: 7
+[90] biber:322> INFO - === mer. sept.  1, 2021, 17:03:56
+[106] Biber.pm:415> INFO - Reading 'booklet.bcf'
+[234] Biber.pm:943> INFO - Found 211 citekeys in bib section 0
+[251] Biber.pm:4256> INFO - Processing section 0
+[251] Utils.pm:75> INFO - Globbing data source 'Local-TME-EMT.bib'
+[252] Utils.pm:91> INFO - Globbed data source 'Local-TME-EMT.bib' to Local-TME-EMT.bib
+[262] Biber.pm:4455> INFO - Looking for bibtex format file 'Local-TME-EMT.bib' for section 0
+[328] bibtex.pm:1653> INFO - LaTeX decoding ...
+[2789] bibtex.pm:1471> INFO - Found BibTeX data source 'Local-TME-EMT.bib'
+[2812] Utils.pm:293> WARN - Duplicate entry key: 'Bordelles*05' in file 'Local-TME-EMT.bib', skipping ...
+[2867] Utils.pm:293> WARN - Possible typo (case mismatch) between datasource keys: 'Kotnik-vandeLune*04' and 'Kotnik-VanDeLune*04' in file 'Local-TME-EMT.bib'
+[3113] Utils.pm:293> WARN - year field '1983/84' in entry 'Dress*83' is not an integer - this will probably not sort properly.
+[3832] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_IU5k/Local-TME-EMT.bib_17354.utf8, line 17716, warning: 435 characters of junk seen at toplevel
+[3832] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_IU5k/Local-TME-EMT.bib_17354.utf8, line 19271, warning: 24 characters of junk seen at toplevel
+[3833] Utils.pm:293> WARN - I didn't find a database entry for 'Kadiri-Faber*18' (section 0)
+[3833] Utils.pm:293> WARN - I didn't find a database entry for 'Kadiri*18' (section 0)
+[4074] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[4074] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[4074] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[4074] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[4276] bbl.pm:652> INFO - Writing 'booklet.bbl' with encoding 'UTF-8'
+[4357] bbl.pm:755> INFO - Output to booklet.bbl
+[4357] Biber.pm:128> INFO - WARNINGS: 7

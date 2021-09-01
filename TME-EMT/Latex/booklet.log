@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  1 SEP 2021 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  1 SEP 2021 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2622,24 +2622,35 @@ l.216 \cite{Jaeschke*93}
 dentifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.220 \cite{Dudek*16b}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{Hfootnote.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.231 \cite{Cully*21}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{Hfootnote.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.247 \cite{CostaPereira*89}
+l.228 \cite{CostaPereira*89}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 in \cite{Dudek*15} 
-                         into:
-Overfull \hbox (2.18849pt too wide) in paragraph at lines 270--272
+l.234 \cite{Dudek*16b}
+                      
+Overfull \hbox (23.5694pt too wide) in paragraph at lines 238--239
+[]\OT1/cmr/m/n/10 The in-ter-val $(\OML/cmm/m/it/10 x; x \OT1/cmr/m/n/10 + 3\OM
+L/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ]$ con-tains a prime for $\OML/cmm/m/it/10 x \
+OMS/cmsy/m/n/10 ^^U []\OT1/cmr/m/n/10 ([](34\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3
+2))$. 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \cite{Cully*21}.
+                      
+Overfull \hbox (23.5694pt too wide) in paragraph at lines 248--249
+[]\OT1/cmr/m/n/10 The in-ter-val $(\OML/cmm/m/it/10 x; x \OT1/cmr/m/n/10 + 3\OM
+L/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ]$ con-tains a prime for $\OML/cmm/m/it/10 x \
+OMS/cmsy/m/n/10 ^^U []\OT1/cmr/m/n/10 ([](33\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 9
+9))$. 
+ []
+
+
+Overfull \hbox (1.24715pt too wide) in paragraph at lines 259--261
 []\OT1/cmr/m/n/10 Under the Rie-mann Hy-poth-e-sis, the in-ter-val $[]\OML/cmm/
 m/it/10 x \OMS/cmsy/m/n/10 ^^@ [][] [] \OML/cmm/m/it/10 x; x[]$
  []
@@ -2648,10 +2659,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 ...te{Carneiro-Milinovich-Soundararajan*19},
+l.265 \cite{Dudek*15}
+                     
+Overfull \hbox (2.18849pt too wide) in paragraph at lines 269--271
+[]\OT1/cmr/m/n/10 Under the Rie-mann Hy-poth-e-sis, the in-ter-val $[]\OML/cmm/
+m/it/10 x \OMS/cmsy/m/n/10 ^^@ [][] [] \OML/cmm/m/it/10 x; x[]$
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.274 ...te{Carneiro-Milinovich-Soundararajan*19},
                                                    the authors go one step f...
 
-Overfull \hbox (5.23328pt too wide) in paragraph at lines 278--280
+Overfull \hbox (5.23328pt too wide) in paragraph at lines 277--279
 []\OT1/cmr/m/n/10 Under the Rie-mann Hy-poth-e-sis, the in-ter-val $[]\OML/cmm/
 m/it/10 x \OMS/cmsy/m/n/10 ^^@ [][] [] \OML/cmm/m/it/10 x; x[]$
  []
@@ -2660,17 +2682,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.298 \cite{McCurley*84-2},
+l.297 \cite{McCurley*84-2},
                            pdfTeX warning (ext4): destination with the same ide
 ntifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.299 \cite{McCurley*84-3},
+l.298 \cite{McCurley*84-3},
                            pdfTeX warning (ext4): destination with the same ide
 ntifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.300 \cite{Kadiri*05-2}.
+l.299 \cite{Kadiri*05-2}.
                           [82]) (./Art14.tex [83] [84
 
 ]
@@ -3004,16 +3026,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
 Package rerunfilecheck Info: File `booklet.out' has not changed.
-(rerunfilecheck)             Checksum: 1EA5DD8DB5CC91FDE4C966547888C5D4;5845.
+(rerunfilecheck)             Checksum: 43CA89917FDD4F111CEAE8F3852CDF2A;5957.
 Package logreq Info: Writing requests to 'booklet.run.xml'.
 \openout1 = `booklet.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25394 strings out of 483081
- 454695 string characters out of 5963441
- 1150610 words of memory out of 5000000
- 39576 multiletter control sequences out of 15000+600000
+ 25396 strings out of 483081
+ 454721 string characters out of 5963441
+ 1149610 words of memory out of 5000000
+ 39577 multiletter control sequences out of 15000+600000
  557392 words of font info for 131 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  45i,14n,58p,1009b,1567s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3058,10 +3080,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on booklet.pdf (120 pages, 805768 bytes).
+Output written on booklet.pdf (120 pages, 805658 bytes).
 PDF statistics:
- 2154 PDF objects out of 2487 (max. 8388607)
- 1968 compressed objects within 20 object streams
- 420 named destinations out of 1000 (max. 500000)
- 633 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2160 PDF objects out of 2487 (max. 8388607)
+ 1974 compressed objects within 20 object streams
+ 421 named destinations out of 1000 (max. 500000)
+ 641 words of extra memory for PDF output out of 10000 (max. 10000000)
 

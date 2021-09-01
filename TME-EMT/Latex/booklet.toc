@@ -116,7 +116,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {15.1}Interval with primes, without any congruence condition}{79}{section.15.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {15.2}Interval with primes, with congruence condition}{83}{section.15.2}%
+\contentsline {section}{\numberline {15.2}Interval with primes under RH, without any congruence condition}{82}{section.15.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15.3}Interval with primes, with congruence condition}{83}{section.15.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {16} Sieve bounds}{85}{chapter.16}%
 \defcounter {refsection}{0}\relax 

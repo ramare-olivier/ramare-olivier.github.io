@@ -56,24 +56,25 @@
 \BOOKMARK [-1][-]{part.7}{VII Sieve and short interval results }{}% 56
 \BOOKMARK [0][-]{chapter.15}{ Short intervals containing primes}{part.7}% 57
 \BOOKMARK [1][-]{section.15.1}{Interval with primes, without any congruence condition}{chapter.15}% 58
-\BOOKMARK [1][-]{section.15.2}{Interval with primes, with congruence condition}{chapter.15}% 59
-\BOOKMARK [0][-]{chapter.16}{ Sieve bounds}{part.7}% 60
-\BOOKMARK [1][-]{section.16.1}{Some upper bounds}{chapter.16}% 61
-\BOOKMARK [1][-]{section.16.2}{Combinatorial sieve estimates}{chapter.16}% 62
-\BOOKMARK [-1][-]{part.8}{VIII Analytic Number Theory in Number Fields}{}% 63
-\BOOKMARK [0][-]{chapter.17}{ Bounds on the Dedekind zeta-function}{part.8}% 64
-\BOOKMARK [1][-]{section.17.1}{Size }{chapter.17}% 65
-\BOOKMARK [1][-]{section.17.2}{Zeroes and zero-free regions }{chapter.17}% 66
-\BOOKMARK [-1][-]{part.9}{IX Applications}{}% 67
-\BOOKMARK [0][-]{chapter.18}{ Explicit bounds for class numbers}{part.9}% 68
-\BOOKMARK [1][-]{section.18.1}{Majorising hKRK}{chapter.18}% 69
-\BOOKMARK [1][-]{section.18.2}{Majorising hK}{chapter.18}% 70
-\BOOKMARK [1][-]{section.18.3}{Using the influence of small primes}{chapter.18}% 71
-\BOOKMARK [1][-]{section.18.4}{The h-K of CM-fields}{chapter.18}% 72
-\BOOKMARK [0][-]{chapter.19}{ Primitive Roots}{part.9}% 73
-\BOOKMARK [-1][-]{part.10}{X Development}{}% 74
-\BOOKMARK [0][-]{chapter.20}{README}{part.10}% 75
-\BOOKMARK [1][-]{section.20.1}{How to write}{chapter.20}% 76
-\BOOKMARK [1][-]{section.20.2}{How to contribute}{chapter.20}% 77
-\BOOKMARK [1][-]{section.20.3}{Adding a part or a chapter}{chapter.20}% 78
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{part.10}% 79
+\BOOKMARK [1][-]{section.15.2}{Interval with primes under RH, without any congruence condition}{chapter.15}% 59
+\BOOKMARK [1][-]{section.15.3}{Interval with primes, with congruence condition}{chapter.15}% 60
+\BOOKMARK [0][-]{chapter.16}{ Sieve bounds}{part.7}% 61
+\BOOKMARK [1][-]{section.16.1}{Some upper bounds}{chapter.16}% 62
+\BOOKMARK [1][-]{section.16.2}{Combinatorial sieve estimates}{chapter.16}% 63
+\BOOKMARK [-1][-]{part.8}{VIII Analytic Number Theory in Number Fields}{}% 64
+\BOOKMARK [0][-]{chapter.17}{ Bounds on the Dedekind zeta-function}{part.8}% 65
+\BOOKMARK [1][-]{section.17.1}{Size }{chapter.17}% 66
+\BOOKMARK [1][-]{section.17.2}{Zeroes and zero-free regions }{chapter.17}% 67
+\BOOKMARK [-1][-]{part.9}{IX Applications}{}% 68
+\BOOKMARK [0][-]{chapter.18}{ Explicit bounds for class numbers}{part.9}% 69
+\BOOKMARK [1][-]{section.18.1}{Majorising hKRK}{chapter.18}% 70
+\BOOKMARK [1][-]{section.18.2}{Majorising hK}{chapter.18}% 71
+\BOOKMARK [1][-]{section.18.3}{Using the influence of small primes}{chapter.18}% 72
+\BOOKMARK [1][-]{section.18.4}{The h-K of CM-fields}{chapter.18}% 73
+\BOOKMARK [0][-]{chapter.19}{ Primitive Roots}{part.9}% 74
+\BOOKMARK [-1][-]{part.10}{X Development}{}% 75
+\BOOKMARK [0][-]{chapter.20}{README}{part.10}% 76
+\BOOKMARK [1][-]{section.20.1}{How to write}{chapter.20}% 77
+\BOOKMARK [1][-]{section.20.2}{How to contribute}{chapter.20}% 78
+\BOOKMARK [1][-]{section.20.3}{Adding a part or a chapter}{chapter.20}% 79
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{part.10}% 80

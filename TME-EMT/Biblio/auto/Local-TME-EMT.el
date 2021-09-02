@@ -330,7 +330,6 @@
     "Dunford-Schwartz*63-2"
     "Dunford-Schwartz*63-3"
     "Duras*93"
-    "Nicolas*21"
     "Duras-Nicolas-Robin*99"
     "Robin*83-0"
     "Dusart*16"

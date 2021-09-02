@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  2 SEP 2021 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  2 SEP 2021 11:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1639,43 +1639,43 @@ pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 From \cite{Robin*83-1}:
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{Hfootnote.1}) has been already used, duplicate ignored
+l.20 \cite{Robin*83-1}:
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 \cite{Nicolas-Robin*83}:
+l.30 \cite{Nicolas-Robin*83}:
                              pdfTeX warning (ext4): destination with the same i
 dentifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 From page 51 of \cite{Robin*83-0}:
+l.39 From page 51 of \cite{Robin*83-0}:
                                        pdfTeX warning (ext4): destination with 
 the same identifier (name{Hfootnote.1}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.50 \cite{Duras*93}
+l.51 \cite{Duras*93}
                      [33]pdfTeX warning (ext4): destination with the same ident
 ifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57   \cite{Duras-Nicolas-Robin*99}:
+l.58   \cite{Duras-Nicolas-Robin*99}:
                                      pdfTeX warning (ext4): destination with th
 e same identifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73 From \cite{Nicolas*08}:
+l.74 From \cite{Nicolas*08}:
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.86 \cite{Ivic*77}.
+l.87 \cite{Ivic*77}.
                     pdfTeX warning (ext4): destination with the same identifier
  (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.97 \cite{Nicolas*21}.
+l.98 \cite{Nicolas*21}.
                        ) [34] [35
 
 ] [36] (./Art03.tex

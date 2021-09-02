@@ -4507,6 +4507,30 @@
       \field{pages}{1311\bibrangedash 1315}
       \range{pages}{5}
     \endentry
+    \entry{Nicolas*21}{report}{}
+      \name{author}{1}{}{%
+        {{hash=a9afe166d2a903bc09dbe48498ee4d70}{%
+           family={Nicolas},
+           familyi={N\bibinitperiod},
+           given={J.-L.},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9afe166d2a903bc09dbe48498ee4d70}
+      \strng{fullhash}{a9afe166d2a903bc09dbe48498ee4d70}
+      \strng{bibnamehash}{a9afe166d2a903bc09dbe48498ee4d70}
+      \strng{authorbibnamehash}{a9afe166d2a903bc09dbe48498ee4d70}
+      \strng{authornamehash}{a9afe166d2a903bc09dbe48498ee4d70}
+      \strng{authorfullhash}{a9afe166d2a903bc09dbe48498ee4d70}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url ={http://math.univ-lyon1.fr/~nicolas/calculcolHR.html}}
+      \field{title}{Computation about the paper The sum of divisors function and the Riemann hypothesis}
+      \field{type}{techreport}
+      \field{year}{2021}
+    \endentry
     \entry{Nicolas*08}{article}{}
       \name{author}{1}{}{%
         {{hash=a9afe166d2a903bc09dbe48498ee4d70}{%
@@ -4521,6 +4545,7 @@
       \strng{authorbibnamehash}{a9afe166d2a903bc09dbe48498ee4d70}
       \strng{authornamehash}{a9afe166d2a903bc09dbe48498ee4d70}
       \strng{authorfullhash}{a9afe166d2a903bc09dbe48498ee4d70}
+      \field{extraname}{2}
       \field{sortinit}{N}
       \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
       \field{labelnamesource}{author}

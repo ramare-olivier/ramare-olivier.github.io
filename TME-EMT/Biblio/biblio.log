@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2020.5.12)  2 SEP 2021 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2020.5.12)  2 SEP 2021 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,15 +348,15 @@ en-tre des fonc-tions
  []
 
 [9] [10] [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1114
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1113
 []\OT1/cmr/m/n/10 Trudgian, T. 2012.  A new up-per bound for $\OMS/cmsy/m/n/10 
 j\OML/cmm/m/it/10 ^^P\OT1/cmr/m/n/10 (1 + \OML/cmm/m/it/10 it\OT1/cmr/m/n/10 )\
 OMS/cmsy/m/n/10 j$\OT1/cmr/m/n/10 .
  []
 
-[13])
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 325.
- [14]
+ [13] [14]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 325.
  (./biblio.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 325.
@@ -378,4 +378,4 @@ Here is how much of TeX's memory you used:
  59 hyphenation exceptions out of 8191
  37i,4n,31p,252b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on biblio.dvi (14 pages, 82092 bytes).
+Output written on biblio.dvi (14 pages, 81816 bytes).

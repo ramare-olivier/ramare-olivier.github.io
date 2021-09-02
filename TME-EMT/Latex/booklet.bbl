@@ -4526,10 +4526,15 @@
       \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{\url ={http://math.univ-lyon1.fr/~nicolas/calculcolHR.html}}
       \field{title}{Computation about the paper The sum of divisors function and the Riemann hypothesis}
       \field{type}{techreport}
       \field{year}{2021}
+      \verb{urlraw}
+      \verb http://math.univ-lyon1.fr/~nicolas/calculcolHR.html
+      \endverb
+      \verb{url}
+      \verb http://math.univ-lyon1.fr/~nicolas/calculcolHR.html
+      \endverb
     \endentry
     \entry{Nicolas*08}{article}{}
       \name{author}{1}{}{%

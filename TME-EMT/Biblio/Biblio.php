@@ -949,7 +949,7 @@ MathJax.Hub.Config({
      <span class="authoryear" alt="Nicolas*21">Nicolas, J.-L. 2021</span></a>
 <br>
      &nbsp;&nbsp;&nbsp;<span class="title">Computation about the paper The sum of divisors function and the   Riemann hypothesis.</span>
-     <span class="refs">Tech. rept.  \url =http://math.univ-lyon1.fr/ nicolas/calculcolHR.html.</span>
+     <span class="refs">Tech. rept.</span>
    </li>
    <li class="bibentry" id="Nicolas-Robin*83"><a name="Nicolas-Robin*83">
      <span class="authoryear" alt="Nicolas-Robin*83">Nicolas, J.-L., &amp; Robin, G. 1983</span></a>

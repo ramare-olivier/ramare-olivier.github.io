@@ -124,6 +124,8 @@ Duras*93
 Duras-Nicolas-Robin*99
 Nicolas*08
 Ivic*77
+Eum-Koo*15
+Washington-Yang*21
 Ramare*95
 Berment-Ramare*12
 Ramare*95
@@ -174,6 +176,7 @@ Platt*11
 Platt*17
 Wedeniwski*02
 Gourdon-Demichel*04
+Platt-Trudgian*21a
 Gabcke*79
 Rumely*93
 Bennett*01

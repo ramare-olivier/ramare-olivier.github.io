@@ -6,6 +6,11 @@ use File::Copy;
 # chmod 755 UpDateBiblio.pl to make it executable
 # Use simply with ./UpDateBiblio.pl
 
+### SITE DEPENDENT CONSTANT !!!
+my $Global_bib_file = "../../../../tex/Bibliographie/Global.bib";
+my $Local_bib_file = "Local-TME-EMT.bib";
+
+
 my $RefToBeProcessed_txtfile = "RefToBeProcessed.txt";
 my $RefToCitation_jsfile = "RefToCitation.js";
 my $RefToAuthorYear_jsfile = "RefToAuthorYear.js";
@@ -537,6 +542,10 @@ sub make_RefToAll_jsfile_Biblio_phpfile {
 ######### Silence ! Maintenant, on travaille ! ####################
 ###################################################################
 
+print "Copying the new bib-file from $Global_bib_file ...\n";
+copy($Global_bib_file, $Local_bib_file) or die "Creation of $Local_bib_file failed: $!";
+print("done.\n");
+
 print "Build $RefToBeProcessed_txtfile...\n";
 make_RefToBeProcessed_txtfile(); print("done.\n");
 
@@ -552,7 +561,7 @@ make_RefToAll_jsfile_Biblio_phpfile(); print("done.\n");
 make_texfile();
 
 print "Copying Local-TME-EMT.bib to ../Latex directory\n";
-copy("Local-TME-EMT.bib","../Latex/Local-TME-EMT.bib") or die "Copy failed: $!";
+copy($Local_bib_file, "../Latex/Local-TME-EMT.bib") or die "Copy failed: $!";
 
 chdir("../Latex");
 print "Entering ../Latex directory\n";

@@ -1264,6 +1264,63 @@
       \verb :/home/ramare/tex/Other/Acta/aa0202Cramer.pdf:PDF
       \endverb
     \endentry
+    \entry{Cully*21}{article}{}
+      \name{author}{1}{}{%
+        {{hash=439f07e7eeae0299df54a662452e2f3f}{%
+           family={Cully-Hugill},
+           familyi={C\bibinithyphendelim H\bibinitperiod},
+           given={Michaela},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{fullhash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{bibnamehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{authorbibnamehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{authornamehash}{439f07e7eeae0299df54a662452e2f3f}
+      \strng{authorfullhash}{439f07e7eeae0299df54a662452e2f3f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2107.14468}
+      \field{title}{Primes between consecutive powers}
+      \field{year}{2021}
+    \endentry
+    \entry{Cully-Trudgian*21}{article}{}
+      \name{author}{2}{}{%
+        {{hash=439f07e7eeae0299df54a662452e2f3f}{%
+           family={Cully-Hugill},
+           familyi={C\bibinithyphendelim H\bibinitperiod},
+           given={Michaela},
+           giveni={M\bibinitperiod}}}%
+        {{hash=af8f95636cfb8ee32db62432b50fcea2}{%
+           family={Trudgian},
+           familyi={T\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{fullhash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{bibnamehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{authorbibnamehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{authornamehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{authorfullhash}{5ff300a4acbe14c01b154e232cc4a495}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1382-4090}
+      \field{journaltitle}{Ramanujan J.}
+      \field{number}{1}
+      \field{title}{Two explicit divisor sums}
+      \field{volume}{56}
+      \field{year}{2021}
+      \field{pages}{141\bibrangedash 149}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/s11139-020-00333-3
+      \endverb
+    \endentry
     \entry{Daboussi-Rivat*01}{article}{}
       \name{author}{2}{}{%
         {{hash=bbd5a2e3d4bc15215d5a01d16ac0dd01}{%
@@ -4794,6 +4851,7 @@
       \strng{authorbibnamehash}{d0b290fda16e446719a77447f29d0e95}
       \strng{authornamehash}{d0b290fda16e446719a77447f29d0e95}
       \strng{authorfullhash}{d0b290fda16e446719a77447f29d0e95}
+      \field{extraname}{1}
       \field{sortinit}{P}
       \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
       \field{labelnamesource}{author}
@@ -4842,6 +4900,42 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1090/mcom/3198
+      \endverb
+    \endentry
+    \entry{Platt-Trudgian*21b}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0cb59969af80e6661795f3ed6010efa9}{%
+           family={Platt},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=66490333fa52c597ed64f7abf27c7710}{%
+           family={Trudgian},
+           familyi={T\bibinitperiod},
+           given={Timothy\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{fullhash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{bibnamehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{authorbibnamehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{authornamehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{authorfullhash}{7cd0ac82c63851914bfb1ef909123a31}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5718}
+      \field{journaltitle}{Math. Comp.}
+      \field{number}{328}
+      \field{title}{The error term in the prime number theorem}
+      \field{volume}{90}
+      \field{year}{2021}
+      \field{pages}{871\bibrangedash 881}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1090/mcom/3583
       \endverb
     \endentry
     \entry{Pohst-Zassenhaus*89}{book}{}
@@ -6516,7 +6610,6 @@
       \range{pages}{4}
     \endentry
   \enddatalist
-  \missing{Cully*21}
   \missing{Kadiri*18}
   \missing{Kadiri-Faber*18}
 \endrefsection

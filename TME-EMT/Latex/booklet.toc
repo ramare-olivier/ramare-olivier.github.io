@@ -36,7 +36,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Euler products}{31}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4} Explicit upper bounds for some special arithmetic functions}{33}{chapter.4}%
+\contentsline {chapter}{\numberline {4} Explicit pointwise upper bounds for some special arithmetic functions}{33}{chapter.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{II\hspace {1em}Exact computations}{35}{part.2}%
 \defcounter {refsection}{0}\relax 

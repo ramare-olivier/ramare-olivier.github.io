@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  19 SEP 2021 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  22 SEP 2021 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -856,13 +856,6 @@ Package biblatex Info: ... file 'booklet.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Cully*21
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                Kadiri*18
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1027,124 +1020,126 @@ Package hyperref Warning: Ignoring empty anchor on input line 149.
 Package hyperref Warning: Ignoring empty anchor on input line 157.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 159.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 164.
-
-
-Overfull \hbox (9.82211pt too wide) in paragraph at lines 170--176
-[]\OT1/cmr/m/n/10 For $\OML/cmm/m/it/10 x > \OT1/cmr/m/n/10 1$, we have $[][] ^
-^C(\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =n \OT1/cmr/m/n/10 = [] 
-\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^M \OT1/cmr/m/n/10 + 
-\OML/cmm/m/it/10 O[]\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 833\OML
-/cmm/m/it/10 = [][] x\OT1/cmr/m/n/10 )$.
+Overfull \hbox (28.47102pt too wide) in paragraph at lines 162--165
+[]\OT1/cmr/m/n/10 When $\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^U \OML/cmm/m/it/1
+0 e[]$\OT1/cmr/m/n/10 , we have $[][][] \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 23
+5 ([] \OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[] [] \OMS/cmsy/m/n/10 ^^@[] \OML/cmm/
+m/it/10 :$ 
  []
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 191.
+Package hyperref Warning: Ignoring empty anchor on input line 169.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 228.
+Package hyperref Warning: Ignoring empty anchor on input line 171.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 176.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 204.
 
 [11]
 
-Package hyperref Warning: Ignoring empty anchor on input line 248.
+Package hyperref Warning: Ignoring empty anchor on input line 241.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 251.
+Package hyperref Warning: Ignoring empty anchor on input line 261.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 257.
+Package hyperref Warning: Ignoring empty anchor on input line 264.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 270.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 340.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 336.
+(hyperref)                removing `math shift' on input line 340.
 
 [12]
 
-Package hyperref Warning: Ignoring empty anchor on input line 342.
+Package hyperref Warning: Ignoring empty anchor on input line 349.
 
 
-Overfull \hbox (12.57935pt too wide) detected at line 346
+Package hyperref Warning: Ignoring empty anchor on input line 355.
+
+
+Overfull \hbox (12.57935pt too wide) detected at line 359
 \OML/cmm/m/it/10 p[] \OMS/cmsy/m/n/10 ^^X \OML/cmm/m/it/10 n [] :
  []
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 359.
+Package hyperref Warning: Ignoring empty anchor on input line 372.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 366.
+Package hyperref Warning: Ignoring empty anchor on input line 379.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 374.
+Package hyperref Warning: Ignoring empty anchor on input line 387.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 382.
+Package hyperref Warning: Ignoring empty anchor on input line 395.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 386.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 396.
-
-[13]
-Overfull \hbox (0.68304pt too wide) in paragraph at lines 405--405
-[]\OT1/cmr/bx/n/14.4 Bounds on primes in arith-metic pro-gres-sions 
- []
+Package hyperref Warning: Ignoring empty anchor on input line 399.
 
 
 Package hyperref Warning: Ignoring empty anchor on input line 409.
 
-
-Package hyperref Warning: Ignoring empty anchor on input line 410.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 411.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 412.
+[13]
+Overfull \hbox (0.68304pt too wide) in paragraph at lines 418--418
+[]\OT1/cmr/bx/n/14.4 Bounds on primes in arith-metic pro-gres-sions 
+ []
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 413.
+Package hyperref Warning: Ignoring empty anchor on input line 422.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 415.
+Package hyperref Warning: Ignoring empty anchor on input line 423.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 418.
+Package hyperref Warning: Ignoring empty anchor on input line 424.
 
 
-Overfull \hbox (4.72844pt too wide) in paragraph at lines 445--453
+Package hyperref Warning: Ignoring empty anchor on input line 425.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 426.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 428.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 431.
+
+
+Overfull \hbox (4.72844pt too wide) in paragraph at lines 458--466
 []\OT1/cmr/m/n/10 We have $[] [] [] [][][] 1 \OMS/cmsy/m/n/10 ^^@ [][] ^^T \OT1
 /cmr/m/n/10 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 840\OML/cmm/m/it/10 :$ 
  []
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 464.
+Package hyperref Warning: Ignoring empty anchor on input line 477.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 466.
+Package hyperref Warning: Ignoring empty anchor on input line 479.
 
 [14]
-Overfull \hbox (12.25874pt too wide) in paragraph at lines 474--483
+Overfull \hbox (12.25874pt too wide) in paragraph at lines 487--496
 []\OT1/cmr/m/n/10 We have $[] [] [] [][][] [] \OMS/cmsy/m/n/10 ^^@ [] ^^@ \OML/
 cmm/m/it/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q; a\OT1/cmr/m/n/10 )[] \OMS/cms
 y/m/n/10 2
  []
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 523.
+Package hyperref Warning: Ignoring empty anchor on input line 536.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 524.
+Package hyperref Warning: Ignoring empty anchor on input line 537.
 
 ) (./Art02.tex [15] [16
 
@@ -1414,7 +1409,7 @@ ed
 l.104  and \cite{Coffey*06}.
                              In particular, we have
 Overfull \hbox (103.40735pt too wide) in paragraph at lines 97--110
-[][]\OT1/cmr/m/n/10 103[][]] and [[][]M. Cof-fey, [][]33[][]]. In par-tic-u-lar
+[][]\OT1/cmr/m/n/10 105[][]] and [[][]M. Cof-fey, [][]33[][]]. In par-tic-u-lar
 , we have $\OML/cmm/m/it/10 ^^M[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OT1/cm
 r/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 07281584548367672486058637587490131
 91377 +
@@ -1552,9 +1547,26 @@ l.458 \cite{Bordelles*02}
 ifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.477 \cite{Lapkova*16},
-                         we find
-Overfull \hbox (36.38828pt too wide) detected at line 496
+l.476 \cite{Cully-Trudgian*21},
+                               
+Overfull \hbox (44.56876pt too wide) detected at line 508
+[] \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )[] = \
+OML/cmm/m/it/10 D[]x\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[] +
+ \OML/cmm/m/it/10 D[]x\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[]
+ + \OML/cmm/m/it/10 D[]x\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 x \OT1/cmr/m/n/10 
++ \OML/cmm/m/it/10 D[]x \OT1/cmr/m/n/10 + \OMS/cmsy/m/n/10 O[]\OT1/cmr/m/n/10 (
+9\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 73 4\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 48 \OM
+L/cmm/m/it/10 x[] [] x \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 73 
+[])
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.519 \cite{Lapkova*16},
+                         we find [29]
+Overfull \hbox (36.38828pt too wide) detected at line 538
 \OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 = []([] \OML/cmm/m/it/10 ^^T \OT1/cmr/m/n/
 10 + 1)\OML/cmm/m/it/10 ; C[] \OT1/cmr/m/n/10 = 2[]\OML/cmm/m/it/10 ^^T \OT1/cm
 r/m/n/10 + ([] \OML/cmm/m/it/10 ^^T \OT1/cmr/m/n/10 + 1)[][] [] \OML/cmm/m/it/1
@@ -1569,60 +1581,59 @@ pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.500 \cite{Lapkova*16-2} 
+l.542 \cite{Lapkova*16-2} 
                           for thepdfTeX warning (ext4): destination with the sa
 me identifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.505 \cite{Cipu*15-1}
+l.547 \cite{Cipu*15-1}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.507 \cite{Trudgian*15-2}.
-                            [29]pdfTeX warning (ext4): destination with the sam
-e identifier (name{Hfootnote.1}) has been already used, duplicate ignored
+l.549 \cite{Trudgian*15-2}.
+                           pdfTeX warning (ext4): destination with the same ide
+ntifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.538 \cite{Trevino*15-2},
+l.580 \cite{Trevino*15-2},
                            Lemma 2.pdfTeX warning (ext4): destination with the 
 same identifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.558 \cite{Ramare*14-1}.
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{Hfootnote.1}) has been already used, duplicate ignored
+l.600 \cite{Ramare*14-1}.
+                          [30]pdfTeX warning (ext4): destination with the same 
+identifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.574 \cite{Montgomery-Vaughan*73},
+l.616 \cite{Montgomery-Vaughan*73},
                                    pdfTeX warning (ext4): destination with the 
 same identifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.576 \cite{Ramare*95},
+l.618 \cite{Ramare*95},
                        pdfTeX warning (ext4): destination with the same identif
 ier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 \cite{Ward*27}
+l.620 \cite{Ward*27}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.580 \cite{Buethe*14}
+l.622 \cite{Buethe*14}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.583 \cite{Rosser-Schoenfeld*62}.
-                                   [30]pdfTeX warning (ext4): destination with 
-the same identifier (name{Hfootnote.1}) has been already used, duplicate ignore
-d
+l.625 \cite{Rosser-Schoenfeld*62}.
+                                  pdfTeX warning (ext4): destination with the s
+ame identifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.612 \cite{Dusart*16},
+l.654 \cite{Dusart*16},
                         it is
-Overfull \hbox (20.14253pt too wide) in paragraph at lines 618--621
+Overfull \hbox (20.14253pt too wide) in paragraph at lines 660--663
 []\OT1/cmr/m/n/10 When $\OML/cmm/m/it/10 x > \OT1/cmr/m/n/10 2 278 382$, we hav
 e $1 \OMS/cmsy/m/n/10 ^^@ [] ^^T \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ([] \OML/c
 mm/m/it/10 x\OT1/cmr/m/n/10 ) [][]1 \OMS/cmsy/m/n/10 ^^@
@@ -1632,15 +1643,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.632 In \cite{Bordelles*05},
-                             pdfTeX warning (ext4): destination with the same i
-dentifier (name{Hfootnote.1}) has been already used, duplicate ignored
+l.674 In \cite{Bordelles*05},
+                              [31]pdfTeX warning (ext4): destination with the s
+ame identifier (name{Hfootnote.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.637 \cite{Vanlalnagaia*15-1}
-                              ) (./Art12.tex [31] [32
-
-]
+l.679 \cite{Vanlalnagaia*15-1}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{Hfootnote.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.696 \cite{Rosser-Schoenfeld*62}
+                                 ) (./Art12.tex [32]
 Chapter 4.
 pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.1})
  has been already used, duplicate ignored
@@ -1663,8 +1677,10 @@ d
 <to be read again> 
                    \relax 
 l.51 \cite{Duras*93}
-                     [33]pdfTeX warning (ext4): destination with the same ident
-ifier (name{Hfootnote.1}) has been already used, duplicate ignored
+                     [33
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.1}
+) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.58   \cite{Duras-Nicolas-Robin*99}:
@@ -2005,7 +2021,7 @@ fier (name{Hfootnote.2}) has been already used, duplicate ignored
 l.31 \cite{Louboutin*15}
                         
 Overfull \hbox (14.09077pt too wide) in paragraph at lines 29--33
-\OT1/cmr/m/n/10 [[][]S. Louboutin, [][]115[][]] an-nounces the fol-low-ing lowe
+\OT1/cmr/m/n/10 [[][]S. Louboutin, [][]117[][]] an-nounces the fol-low-ing lowe
 r bound proved in [[][]S. R. Louboutin,
  []
 
@@ -2521,9 +2537,14 @@ l.259 \cite{Kadiri-Ng*12}.
 tifier (name{Hfootnote.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.274 \cite{Ramare*13d}.
+l.274 \cite{Kadiri*13}.
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{Hfootnote.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.276 \cite{Ramare*13d}.
                         
-Overfull \hbox (5.25511pt too wide) detected at line 286
+Overfull \hbox (5.25511pt too wide) detected at line 288
 [] [] [] \OML/cmm/m/it/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[; T; ^^_\OT1/cm
 r/m/n/10 ) \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 20[]56 \OML/cmm/m/it/10 Q[]T[][
 ][] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Q[]T\OT1/cmr/m/n/10 ) + 32 \OML/cmm/m
@@ -2534,7 +2555,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.298 \cite{Kadiri-Lumley-Ng*18}.
+l.300 \cite{Kadiri-Lumley-Ng*18}.
                                  ) [75] [76
 
 ] [77] [78] (./Art09.tex
@@ -2657,7 +2678,12 @@ OMS/cmsy/m/n/10 ^^U []\OT1/cmr/m/n/10 ([](34\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3
 2))$. 
  []
 
-
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \cite{Cully*21} 
+                      as follows.
 Overfull \hbox (23.5694pt too wide) in paragraph at lines 248--249
 []\OT1/cmr/m/n/10 The in-ter-val $(\OML/cmm/m/it/10 x; x \OT1/cmr/m/n/10 + 3\OM
 L/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ]$ con-tains a prime for $\OML/cmm/m/it/10 x \
@@ -2845,50 +2871,55 @@ l.77 see \cite{Pohst-Zassenhaus*89}.
  same identifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81 (see \cite{Bordelles*02}
-                             pdfTeX warning (ext4): destination with the same i
-dentifier (name{Hfootnote.4}) has been already used, duplicate ignored
+l.82 \cite{Bordelles*02}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 and \cite{Bordelles*06})
-                             pdfTeX warning (ext4): destination with the same i
-dentifier (name{Hfootnote.4}) has been already used, duplicate ignored
+l.84 \cite{Bordelles*06})
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.104 \cite{Louboutin*05} 
+l.100 \cite{Cully-Trudgian*21}
+                              pdfTeX warning (ext4): destination with the same 
+identifier (name{Hfootnote.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 \cite{Louboutin*05} 
                           how the [94]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 135.
+(hyperref)                removing `math shift' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 135.
+(hyperref)                removing `superscript' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 135.
+(hyperref)                removing `subscript' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 135.
+(hyperref)                removing `math shift' on input line 146.
 
 pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.157 From \cite{Louboutin*00}:
+l.168 From \cite{Louboutin*00}:
                                pdfTeX warning (ext4): destination with the same
  identifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.172 From \cite{Louboutin*03}:
-                               pdfTeX warning (ext4): destination with the same
- identifier (name{Hfootnote.4}) has been already used, duplicate ignored
+l.183 From \cite{Louboutin*03}:
+                                [95]pdfTeX warning (ext4): destination with the
+ same identifier (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 And a third result from \cite{Louboutin*03}:
-                                                   [95]) (./Art19.tex [96]
+l.220 And a third result from \cite{Louboutin*03}:
+                                                  ) (./Art19.tex [96]
 Chapter 19.
 ) [97
 
@@ -2931,6 +2962,12 @@ Package biblatex Warning: No driver for entry type ''.
 (biblatex)                Using fallback driver on input line 286.
 
 [105]
+Overfull \hbox (0.45438pt too wide) in paragraph at lines 286--286
+[][]\OT1/cmr/m/n/10 M. Cully-Hugill. \  Primes be-tween con-sec-u-tive pow-ers"
+. In: \OT1/cmr/m/it/10 arXiv preprint
+ []
+
+
 Overfull \hbox (0.23302pt too wide) in paragraph at lines 286--286
 \OT1/cmr/m/n/10 garias, Miller, Odlyzko method". In: \OT1/cmr/m/it/10 Math. Com
 p. \OT1/cmr/m/n/10 65.213 (1996), pp. 235{
@@ -2968,13 +3005,13 @@ Overfull \hbox (0.98564pt too wide) in paragraph at lines 286--286
 . \OT1/cmr/m/n/10 23 (1994), 123{134 (1995).
  []
 
-
+[110]
 Overfull \hbox (11.54068pt too wide) in paragraph at lines 286--286
 [][]\OT1/cmr/m/n/10 E. Lan-dau. \  Ab-sch^^?atzungen von Charak-ter-sum-men, Ei
 n-heiten und Klassen-
  []
 
-[110]
+
 Overfull \hbox (7.739pt too wide) in paragraph at lines 286--286
 \OT1/cmr/m/n/10 prob-lems of num-ber the-ory". In: \OT1/cmr/m/it/10 Rus-sian Ma
 th. Sur-veys \OT1/cmr/m/n/10 22 (1967), pp. 119{
@@ -2998,13 +3035,13 @@ Overfull \hbox (4.38914pt too wide) in paragraph at lines 286--286
 c al-ge-braic num-ber the-ory\OT1/cmr/m/n/10 . Vol. 30.
  []
 
-[114] [115]
+[114] [115] [116]
 Overfull \hbox (7.06023pt too wide) in paragraph at lines 286--286
 [][]\OT1/cmr/m/n/10 H. Siebert. \  Mont-gomery's weighted sieve for di-men-sion
  two". In: \OT1/cmr/m/it/10 Monatsh.
  []
 
-[116]
+
 Overfull \hbox (9.03731pt too wide) in paragraph at lines 286--286
 [][]\OT1/cmr/m/n/10 S. Stechkin. \  Ra-tio-nal in-equal-i-ties and ze-ros of th
 e Rie-mann zeta-function".
@@ -3036,19 +3073,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
 Package rerunfilecheck Info: File `booklet.out' has not changed.
-(rerunfilecheck)             Checksum: 43CA89917FDD4F111CEAE8F3852CDF2A;5957.
+(rerunfilecheck)             Checksum: 2C0EBC7A1967B8C5A52990C8EC1B5910;5967.
 Package logreq Info: Writing requests to 'booklet.run.xml'.
 \openout1 = `booklet.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25410 strings out of 483081
- 455151 string characters out of 5963441
- 1150800 words of memory out of 5000000
- 39589 multiletter control sequences out of 15000+600000
+ 25433 strings out of 483081
+ 455750 string characters out of 5963441
+ 1151053 words of memory out of 5000000
+ 39609 multiletter control sequences out of 15000+600000
  557392 words of font info for 131 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 45i,14n,58p,1009b,1567s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,14n,58p,1009b,1568s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/ramare/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sh
@@ -3090,10 +3127,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on booklet.pdf (120 pages, 807028 bytes).
+Output written on booklet.pdf (120 pages, 812348 bytes).
 PDF statistics:
- 2170 PDF objects out of 2487 (max. 8388607)
- 1984 compressed objects within 20 object streams
- 423 named destinations out of 1000 (max. 500000)
+ 2188 PDF objects out of 2487 (max. 8388607)
+ 2001 compressed objects within 21 object streams
+ 426 named destinations out of 1000 (max. 500000)
  641 words of extra memory for PDF output out of 10000 (max. 10000000)
 

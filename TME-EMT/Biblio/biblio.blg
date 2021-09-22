@@ -3,61 +3,60 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: biblio.aux
 The style file: authordate1.bst
 Database file #1: Local-TME-EMT.bib
-Repeated entry---line 3839 of file Local-TME-EMT.bib
+Repeated entry---line 3854 of file Local-TME-EMT.bib
  : @article{Bordelles*05
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 11789 of file Local-TME-EMT.bib
+Repeated entry---line 11825 of file Local-TME-EMT.bib
  : @article{Kotnik-vandeLune*04
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "Carneiro-Milinovich-Soundararajan*19" isn't style-file defined
---line 17750 of file Local-TME-EMT.bib
-Warning--I didn't find a database entry for "Cully*21"
+--line 17786 of file Local-TME-EMT.bib
 Warning--I didn't find a database entry for "Kadiri-Faber*18"
 Warning--I didn't find a database entry for "Kadiri*18"
 Warning--empty school in Platt*13
 Warning--empty journal in Trudgian*12b
 Warning--empty journal in Wedeniwski*02
-You've used 211 entries,
+You've used 214 entries,
             2441 wiz_defined-function locations,
-            1903 strings with 32731 characters,
-and the built_in function-call counts, 84851 in all, are:
-= -- 8529
-> -- 2133
-< -- 693
-+ -- 663
-- -- 570
-* -- 7195
-:= -- 13551
-add.period$ -- 865
-call.type$ -- 211
-change.case$ -- 1321
-chr.to.int$ -- 200
-cite$ -- 214
-duplicate$ -- 3321
-empty$ -- 6793
-format.name$ -- 879
-if$ -- 17339
-int.to.chr$ -- 12
+            1918 strings with 33055 characters,
+and the built_in function-call counts, 86037 in all, are:
+= -- 8650
+> -- 2169
+< -- 704
++ -- 676
+- -- 580
+* -- 7296
+:= -- 13742
+add.period$ -- 877
+call.type$ -- 214
+change.case$ -- 1341
+chr.to.int$ -- 202
+cite$ -- 217
+duplicate$ -- 3366
+empty$ -- 6880
+format.name$ -- 896
+if$ -- 17577
+int.to.chr$ -- 13
 int.to.str$ -- 0
-missing$ -- 211
-newline$ -- 1079
-num.names$ -- 635
-pop$ -- 1043
+missing$ -- 214
+newline$ -- 1094
+num.names$ -- 644
+pop$ -- 1062
 preamble$ -- 1
-purify$ -- 1532
+purify$ -- 1555
 quote$ -- 0
-skip$ -- 3133
+skip$ -- 3174
 stack$ -- 0
-substring$ -- 6947
-swap$ -- 645
+substring$ -- 7032
+swap$ -- 653
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1668
+type$ -- 1692
 warning$ -- 3
-while$ -- 691
+while$ -- 701
 width$ -- 0
-write$ -- 2769
+write$ -- 2807
 (There were 2 error messages)

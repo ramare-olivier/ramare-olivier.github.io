@@ -86,6 +86,7 @@ Rosser-Schoenfeld*62
 Kadiri-Faber*13
 Kadiri-Faber*18
 Kadiri*13
+Platt-Trudgian*21b
 Panaitopol*00
 Axler*16
 Ramare*12-1
@@ -154,6 +155,7 @@ Deshouillers-Dress*88
 Mardjanichvili*39
 Deshouillers-Dress*88
 Bordelles*02
+Cully-Trudgian*21
 Lapkova*16
 Lapkova*16-2
 Cipu*15-1
@@ -206,6 +208,7 @@ Watkins*00-1
 Chen-Wang*89-2
 Liu-Wang*02-1
 Kadiri-Ng*12
+Kadiri*13
 Ramare*13d
 Kadiri-Lumley-Ng*18
 Qiu*91
@@ -249,6 +252,7 @@ Ramare*01
 Pohst-Zassenhaus*89
 Bordelles*02
 Bordelles*06
+Cully-Trudgian*21
 Louboutin*05
 Louboutin*05
 Louboutin*00

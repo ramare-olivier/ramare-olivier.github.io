@@ -218,6 +218,16 @@ Cohen, H., Dress, F., \& {El Marraki}, M. 2007.
   numbers.
 \newblock {\em Acta Arith.}, {\bf 2}, 23--46.
 
+\bibitem[\protect\citename{Cully-Hugill, }2021]{Cully*21}
+Cully-Hugill, Michaela. 2021.
+\newblock Primes between consecutive powers.
+\newblock {\em arXiv preprint arXiv:2107.14468}.
+
+\bibitem[\protect\citename{Cully-Hugill \& Trudgian, }2021]{Cully-Trudgian*21}
+Cully-Hugill, Michaela, \& Trudgian, Tim. 2021.
+\newblock Two explicit divisor sums.
+\newblock {\em Ramanujan J.}, {\bf 56}(1), 141--149.
+
 \bibitem[\protect\citename{Daboussi \& Rivat, }2001]{Daboussi-Rivat*01}
 Daboussi, H., \& Rivat, J. 2001.
 \newblock Explicit upper bounds for exponential sums over primes.
@@ -840,8 +850,8 @@ Panaitopol, L. 2000.
 \newblock A formula for {$\pi(x)$} applied to a result of {K}oninck-{I}vi\'c.
 \newblock {\em Nieuw Arch. Wiskd. (5)}, {\bf 1}(1), 55--56.
 
-\bibitem[\protect\citename{Platt \& Trudgian, }2021]{Platt-Trudgian*21a}
-Platt, Dave, \& Trudgian, Tim. 2021.
+\bibitem[\protect\citename{Platt \& Trudgian, }2021a]{Platt-Trudgian*21a}
+Platt, Dave, \& Trudgian, Tim. 2021a.
 \newblock The {R}iemann hypothesis is true up to {$3\cdot10^{12}$}.
 \newblock {\em Bull. Lond. Math. Soc.}, {\bf 53}(3), 792--797.
 
@@ -849,6 +859,11 @@ Platt, Dave, \& Trudgian, Tim. 2021.
 Platt, David~J. 2017.
 \newblock Isolating some non-trivial zeros of zeta.
 \newblock {\em Math. Comp.}, {\bf 86}(307), 2449--2467.
+
+\bibitem[\protect\citename{Platt \& Trudgian, }2021b]{Platt-Trudgian*21b}
+Platt, David~J., \& Trudgian, Timothy~S. 2021b.
+\newblock The error term in the prime number theorem.
+\newblock {\em Math. Comp.}, {\bf 90}(328), 871--881.
 
 \bibitem[\protect\citename{Platt, }2011]{Platt*11}
 Platt, D.J. 2011.

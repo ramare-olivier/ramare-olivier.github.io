@@ -315,7 +315,7 @@ function TMEEMTMenuold (){
             }
         newHTML += '</ul></span></li>';
     }
-    newHTML += '<li class="tme-emt-main-biblio-item"><a href = "Biblio/Biblio.php">Bibliography</a></li></ul>';
+    newHTML += '<li class="tme-emt-main-biblio-item"><a href = "Biblio/Biblio.html">Bibliography</a></li></ul>';
     document.getElementById("TMEEMTMenu").innerHTML = newHTML;
 }
 
@@ -363,7 +363,7 @@ function shadeSelectedEntry (whoseName){
 /*------ RefToCitation is defined in Biblio/RefToCitation.js ---------*/
 
 function bibref(key) { 
-    var newHTML = "[<a href='../Biblio/Biblio.php"; /*Il faut mettre l'ancre a la fin*/
+    var newHTML = "[<a href='../Biblio/Biblio.html"; /*Il faut mettre l'ancre a la fin*/
     newHTML += "?SelectedEntry=\"" + key + "\"#" + key +"'>" + RefToCitation[key] 
         + "</a><span class=\"FullRef\">&nbsp;&dagger;<span class=\"TheRef\">"
         + "<span class=\"AuthorYear\">" + RefToAuthorYear[key] + "</span><br>" 

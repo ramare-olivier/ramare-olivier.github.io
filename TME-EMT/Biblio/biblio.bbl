@@ -223,6 +223,11 @@ Cully-Hugill, Michaela. 2021.
 \newblock Primes between consecutive powers.
 \newblock {\em arXiv preprint arXiv:2107.14468}.
 
+\bibitem[\protect\citename{Cully-Hugill \& Trudgian, }2021]{Cully-Trudgian*21}
+Cully-Hugill, Michaela, \& Trudgian, Tim. 2021.
+\newblock Two explicit divisor sums.
+\newblock {\em Ramanujan J.}, {\bf 56}(1), 141--149.
+
 \bibitem[\protect\citename{Daboussi \& Rivat, }2001]{Daboussi-Rivat*01}
 Daboussi, H., \& Rivat, J. 2001.
 \newblock Explicit upper bounds for exponential sums over primes.
@@ -373,6 +378,12 @@ Dusart, Pierre. 2016.
 \newblock Majorations de la fonction sommatoire de la fonction
   $\frac{\mu(n)}n$.
 \newblock {\em Univ. Bordeaux 1}, {\bf Pr\'e-publication}(96-8).
+
+\bibitem[\protect\citename{Eum \& Koo, }2015]{Eum-Koo*15}
+Eum, Ick~Sun, \& Koo, Ja~Kyung. 2015.
+\newblock The {R}iemann hypothesis and an upper bound of the divisor function
+  for odd integers.
+\newblock {\em J. Math. Anal. Appl.}, {\bf 421}(1), 917--924.
 
 \bibitem[\protect\citename{Faber \& Kadiri, }2015]{Kadiri-Faber*13}
 Faber, L., \& Kadiri, H. 2015.
@@ -839,10 +850,20 @@ Panaitopol, L. 2000.
 \newblock A formula for {$\pi(x)$} applied to a result of {K}oninck-{I}vi\'c.
 \newblock {\em Nieuw Arch. Wiskd. (5)}, {\bf 1}(1), 55--56.
 
+\bibitem[\protect\citename{Platt \& Trudgian, }2021a]{Platt-Trudgian*21a}
+Platt, Dave, \& Trudgian, Tim. 2021a.
+\newblock The {R}iemann hypothesis is true up to {$3\cdot10^{12}$}.
+\newblock {\em Bull. Lond. Math. Soc.}, {\bf 53}(3), 792--797.
+
 \bibitem[\protect\citename{Platt, }2017]{Platt*17}
 Platt, David~J. 2017.
 \newblock Isolating some non-trivial zeros of zeta.
 \newblock {\em Math. Comp.}, {\bf 86}(307), 2449--2467.
+
+\bibitem[\protect\citename{Platt \& Trudgian, }2021b]{Platt-Trudgian*21b}
+Platt, David~J., \& Trudgian, Timothy~S. 2021b.
+\newblock The error term in the prime number theorem.
+\newblock {\em Math. Comp.}, {\bf 90}(328), 871--881.
 
 \bibitem[\protect\citename{Platt, }2011]{Platt*11}
 Platt, D.J. 2011.
@@ -1157,6 +1178,12 @@ Vinogradov, I.M. 2004.
 Ward, D.~R. 1927.
 \newblock Some {S}eries {I}nvolving {E}uler's {F}unction.
 \newblock {\em J. London Math. Soc.}, {\bf S1-2}(4), 210--214.
+
+\bibitem[\protect\citename{Washington \& Yang, }2021]{Washington-Yang*21}
+Washington, Lawrence~C., \& Yang, Ambrose. 2021.
+\newblock Analogues of the {R}obin-{L}agarias criteria for the {R}iemann
+  hypothesis.
+\newblock {\em Int. J. Number Theory}, {\bf 17}(4), 843--870.
 
 \bibitem[\protect\citename{Watkins, }2004]{Watkins*00-1}
 Watkins, M. 2004.

@@ -156,43 +156,7 @@ utilisation commerciale demande qu'on en discute.
 <H3>Errata / todo et autres peut-mieux-faire :
 </H3></font>
 <ul>
-<li> Les versions dat&eacute;es 2004 contiennent une erreur
-<b>&eacute;norme</b> qui a surv&eacute;cu aux diverses passes et je
-remercie grandement St&eacute;phane Louboutin de me l'avoir signal&eacute;e !! Il
-y est
-dit, mais &eacute;videmment pas utilis&eacute;, que la s&eacute;rie de Fourier d'une
-fonction p&eacute;riodique continue convergeait toujours vers cette fonction
-!!! Ce qui est notoirement faux, archi faux et un probl&egrave;me classique en
-analyse harmonique. Certaines conditions simples suffisent pour
-assurer la convergence de la s&eacute;rie de Fourier d'une fonction
-f int&eacute;grable:
 
-<ul>
-<li> si au point x, f admet une limite &agrave; droite f(x+) et une limite
-&agrave; gauche f(x-), et si il existe aussi des d&eacute;riv&eacute;es &agrave; droite et &agrave; gauche,alors la s&eacute;rie de Fourier au point x converge vers
-(f(x+)+f(x-))/2</li>
-
-<li> si on sait que les +- n-i&egrave;me coefficients de Fourier sont O(1/|n|)
-(c'est le cas si f est de variation totale born&eacute;e sur [-pi,+pi])  alors
-la s&eacute;rie de Fourier de f au point x converge
-vers (f(x+)+f(x-))/2 d&egrave;s que f(x+) et f(x-) existent</li>
-
-<li> si la s&eacute;rie des coefficients de Fourier est sommable
-(\sum |c_n| < \infty) alors f est presque partout &eacute;gale
-&agrave; la somme de sa s&eacute;rie de Fourier (qui est une fonction
-continue, donc en fait f est &eacute;gale &agrave; cette fonction,
-sauf qu'on l'a peut-&ecirc;tre modifi&eacute;e sur un ensemble de
-mesure nulle)</li>
-</ul>
-
-
- En particulier 1. ou 2. montrent qu'il y a convergence
-en tout point lorsque f est de classe C1 par morceaux. Si
-f est C1 par morceaux ET continue, on peut par ailleurs montrer
-a priori que la s&eacute;rie de ses coefficients de Fourier est sommable.
-
-
-</li>
 <li> Les versions dat&eacute;es du premier janvier 2007 contiennent une erreur
 au lemme 3.5 : la majoration est 2 fois celle indiqu&eacute;e. Le
 th&eacute;or&egrave;me 3.5 demande alors une v&eacute;rification &agrave;

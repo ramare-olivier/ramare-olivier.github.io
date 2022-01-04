@@ -31,6 +31,24 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+    $('dl.MenuDroit .bidule').click(function() {
+        var text = $(this).siblings('.moremenu').eq(0);
+        if(text.is(':hidden')){
+            text.slideDown('500');
+            $(this).html('-');
+        }
+        else {
+            text.slideUp('300');
+            $(this).html('+');
+        }
+    });
+    $('dl.MenuDroit .moremenu').click(function() {
+        $(this).slideUp('300');
+        $(this).siblings('.bidule').eq(0).html('+');
+    });
+});
+
+$(document).ready(function(){
     $('#TMEEMTMenu li .bidule').click(function() {
         var text = $(this).siblings('.resumecontent').eq(0);
         if(text.is(':hidden')){

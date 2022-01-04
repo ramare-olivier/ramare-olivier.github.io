@@ -213,7 +213,7 @@ span.math {font-variant: normal;}
              font-family: "Times New Roman", Georgia, serif; font-variant: small-caps;}
 /* Quand on met une ancre on ne veut pas de couleur: */
 
-a.dontmention { color:black; }
+a.dontmention {display: block; position: relative; top: -100px; visibility: hidden;}
 
 /* Pour completer la ligne 63 de spip-typo.css */
 table.fondgris tbody tr td { background: #EEE; }
@@ -288,6 +288,14 @@ li.paper div.resumecontent {
     border:2px solid #DDDDDD;
     margin-bottom:1em;
     padding:0.8em;
+    background:none repeat scroll 0 0 #E6EFC2;
+    border-color: #F9F9EE;
+    color:#264409;}
+
+dl .moremenu {
+    display:none;
+    font-style:oblique;
+    font-size: smaller;
     background:none repeat scroll 0 0 #E6EFC2;
     border-color: #F9F9EE;
     color:#264409;}

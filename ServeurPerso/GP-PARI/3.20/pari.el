@@ -1,6 +1,6 @@
 ;; pari.el -- GP/PARI editing support package.
 
-;; Copyright (C) 1997-2017  The PARI group.
+;; Copyright (C) 1997-2022  The PARI group.
 
 ;; This file is part of the PARIEMACS package.
 
@@ -14,7 +14,7 @@
 ;; to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 ;; Boston, MA 02111-1307, USA.
 
-;; pari.el version 3.14  (4-December-2017): Olivier Ramare (olivier.ramare AT univ-amu.fr).
+;; pari.el version 3.20  (15-January-2022): Olivier Ramare (olivier.ramare AT univ-amu.fr).
 
 ;; Major mode for editing GP scripts. It provides functions for editing
 ;; the code and evaluating it . See the documentation of gp-script-mode
@@ -236,7 +236,7 @@ See also `gp-worryp'.")
 (when (null gp-syntax-table)
   (setq gp-syntax-table (make-syntax-table))
   (mapcar (lambda (acons) (modify-syntax-entry (car acons) (cdr acons) gp-syntax-table))
-          '((?( . "()") (?) .  ")(") (?[ . "(]") (?] . ")[") (?{ . "(}") (?} . "){") ; parenthesis
+          '((?\( . "()") (?\) .  ")(") (?\[ . "(]") (?\] . ")[") (?{ . "(}") (?} . "){") ; parenthesis
             (?# . ".") (?~ . "_") (?! . "_") (?% . "_")                          ; symbol constituent
             (?\\ . ". 12b") (?/ . ". 14") (?* . ". 23")            ; comments
             (?> . "." ) (?| . "." ) (?+ . ".") (?- . ".") (?= . ".") (?< . "." ) ; ponctuation
@@ -390,17 +390,35 @@ regardless of where in the line point is when the TAB command is used."
 
 (defcustom gp-structures
   '((["for(" head 3] [")" end])
-    (["parfor(" head 6] [")" end])
-    (["forvec(" head 6] [")" end])
-    (["forstep(" head 7] [")" end])
-    (["fordiv(" head 6] [")" end])
-    (["forell(" head 6] [")" end])
-    (["forsubgroup(" head 7] [")" end])
-    (["sum(" head 6] [")" end])
-    (["parsum(" head 6] [")" end])
+    (["parfor(" head 3] [")" end])
+    (["forprime(" head 3] [")" end])
+    (["forprimestep(" head 3] [")" end])
+    (["foreach(" head 3] [")" end])
+    (["forprimestep(" head 3] [")" end])
+    (["forcomposite(" head 3] [")" end])
+    (["forfactored(" head 3] [")" end])
+    (["forqfvec(" head 3] [")" end])
+    (["forsquarefree(" head 3] [")" end])
+    (["parforprime(" head 3] [")" end])
+    (["forvec(" head 3] [")" end])
+    (["forstep(" head 3] [")" end])
+    (["forsubset(" head 3] [")" end])
+    (["fordiv(" head 3] [")" end])
+    (["fordivfactored(" head 3] [")" end])
+    (["forell(" head 3] [")" end])
+    (["forpart(" head 3] [")" end])
+    (["forperm(" head 3] [")" end])
+    (["forsubgroup(" head 3] [")" end])
+    (["sum(" head 3] [")" end])
+    (["prod(" head 3] [")" end])
+    (["vecsum(" head 3] [")" end])
+    (["vecprod(" head 3] [")" end])
+    (["parsum(" head 3] [")" end])
     (["apply(" head 5] [")" end])
-    (["parapply(" head 8] [")" end])
+    (["parapply(" head 5] [")" end])
     (["return(" head 3] [")" end])
+    (["my(" head 3] [")" end])
+    (["local(" head 3] [")" end])
     (["(" head 1] [")" end])
     (["[" head 1] ["]" end])
     (["{" head gp-indent-level] ["}" end])
@@ -408,7 +426,9 @@ regardless of where in the line point is when the TAB command is used."
     (["=" math-relation 1]) ;that's the last item of any relation, like in '=='
     (["<" math-relation 1])
     ([">" math-relation 1])
-   )
+    ([".." math-relation 1])
+    (["|" math-relation 1])
+  )
 "See `sli-structures'."
 :type '(repeat (repeat (restricted-sexp :match-alternatives (vectorp listp))))
 :initialize 'custom-initialize-default
@@ -547,8 +567,11 @@ The following bindings are available:
   ;; than gp-fontifyp.)
 
   (run-hooks 'pari-mode-hook)
-  (run-mode-hooks 'gp-script-mode-hook) ; Set up user preferences.
+  ;(run-mode-hooks 'gp-script-mode-hook) ; Set up user preferences.
   (gp-add-imenu-index)
+  (while (not (featurep 'pari-fontification))
+    (require 'pari-fontification))
+  (run-mode-hooks 'gp-script-mode-hook) ; Set up user preferences.
   (gp-init-script-menu-bar)         ; Start menu-bar.
   (gp-update-fontification)
   )
@@ -1995,10 +2018,10 @@ to newline and reciprocally"
   (setq gp-auto-indent choice)
   (if choice
       (progn
-        (define-key gp-script-map "\r"    'sli-electric-terminate-line)
-        (define-key gp-script-map "\M-\r" 'newline))
-  (define-key gp-script-map "\M-\r" 'sli-electric-terminate-line)
-  (define-key gp-script-map "\r"    'newline)))
+	(define-key gp-script-map "\M-\r" 'sli-electric-terminate-line)
+	(define-key gp-script-map "\r"    'newline)))
+  (define-key gp-script-map "\r"    'sli-electric-terminate-line)
+  (define-key gp-script-map "\M-\r" 'newline))
 
 ;;-------------------------------
 ;; The Maid and Tutor
@@ -2007,22 +2030,56 @@ to newline and reciprocally"
 (defun gp-maid (arg)
   "Furthering the effect of `sli-maid'"
   (interactive "P") ; the universal argument is not used yet
-  (let (message oldmessage (answer "") princ oldprinc errorp)
+  (let (message oldmessage (answer "") princ oldprinc errorp
+	where-to-complete todo-list)
     ;; primitive advising and furthering of errors !
     (fset 'oldmessage (symbol-function 'message))
-    (fset 'message (lambda (a &rest b) (setq answer a)))
+    (fset 'message (lambda (a &rest b) ))
     (fset 'oldprinc (symbol-function 'princ))
-    (fset 'princ (lambda (&rest a) (setq errorp t)))
-    (ignore-errors (sli-maid))
-    (fset 'message (symbol-function 'oldmessage))
-    (fset 'princ (symbol-function 'oldprinc))
-    (if (or (string= answer "Nothing to do") 
-            errorp)
-        (progn
-          (unless (gp-run-gp) 
-            ;; Don't know what to do!
-            (message (gp-messager 100)))
-          ))))
+    (fset 'princ (lambda (&rest a)))
+    ;; Look at the situation:
+    (ignore-errors (setq todo-list (sli-maid nil t)))
+    ;(print (list "Yo " todo-list))
+    (while (and todo-list
+		(or (string= (car todo-list) " ") 
+		    (not (stringp (car todo-list)))))
+      (setq todo-list (cdr todo-list)))
+    ;; If todo-list is not empty, there is something to complete.
+    ;; But it may be on some following lines. We check:
+    ;(print (list "Yoooo " todo-list))
+    (save-excursion
+      (while (and todo-list (not (eobp)))
+	(if (search-forward (car todo-list) nil 1)
+	    (progn
+	      ;(print (list "Ya " todo-list))
+	      (setq todo-list (ignore-errors (sli-maid nil t)))
+	      ;(print (list "Ta " todo-list))
+	      (while (and todo-list
+			  (or (string= (car todo-list) " ") 
+			      (not (stringp (car todo-list)))))
+		(setq todo-list (cdr todo-list)))))))
+    ;; Restore
+    (if todo-list
+	(progn
+	  (fset 'message (lambda (a &rest b) (setq answer a)))
+	  (fset 'princ (lambda (&rest a) (setq errorp t)))
+	  (ignore-errors (sli-maid))
+	  (fset 'message (symbol-function 'oldmessage))
+	  (fset 'princ (symbol-function 'oldprinc))
+	  ; Au cas ou on serait trompe : ;)
+	  (if (or (string= answer "Nothing to do")
+		  errorp)
+	      (progn
+		(unless (gp-run-gp) 
+		  ;; Don't know what to do!
+		  (message (gp-messager 100)))
+		)))
+      (fset 'message (symbol-function 'oldmessage))
+      (fset 'princ (symbol-function 'oldprinc))
+      (unless (gp-run-gp) 
+	;; Don't know what to do!
+	(message (gp-messager 100)))
+      )))
 
 (defun gp-tutor nil
   "Furthering the effect of `sli-tutor'"
@@ -2199,6 +2256,7 @@ to newline and reciprocally"
       (message "Menu bar item GP-script loaded till level 1.")
       (run-hooks 'pari-menu-bar-update-hook)
       (run-hooks 'pari-menu-bar-update-hook) ; pourquoi deux fois ??? Ya idee ou erreur ??
+      (run-hooks 'pari-menu-bar-update-hook) ; pourquoi deux fois ??? Ya idee ou erreur ??
       ;(run-hooks 'menu-bar-update-hook)
       ))
 
@@ -2236,6 +2294,7 @@ to newline and reciprocally"
      (message "Menu bar item GP loaded till level 1.")
      (run-hooks 'pari-menu-bar-update-hook)
      (run-hooks 'pari-menu-bar-update-hook)
+     (run-hooks 'pari-menu-bar-update-hook) ; pourquoi trois fois ??? Ya une idee ou une erreur ??
      (run-hooks 'pari-menu-bar-update-hook) ; pourquoi trois fois ??? Ya une idee ou une erreur ??
      ;(run-hooks 'menu-bar-update-hook)
      ))

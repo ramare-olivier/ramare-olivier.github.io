@@ -1,4 +1,4 @@
-Latest version handled : 3.14
+Latest version handled : 3.20
 
 Copyright (C) 1997-2017 The PARI Group, Bordeaux.
 
@@ -101,9 +101,16 @@ Some specific highlighting is then enabled when editing *.gp files
 when editing such scripts and two main new commands are made available:
 
 M-x gp      starts up the pari-gp process in a new buffer,  *PARI*
-            A menu item GP is available with some specific comamnds.
+            A menu item GP is available with some specific commands.
 M-x gpman   starts up a dvi previewer with the PARI-GP manual. 
 
+===========================================================================
+TROUBLE-SHOOTING:
+=================
+(1) In case the parentheses are wrongly handled, please set show-paren-mode
+to t in your .emacs. This can be done from the Customize / Specific Option / ...
+from the emacs Edit-menu.
+(2) On some systems, the colors appear only when GP is started.
 ===========================================================================
 
 GP-MODE/GP-SCRIPT-MODE:
@@ -407,6 +414,20 @@ is 3 spaces. The indentation after "{" is decided by gp-indent-level.
 This string is special because it appears in gp-fixed-keys-alist: when
 it occurs as the first word of a line, it will be placed at a fixed place
 from the left margin, originally separated by 0 spaces from it.
+
+/* Wanted:
+
+while(1,
+  if(toto, inst
+  , lereste)
+
+  if(toto,
+    inst
+  , lereste
+  )
+
+*/
+
 
 If you want a style like
 {

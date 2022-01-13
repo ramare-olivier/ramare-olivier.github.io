@@ -1,6 +1,6 @@
 ;; pari-fontification.el -- fontification functions.
 
-;; Copyright (C) 1997-2017  The PARI group.
+;; Copyright (C) 1997-2022  The PARI group.
 
 ;; This file is part of the PARIEMACS package.
 
@@ -14,8 +14,11 @@
 ;; to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 ;; Boston, MA 02111-1307, USA.
 
+;; Provides: variable:  gp-fontification-keywords
+;;           functions: gp-update-fontification, gp-find-global-var, 
+
 ;; To be used with pari.el version 3.00 or higher.
-;; pari-fontification.el version 3.14
+;; pari-fontification.el version 3.20
 
 ;; See README for more details.
 
@@ -25,10 +28,6 @@
 ;;     See mupad-color-scheme and mupad-color-scheme-alist.
 ;;  -- An initial value of gp-fontifyp to nil ...
 
-(provide 'pari-fontification)
-
-;; Provides: variable:  gp-fontification-keywords
-;;           functions: gp-update-fontification, gp-find-global-var, 
 
 ;; Of pari.el, it uses:
 ;;     functions: gp-window-manager, gp-store-wind-conf
@@ -97,25 +96,32 @@ in both gp-mode and gp-script-mode. "
      ''gp-help  ''gp-timer   ''gp-comment ''gp-string ''gp-control-statement
      ''gp-default-keywords   ''gp-default-set         ''gp-input-cmd
      ''gp-global-var         ''gp-function-proto      ''gp-function-args
-     ''gp-time-word)))
+     ''gp-time-word          ''gp-parallel-stuff ''gp-typing)))
 
 (defvar pari-fontification-keywords
   (list
-    '("\\<\\(buffersize\\|co\\(lors\\|mpatible\\)\\|debug\\(mem\\)?\\|echo\\|format\\|h\\(elp\\|size\\)\\|logfile\\|output\\|p\\(a\\(risize\\|th\\)\\|r\\(imelimit\\|ompt\\)\\|sfile\\)\\|\\(real\\|series\\)precision\\|simplify\\|strictmatch\\|timer\\)\\>"  (1 gp-default-keywords))
-    '("\\<\\(return\\|break\\|next\\|if\\|until\\|while\\|sum\\|for\\(div\\|prime\\|step\\|vec\\|subgroup\\)?\\)\\>" (1 gp-control-statement))
-    '("\\<\\(Strprintf\\|a\\(?:ddhelp\\|l\\(?:arm\\|ias\\|locatemem\\)\\|pply\\)\\|break\\|default\\|e\\(?:rror\\|xtern\\)\\|for\\(?:div\\|ell\\|prime\\|s\\(?:\\(?:te\\|ubgrou\\)p\\)\\|vec\\)?\\|g\\(?:et\\(?:heap\\|rand\\|stack\\|time\\)\\|lobal\\)\\|i\\(?:f\\|n\\(?:line\\|put\\)\\)\\|kill\\|local\\|my\\|next\\|p\\(?:ar\\(?:apply\\|for\\|sum\\|vector\\)\\|rint\\(?:tex\\|[1f]\\)?\\)\\|quit\\|return\\|s\\(?:e\\(?:lect\\|trand\\)\\|\\(?:u\\|yste\\)m\\)\\|t\\(?:rap\\|ype\\)\\|until\\|ve\\(?:ctor\\|rsion\\)\\|w\\(?:arning\\|h\\(?:atnow\\|ile\\)\\|rite\\(?:1\\|bin\\|tex\\)?\\)\\)\\>" (1 gp-control-statement))
+   '("\\<\\(buffersize\\|co\\(lors\\|mpatible\\)\\|debug\\(mem\\)?\\|echo\\|format\\|h\\(elp\\|size\\)\\|logfile\\|output\\|p\\(a\\(risize\\|th\\)\\|r\\(imelimit\\|ompt\\)\\|sfile\\)\\|\\(real\\|series\\)precision\\|simplify\\|strictmatch\\|timer\\|parisizemax\\|nbthreads\\)\\>"  (1 gp-default-keywords))
+   '("\\(|\\|<-\\|\\.\\.\\|&\\|->\\)" (0 gp-default-keywords))
+  ; '("\\<\\(return\\|break\\|next\\|if\\|until\\|while\\|sum\\|for\\(div\\|prime\\|step\\|vec\\|subgroup\\)?\\)\\>" (1 gp-control-statement))
+   '("\\<\\(parforprime\\|parfor\\|parforeach\\|parforprimestep\\|parforvec\\|while\\|until\\|break\\|breakpoint\\|if\\|iferr\\|for\\|forsquarefree\\|forcomposite\\|fordiv\\|fordivfactored\\|foreach\\|forell\\|forfactored\\|forpart\\|forqfvec\\|forperm\\|forprime\\|forprimestep\\|forsquarefree\\|sum\\|prod\\|forstep\\|forsubgroup\\|forsubset\\|forvec\\|return\\|my\\|local\\|next\\)\\>" (1 gp-control-statement))
+;(print (regexp-opt '("parforprime" "parfor"  "parforeach"  "parforprimestep"  "parforvec" "while"  "until"   "break"  "breakpoint"  "if"  "iferr" "for"  "forcomposite"  "fordiv"  "fordivfactored"  "foreach"  "forell"  "forfactored" "forpart"  "forperm"  "forprime"  "forprimestep"  "forsquarefree" "forstep"  "forsubgroup"  "forsubset"  "forvec"  "return"  "my"  "local" "next")   'word))
+   '("\\<\\(Strchr\\|Strexpand\\|Strprintf\\|Strtex\\|addhelp\\|alarm\\|alias\\|allocatemem\\|apply\\|arity\\|call\\|dbg_down\\|dbg_err\\|dbg_up\\|dbg_x\\|errname\\|error\\|extern\\|externstr\\|fileclose\\|fileextern\\|fileflush\\|fileopen\\|fileread\\|filereadstr\\|filewrite\\|filewrite1\\|fold\\|getabstime\\|getenv\\|getheap\\|getlocalbitprec\\|getlocalprec\\|getrand\\|getstack\\|gettime\\|getwalltime\\|inline\\|input\\|install\\|kill\\|listcreate\\|listinsert\\|listkill\\|listpop\\|listput\\|listsort\\|localbitprec\\|localprec\\|mapdelete\\|mapget\\|mapisdefined\\|mapput\\|print\\|print1\\|printf\\|printp\\|printsep\\|printsep1\\|printtex\\|quit\\|read\\|readstr\\|readvec\\|select\\|self\\|setdebug\\|setrand\\|strchr\\|strexpand\\|strjoin\\|strprintf\\|strsplit\\|strtex\\|strtime\\|system\\|trap\\|type\\|uninline\\|version\\|warning\\|whatnow\\|write\\|write1\\|writebin\\|writetex\\|vecsum\\|vecprod\\)\\>" (0 gp-control-statement))
     '("\\<\\(default\\)(" (1 gp-default-set))
     '("\\<\\(time = \\)[0-9][hmn,0-9 ]* ms\." (1 gp-time-word))
     '("^ *\\\\[a-z].*$" . gp-default-set)
+    '(":\\(small\\|int\\|real\\|mp\\|vecsmall\\|vec\\|var\\|pol\\|genstr\\|list\\|gen\\|void\\|bool\\|negbool\\|lg\\|str\\|typ\\|small_int\\|nf\\|bnf\\|bnr\\|ell\\|bell\\|clgp\\|prid\\|gal\\)\\>" . gp-typing)
     ; In the two following ones, in case we meet a list, the separators are also painted...
     '("\\<\\([a-zA-Z]\\w*\\)(\\([^)]*\\)) *=[^=]" (1 gp-function-proto) (2 gp-function-args))
     '("\\<global[ \t]*(\\([^)]*\\))" (1 gp-global-var t))
+    '("\\<\\(parsum\\|parvector\\|parselect\\|export\\|exportall\\|unexportall\\|parapply\\|pareval\\|parploth\\|unexport\\)\\>" (1 gp-parallel-stuff))
     )
   "Common keywords to be fontified in gp- and gp-script- mode.")
 
-;(print (regexp-opt '("Strprintf" "addhelp" "alarm" "alias" "allocatemem" "apply" "break" "default" "error" "extern" "for" "fordiv" "forell" "forprime" "forstep" "forsubgroup" "forvec" "getheap" "getrand" "getstack" "gettime" "global" "if" "input" "kill" "local" "my" "next" "print" "print1" "printf" "printtex" "quit" "return" "select" "setrand" "system" "trap" "type" "until" "version"  "warning" "whatnow" "while" "write" "write1" "writebin"   "writetex" "apply" "parapply" "parfor" "parsum" "sum" "vector" "parvector" "inline")   'word))
+;(print (regexp-opt '("Strchr" "Strexpand" "Strprintf" "Strtex" "addhelp" "alarm" "alias" "allocatemem" "apply" "arity" "call" "dbg_down" "dbg_err" "dbg_up" "dbg_x" "errname" "error" "extern" "externstr" "fileclose" "fileextern" "fileflush" "fileopen" "fileread" "filereadstr" "filewrite" "filewrite1" "fold" "getabstime" "getenv" "getheap" "getlocalbitprec" "getlocalprec" "getrand" "getstack" "gettime" "getwalltime" "inline" "input" "install" "kill" "listcreate" "listinsert" "listkill" "listpop" "listput" "listsort" "localbitprec" "localprec" "mapdelete" "mapget" "mapisdefined" "mapput" "print" "print1" "printf" "printp" "printsep" "printsep1" "printtex" "quit" "read" "readstr" "readvec" "select" "self" "setdebug" "setrand" "strchr" "strexpand" "strjoin" "strprintf" "strsplit" "strtex" "strtime" "system" "trap" "type" "uninline" "version" "warning" "whatnow" "write" "write1" "writebin" "writetex" "sum" "vecsum" "vecprod" "prod" )  'word))
 
-;(print (regexp-opt '("Strprintf" "addhelp" "alarm" "alias" "allocatemem" "apply" "break" "default" "error" "extern" "for" "fordiv" "forell" "forprime" "forstep" "forsubgroup" "forvec" "getheap" "getrand" "getstack" "gettime" "global" "if" "input" "kill" "local" "my" "next" "print" "print1" "printf" "printtex" "quit" "return" "select" "setrand" "system" "trap" "type" "until" "version"  "warning" "whatnow" "while" "write" "write1" "writebin"   "writetex" "parapply" "parfor" "parsum" "sum" "vector" "parvector")   'word))
+;(print (regexp-opt '("Strprintf" "addhelp" "alarm" "alias" "allocatemem" "apply" "break" "default" "error" "extern" "for" "fordiv" "forell" "forprime" "forstep" "forsubgroup" "forvec" "getheap" "getrand" "getstack" "gettime" "global" "if" "input" "kill" "local" "my" "next" "print" "print1" "printf" "printtex" "quit" "return" "select" "setrand" "system" "trap" "type" "until" "version"  "warning" "whatnow" "while" "write" "write1" "writebin"   "writetex" "apply" "parapply" "parfor" "parsum" "sum" "vector" "parvector" "inline") 'word))
+
+;(print (regexp-opt '("Strprintf" "addhelp" "alarm" "alias" "allocatemem" "apply" "break" "default" "error" "extern" "for" "fordiv" "forell" "forprime" "forstep" "forsubgroup" "forvec" "getheap" "getrand" "getstack" "gettime" "global" "if" "input" "kill" "local" "my" "next" "print" "print1" "printf" "printtex" "quit" "return" "select" "setrand" "system" "trap" "type" "until" "version"  "warning" "whatnow" "while" "write" "write1" "writebin"   "writetex" "sum" "vector" )   'word))
 
 
 (defvar gp-fontification-keywords
@@ -233,6 +239,24 @@ Default is font-lock-keywords.")
                                                       :italic t))
       (t (:italic t)))
     "*Face used in GP to highlight the word time for the timer.")
+  (defface gp-parallel-stuff
+    '((((class grayscale) (background light)) (:foreground "DimGray" :italic t))
+      (((class grayscale) (background dark)) (:foreground "LightGray" :italic t))
+      (((class color) (background light)) (:foreground "tomato" :background "snow1"
+                                                       :italic t))
+      (((class color) (background dark)) (:foreground "OrangeRed" :background "Orchid"
+                                                      :italic t))
+      (t (:italic t)))
+    "*Face used in GP to highlight some parallel instructions.")
+  (defface gp-typing
+    '((((class grayscale) (background light)) (:foreground "DimGray" :italic t))
+      (((class grayscale) (background dark)) (:foreground "LightGray" :italic t))
+      (((class color) (background light)) (:foreground "tomato" :background "snow1"
+                                                       :italic t))
+      (((class color) (background dark)) (:foreground "OrangeRed" :background "Orchid"
+                                                      :italic t))
+      (t (:italic t)))
+    "*Face used in GP to highlight type specification for gp2c.")
   (defface gp-default-set
     '((((class grayscale) (background light)) (:foreground "LightGray" :bold t))
       (((class grayscale) (background dark)) (:foreground "DimGray" :bold t))
@@ -411,7 +435,9 @@ considered backslashed and not returned."
 (defun gp-update-fontification nil "Update fontification."
   (interactive)
   (when gp-fontifyp ;;(print "Yo")
-    (font-lock-fontify-buffer)))
+    (font-lock-fontify-buffer)
+    (font-lock-fontify-region (point-min) (point-max) t) ;; TO BE REMOVED!!
+    (font-lock-flush)))
 
 (defun gp-turn-on-lazy-font-lock nil ""
   (interactive)
@@ -481,7 +507,7 @@ considered backslashed and not returned."
      (when (and gp-menu-barp
                 (or (and (eq major-mode 'gp-mode) GP-menu-map (= gp-menu-map-level 2))
                     (and (eq major-mode 'gp-script-mode) 
-                         GP-script-menu-map(= gp-script-menu-map-level 2) )))
+                         GP-script-menu-map (= gp-script-menu-map-level 2) )))
        (let ((sentences (if (and (require 'pari-completion) (featurep 'pari-completion))
                     ;; (gp-messager 72) [Complete] is defined there.
                        (list (gp-messager 72) "")
@@ -526,5 +552,7 @@ considered backslashed and not returned."
      (make-local-variable 'font-lock-keywords-only)
      (setq font-lock-defaults '(gp-fontification-keywords t nil nil))
      ))
+
+(provide 'pari-fontification)
 
 ;; pari-fontification.el ends here.

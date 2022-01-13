@@ -1,6 +1,6 @@
 ;; sli-tools.el --- structured languages indentation package
 
-;; Copyright (C) 2000-2014  The PARI group.
+;; Copyright (C) 2000-2022  The PARI group.
 
 ;; This file is part of the PARIEMACS package.
 
@@ -13,7 +13,7 @@
 ;; it, along with the package; see the file 'COPYING'. If not, write
 ;; to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 ;; Boston, MA 02111-1307, USA.
-;; sli-tools.el version 0.98
+;; sli-tools.el version 1.00
 
 ;; It works out some tools for indentation of structured programs.
 ;; It has been written for mupad.el and pari.el but should apply to
@@ -140,6 +140,9 @@
 :group 'editing :prefix "sli-")
 
 (defcustom sli-handles-sexp nil "A true value advises forward/backward/scan-sexp/s"
+:type 'boolean :group 'sli)
+
+(defcustom sli-dont-reindent-line t "When t, the current line is not reindented when return is entered"
 :type 'boolean :group 'sli)
 
 ;; These values are modified in sli-tools:
@@ -2407,7 +2410,8 @@ In a program, use `sli-indent-line'."
                 (sli-remove-trailing-spaces)
                 (setq only-spacep (sli-only-spacep))
 				; (princ "\n") (princ (list "only-spacep = " only-spacep))
-                (sli-insert-indent (setq this-indent (sli-tell-indent nil nil t)))
+                (unless sli-dont-reindent-line
+		  (sli-insert-indent (setq this-indent (sli-tell-indent nil nil t))))
                 (unless only-spacep (sli-safe-insert " "))
                                         ;--> in case of thendo with point between then and do.
                 (setq next-indent (sli-tell-indent t nil t))
@@ -2479,7 +2483,7 @@ by specifying special furtherings in `sli-maid-correction-alist'"
 		  ;             (sli-get-relevant (car full-key))))
                   (setq head
 			(sli-find-matching-key
-			 (cdr full-key) 
+			 (cdr full-key)
                          (sli-get-special-head-previous-keys (car full-key)) (sli-get-relevant (car full-key)) t))
 		  (setq is-a-special-head-head-keyp t)
 		  (when sli-verbose
@@ -2524,11 +2528,12 @@ by specifying special furtherings in `sli-maid-correction-alist'"
 		    (setq key (sli-following-key (car full-key))))
 		  ;(print (list "yes" key head))
 		  (unless (and (not (null key))
-                                 (or (not (member (char-syntax (string-to-char key)) '(?w ?_ ?\( ?\) ?$)))
-                                     (= (char-syntax (preceding-char)) ?\ )))
+			       (or (not (member (char-syntax (string-to-char key)) '(?w ?_ ?\( ?\) ?$)))
+				   (= (char-syntax (preceding-char)) ?\ )))
                       (if on-listp
                           (setq where-to-write (append where-to-write '(" ")))
                         (setq has-answered t)
+			;(print "That's here")
                         (sli-safe-insert " ")))
 		  (if on-listp
                       (setq where-to-write (append where-to-write (list key)))
@@ -2547,12 +2552,13 @@ by specifying special furtherings in `sli-maid-correction-alist'"
                                 (sli-following-key (car full-key))))
                                ;(princ " Yol ")         ; add a space if required:
                     (unless (and (not (null key))
-                                 (or (not (member (char-syntax (string-to-char key)) '(?w ?_ ?\( ?\) ?$)))
+                                 (or (member (char-syntax (string-to-char key)) '(?w ?_ ?\( ?\) ?$))
                                      (= (char-syntax (preceding-char)) ?\ )))
                       (if on-listp
                           (setq where-to-write (append where-to-write '(" ")))
                         (setq has-answered t)
-                       (sli-safe-insert " ")))
+			;(print "That's here")
+			(sli-safe-insert " ")))
                     (or (null key)
                         (if on-listp
                             (setq where-to-write (append where-to-write (list key)))

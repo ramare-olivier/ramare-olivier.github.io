@@ -1,6 +1,6 @@
 ;; pari-completion.el -- completion functions.
 
-;; Copyright (C) 1997-2017  The PARI group.
+;; Copyright (C) 1997-2022  The PARI group.
 
 ;; This file is part of the PARIEMACS package.
 
@@ -15,7 +15,7 @@
 ;; Boston, MA 02111-1307, USA.
 
 ;; To be used with pari.el version 3.00 or higher
-;; pari-completion.el version 3.14
+;; pari-completion.el version 3.20
 
 ;; See README for more details.
  
@@ -189,7 +189,7 @@ name to 'gp-cpl-lists-list."
 (defun gp-find-word-to-complete nil
   (save-excursion
    (let ((pt (point)))
-      (if (char-equal (preceding-char) ?() (forward-char -1))
+      (if (char-equal (preceding-char) ?\() (forward-char -1))
       (if (not (bolp))
           (progn
             (forward-char -1)           
@@ -331,7 +331,7 @@ is a list of list of possible matching words."
         (progn
           (insert (car ans))
           ;; In case of a direct completion via readline:
-          (if (char-equal (preceding-char) ?)) (forward-char -1))))
+          (if (char-equal (preceding-char) ?\)) (forward-char -1))))
 
     (if (equal (nth 1 ans) nil)
     ;; at most one match:
@@ -345,8 +345,8 @@ is a list of list of possible matching words."
               ;; In case of a completion via readline:
 
               (if (and (char-after (point))
-                       (char-equal (char-after (point)) ?()) (forward-char 1))
-              (if (char-equal (preceding-char) ?)) (forward-char -1))))
+                       (char-equal (char-after (point)) ?\()) (forward-char 1))
+              (if (char-equal (preceding-char) ?\)) (forward-char -1))))
     ;; more than two matches:
     (if (string= (car ans) "")
       ;; We do not display anything if a partial completion was possible:

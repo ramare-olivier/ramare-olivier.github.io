@@ -1,6 +1,6 @@
-;; pari-help.el -- documentation fucntions.
+;; pari-help.el -- documentation functions.
 
-;; Copyright (C) 1997-2017  The PARI group.
+;; Copyright (C) 1997-2022  The PARI group.
 
 ;; This file is part of the PARIEMACS package.
 
@@ -15,7 +15,7 @@
 ;; Boston, MA 02111-1307, USA.
 
 ;; To be used with pari.el version 3.00 or higher
-;; pari-help.el version 3.14 (5-December-2017)
+;; pari-help.el version 3.20 (10-January-2022)
 
 ;; See README for more details.
  

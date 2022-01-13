@@ -1,6 +1,6 @@
 ;; pari-messages.el -- rough multilingual support.
 
-;; Copyright (C) 1997-2017  The PARI group.
+;; Copyright (C) 1997-2022  The PARI group.
 
 ;; This file is part of the PARIEMACS package.
 
@@ -15,7 +15,7 @@
 ;; Boston, MA 02111-1307, USA.
 
 ;; To be used with pari.el version 3.00 or higher
-;; pari-messages.el version 3.14
+;; pari-messages.el version 3.20
 
 ;; See README for more details.
  

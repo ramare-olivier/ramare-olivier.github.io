@@ -64,17 +64,8 @@ MathJax.Hub.Config({
 <!-- End of the inclusion linked to MathJax      -->
 <!-- ============================================-->
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FDWZ1HDH2N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FDWZ1HDH2N');
-</script>
-<!-- ==================================== -->
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101242330);</script>
+<script async src="//static.getclicky.com/js"></script>
 
 </HEAD>
 
@@ -630,6 +621,6 @@ Le calcul &agrave; baguettes en Chine ancienne.
 
 <div id="TemporaryWindow">
 </div>
-
+ 
 </BODY>
 </HTML>

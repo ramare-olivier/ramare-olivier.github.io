@@ -73,6 +73,7 @@
       \strng{authorbibnamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
       \strng{authornamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
       \strng{authorfullhash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
@@ -84,6 +85,40 @@
       \field{year}{2016}
       \field{pages}{Paper No. A22\bibrangessep 15}
       \range{pages}{-1}
+    \endentry
+    \entry{Axler*19}{article}{}
+      \name{author}{1}{}{%
+        {{hash=44643bbaa654b8fb89d8d68f8c7a7b82}{%
+           family={Axler},
+           familyi={A\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{fullhash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{bibnamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{authorbibnamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{authornamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{authorfullhash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1246-7405}
+      \field{journaltitle}{J. Théor. Nombres Bordeaux}
+      \field{number}{2}
+      \field{title}{On the sum of the first {$n$} prime numbers}
+      \field{volume}{31}
+      \field{year}{2019}
+      \field{pages}{293\bibrangedash 311}
+      \range{pages}{19}
+      \verb{urlraw}
+      \verb http://jtnb.cedram.org/item?id=JTNB_2019__31_2_293_0
+      \endverb
+      \verb{url}
+      \verb http://jtnb.cedram.org/item?id=JTNB_2019__31_2_293_0
+      \endverb
     \endentry
     \entry{Bach-Sorenson*96}{article}{}
       \name{author}{2}{}{%
@@ -1569,6 +1604,74 @@
       \field{year}{1996}
       \field{pages}{291\bibrangedash 295}
       \range{pages}{5}
+    \endentry
+    \entry{Deleglise-Nicolas*19a}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6f53fb227b01894d40689a82f6e1c775}{%
+           family={Deléglise},
+           familyi={D\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ad7f92664032bfba1eecfd9949dcefd1}{%
+           family={Nicolas},
+           familyi={N\bibinitperiod},
+           given={Jean-Louis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{775e087a55230e83c72defccea272e9d}
+      \strng{fullhash}{775e087a55230e83c72defccea272e9d}
+      \strng{bibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorbibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authornamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorfullhash}{775e087a55230e83c72defccea272e9d}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1446-7887}
+      \field{journaltitle}{J. Aust. Math. Soc.}
+      \field{number}{2}
+      \field{title}{An arithmetic equivalence of the {R}iemann hypothesis}
+      \field{volume}{106}
+      \field{year}{2019}
+      \field{pages}{235\bibrangedash 273}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1017/S1446788718000083
+      \endverb
+    \endentry
+    \entry{Deleglise-Nicolas*19b}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6f53fb227b01894d40689a82f6e1c775}{%
+           family={Deléglise},
+           familyi={D\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ad7f92664032bfba1eecfd9949dcefd1}{%
+           family={Nicolas},
+           familyi={N\bibinitperiod},
+           given={Jean-Louis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{775e087a55230e83c72defccea272e9d}
+      \strng{fullhash}{775e087a55230e83c72defccea272e9d}
+      \strng{bibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorbibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authornamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorfullhash}{775e087a55230e83c72defccea272e9d}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Combinatorics and Numb. Th.}
+      \field{number}{2}
+      \field{title}{The {L}andau function and the {R}iemann Hypothesis}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{pages}{45\bibrangedash 95}
+      \range{pages}{51}
     \endentry
     \entry{Deshouillers-Dress*88}{article}{}
       \name{author}{2}{}{%

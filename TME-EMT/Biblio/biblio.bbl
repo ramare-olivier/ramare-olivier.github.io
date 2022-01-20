@@ -10,6 +10,11 @@ Axler, Christian. 2016.
 \newblock New bounds for the prime counting function.
 \newblock {\em Integers}, {\bf 16}, Paper No. A22, 15.
 
+\bibitem[\protect\citename{Axler, }2019]{Axler*19}
+Axler, Christian. 2019.
+\newblock On the sum of the first {$n$} prime numbers.
+\newblock {\em J. Th\'{e}or. Nombres Bordeaux}, {\bf 31}(2), 293--311.
+
 \bibitem[\protect\citename{Bach \& Sorenson, }1996]{Bach-Sorenson*96}
 Bach, E., \& Sorenson, J. 1996.
 \newblock Explicit bounds for primes in residue classes.
@@ -271,6 +276,18 @@ Delange, Hubert. 1987.
 {Del\'eglise}, M., \& Rivat, J. 1998.
 \newblock Computing $\psi(x)$.
 \newblock {\em Math. Comp.}, {\bf 67}(224), 1691--1696.
+
+\bibitem[\protect\citename{Del\'{e}glise \& Nicolas,
+  }2019a]{Deleglise-Nicolas*19a}
+Del\'{e}glise, Marc, \& Nicolas, Jean-Louis. 2019a.
+\newblock An arithmetic equivalence of the {R}iemann hypothesis.
+\newblock {\em J. Aust. Math. Soc.}, {\bf 106}(2), 235--273.
+
+\bibitem[\protect\citename{Del\'{e}glise \& Nicolas,
+  }2019b]{Deleglise-Nicolas*19b}
+Del\'{e}glise, Marc, \& Nicolas, Jean-Louis. 2019b.
+\newblock The {L}andau function and the {R}iemann Hypothesis.
+\newblock {\em J. Combinatorics and Numb. Th.}, {\bf 11}(2), 45--95.
 
 \bibitem[\protect\citename{Deshouillers \& Dress, }1988]{Deshouillers-Dress*88}
 Deshouillers, J.-M, \& Dress, F. 1988.

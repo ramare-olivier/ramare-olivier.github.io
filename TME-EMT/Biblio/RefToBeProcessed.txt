@@ -96,6 +96,9 @@ Ramare*13d
 Schoenfeld*76
 Dusart*07
 Trevino*12
+Axler*19
+Deleglise-Nicolas*19a
+Deleglise-Nicolas*19b
 Rosser*38
 Cipolla*02
 Rosser*38
@@ -105,6 +108,7 @@ Robin*83-1
 Massias-Robin*96
 Dusart*99-2
 Carneiro-Milinovich-Soundararajan*19
+Axler*19
 DeKoninck-Letendre*20
 McCurley*84-2
 McCurley*84-3

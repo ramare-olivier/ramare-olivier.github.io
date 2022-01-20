@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Bounds on primes, without any congruence condition}{10}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Bounds on the $n$-th prime}{13}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Bounds containing $n$-th prime}{13}{section.1.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Bounds on primes in arithmetic progressions}{14}{section.1.4}%
 \defcounter {refsection}{0}\relax 

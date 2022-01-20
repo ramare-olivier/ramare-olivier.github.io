@@ -1412,6 +1412,41 @@
       \field{pages}{8\bibrangedash 13}
       \range{pages}{6}
     \endentry
+    \entry{DeKoninck-Letendre*20}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d193877f716c9b1a9937f317301cf569}{%
+           family={De\bibnamedelima Koninck},
+           familyi={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Jean-Marie},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=741e8e12af9ed3d0ac3bf03c770ce265}{%
+           family={Letendre},
+           familyi={L\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{fullhash}{66911903a0913fb209f127b58c8502e5}
+      \strng{bibnamehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{authorbibnamehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{authornamehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{authorfullhash}{66911903a0913fb209f127b58c8502e5}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-1354}
+      \field{journaltitle}{Colloq. Math.}
+      \field{number}{1}
+      \field{title}{New upper bounds for the number of divisors function}
+      \field{volume}{162}
+      \field{year}{2020}
+      \field{pages}{23\bibrangedash 52}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.4064/cm7792-6-2019
+      \endverb
+    \endentry
     \entry{Delange*87}{article}{}
       \name{author}{1}{}{%
         {{hash=a376ba7988e51f9a848757b92bcdc090}{%

@@ -337,7 +337,7 @@ table.
 \par 
 
 
-\section{Bounds on the $n$-th prime}
+\section{Bounds containing $n$-th prime}
 
 
 
@@ -406,11 +406,40 @@ $$
 p_n < n (\log n + \log\log n - 0.9484)
 $$ for $n > 39017$ i.e. $p_n > 467\,473$.
 
-In \cite{Carneiro-Milinovich-Soundararajan*19}, the authors  prove the next result.
+In
+\cite{Carneiro-Milinovich-Soundararajan*19},
+the authors  prove the next result.
 \begin{thm}{Theorem (2019)}
 
-Under the Riemann Hypothesis we have $p_{n+1}-p-n\le\frac{22}{25}\sqrt{p_n}\log p_n$.
+Under the Riemann Hypothesis we have $p_{n+1}-p_n\le\frac{22}{25}\sqrt{p_n}\log p_n$.
 \end{thm}
+
+
+\par 
+\par 
+In 
+\cite{DeKoninck-Letendre*20},
+we find in passing (Lemma 4.8) the next result.
+\par 
+\begin{thm}{Theorem (2020)}
+
+  We have
+  $$
+  \sum_{i\le k}\log p_i\le
+  k\bigl(\log k+\log\log -3/4\Bigr)\quad(\text{for $k\ge 4$}),
+  $$
+  as well as
+  $$
+  \sum_{i\le k}\log\log p_i\ge
+  k\biggl(\log\log k+\frac{\log\log -5/4}{\log k}\biggr)
+  \quad(\text{for $k\ge319$}).
+  $$
+\end{thm}
+
+
+
+
+
 
 
 

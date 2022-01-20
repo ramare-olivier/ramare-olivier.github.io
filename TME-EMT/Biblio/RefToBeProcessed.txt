@@ -105,6 +105,7 @@ Robin*83-1
 Massias-Robin*96
 Dusart*99-2
 Carneiro-Milinovich-Soundararajan*19
+DeKoninck-Letendre*20
 McCurley*84-2
 McCurley*84-3
 Ramare-Rumely*96

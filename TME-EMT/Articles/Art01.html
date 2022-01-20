@@ -412,7 +412,7 @@ table.
 
 <div class="section">
   <a name="nthprime"></a>
-3. Bounds on the $n$-th prime
+3. Bounds containing $n$-th prime
 </div>
 
 
@@ -481,12 +481,41 @@ $$
 p_n < n (\log n + \log\log n - 0.9484)
 $$ for $n > 39017$ i.e. $p_n > 467\,473$.
 
-In <script type="text/javascript">bibref("Carneiro-Milinovich-Soundararajan*19")</script>, the authors  prove the next result.
+In
+<script type="text/javascript">bibref("Carneiro-Milinovich-Soundararajan*19")</script>,
+the authors  prove the next result.
 <br><span class="THM">Theorem (2019)</span>
 <blockquote class="outer-thm">
 <div class="thm">
-Under the Riemann Hypothesis we have $p_{n+1}-p-n\le\frac{22}{25}\sqrt{p_n}\log p_n$.
+Under the Riemann Hypothesis we have $p_{n+1}-p_n\le\frac{22}{25}\sqrt{p_n}\log p_n$.
 </div></blockquote>
+
+<br>
+<br>
+In 
+<script type="text/javascript">bibref("DeKoninck-Letendre*20")</script>,
+we find in passing (Lemma 4.8) the next result.
+<br>
+<br><span class="THM">Theorem (2020)</span>
+<blockquote class="outer-thm">
+<div class="thm">
+  We have
+  $$
+  \sum_{i\le k}\log p_i\le
+  k\bigl(\log k+\log\log -3/4\Bigr)\quad(\text{for $k\ge 4$}),
+  $$
+  as well as
+  $$
+  \sum_{i\le k}\log\log p_i\ge
+  k\biggl(\log\log k+\frac{\log\log -5/4}{\log k}\biggr)
+  \quad(\text{for $k\ge319$}).
+  $$
+</div></blockquote>
+
+
+
+
+
 
 
 

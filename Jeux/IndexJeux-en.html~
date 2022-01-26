@@ -992,8 +992,6 @@ function PlaySquareDance(){
 
 <dl id="MenuDroit"> 
 <dt>Navigation</dt>
-<dd><a href="IndexJeux-en.html">English version 
-    <img src="../trucs/drapeau_20UK.jpg" width="40px" class="InTheMiddle"></a></dd>
 <dd><a href="#Top">Retour au d&eacute;but</a></dd>
 <dd><a href="#Solitaire">Le jeu du solitaire</a></dd>
 <dd><a href="#Captures">Le jeu des captures</a></dd>

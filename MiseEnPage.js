@@ -242,7 +242,7 @@ function Preprint(Titre, AdditionalAuthor, hreflocal, year, nbpages, note) {
 function Software(Titre, AdditionalAuthor, hreflocal, year, nblines, note) {
     var newHTML ='<img src="../trucs/cat-gets-mouse.png" class="catimage">';
     
-    newHTML += '<span class="titrearticle">' + Titre + '</span>';
+    newHTML += '<span class="titresoftware">' + Titre + '</span>';
     newHTML += ' <span class="ou">(' + year + ')</span>';
     newHTML += '<br>';
     if(AdditionalAuthor){

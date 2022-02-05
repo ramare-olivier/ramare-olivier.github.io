@@ -239,6 +239,27 @@ function Preprint(Titre, AdditionalAuthor, hreflocal, year, nbpages, note) {
      document.write( newHTML);
 }
 
+function Software(Titre, AdditionalAuthor, hreflocal, year, nblines, note) {
+    var newHTML ="";
+    
+    newHTML += '<span class="titrearticle">' + Titre + '</span>';
+    newHTML += ' <span class="ou">(' + year + ')</span>';
+    newHTML += '<br>';
+    if(AdditionalAuthor){
+	newHTML += 'avec ' + AdditionalAuthor + '<br>';
+    };
+    newHTML += '<i>';
+    newHTML += '<span class="ou"> ' + note + ' ' + nblines + ' lines</span></i>';
+    newHTML += '&nbsp;&nbsp;&nbsp; <span class="totheright"> <span class="Abstract">&raquo; Abstract</span>';
+    if(hreflocal){
+	newHTML += ' &nbsp;<a href="';
+	newHTML += hreflocal + '" class="verydiscreet">&raquo; Local pdf</a>';
+    };
+    newHTML += '</span>';
+    newHTML += '<span class="bidule">+</span>';
+     document.write( newHTML);
+}
+
 function Appendix(Titre, TitreLivre, AuteurLivre, hreflocal, year, nbpages, hreflivre) {
     var newHTML ="";
     

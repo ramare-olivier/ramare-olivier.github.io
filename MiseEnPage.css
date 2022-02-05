@@ -261,6 +261,10 @@ li.preprint {
     background:#F3F3D3;
 }
 
+li.software {   
+    background:#2fb57a;
+}
+
 li.paper:hover{
     margin: 2px 2px 2px 2px;
 }

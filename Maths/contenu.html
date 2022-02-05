@@ -51,6 +51,10 @@ MathJax.Hub.Config({
   function nbrp(){
   document.write('<span class="numeropreprint verydiscreet">[Preprint no ' + compteur_preprints + ']</span>&nbsp;');
   compteur_preprints++;}
+  var compteur_softwares = 1;
+  function nbrs(){
+  document.write('<span class="numeropreprint verydiscreet">[Software no ' + compteur_softwares + ']</span>&nbsp;');
+  compteur_softwares++;}
   function nbretoile(){
   document.write('<span class="numero verydiscreet">[*]</span>&nbsp;');}
 </script>
@@ -1072,11 +1076,11 @@ $
     </div>
   </li>
   <!-- ============================= -->
-  <li class="paper preprint"><script language="javascript">
-      Preprint("Sage: Computing Lattice Invariant Euler Products Library", "" ,
-      "LatticeInvariantEulerProducts-06.sage", 2020,18,
+  <li class="paper software"><script language="javascript">
+      Software("Sage: Computing Lattice Invariant Euler Products Library", "" ,
+      "LatticeInvariantEulerProducts-06.sage", 2020,533,
       "Addendum to 'Fast multi-precision computation of some Euler products'");
-      nbrp();</script>
+      nbrs();</script>
     <div class="resumecontent">
       This is the software that emerges from the paper 'Fast multi-precision
       computation of some Euler products'.

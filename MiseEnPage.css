@@ -262,7 +262,8 @@ li.preprint {
 }
 
 li.software {   
-    background:#2fb57a;
+ /*--   background:#87edc0; --*/
+    background:#c5eada;
 }
 
 li.paper:hover{

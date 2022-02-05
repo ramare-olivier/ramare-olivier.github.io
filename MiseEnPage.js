@@ -253,7 +253,7 @@ function Software(Titre, AdditionalAuthor, hreflocal, year, nblines, note) {
     newHTML += '&nbsp;&nbsp;&nbsp; <span class="totheright"> <span class="Abstract">&raquo; Abstract</span>';
     if(hreflocal){
 	newHTML += ' &nbsp;<a href="';
-	newHTML += hreflocal + '" class="verydiscreet">&raquo; Local pdf</a>';
+	newHTML += hreflocal + '" class="verydiscreet">&raquo; Local file</a>';
     };
     newHTML += '</span>';
     newHTML += '<span class="bidule">+</span>';

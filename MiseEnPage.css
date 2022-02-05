@@ -267,6 +267,10 @@ li.software {
     background:#E1E1CD;
 }
 
+li.software img.centeredimage {
+    vertical-align: middle;
+}
+
 li.paper:hover{
     margin: 2px 2px 2px 2px;
 }

@@ -81,6 +81,21 @@ function DisplayPicture(){
         '<br/><br/><img align=baseline src="trucs/Olivier-Ramare.jpg" width="150" >';
 }
 
+function DisplayPictureSurya(){
+    document.getElementById("TemporaryWindow").innerHTML =
+        '<br/><br/><br/><br/><img align=baseline src="../trucs/Luminy2015-3.jpg" width="150" >';
+}
+
+function DisplayPicturePieter(){
+    document.getElementById("TemporaryWindow").innerHTML =
+        '<br/><br/><br/><br/><img align=baseline src="../trucs/Pieter.jpeg" width="150" >';
+}
+
+function DisplayPictureAlisa(){
+    document.getElementById("TemporaryWindow").innerHTML =
+        '<br/><br/><br/><br/><img align=baseline src="../trucs/alisa-sedunova-2019.jpg" width="150" >';
+}
+
 function DisplayPictureNouakchottOne(){
     document.getElementById("TemporaryWindow").innerHTML =
         '<br/><br/><img align=baseline src="2012-12-06-0176.jpg" width="300" >';

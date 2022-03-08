@@ -10,11 +10,6 @@ Axler, Christian. 2016.
 \newblock New bounds for the prime counting function.
 \newblock {\em Integers}, {\bf 16}, Paper No. A22, 15.
 
-\bibitem[\protect\citename{Axler, }2019]{Axler*19}
-Axler, Christian. 2019.
-\newblock On the sum of the first {$n$} prime numbers.
-\newblock {\em J. Th\'{e}or. Nombres Bordeaux}, {\bf 31}(2), 293--311.
-
 \bibitem[\protect\citename{Bach \& Sorenson, }1996]{Bach-Sorenson*96}
 Bach, E., \& Sorenson, J. 1996.
 \newblock Explicit bounds for primes in residue classes.
@@ -97,11 +92,6 @@ Bordell{\`e}s, O. 2002.
 \newblock {\em JIPAM. J. Inequal. Pure Appl. Math.}, {\bf 3}(3), Article 38, 15
   pp. (electronic).
 
-\bibitem[\protect\citename{Bordell\'es, }2005]{Bordelles*05}
-Bordell\'es, O. 2005.
-\newblock An explicit {M}ertens' type inequality for arithmetic progressions.
-\newblock {\em J. Inequal. Pure Appl. Math.}, {\bf 6}(3), paper no 67 (10p).
-
 \bibitem[\protect\citename{Bordell{\`e}s, }2006]{Bordelles*06}
 Bordell{\`e}s, O. 2006.
 \newblock An inequality for the class number.
@@ -113,6 +103,12 @@ Bordell\`es, O. 2012.
 \newblock {\em Arithmetic Tales}.
 \newblock Universitext.
 \newblock Springer London Heidelberg New York Dordrecht.
+
+\bibitem[\protect\citename{Bordell\`es, }2005]{Bordelles*05}
+Bordell\`es, Olivier. 2005.
+\newblock An explicit {M}ertens' type inequality for arithmetic progressions.
+\newblock {\em JIPAM. J. Inequal. Pure Appl. Math.}, {\bf 6}(3), Article 67,
+  10.
 
 \bibitem[\protect\citename{Bordell{\`e}s, }2015]{Bordelles*15}
 Bordell{\`e}s, Olivier. 2015.
@@ -227,11 +223,6 @@ Cully-Hugill, Michaela. 2021.
 \newblock Primes between consecutive powers.
 \newblock {\em arXiv preprint arXiv:2107.14468}.
 
-\bibitem[\protect\citename{Cully-Hugill \& Trudgian, }2021]{Cully-Trudgian*21}
-Cully-Hugill, Michaela, \& Trudgian, Tim. 2021.
-\newblock Two explicit divisor sums.
-\newblock {\em Ramanujan J.}, {\bf 56}(1), 141--149.
-
 \bibitem[\protect\citename{Daboussi \& Rivat, }2001]{Daboussi-Rivat*01}
 Daboussi, H., \& Rivat, J. 2001.
 \newblock Explicit upper bounds for exponential sums over primes.
@@ -246,12 +237,6 @@ Daboussi, H., \& Rivat, J. 2001.
 Davenport, H. 1937.
 \newblock On some infinite series involving arithmetical functions.
 \newblock {\em Quart. J. Math., Oxf. Ser.}, {\bf 8}, 8--13.
-
-\bibitem[\protect\citename{De~Koninck \& Letendre,
-  }2020]{DeKoninck-Letendre*20}
-De~Koninck, Jean-Marie, \& Letendre, Patrick. 2020.
-\newblock New upper bounds for the number of divisors function.
-\newblock {\em Colloq. Math.}, {\bf 162}(1), 23--52.
 
 \bibitem[\protect\citename{Delange, }1987]{Delange*87}
 Delange, Hubert. 1987.
@@ -276,18 +261,6 @@ Delange, Hubert. 1987.
 {Del\'eglise}, M., \& Rivat, J. 1998.
 \newblock Computing $\psi(x)$.
 \newblock {\em Math. Comp.}, {\bf 67}(224), 1691--1696.
-
-\bibitem[\protect\citename{Del\'{e}glise \& Nicolas,
-  }2019a]{Deleglise-Nicolas*19a}
-Del\'{e}glise, Marc, \& Nicolas, Jean-Louis. 2019a.
-\newblock An arithmetic equivalence of the {R}iemann hypothesis.
-\newblock {\em J. Aust. Math. Soc.}, {\bf 106}(2), 235--273.
-
-\bibitem[\protect\citename{Del\'{e}glise \& Nicolas,
-  }2019b]{Deleglise-Nicolas*19b}
-Del\'{e}glise, Marc, \& Nicolas, Jean-Louis. 2019b.
-\newblock The {L}andau function and the {R}iemann Hypothesis.
-\newblock {\em J. Combinatorics and Numb. Th.}, {\bf 11}(2), 45--95.
 
 \bibitem[\protect\citename{Deshouillers \& Dress, }1988]{Deshouillers-Dress*88}
 Deshouillers, J.-M, \& Dress, F. 1988.
@@ -400,12 +373,6 @@ Dusart, Pierre. 2016.
 \newblock Majorations de la fonction sommatoire de la fonction
   $\frac{\mu(n)}n$.
 \newblock {\em Univ. Bordeaux 1}, {\bf Pr\'e-publication}(96-8).
-
-\bibitem[\protect\citename{Eum \& Koo, }2015]{Eum-Koo*15}
-Eum, Ick~Sun, \& Koo, Ja~Kyung. 2015.
-\newblock The {R}iemann hypothesis and an upper bound of the divisor function
-  for odd integers.
-\newblock {\em J. Math. Anal. Appl.}, {\bf 421}(1), 917--924.
 
 \bibitem[\protect\citename{Faber \& Kadiri, }2015]{Kadiri-Faber*13}
 Faber, L., \& Kadiri, H. 2015.
@@ -558,12 +525,6 @@ Ivi{\'c}, A. 1977.
 {Jaeschke}, {G.} 1993.
 \newblock On strong pseudoprimes to several bases.
 \newblock {\em Math. Comp.}, {\bf 61}(204), 915--926.
-
-\bibitem[\protect\citename{Jain-Sharma {\em et~al.},
-  }2021]{Jain-Sharma-Khale-Liu*21}
-Jain-Sharma, Niraek, Khale, Tanmay, \& Liu, Mengzhen. 2021.
-\newblock Explicit {B}urgess bound for composite moduli.
-\newblock {\em Int. J. Number Theory}, {\bf 17}(10), 2207--2219.
 
 \bibitem[\protect\citename{Jang \& Kwon, }2014]{Jang-Kwon*14}
 Jang, Woo-Jin, \& Kwon, Soun-Hi. 2014.
@@ -878,20 +839,10 @@ Panaitopol, L. 2000.
 \newblock A formula for {$\pi(x)$} applied to a result of {K}oninck-{I}vi\'c.
 \newblock {\em Nieuw Arch. Wiskd. (5)}, {\bf 1}(1), 55--56.
 
-\bibitem[\protect\citename{Platt \& Trudgian, }2021a]{Platt-Trudgian*21a}
-Platt, Dave, \& Trudgian, Tim. 2021a.
-\newblock The {R}iemann hypothesis is true up to {$3\cdot10^{12}$}.
-\newblock {\em Bull. Lond. Math. Soc.}, {\bf 53}(3), 792--797.
-
 \bibitem[\protect\citename{Platt, }2017]{Platt*17}
 Platt, David~J. 2017.
 \newblock Isolating some non-trivial zeros of zeta.
 \newblock {\em Math. Comp.}, {\bf 86}(307), 2449--2467.
-
-\bibitem[\protect\citename{Platt \& Trudgian, }2021b]{Platt-Trudgian*21b}
-Platt, David~J., \& Trudgian, Timothy~S. 2021b.
-\newblock The error term in the prime number theorem.
-\newblock {\em Math. Comp.}, {\bf 90}(328), 871--881.
 
 \bibitem[\protect\citename{Platt, }2011]{Platt*11}
 Platt, D.J. 2011.
@@ -1206,12 +1157,6 @@ Vinogradov, I.M. 2004.
 Ward, D.~R. 1927.
 \newblock Some {S}eries {I}nvolving {E}uler's {F}unction.
 \newblock {\em J. London Math. Soc.}, {\bf S1-2}(4), 210--214.
-
-\bibitem[\protect\citename{Washington \& Yang, }2021]{Washington-Yang*21}
-Washington, Lawrence~C., \& Yang, Ambrose. 2021.
-\newblock Analogues of the {R}obin-{L}agarias criteria for the {R}iemann
-  hypothesis.
-\newblock {\em Int. J. Number Theory}, {\bf 17}(4), 843--870.
 
 \bibitem[\protect\citename{Watkins, }2004]{Watkins*00-1}
 Watkins, M. 2004.

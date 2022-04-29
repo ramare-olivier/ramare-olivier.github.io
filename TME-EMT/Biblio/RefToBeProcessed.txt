@@ -34,6 +34,8 @@ Lehman*66a
 Rosser*41
 Ramare-Saouter*02
 Trudgian*13
+Hasanalizade-Shen-Wong*22
+Bennett-Martin-OBryant-Rechnitzer*21
 Helgott*17u
 Bastion-Rogalaski*02
 Ramare*13d
@@ -306,6 +308,7 @@ Rademacher*59
 Trudgian*13
 Kadiri-Ng*12
 Trudgian*14-1
+Hasanalizade-Shen-Wong*21
 Kadiri*12
 Ahn-Kwon*14
 Montgomery-Vaughan*74

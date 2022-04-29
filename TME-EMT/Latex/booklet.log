@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  20 JAN 2022 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.26)  29 APR 2022 08:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1441,7 +1441,7 @@ ed
 l.104  and \cite{Coffey*06}.
                              In particular, we have
 Overfull \hbox (103.40735pt too wide) in paragraph at lines 97--110
-[][]\OT1/cmr/m/n/10 110[][]] and [[][]M. Cof-fey, [][]34[][]]. In par-tic-u-lar
+[][]\OT1/cmr/m/n/10 113[][]] and [[][]M. Cof-fey, [][]35[][]]. In par-tic-u-lar
 , we have $\OML/cmm/m/it/10 ^^M[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OT1/cm
 r/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 07281584548367672486058637587490131
 91377 +
@@ -2053,7 +2053,7 @@ fier (name{Hfootnote.2}) has been already used, duplicate ignored
 l.31 \cite{Louboutin*15}
                         
 Overfull \hbox (14.09077pt too wide) in paragraph at lines 29--33
-\OT1/cmr/m/n/10 [[][]S. Louboutin, [][]122[][]] an-nounces the fol-low-ing lowe
+\OT1/cmr/m/n/10 [[][]S. Louboutin, [][]125[][]] an-nounces the fol-low-ing lowe
 r bound proved in [[][]S. R. Louboutin,
  []
 
@@ -2332,45 +2332,84 @@ T1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 278 [] [] \OML/cmm/m/it/10 T
  \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 510 + [][]
  []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 259.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 259.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 259.
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.256 \cite{Hasanalizade-Shen-Wong*22}
+                                      
+Overfull \hbox (8.8531pt too wide) detected at line 266
+\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 ) = [] 1 =
+ [] [] [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 O[][]
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1038 [] \OML/cmm/m/it/10 T \
+OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2573 [] [] \OML/cmm/m/it/10
+ T \OT1/cmr/m/n/10 + 9\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3675[]
+ []
 
 pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.263 \cite{Helgott*17u} 
-                         the proofpdfTeX warning (ext4): destination with the s
-ame identifier (name{Hfootnote.2}) has been already used, duplicate ignored
+l.277 \cite{Bennett-Martin-OBryant-Rechnitzer*21}
+                                                 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.291             function $L(\cdot
+                                   ,\chi)$ of
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (107.80919pt too wide) in paragraph at lines 282--293
+[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O[][]\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\
+OT1/cmr/m/n/10 22737\OML/cmm/m/it/10 ` \OT1/cmr/m/n/10 + 2 [](1 + \OML/cmm/m/it
+/10 `\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :
+\OT1/cmr/m/n/10 5[]$$\OML/cmm/m/it/10 wherethesummationisoverallzerosoftheDiric
+hletfunction$\OT1/cmr/m/n/10 L($\OMS/cmsy/m/n/10 ^^A\OML/cmm/m/it/10 ; ^^_\OT1/
+cmr/m/n/10 )$
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 301.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 301.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 301.
+
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.2})
+ has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.316 from \cite{Bastion-Rogalaski*02},
+l.305 \cite{Helgott*17u} 
+                         the proof [72]pdfTeX warning (ext4): destination with 
+the same identifier (name{Hfootnote.2}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.358 from \cite{Bastion-Rogalaski*02},
                                        pdfTeX warning (ext4): destination with 
 the same identifier (name{Hfootnote.2}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.317 Lemma 5.1 of \cite{Ramare*13d} 
-                                     shows [72]pdfTeX warning (ext4): destinati
-on with the same identifier (name{Hfootnote.2}) has been already used, duplicat
-e ignored
+l.359 Lemma 5.1 of \cite{Ramare*13d} 
+                                     showspdfTeX warning (ext4): destination wi
+th the same identifier (name{Hfootnote.2}) has been already used, duplicate ign
+ored
 <to be read again> 
                    \relax 
-l.327 \cite{Delange*87}.
+l.369 \cite{Delange*87}.
                         pdfTeX warning (ext4): destination with the same identi
 fier (name{Hfootnote.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.329 \cite{Ford*01} 
+l.371 \cite{Ford*01} 
                      for a) (./Art08.tex [73] [74
 
 ]
@@ -2838,13 +2877,28 @@ j \OT1/cmr/m/n/10 +
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \cite{Kadiri*12},
+l.67 \cite{Hasanalizade-Shen-Wong*21}
+                                     
+Overfull \hbox (52.31993pt too wide) in paragraph at lines 73--76
+[]\OT1/cmr/m/n/10 When $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10
+ 1$, we have $\OML/cmm/m/it/10 N[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T\OT1/cmr/m
+/n/10 ) = [] [][]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 d[]\OMS/cmsy/m/n/10 j[][][]
+[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 O[][]\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 
+:\OT1/cmr/m/n/10 228([] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 d[]\OMS/cmsy/m/n/10 
+j \OT1/cmr/m/n/10 +
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.80 \cite{Kadiri*12},
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.87 \cite{Ahn-Kwon*14}
-                       ) [94] [95
+l.100 \cite{Ahn-Kwon*14}
+                        ) [94] [95
 
 ] [96] (./Art13.tex
 Chapter 18.
@@ -3010,7 +3064,7 @@ Overfull \hbox (0.23302pt too wide) in paragraph at lines 286--286
 p. \OT1/cmr/m/n/10 65.213 (1996), pp. 235{
  []
 
-[110] [111]
+[110] [111] [112]
 Overfull \hbox (11.35666pt too wide) in paragraph at lines 286--286
 [][]\OT1/cmr/m/n/10 W. Gabcke. \  Neue Her-leitung und ex-plizite Restab-schaet
 -zung der Riemann-
@@ -3022,7 +3076,7 @@ Overfull \hbox (10.12505pt too wide) in paragraph at lines 286--286
 e Fakult^^?at
  []
 
-[112]
+
 Overfull \hbox (5.86592pt too wide) in paragraph at lines 286--286
 [][]\OT1/cmr/m/n/10 A. Granville and K. Soundarara-jan. \  The dis-tri-bu-tion 
 of val-ues of $\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; ^^_\OT1/c
@@ -3048,13 +3102,13 @@ Overfull \hbox (11.54068pt too wide) in paragraph at lines 286--286
 n-heiten und Klassen-
  []
 
-
+[115]
 Overfull \hbox (7.739pt too wide) in paragraph at lines 286--286
 \OT1/cmr/m/n/10 prob-lems of num-ber the-ory". In: \OT1/cmr/m/it/10 Rus-sian Ma
 th. Sur-veys \OT1/cmr/m/n/10 22 (1967), pp. 119{
  []
 
-[115] [116] [117]
+[116] [117]
 Overfull \hbox (27.28345pt too wide) in paragraph at lines 286--286
 \OT1/cmr/m/n/10 Grad-u-ate Texts in Math-e-mat-ics. Springer-Verlag, New York, 
 1996, pp. xiv+342.
@@ -3090,13 +3144,13 @@ Overfull \hbox (1.41916pt too wide) in paragraph at lines 286--286
 L/cmm/m/it/10 k$\OT1/cmr/m/n/10 th power non-residue".
  []
 
-
+[121]
 Overfull \hbox (1.6206pt too wide) in paragraph at lines 286--286
 [][]\OT1/cmr/m/n/10 T. Trud-gian. \  An im-proved up-per bound for the er-ror i
 n the zero-counting
  []
 
-[121]
+
 Overfull \hbox (4.4796pt too wide) in paragraph at lines 286--286
 [][]\OT1/cmr/m/n/10 T. Trud-gian. \  Im-prove-ments to Tur-ing's method". In: \
 OT1/cmr/m/it/10 Math. Comp. \OT1/cmr/m/n/10 80.276
@@ -3111,23 +3165,15 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
 Package rerunfilecheck Info: File `booklet.out' has not changed.
 (rerunfilecheck)             Checksum: 00F476721A1545264C5BC9ED095A2990;5963.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'booklet.run.xml'.
 \openout1 = `booklet.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25474 strings out of 483081
- 456877 string characters out of 5963441
- 1150498 words of memory out of 5000000
- 39640 multiletter control sequences out of 15000+600000
+ 25495 strings out of 483081
+ 457667 string characters out of 5963441
+ 1151814 words of memory out of 5000000
+ 39658 multiletter control sequences out of 15000+600000
  557392 words of font info for 131 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  45i,14n,58p,1009b,1568s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3172,10 +3218,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on booklet.pdf (125 pages, 820414 bytes).
+Output written on booklet.pdf (125 pages, 823330 bytes).
 PDF statistics:
- 2234 PDF objects out of 2487 (max. 8388607)
- 2042 compressed objects within 21 object streams
- 436 named destinations out of 1000 (max. 500000)
+ 2246 PDF objects out of 2487 (max. 8388607)
+ 2054 compressed objects within 21 object streams
+ 439 named destinations out of 1000 (max. 500000)
  641 words of extra memory for PDF output out of 10000 (max. 10000000)
 

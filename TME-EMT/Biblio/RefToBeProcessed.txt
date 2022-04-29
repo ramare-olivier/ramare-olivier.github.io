@@ -226,6 +226,8 @@ Pomerance*11
 Landau*18-3
 Granville-Soundararajan*07
 Granville-Soundararajan*07
+Bordignon-Kerr*20
+Bordignon*21
 Trevino*15-2
 McGown*12
 Booker*06

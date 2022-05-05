@@ -91,20 +91,48 @@ This latter estimates holds as soon as $q\ge40$.
 
 In case $\chi$ odd, the constant $1/(2\pi)$ has already
 been asymptotically obtained in
-\cite{Landau*18-3} and is still
-unsurpassed. When $\chi$ is odd and $M=1$, the best asymptotical constant up to now is
+\cite{Landau*18-3}.
+When $\chi$ is odd and $M=1$, the best asymptotical constant before 2020 was
 $1/(3\pi)$ from Theorem 7 of
 \cite{Granville-Soundararajan*07},
-
 In case $\chi$ even, we have
 $$
 \max_{M,N}\left|\sum_{a=M}^N\chi(a)\right|
 =2\max_{N}\left|\sum_{a=1}^N\chi(a)\right|.
 $$
 (The LHS is always less than the RHS. Equality is then easily proved).
-The asymptotical best constant
-is $23/(35\pi\sqrt{3})$ from Theorem 7 of
+The asymptotical best constant in 2007
+was $23/(35\pi\sqrt{3})$ from Theorem 7 of
 \cite{Granville-Soundararajan*07}.
+
+These results are improved upon for large values squarefree values of $q$ in
+\cite{Bordignon-Kerr*20}
+by a different method into the following.
+\par 
+\begin{thm}{Theorem (2020)}
+
+  For $\chi$ a primitive character to the squarefree modulus $q \ge \exp(1088\ell^2)$, we have
+$$
+\max_{N}\left|\sum_{a=1}^{N}\chi(a)\right|
+\le
+\begin{cases}
+  \frac{2}{\pi^2}\sqrt{q}\bigl(\frac14+\frac{1}{4\ell}\bigr)\log q
+  +\bigl(49+\frac{1}{1088\ell}\bigr)\sqrt{q},&
+  \text{$\chi$ even,}\\
+  \frac{1}{2\pi}\bigl(\frac12+\frac{1}{2\ell}\bigr)\sqrt{q}\log q
+  +\bigl(49+\frac{1}{1088\ell}\bigr)\sqrt{q},&
+  \text{$\chi$ odd}.
+\end{cases}
+$$
+This latter estimates holds as soon as $q\ge40$.
+\end{thm}
+
+
+Corresponding estimates when $q$ is not squarefree are proved in
+\cite{Bordignon*21}, the
+saving $1/4$ being slightly degraded to $3/8$.
+
+
 
 \section{Burgess type estimates}
 

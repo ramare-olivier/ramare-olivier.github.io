@@ -73,6 +73,7 @@
       \strng{authorbibnamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
       \strng{authornamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
       \strng{authorfullhash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
@@ -84,6 +85,40 @@
       \field{year}{2016}
       \field{pages}{Paper No. A22\bibrangessep 15}
       \range{pages}{-1}
+    \endentry
+    \entry{Axler*19}{article}{}
+      \name{author}{1}{}{%
+        {{hash=44643bbaa654b8fb89d8d68f8c7a7b82}{%
+           family={Axler},
+           familyi={A\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{fullhash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{bibnamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{authorbibnamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{authornamehash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \strng{authorfullhash}{44643bbaa654b8fb89d8d68f8c7a7b82}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1246-7405}
+      \field{journaltitle}{J. Théor. Nombres Bordeaux}
+      \field{number}{2}
+      \field{title}{On the sum of the first {$n$} prime numbers}
+      \field{volume}{31}
+      \field{year}{2019}
+      \field{pages}{293\bibrangedash 311}
+      \range{pages}{19}
+      \verb{urlraw}
+      \verb http://jtnb.cedram.org/item?id=JTNB_2019__31_2_293_0
+      \endverb
+      \verb{url}
+      \verb http://jtnb.cedram.org/item?id=JTNB_2019__31_2_293_0
+      \endverb
     \endentry
     \entry{Bach-Sorenson*96}{article}{}
       \name{author}{2}{}{%
@@ -358,6 +393,52 @@
       \field{pages}{1\bibrangedash 49}
       \range{pages}{49}
     \endentry
+    \entry{Bennett-Martin-OBryant-Rechnitzer*21}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b8b177a14175aecf03f123c5508e51ad}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c06cf923cb7824f2455f1750eec3b292}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=18cfc85c8f2c97616cb9ce8dbf13391d}{%
+           family={O'Bryant},
+           familyi={O\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=94878995ef576d31ce7a6f41311b2fbf}{%
+           family={Rechnitzer},
+           familyi={R\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a713d6f26c0066bd09d67bdedff77de}
+      \strng{fullhash}{45e44530d205d90b30b71ddc4a76c624}
+      \strng{bibnamehash}{2a713d6f26c0066bd09d67bdedff77de}
+      \strng{authorbibnamehash}{2a713d6f26c0066bd09d67bdedff77de}
+      \strng{authornamehash}{2a713d6f26c0066bd09d67bdedff77de}
+      \strng{authorfullhash}{45e44530d205d90b30b71ddc4a76c624}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5718}
+      \field{journaltitle}{Math. Comp.}
+      \field{number}{329}
+      \field{title}{Counting zeros of {D}irichlet {$L$}-functions}
+      \field{volume}{90}
+      \field{year}{2021}
+      \field{pages}{1455\bibrangedash 1482}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1090/mcom/3599
+      \endverb
+    \endentry
     \entry{Bennett-Martin-OBryant-Rechnitzer*18}{article}{}
       \name{author}{4}{}{%
         {{hash=b8b177a14175aecf03f123c5508e51ad}{%
@@ -387,6 +468,7 @@
       \strng{authorbibnamehash}{2a713d6f26c0066bd09d67bdedff77de}
       \strng{authornamehash}{2a713d6f26c0066bd09d67bdedff77de}
       \strng{authorfullhash}{45e44530d205d90b30b71ddc4a76c624}
+      \field{extraname}{2}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
@@ -539,6 +621,35 @@
       \verb http://dx.doi.org/10.1090/S0025-5718-06-01850-3
       \endverb
     \endentry
+    \entry{Bordelles*05}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f748230cc4918edb9c87f65688103b33}{%
+           family={Bordellés},
+           familyi={B\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{f748230cc4918edb9c87f65688103b33}
+      \strng{fullhash}{f748230cc4918edb9c87f65688103b33}
+      \strng{bibnamehash}{f748230cc4918edb9c87f65688103b33}
+      \strng{authorbibnamehash}{f748230cc4918edb9c87f65688103b33}
+      \strng{authornamehash}{f748230cc4918edb9c87f65688103b33}
+      \strng{authorfullhash}{f748230cc4918edb9c87f65688103b33}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Inequal. Pure Appl. Math.}
+      \field{number}{3}
+      \field{title}{An explicit {M}ertens' type inequality for arithmetic progressions}
+      \field{volume}{6}
+      \field{year}{2005}
+      \field{pages}{paper no 67 (10p)}
+      \range{pages}{-1}
+      \verb{file}
+      \verb :/home/ramare/tex/Other/Bordeles/BordellesMertens.pdf:PDF
+      \endverb
+    \endentry
     \entry{Bordelles*06}{article}{}
       \name{author}{1}{}{%
         {{hash=6496b4d01d5f38b66c609838f539fe4d}{%
@@ -627,10 +738,10 @@
       \verb :/home/ramare/tex/Other/Bordelles/053_01.pdf:PDF;:/home/ramare/tex/Other/Bordeles/Bordeles_01.pdf:PDF
       \endverb
     \endentry
-    \entry{Bordelles*05}{article}{}
+    \entry{Bordelles*15}{article}{}
       \name{author}{1}{}{%
         {{hash=64d5ef6712fee7e38a07adaece5278ca}{%
-           family={Bordellès},
+           family={Bordell{è}s},
            familyi={B\bibinitperiod},
            given={Olivier},
            giveni={O\bibinitperiod}}}%
@@ -646,34 +757,6 @@
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{1443-5756}
-      \field{journaltitle}{JIPAM. J. Inequal. Pure Appl. Math.}
-      \field{number}{3}
-      \field{title}{An explicit {M}ertens' type inequality for arithmetic progressions}
-      \field{volume}{6}
-      \field{year}{2005}
-      \field{pages}{Article 67\bibrangessep 10}
-      \range{pages}{-1}
-    \endentry
-    \entry{Bordelles*15}{article}{}
-      \name{author}{1}{}{%
-        {{hash=64d5ef6712fee7e38a07adaece5278ca}{%
-           family={Bordell{è}s},
-           familyi={B\bibinitperiod},
-           given={Olivier},
-           giveni={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{64d5ef6712fee7e38a07adaece5278ca}
-      \strng{fullhash}{64d5ef6712fee7e38a07adaece5278ca}
-      \strng{bibnamehash}{64d5ef6712fee7e38a07adaece5278ca}
-      \strng{authorbibnamehash}{64d5ef6712fee7e38a07adaece5278ca}
-      \strng{authornamehash}{64d5ef6712fee7e38a07adaece5278ca}
-      \strng{authorfullhash}{64d5ef6712fee7e38a07adaece5278ca}
-      \field{extraname}{5}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
       \field{issn}{1530-7638}
       \field{journaltitle}{J. Integer Seq.}
       \field{number}{11}
@@ -682,6 +765,71 @@
       \field{year}{2015}
       \field{pages}{Article 15.11.1\bibrangessep 13}
       \range{pages}{-1}
+    \endentry
+    \entry{Bordignon*21}{article}{}
+      \name{author}{1}{}{%
+        {{hash=af2f969600be9e0af4d7cad7ec4259bc}{%
+           family={Bordignon},
+           familyi={B\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{af2f969600be9e0af4d7cad7ec4259bc}
+      \strng{fullhash}{af2f969600be9e0af4d7cad7ec4259bc}
+      \strng{bibnamehash}{af2f969600be9e0af4d7cad7ec4259bc}
+      \strng{authorbibnamehash}{af2f969600be9e0af4d7cad7ec4259bc}
+      \strng{authornamehash}{af2f969600be9e0af4d7cad7ec4259bc}
+      \strng{authorfullhash}{af2f969600be9e0af4d7cad7ec4259bc}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0008-4395}
+      \field{journaltitle}{Canad. Math. Bull.}
+      \field{number}{4}
+      \field{title}{A {P}ólya-{V}inogradov inequality for short character sums}
+      \field{volume}{64}
+      \field{year}{2021}
+      \field{pages}{906\bibrangedash 910}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.4153/S0008439520000934
+      \endverb
+    \endentry
+    \entry{Bordignon-Kerr*20}{article}{}
+      \name{author}{2}{}{%
+        {{hash=af2f969600be9e0af4d7cad7ec4259bc}{%
+           family={Bordignon},
+           familyi={B\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f618b0f2d8d150a9c33549702f683b8c}{%
+           family={Kerr},
+           familyi={K\bibinitperiod},
+           given={Bryce},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{3130532967053b7fb417d67a5e71b2f5}
+      \strng{fullhash}{3130532967053b7fb417d67a5e71b2f5}
+      \strng{bibnamehash}{3130532967053b7fb417d67a5e71b2f5}
+      \strng{authorbibnamehash}{3130532967053b7fb417d67a5e71b2f5}
+      \strng{authornamehash}{3130532967053b7fb417d67a5e71b2f5}
+      \strng{authorfullhash}{3130532967053b7fb417d67a5e71b2f5}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9947}
+      \field{journaltitle}{Trans. Amer. Math. Soc.}
+      \field{number}{9}
+      \field{title}{An explicit {P}ólya-{V}inogradov inequality via partial {G}aussian sums}
+      \field{volume}{373}
+      \field{year}{2020}
+      \field{pages}{6503\bibrangedash 6527}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1090/tran/8138
+      \endverb
     \endentry
     \entry{Borwein-Ferguson-Mossinghoff*08}{article}{}
       \name{author}{3}{}{%
@@ -1286,6 +1434,41 @@
       \field{title}{Primes between consecutive powers}
       \field{year}{2021}
     \endentry
+    \entry{Cully-Trudgian*21}{article}{}
+      \name{author}{2}{}{%
+        {{hash=439f07e7eeae0299df54a662452e2f3f}{%
+           family={Cully-Hugill},
+           familyi={C\bibinithyphendelim H\bibinitperiod},
+           given={Michaela},
+           giveni={M\bibinitperiod}}}%
+        {{hash=af8f95636cfb8ee32db62432b50fcea2}{%
+           family={Trudgian},
+           familyi={T\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{fullhash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{bibnamehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{authorbibnamehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{authornamehash}{5ff300a4acbe14c01b154e232cc4a495}
+      \strng{authorfullhash}{5ff300a4acbe14c01b154e232cc4a495}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1382-4090}
+      \field{journaltitle}{Ramanujan J.}
+      \field{number}{1}
+      \field{title}{Two explicit divisor sums}
+      \field{volume}{56}
+      \field{year}{2021}
+      \field{pages}{141\bibrangedash 149}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/s11139-020-00333-3
+      \endverb
+    \endentry
     \entry{Daboussi-Rivat*01}{article}{}
       \name{author}{2}{}{%
         {{hash=bbd5a2e3d4bc15215d5a01d16ac0dd01}{%
@@ -1375,6 +1558,41 @@
       \field{year}{1937}
       \field{pages}{8\bibrangedash 13}
       \range{pages}{6}
+    \endentry
+    \entry{DeKoninck-Letendre*20}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d193877f716c9b1a9937f317301cf569}{%
+           family={De\bibnamedelima Koninck},
+           familyi={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Jean-Marie},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=741e8e12af9ed3d0ac3bf03c770ce265}{%
+           family={Letendre},
+           familyi={L\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{fullhash}{66911903a0913fb209f127b58c8502e5}
+      \strng{bibnamehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{authorbibnamehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{authornamehash}{66911903a0913fb209f127b58c8502e5}
+      \strng{authorfullhash}{66911903a0913fb209f127b58c8502e5}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-1354}
+      \field{journaltitle}{Colloq. Math.}
+      \field{number}{1}
+      \field{title}{New upper bounds for the number of divisors function}
+      \field{volume}{162}
+      \field{year}{2020}
+      \field{pages}{23\bibrangedash 52}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.4064/cm7792-6-2019
+      \endverb
     \endentry
     \entry{Delange*87}{article}{}
       \name{author}{1}{}{%
@@ -1498,6 +1716,74 @@
       \field{year}{1996}
       \field{pages}{291\bibrangedash 295}
       \range{pages}{5}
+    \endentry
+    \entry{Deleglise-Nicolas*19a}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6f53fb227b01894d40689a82f6e1c775}{%
+           family={Deléglise},
+           familyi={D\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ad7f92664032bfba1eecfd9949dcefd1}{%
+           family={Nicolas},
+           familyi={N\bibinitperiod},
+           given={Jean-Louis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{775e087a55230e83c72defccea272e9d}
+      \strng{fullhash}{775e087a55230e83c72defccea272e9d}
+      \strng{bibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorbibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authornamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorfullhash}{775e087a55230e83c72defccea272e9d}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1446-7887}
+      \field{journaltitle}{J. Aust. Math. Soc.}
+      \field{number}{2}
+      \field{title}{An arithmetic equivalence of the {R}iemann hypothesis}
+      \field{volume}{106}
+      \field{year}{2019}
+      \field{pages}{235\bibrangedash 273}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1017/S1446788718000083
+      \endverb
+    \endentry
+    \entry{Deleglise-Nicolas*19b}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6f53fb227b01894d40689a82f6e1c775}{%
+           family={Deléglise},
+           familyi={D\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ad7f92664032bfba1eecfd9949dcefd1}{%
+           family={Nicolas},
+           familyi={N\bibinitperiod},
+           given={Jean-Louis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{775e087a55230e83c72defccea272e9d}
+      \strng{fullhash}{775e087a55230e83c72defccea272e9d}
+      \strng{bibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorbibnamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authornamehash}{775e087a55230e83c72defccea272e9d}
+      \strng{authorfullhash}{775e087a55230e83c72defccea272e9d}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Combinatorics and Numb. Th.}
+      \field{number}{2}
+      \field{title}{The {L}andau function and the {R}iemann Hypothesis}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{pages}{45\bibrangedash 95}
+      \range{pages}{51}
     \endentry
     \entry{Deshouillers-Dress*88}{article}{}
       \name{author}{2}{}{%
@@ -2102,6 +2388,41 @@
       \verb :/home/ramare/tex/Other/ElMarraki/PreprintBordeaux-1996.pdf:PDF
       \endverb
     \endentry
+    \entry{Eum-Koo*15}{article}{}
+      \name{author}{2}{}{%
+        {{hash=42caca0b036b21ec35242834a4596953}{%
+           family={Eum},
+           familyi={E\bibinitperiod},
+           given={Ick\bibnamedelima Sun},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=fd4d0797e56d78aceab8b73534d2ddb9}{%
+           family={Koo},
+           familyi={K\bibinitperiod},
+           given={Ja\bibnamedelima Kyung},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3460ad8206dbb2a28fcaa508a7d8f037}
+      \strng{fullhash}{3460ad8206dbb2a28fcaa508a7d8f037}
+      \strng{bibnamehash}{3460ad8206dbb2a28fcaa508a7d8f037}
+      \strng{authorbibnamehash}{3460ad8206dbb2a28fcaa508a7d8f037}
+      \strng{authornamehash}{3460ad8206dbb2a28fcaa508a7d8f037}
+      \strng{authorfullhash}{3460ad8206dbb2a28fcaa508a7d8f037}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-247X}
+      \field{journaltitle}{J. Math. Anal. Appl.}
+      \field{number}{1}
+      \field{title}{The {R}iemann hypothesis and an upper bound of the divisor function for odd integers}
+      \field{volume}{421}
+      \field{year}{2015}
+      \field{pages}{917\bibrangedash 924}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.jmaa.2014.07.063
+      \endverb
+    \endentry
     \entry{Kadiri-Faber*13}{article}{}
       \name{author}{2}{}{%
         {{hash=d50dea99b2a0e5b35ea15f4f6327afb3}{%
@@ -2635,6 +2956,87 @@
       \verb :/home/ramare/tex/Other/Hall/Richard_R._Hall,_Gérald_Tenenbaum_Divisors__1988.djvu:Djvu
       \endverb
     \endentry
+    \entry{Hasanalizade-Shen-Wong*21}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1195f8c8d11b81e54137f5341c99a4a4}{%
+           family={Hasanalizade},
+           familyi={H\bibinitperiod},
+           given={Elchin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cbb88ef77dba22411534fc845f6cd36a}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Quanli},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=65a00a8989038d9ccc2988477c2cad12}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Peng-Jie},
+           giveni={P\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{fullhash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{bibnamehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{authorbibnamehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{authornamehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{authorfullhash}{0b58056f4161818bb0b6e684a1099364}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5718}
+      \field{journaltitle}{Math. Comp.}
+      \field{number}{333}
+      \field{title}{Counting zeros of {D}edekind zeta functions}
+      \field{volume}{91}
+      \field{year}{2021}
+      \field{pages}{277\bibrangedash 293}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1090/mcom/3665
+      \endverb
+    \endentry
+    \entry{Hasanalizade-Shen-Wong*22}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1195f8c8d11b81e54137f5341c99a4a4}{%
+           family={Hasanalizade},
+           familyi={H\bibinitperiod},
+           given={Elchin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cbb88ef77dba22411534fc845f6cd36a}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Quanli},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=65a00a8989038d9ccc2988477c2cad12}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Peng-Jie},
+           giveni={P\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{fullhash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{bibnamehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{authorbibnamehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{authornamehash}{0b58056f4161818bb0b6e684a1099364}
+      \strng{authorfullhash}{0b58056f4161818bb0b6e684a1099364}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-314X}
+      \field{journaltitle}{J. Number Theory}
+      \field{title}{Counting zeros of the {R}iemann zeta function}
+      \field{volume}{235}
+      \field{year}{2022}
+      \field{pages}{219\bibrangedash 241}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1016/j.jnt.2021.06.032
+      \endverb
+    \endentry
     \entry{Helgott*17u}{unpublished}{}
       \name{author}{1}{}{%
         {{hash=879bac43b783c62e826584fbd6b0cc2b}{%
@@ -2925,6 +3327,46 @@
       \field{year}{1993}
       \field{pages}{915\bibrangedash 926}
       \range{pages}{12}
+    \endentry
+    \entry{Jain-Sharma-Khale-Liu*21}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f1120cf6b72a6c26ff79c053096de5c6}{%
+           family={Jain-Sharma},
+           familyi={J\bibinithyphendelim S\bibinitperiod},
+           given={Niraek},
+           giveni={N\bibinitperiod}}}%
+        {{hash=939998925991b75d3c9c885189a7ea73}{%
+           family={Khale},
+           familyi={K\bibinitperiod},
+           given={Tanmay},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a8332180b087f6b2e3101371093e9188}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Mengzhen},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a4a83aa09de2f8fb5d11f0437105d96c}
+      \strng{fullhash}{a4a83aa09de2f8fb5d11f0437105d96c}
+      \strng{bibnamehash}{a4a83aa09de2f8fb5d11f0437105d96c}
+      \strng{authorbibnamehash}{a4a83aa09de2f8fb5d11f0437105d96c}
+      \strng{authornamehash}{a4a83aa09de2f8fb5d11f0437105d96c}
+      \strng{authorfullhash}{a4a83aa09de2f8fb5d11f0437105d96c}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1793-0421}
+      \field{journaltitle}{Int. J. Number Theory}
+      \field{number}{10}
+      \field{title}{Explicit {B}urgess bound for composite moduli}
+      \field{volume}{17}
+      \field{year}{2021}
+      \field{pages}{2207\bibrangedash 2219}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1142/S1793042121500834
+      \endverb
     \endentry
     \entry{Jang-Kwon*14}{article}{}
       \name{author}{2}{}{%
@@ -4762,6 +5204,42 @@
       \field{pages}{77\bibrangedash 92}
       \range{pages}{16}
     \endentry
+    \entry{Platt-Trudgian*21a}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7876864d71873e82aad2393b8cf18fe4}{%
+           family={Platt},
+           familyi={P\bibinitperiod},
+           given={Dave},
+           giveni={D\bibinitperiod}}}%
+        {{hash=af8f95636cfb8ee32db62432b50fcea2}{%
+           family={Trudgian},
+           familyi={T\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0b290fda16e446719a77447f29d0e95}
+      \strng{fullhash}{d0b290fda16e446719a77447f29d0e95}
+      \strng{bibnamehash}{d0b290fda16e446719a77447f29d0e95}
+      \strng{authorbibnamehash}{d0b290fda16e446719a77447f29d0e95}
+      \strng{authornamehash}{d0b290fda16e446719a77447f29d0e95}
+      \strng{authorfullhash}{d0b290fda16e446719a77447f29d0e95}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0024-6093}
+      \field{journaltitle}{Bull. Lond. Math. Soc.}
+      \field{number}{3}
+      \field{title}{The {R}iemann hypothesis is true up to {$3\cdot10^{12}$}}
+      \field{volume}{53}
+      \field{year}{2021}
+      \field{pages}{792\bibrangedash 797}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1112/blms.12460
+      \endverb
+    \endentry
     \entry{Platt*17}{article}{}
       \name{author}{1}{}{%
         {{hash=0cb59969af80e6661795f3ed6010efa9}{%
@@ -4794,6 +5272,42 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1090/mcom/3198
+      \endverb
+    \endentry
+    \entry{Platt-Trudgian*21b}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0cb59969af80e6661795f3ed6010efa9}{%
+           family={Platt},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=66490333fa52c597ed64f7abf27c7710}{%
+           family={Trudgian},
+           familyi={T\bibinitperiod},
+           given={Timothy\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{fullhash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{bibnamehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{authorbibnamehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{authornamehash}{7cd0ac82c63851914bfb1ef909123a31}
+      \strng{authorfullhash}{7cd0ac82c63851914bfb1ef909123a31}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5718}
+      \field{journaltitle}{Math. Comp.}
+      \field{number}{328}
+      \field{title}{The error term in the prime number theorem}
+      \field{volume}{90}
+      \field{year}{2021}
+      \field{pages}{871\bibrangedash 881}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1090/mcom/3583
       \endverb
     \endentry
     \entry{Pohst-Zassenhaus*89}{book}{}
@@ -4834,12 +5348,6 @@
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1017/CBO9780511661952
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1017/CBO9780511661952
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1017/CBO9780511661952
       \endverb
     \endentry
     \entry{Pomerance*11}{article}{}
@@ -6221,12 +6729,6 @@
       \verb{doi}
       \verb 10.1016/j.jnt.2013.07.017
       \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1016/j.jnt.2013.07.017
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1016/j.jnt.2013.07.017
-      \endverb
     \endentry
     \entry{Lune-Riele-Winter*86}{article}{}
       \name{author}{3}{}{%
@@ -6349,6 +6851,41 @@
       \range{pages}{5}
       \verb{doi}
       \verb 10.1112/jlms/s1-2.4.210
+      \endverb
+    \endentry
+    \entry{Washington-Yang*21}{article}{}
+      \name{author}{2}{}{%
+        {{hash=69835b36275ec8c34f049b5bcea8cf76}{%
+           family={Washington},
+           familyi={W\bibinitperiod},
+           given={Lawrence\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9b8bec8dd50cc9a9a80c4bfadd307d9c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Ambrose},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b5154492a366e33a5eab41ebb7393c7}
+      \strng{fullhash}{9b5154492a366e33a5eab41ebb7393c7}
+      \strng{bibnamehash}{9b5154492a366e33a5eab41ebb7393c7}
+      \strng{authorbibnamehash}{9b5154492a366e33a5eab41ebb7393c7}
+      \strng{authornamehash}{9b5154492a366e33a5eab41ebb7393c7}
+      \strng{authorfullhash}{9b5154492a366e33a5eab41ebb7393c7}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1793-0421}
+      \field{journaltitle}{Int. J. Number Theory}
+      \field{number}{4}
+      \field{title}{Analogues of the {R}obin-{L}agarias criteria for the {R}iemann hypothesis}
+      \field{volume}{17}
+      \field{year}{2021}
+      \field{pages}{843\bibrangedash 870}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1142/S1793042121500111
       \endverb
     \endentry
     \entry{Watkins*00-1}{article}{}

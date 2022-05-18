@@ -1,6 +1,6 @@
-var Architecture = [[["Home", "index.html"]], [["Publications", "Maths/contenu.html"]], [["Projet TME-EMT", "TME-EMT/accueil.html"]], [["Jeux - Games", "Jeux/IndexJeux.html"], ["Solitaire", "Jeux/Solitaire/SolitaireJeu.html"], ["&Eacute;tude du Solitaire", "Jeux/Solitaire/Solitaire.html"]]];
+var Architecture = [[["Home", "index.html"]], [["Publications", "Maths/contenu.html"], ["Publications Typos", "Maths/ExcursionsInMultiplicativeNT-Typos/contenu-typos.html"]], [["Projet TME-EMT", "TME-EMT/accueil.html"]], [["Jeux - Games", "Jeux/IndexJeux.html"], ["Solitaire", "Jeux/Solitaire/SolitaireJeu.html"], ["&Eacute;tude du Solitaire", "Jeux/Solitaire/Solitaire.html"]]];
 
-var Architecture_en = [[["Home", "index.html"]], [["Publications", "Maths/contenu.html"]], [["The TME-EMT project", "TME-EMT/accueil.html"]], [["Games", "Jeux/IndexJeux.html"], ["Peg Solitaire", "Jeux/Solitaire/SolitaireJeu-en.html"], ["Study of Peg Solitaire", "Jeux/Solitaire/Solitaire-en.html"]]];
+var Architecture_en = [[["Home", "index.html"]], [["Publications", "Maths/contenu.html"], ["Publications", "Maths/ExcursionsInMultiplicativeNT-Typos/contenu-typos.html"]], [["The TME-EMT project", "TME-EMT/accueil.html"]], [["Games", "Jeux/IndexJeux.html"], ["Peg Solitaire", "Jeux/Solitaire/SolitaireJeu-en.html"], ["Study of Peg Solitaire", "Jeux/Solitaire/Solitaire-en.html"]]];
 
 var Architecture_Cours = [["Le cours de Nouakchott 2012", "CoursNouakchott/index.html"],["Le cours de Monastir 2013", "CoursMonastir/index.html"],["Le cours de Nouakchott 2013", "CoursNouakchott2013/index.html"]]; 
 
@@ -57,6 +57,19 @@ function BandeauGeneral(numeroOn, Home, profondeur, lang){
         newHTML += '<strong class="on">' 
             + Architecture_TME_EMT[profondeur[0]][1][profondeur[1]][0]
             + '</strong></p>  ';
+     } else if (numeroOn == 4){ 
+        /*** Typos ***/
+        newHTML += '<a href = "'  + Home + arch[0][0][1] 
+            + '">' + arch[0][0][0]
+            + '</a>  &gt; ';
+        newHTML += '<a href = "'  + Home + arch[1][0][1] 
+            + '">' + arch[1][0][0]
+            + '</a>  &gt; ';
+        newHTML += '<a href = "' 
+             + Home + arch[1][0][1] + arch[1][1][1]
+	     + '">'
+	     +'<strong class="on">' + arch[1][1][0]
+            + '</strong></a> &gt </p>  ';
    } else {
         newHTML += '<a href = "'  + Home + arch[0][0][1] 
             + '">' + arch[0][0][0]

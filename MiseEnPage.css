@@ -643,3 +643,19 @@ span.rotate {
 }
 
 
+
+ol.typos li {
+    counter-increment: muffins;
+    padding-left:4px;
+    margin-left: 3px;
+}
+ol.typos li:before {
+    content: "[" counter(muffins) "]  " ;
+    font-weight: bold;
+    font-size:16pt;
+    color: #264409;
+}
+ol.typos {
+  list-style: none;
+  counter-reset: muffins;
+}

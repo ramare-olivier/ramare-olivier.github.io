@@ -647,13 +647,21 @@ span.rotate {
 ol.typos li {
     counter-increment: muffins;
     padding-left:4px;
-    margin-left: 3px;
+    margin-left: 20px;
+}
+ol.typos li span.titre{
+    color: #264409;
+    font-weight: bold;
+    font-size:16pt;
+}
+ol.typos li div.typo {
+    margin-left: 35px;
 }
 ol.typos li:before {
     content: "[" counter(muffins) "]  " ;
     font-weight: bold;
     font-size:16pt;
-    color: #264409;
+    color: #006600;
 }
 ol.typos {
   list-style: none;

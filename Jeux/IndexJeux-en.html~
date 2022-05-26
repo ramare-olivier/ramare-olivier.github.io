@@ -4,7 +4,7 @@
 
 <HTML>
 <HEAD>
-   <TITLE>Olivier Ramar&eacute;: Games</TITLE>
+   <TITLE>Olivier Ramar&eacute; : Jeux</TITLE>
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
 <meta name="Content-Language" content="fr">
 <meta name="Description" content="Jeux mathematiques : solitaire, jeu des captures, planik, planiket, et modelisations.">
@@ -154,14 +154,14 @@ function newCapturegame() {
 
 function PlayCapture(){
     var newHTML ="";
-    newHTML = "<div class=\"explanation\">The aim is to end with only one pawn,"
-+ "<br>or at least with as few pawns as possible!"
+    newHTML = "<div class=\"explanation\">Le but est de finir avec un pion,"
++ "<br>ou au moins avec le moins possible !"
 + "<center><hr width=\"70%\" size=10 color=\"blue\"></center>"
-+"One takes a pawn by clicking on it"
-+"<br>then on the landing square."
-+"<br>This langing square should be two squares away;
-"
-+"<br>One eats a pawn of the middle columns.</div>";
++"Il faut prendre un pion en cliquant"
++"<br>sur la case concern&eacute;e"
++"<br>puis cliquer sur la case d'arriv&eacute;e"
++"<br>en sautant au dessus d'une pile"
++"<br>dont on mange un pion.</div>";
     document.getElementById("TemporaryWindow").innerHTML = newHTML;
 }
 
@@ -347,20 +347,21 @@ function newPlanikgame() {
 
 function PlayPlanik(){
     var newHTML ="";
-    newHTML = "<div class=\"explanation\">The aim is to sort the squares,"
-+ "<br>so that the figures are in increasing order"
-+ "<br>at the end."
-+ "<br>A move can be inverting a line"
-+ "<br>or a column."
+    newHTML = "<div class=\"explanation\">Il faut ranger le carr&eacute;,"
++ "<br>de fa&ccedil;on que les chiffres se suivent"
++ "<br>&agrave; la fin."
++ "<br>Jouer consiste &agrave; inverser une ligne"
++ "<br>ou une colonne."
 + "<center><hr width=\"70%\" size=10 color=\"blue\"></center>"
-+"Click on the end of the line/column to invert"
-+"<br>then on the other extremity."
-+"<br>For the middle lines or columns,"
-+"<br>clicking one one extremity is enough."
-+"<br>Exchanges of column are denoted by"
-+"<br><span style=\"font-variant:normal;\">A, B, C and D</span>"
-+"<br>while exchanges of line are denoted by"
-+"<br><span style=\"font-variant:normal;\">a, b, c and d</span>.</div>"
++"Il faut choisir une extr&eacute;mit&eacute;"
++"<br>de la ligne ou colonne en cliquant dessus"
++"<br>puis cliquer sur l'autre extr&eacute;mit&eacute;."
++"<br>Pour les colonnes ou les lignes du milieu"
++"<br>il suffit de cliquer sur une extr&eacute;mit&eacute;."
++"<br>Les &eacute;changes de colonnes se nomment"
++"<br><span style=\"font-variant:normal;\">A, B, C et D</span>"
++"<br>et les &eacute;changes de lignes se nomment"
++"<br><span style=\"font-variant:normal;\">a, b, c et d</span>.</div>"
 
     document.getElementById("TemporaryWindow").innerHTML = newHTML;
 }
@@ -528,20 +529,21 @@ function initPlaniketgame() {
 
 function PlayPlaniket(){
     var newHTML ="";
-    newHTML = "<div class=\"explanation\">The aim is to sort the squares,"
-+ "<br>so that the figures are in increasing order"
-+ "<br>at the end."
-+ "<br>A move can be inverting a line"
-+ "<br>or a column."
+    newHTML = "<div class=\"explanation\">Il faut ranger le carr&eacute;,"
++ "<br>de fa&ccedil;on que les chiffres se suivent"
++ "<br>&agrave; la fin."
++ "<br>Jouer consiste &agrave; inverser une ligne"
++ "<br>ou une colonne."
 + "<center><hr width=\"70%\" size=10 color=\"blue\"></center>"
-+"Click on the end of the line/column to invert"
-+"<br>then on the other extremity."
-+"<br>For the middle lines or columns,"
-+"<br>clicking one one extremity is enough."
-+"<br>Exchanges of column are denoted by"
-+"<br><span style=\"font-variant:normal;\">A, B and C</span>"
-+"<br>while exchanges of line are denoted by"
-+"<br><span style=\"font-variant:normal;\">a, b and c</span>.</div>"
++"Il faut choisir une extr&eacute;mit&eacute;"
++"<br>de la ligne ou colonne en cliquant dessus"
++"<br>puis cliquer sur l'autre extr&eacute;mit&eacute;."
++"<br>Pour la colonne ou la ligne du milieu"
++"<br>il suffit de cliquer sur une extr&eacute;mit&eacute;."
++"<br>Les &eacute;changes de colonnes se nomment"
++"<br><span style=\"font-variant:normal;\">A, B et C</span>"
++"<br>et les &eacute;changes de lignes se nomment"
++"<br><span style=\"font-variant:normal;\">a, b et c</span>.</div>"
 
     document.getElementById("TemporaryWindow").innerHTML = newHTML;
                      }
@@ -716,20 +718,21 @@ function newCasseTetegame() {
 
 function PlayCasseTete(){
     var newHTML ="";
-    newHTML = "<div class=\"explanation\">The aim is to sort the squares,"
-+ "<br>so that the figures are in increasing order"
-+ "<br>at the end."
-+ "<br>A move can be inverting a line"
-+ "<br>or a column."
+    newHTML = "<div class=\"explanation\">Il faut ranger le carr&eacute;,"
++ "<br>de fa&ccedil;on que les chiffres se suivent"
++ "<br>&agrave; la fin."
++ "<br>Jouer consiste &agrave; faire une rotation"
++ "<br>sur une ligne ou sur une colonne."
 + "<center><hr width=\"70%\" size=10 color=\"blue\"></center>"
-+"Click on the end of the line/column to invert"
-+"<br>then on the other extremity."
-+"<br>For the middle lines or columns,"
-+"<br>clicking one one extremity is enough."
-+"<br>Exchanges of column are denoted by"
-+"<br><span style=\"font-variant:normal;\">A, B and C</span>"
-+"<br>while exchanges of line are denoted by"
-+"<br><span style=\"font-variant:normal;\">a, b and c</span>.</div>"
++"Il faut choisir une extr&eacute;mit&eacute;"
++"<br>de la ligne ou colonne en cliquant dessus"
++"<br>puis cliquer sur l'autre extr&eacute;mit&eacute;."
++"<br>Pour les colonnes ou les lignes m&eacute;diane"
++"<br>il suffit de cliquer sur une extr&eacute;mit&eacute;."
++"<br>Les rotations de colonnes se nomment"
++"<br><span style=\"font-variant:normal;\">A, B et C</span>"
++"<br>et les rotations de lignes se nomment"
++"<br><span style=\"font-variant:normal;\">a, b et c</span>.</div>"
 
     document.getElementById("TemporaryWindow").innerHTML = newHTML;
                      }
@@ -930,21 +933,22 @@ function SquareDance_random_position (){
 
 function PlaySquareDance(){
     var newHTML ="";
-   newHTML = "<div class=\"explanation\">The aim is to sort the squares,"
-+ "<br>so that the figures are in increasing order"
-+ "<br>at the end."
-+ "<br>A move can be inverting a line"
-+ "<br>or a column."
+    newHTML = "<div class=\"explanation\">Il faut ranger le carr&eacute;,"
++ "<br>de fa&ccedil;on que les lettres se suivent"
++ "<br>&agrave; la fin."
++ "<br>Jouer consiste &agrave; faire une rotation"
++ "<br>sur une ligne ou sur une colonne."
 + "<center><hr width=\"70%\" size=10 color=\"blue\"></center>"
-+"Click on the end of the line/column to invert"
-+"<br>then on the other extremity."
-+"<br>For the middle lines or columns,"
-+"<br>clicking one one extremity is enough."
-+"<br>Exchanges of column are denoted by"
-+"<br><span style=\"font-variant:normal;\">A, B, C and D</span>"
-+"<br>while exchanges of line are denoted by"
-+"<br><span style=\"font-variant:normal;\">a, b, c and d</span>.</div>"
-    
++"Il faut choisir une extr&eacute;mit&eacute;"
++"<br>de la ligne ou colonne en cliquant dessus"
++"<br>puis cliquer sur l'autre extr&eacute;mit&eacute;."
++"<br>Pour les colonnes ou les lignes m&eacute;diane"
++"<br>il suffit de cliquer sur une extr&eacute;mit&eacute;."
++"<br>Les rotations de colonnes se nomment"
++"<br><span style=\"font-variant:normal;\">A, B, C et D</span>"
++"<br>et les rotations de lignes se nomment"
++"<br><span style=\"font-variant:normal;\">a, b, c et d</span>.</div>"
+
     document.getElementById("TemporaryWindow").innerHTML = newHTML;
 }
 </SCRIPT>
@@ -970,7 +974,8 @@ function PlaySquareDance(){
      <img class="w3-image" src="../trucs/Mykines-5-2-petit.JPG"
 	  alt="Mykines" title="Mykines" width="100%">
     <div class="w3-display-left w3-padding-large">
-      <h1 class="w3-jumbo w3-text-white">Area Dedicated to Games!</h1>
+      <h1 class="w3-jumbo w3-text-white">Zone r&eacute;serv&eacute;e
+      aux Jeux !</h1>
       
       <h1 class="w3-text-white">Olivier Ramar&eacute;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       <h1 class="w3-jumbo w3-text-white">&nbsp;</h1>
@@ -982,19 +987,17 @@ function PlaySquareDance(){
 
 
 <script language="javascript">
-  BandeauGeneral(3, "../", 0, "en");
+  BandeauGeneral(3, "../", 0, "fr");
 </script>
 
 <dl id="MenuDroit"> 
 <dt>Navigation</dt>
-<dd><a href="IndexJeu.html">Version fran&ccedil;aise
-    <img src="../../trucs/drapeau_20france.jpg" width="40px" class="InTheMiddle"></a></dd>
-<dd><a href="#Top">Back to the top</a></dd>
-<dd><a href="#Solitaire">Peg Solitaire</a></dd>
-<dd><a href="#Captures">Captures</a></dd>
-<dd><a href="#Planik">Planik</a></dd>
-<dd><a href="#Planiket">Planiket</a></dd>
-<dd><a href="#CasseTete">Casse t&ecirc;te</a></dd>
+<dd><a href="#Top">Retour au d&eacute;but</a></dd>
+<dd><a href="#Solitaire">Le jeu du solitaire</a></dd>
+<dd><a href="#Captures">Le jeu des captures</a></dd>
+<dd><a href="#Planik">Le Planik</a></dd>
+<dd><a href="#Planiket">Le Planiket</a></dd>
+<dd><a href="#CasseTete">Un Casse t&ecirc;te</a></dd>
 <dd><a href="#SquareDance">Square Dance</a></dd>
 </dl>
 
@@ -1006,14 +1009,16 @@ function PlaySquareDance(){
     <br></br>
     <br></br>
     <br></br>
-All the material presented here belongs to the author, which is myself
-    :) It may be used under GPL license,
-see <a href="http://org.rodage.com/gpl-3.0.fr.html">ici</a>, or, in a
-    more detailled fashion, 
-    <a href="http://www.gnu.org/licenses/gpl.html">here</a>.
-    Notice that any non-commercial usage will be (happily) welcomed!
-If you use part of the material here, I
-    would appreciate if you could cite me or this site or both :)
+Tout le mat&eacute;riel pr&eacute;sent&eacute; ici appartient &agrave;
+l'auteur, c'est &agrave; dire, pour &eacute;viter de parler &agrave; la
+troisi&egrave;me personne, moi-m&ecirc;me personnellement :) Il est disponible
+sous licence GPL,
+voir <a href="http://org.rodage.com/gpl-3.0.fr.html">ici</a>, ou, de
+fa&ccedil;on plus
+g&eacute;n&eacute;rale, <a href="http://www.gnu.org/licenses/gpl.html">l&agrave;</a>. En 
+particulier, toute utilisation non commerciale est accept&eacute;e et
+m&ecirc;me accueillie &agrave; bras ouverts ! Pensez de temps &agrave; autre
+&agrave; me citer, cela me fera plaisir, m&ecirc;me si je ne le sais pas :)
 </i>
 </blockquote>
 </div>
@@ -1076,8 +1081,8 @@ If you use part of the material here, I
 <hr width="30%" size=3 color="lightblue">
 </center>
 <center>
-<a class="megaword" href="Solitaire/SolitaireJeu-en.html">Towards a
-  page where one can play online</a>
+<a class="megaword" href="Solitaire/SolitaireJeu.html">Vers une page o&ugrave;
+l'on peut jouer en ligne !</a>
 </center>
 </center>
 <!-------------->
@@ -1092,7 +1097,7 @@ If you use part of the material here, I
 <div class="oddselection" style="width:65%;">
 <center>
 <font size=+2>
-  <span class="someword">Captures</span>
+  <span class="someword">Le jeu des Captures</span>
 </font>
 </center>
 <center>
@@ -1100,28 +1105,26 @@ If you use part of the material here, I
 </center>
 
 <ol>
-<li><a href="LeJeuDesCaptures-CIJM-3.pdf"
-       class="someword">Description</a> and some problems.</li>
-<li><a href="LeJeuDesCaptures-livre-3.pdf" class="someword">Towards a
-    mathematical model.</a></li>
+<li><a href="LeJeuDesCaptures-CIJM-3.pdf" class="someword">Un petit texte</a> de pr&eacute;sentations et de probl&egrave;mes.</li>
+<li><a href="LeJeuDesCaptures-livre-3.pdf" class="someword">Vers une mod&eacute;lisation.</a></li>
 </ol>
 </div>
 <center>
 <hr width="30%" size=3 color="lightblue">
 </center>
 <center>
-Here is a (beginner's) script in javascript that allows one to play.
+Voici un petit essai (de d&eacute;butant !) en javascript qui permet de jouer. 
 </center>
 <br>
   <form name="Capture">
     <span>
       <select name="Debut" onChange="window.newCapturegame()" 
                    style="width:150px;font-size:16px;font-style:bold;margin-right:50px;background:#A9F5A9;color:blue;border:none">
-     	<option value="d1">Classical start</option>
-	    <option value="d2">Concavity</option>
-	    <option value="d3">The small wall</option>
-	    <option value="d4">The wall</option>
-	    <option value="d5">The rush</option>
+     	<option value="d1">D&eacute;but classique</option>
+	    <option value="d2">Le creux</option>
+	    <option value="d3">Le muret</option>
+	    <option value="d4">Le mur</option>
+	    <option value="d5">La ru&eacute;e</option>
 	  </select>
     </span>
     <span align="center">
@@ -1139,17 +1142,17 @@ Here is a (beginner's) script in javascript that allows one to play.
     <br><br>
       <font size=-1><i>
       <span class="playcapture" onMouseOver="PlayCapture();" onMouseOut="ClearTemporaryWindow();">
-      In order <font size=+1>to play</font>, click on the starting
-      square and then on the landing one.
+      Pour <font size=+1>jouer</font>, cliquer sur la case de d&eacute;part puis sur celle
+      d'arriv&eacute;e.
       </span>
       </i></font>
     <br><br>
-    Number of remaining pawns:
+    Nombre de pions restant :
     <input name="Capture_moves" size="3" value="0"> <br><br>
     <center>
       <table>
         <tr>
-          <td valign="top"><i>History:</i>&nbsp;</td>
+          <td valign="top"><i>Historique :</i>&nbsp;</td>
           <td> <textarea name="Capturehistorique" rows="5" cols="27"
                          onfocus="document.forms[Capture].Capturehistorique.blur()"
                          wrap="off">
@@ -1180,7 +1183,7 @@ Here is a (beginner's) script in javascript that allows one to play.
 <div class="oddselection" style="width:65%;">
 <center>
 <font size=+2>
-  <span class="someword">Planik</span>
+  <span class="someword">Le Planik</span>
 </font>
 </center>
 <center>
@@ -1189,10 +1192,8 @@ Here is a (beginner's) script in javascript that allows one to play.
 </center>
 
 <ol>
-<li><a href="Planik-CIJM-2.pdf" class="someword">Description</a> and
-  some problems.</li>
-<li><a href="Planik-notes-4.pdf" class="someword">Towards a
-    mathematical model.</a></li>
+<li><a href="Planik-CIJM-2.pdf" class="someword">Un petit texte</a> de pr&eacute;sentations et de probl&egrave;mes.</li>
+<li><a href="Planik-notes-4.pdf" class="someword">Vers une mod&eacute;lisation.</a></li>
 </ol>
 
 
@@ -1201,7 +1202,7 @@ Here is a (beginner's) script in javascript that allows one to play.
 <hr width="30%" size=3 color="lightblue">
 </center>
 <center>
-Here is the sequel of my javascript attempts, so that one can play online!
+Voici la suite de mes essais en javascript, afin de s'essayer &agrave; ce jeux. 
 </center>
 <br>
   <form name="Planik">
@@ -1210,11 +1211,11 @@ Here is the sequel of my javascript attempts, so that one can play online!
         <td>
           <select name="Debut" onChange="window.newPlanikgame()" 
                   style="width:150px;font-size:16px;font-style:bold;margin-right:50px;background:#A9F5A9;color:blue;border:none">
-     	    <option value="d1">Classical Start</option>
-	        <option value="d2">Random Start</option>
-	        <option value="d3">A diagonal</option>
-	        <option value="d4">Double exchange</option>
-     	    <option value="d5">Problem</option>
+     	    <option value="d1">D&eacute;but classique</option>
+	        <option value="d2">Au hasard</option>
+	        <option value="d3">Une diagonale</option>
+	        <option value="d4">Double &eacute;change</option>
+     	    <option value="d5">Probl&egrave;me</option>
 		      </select>
         </td>
         <td>
@@ -1261,15 +1262,15 @@ Here is the sequel of my javascript attempts, so that one can play online!
 
       <font size=-1><i>
       <span class="playcapture" onMouseOver="PlayPlanik();" onMouseOut="ClearTemporaryWindow();">
-      In order <font size=+1>to play</font>, click on the starting
-      square and, if required, on the landing one.
+      Pour <font size=+1>jouer</font>, cliquer sur la case de d&eacute;part puis sur celle
+      d'arriv&eacute;e.
       </span>
     </i></font>
     
     <center>
       <table>
         <tr>
-          <td valign="top"><i>History:</i>&nbsp;</td>
+          <td valign="top"><i>Historique :</i>&nbsp;</td>
           <td> <textarea name="Planikhistorique" rows="5" cols="25"
                          onfocus="document.forms[Planik].Planikhistorique.blur()"
                          wrap="off">
@@ -1304,7 +1305,7 @@ Here is the sequel of my javascript attempts, so that one can play online!
 <div class="oddselection" style="width:65%;">
 <center>
 <font size=+2>
-  <span class="someword">Planiket</span>
+  <span class="someword">Le Planiket</span>
 </font>
 </center>
 </div>
@@ -1313,11 +1314,19 @@ Here is the sequel of my javascript attempts, so that one can play online!
 </center>
 
 <center>
-  <blockquote>
-    Here is a simplified version of the above game. The theory is to be
+<blockquote>
+Le jeu suivant est une version simplifi&eacute;e du
+pr&eacute;c&eacute;dent. Nous laissons &agrave; la lectrice passionn&eacute;e
+le plaisir d'en &eacute;crire une th&eacute;orie ! Il me semble que l'on peut
+r&eacute;soudre tout probl&egrave;me en moins de 5 coups, toute preuve ou
+infirmation de ce fait sera publi&eacute; ici.
+</blockquote>
+<blockquote>
+<i>Here is a simplified version of the above game. The theory is to be
 written: help is welcome! It seems likely that every position can be brought to the initial one
 in not more than five moves. Any proof or disproof of this fact will be
 published here.
+</i>
 </blockquote>
 </center>
         
@@ -1328,9 +1337,9 @@ published here.
         <td>
           <select name="Debut" onChange="window.newPlaniketgame()" 
                   style="width:150px;font-size:16px;font-style:bold;margin-right:50px;background:#A9F5A9;color:blue;border:none">
-     	    <option value="d1">Classical Start</option>
-	        <option value="d2">Random Start</option>
-	        <option value="d3">Double exchange</option>
+     	    <option value="d1">D&eacute;but classique</option>
+	        <option value="d2">Au hasard</option>
+	        <option value="d3">Double &eacute;change</option>
 		      </select>
         </td>
         <td>
@@ -1364,8 +1373,7 @@ published here.
 
       <font size=-1><i>
       <span class="playcapture" onMouseOver="PlayPlaniket();" onMouseOut="ClearTemporaryWindow();">
-      In order <font size=+1>to play</font>, click on the starting
-      square and, if required, on the landing one.
+      Pour <font size=+1>jouer</font>, cliquer sur la case de d&eacute;part puis sur celle
       d'arriv&eacute;e.
       </span>
       </i></font>
@@ -1373,7 +1381,7 @@ published here.
     <center>
       <table valign="top">
         <tr>
-          <td><i>History:</i>&nbsp;</td>
+          <td><i>Historique :</i>&nbsp;</td>
           <td> <textarea name="Planikethistorique" rows="5" cols="25"
                          onfocus="document.forms[Planiket].Planikethistorique.blur()"
                          wrap="off">
@@ -1406,7 +1414,7 @@ published here.
 <div class="oddselection" style="width:65%;">
 <center>
 <font size=+2>
-  <span class="someword">Casse Tete</span>
+  <span class="someword">Le CasseTete</span>
 </font>
 </center>
 </div>
@@ -1416,7 +1424,11 @@ published here.
 
 <center>
 <blockquote>
-Here is a variant of the preceding one by using circular permutations.
+Le jeu suivant est une variation du pr&eacute;c&eacute;dent avec des permutations circulaires (programmation Matteo Andreu).
+</blockquote>
+<blockquote>
+<i>Here is a variant of the preceding one by using circular permutations.
+</i>
 </blockquote>
 </center>
         
@@ -1462,15 +1474,15 @@ Here is a variant of the preceding one by using circular permutations.
 
       <font size=-1><i>
       <span class="playcapture" onMouseOver="PlayCasseTete();" onMouseOut="ClearTemporaryWindow();">
-      In order <font size=+1>to play</font>,click on the starting
-      square and, if required, on the landing one.
+      Pour <font size=+1>jouer</font>, cliquer sur la case de d&eacute;part puis sur celle
+      d'arriv&eacute;e.
       </span>
       </i></font>
 
     <center>
       <table valign="top">
         <tr>
-          <td><i>History:</i>&nbsp;</td>
+          <td><i>Historique :</i>&nbsp;</td>
           <td> <textarea name="CasseTetehistorique" rows="5" cols="25"
                          onfocus="document.forms[CasseTete].Planikethistorique.blur()"
                          wrap="off">
@@ -1512,7 +1524,12 @@ Here is a variant of the preceding one by using circular permutations.
 
 <center>
 <blockquote>
-Here is yet another game with permutations, like the two previous ones, but with no fixed points, which makes the theory rather different!
+Voici encore un jeu de permutations dont nous laissons au lecteur passionn&eacute;
+le plaisir d'en &eacute;crire une th&eacute;orie ! Celle-ci est notoirement diff&eacute;rente de celles des Planik et Planiket
+</blockquote>
+<blockquote>
+<i>Here is another game with permutations, like the two previous ones, but with no fixed points, which makes the theory rather different!
+</i>
 </blockquote>
 </center>
         
@@ -1523,9 +1540,9 @@ Here is yet another game with permutations, like the two previous ones, but with
         <td>
           <select name="Debut" onChange="window.newSquareDancegame()" 
                   style="width:150px;font-size:16px;font-style:bold;margin-right:50px;background:#A9F5A9;color:blue;border:none">
-     	    <option value="d1">Classical Start</option>
-	        <option value="d2">Random Start</option>
-	        <option value="d3">Double exchange</option>
+     	    <option value="d1">D&eacute;but classique</option>
+	        <option value="d2">Au hasard</option>
+	        <option value="d3">Double &eacute;change</option>
 		      </select>
         </td>
         <td>
@@ -1576,15 +1593,15 @@ Here is yet another game with permutations, like the two previous ones, but with
 
       <font size=-1><i>
       <span class="playcapture" onMouseOver="PlaySquareDance();" onMouseOut="ClearTemporaryWindow();">
-      In order <font size=+1>to play</font>, click on the starting
-      square and, if required, on the landing one.
+      Pour <font size=+1>jouer</font>, cliquer sur la case de d&eacute;part puis sur celle
+      d'arriv&eacute;e.
       </span>
       </i></font>
 
     <center>
       <table valign="top">
         <tr>
-          <td><i>History:</i>&nbsp;</td>
+          <td><i>Historique :</i>&nbsp;</td>
           <td> <textarea name="SquareDancehistorique" rows="5" cols="25"
                          onfocus="document.forms[SquareDance].SquareDancehistorique.blur()"
                          wrap="off">

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2022.3.1)  19 MAY 2022 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2022.2.26)  29 APR 2022 09:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -230,10 +230,10 @@ LaTeX Info: Redefining \nameref on input line 8.
 
 
 
-LaTeX Warning: Citation `Kadiri*18' undefined on input line 219.
+LaTeX Warning: Citation `Kadiri-Faber*18' undefined on input line 97.
 
 
-LaTeX Warning: Citation `Kadiri-Faber*18' undefined on input line 246.
+LaTeX Warning: Citation `Kadiri*18' undefined on input line 216.
 
 (./biblio.bbl
 LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
@@ -277,105 +277,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 377--382
  []
 
 [5]
-Underfull \hbox (badness 6348) in paragraph at lines 474--479
+Underfull \hbox (badness 6348) in paragraph at lines 468--473
 \OT1/cmr/m/it/10 Siegel-Formel\OT1/cmr/m/n/10 .  Ph.D. the-sis, Mathematisch-Na
 turwissenschaftliche
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 486--491
+Underfull \hbox (badness 1552) in paragraph at lines 480--485
 \OT1/cmr/m/n/10 mann Zeta Func-tion and ze-ros com-pu-ta-tions at very large he
 ight.
  []
 
 
-Overfull \hbox (120.88525pt too wide) in paragraph at lines 486--491
+Overfull \hbox (120.88525pt too wide) in paragraph at lines 480--485
 [][][][]\OT1/cmr/m/n/10 . 
  []
 
 
-Underfull \hbox (badness 7888) in paragraph at lines 506--510
+Underfull \hbox (badness 7888) in paragraph at lines 500--504
 []\OT1/cmr/m/n/10 Granville, A., & Soundarara-jan, K. 2003.  The dis-tri-bu-tio
 n of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--510
+Underfull \hbox (badness 10000) in paragraph at lines 500--504
 \OT1/cmr/m/n/10 val-ues of $\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (1\OML/cmm/m/it/1
 0 ; ^^_\OT1/cmr/m/n/10 )$.  \OT1/cmr/m/it/10 Geom. Func. Anal.\OT1/cmr/m/n/10 ,
  \OT1/cmr/bx/n/10 13\OT1/cmr/m/n/10 (5), 992--1028.
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 544--548
+Underfull \hbox (badness 1622) in paragraph at lines 538--542
 []\OT1/cmr/m/n/10 Helfgott, H.A. 2017.  $\OML/cmm/m/it/10 L[]$ \OT1/cmr/m/it/10
  bounds for tails of $\OML/cmm/m/it/10 ^^P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\O
 T1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 on a ver-ti-cal line\OT1/cmr/m/n/10 .
  []
 
 
-Overfull \hbox (192.02338pt too wide) in paragraph at lines 544--548
+Overfull \hbox (192.02338pt too wide) in paragraph at lines 538--542
 [][][][]\OT1/cmr/m/n/10 . 
  []
 
 [6]
-Underfull \hbox (badness 5008) in paragraph at lines 616--621
+Underfull \hbox (badness 5008) in paragraph at lines 610--615
 []\OT1/cmr/m/n/10 Kadiri, H. 2002.  \OT1/cmr/m/it/10 Une r^^Segion ex-plicite s
 ans z^^Seros pour les fonc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--621
+Underfull \hbox (badness 10000) in paragraph at lines 610--615
 \OT1/cmr/m/it/10 tions $\OML/cmm/m/it/10 L$ \OT1/cmr/m/it/10 de Dirich-let\OT1/
 cmr/m/n/10 .  Ph.D. the-sis, Uni-ver-sit^^Se Lille 1.
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 641--645
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--639
 []\OT1/cmr/m/n/10 Kadiri, H. 2012.  Ex-plicit zero-free re-gions for Dedekind
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--645
+Underfull \hbox (badness 10000) in paragraph at lines 635--639
 \OT1/cmr/m/n/10 zeta func-tions.  \OT1/cmr/m/it/10 Int. J. Num-ber The-ory\OT1/
 cmr/m/n/10 , \OT1/cmr/bx/n/10 8\OT1/cmr/m/n/10 (1), 125--147.
  []
 
-[8] [9]
-Underfull \hbox (badness 1859) in paragraph at lines 886--890
+[7] [8] [9]
+Underfull \hbox (badness 1859) in paragraph at lines 880--884
 []\OT1/cmr/m/n/10 Nicolas, J.-L. 2008.  Quelques in^^Segalit^^Ses ef-fec-tives 
 en-tre des fonc-tions
  []
 
-[10] [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1189--1192
+[10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1186
 []\OT1/cmr/m/n/10 Trudgian, T. 2012.  A new up-per bound for $\OMS/cmsy/m/n/10 
 j\OML/cmm/m/it/10 ^^P\OT1/cmr/m/n/10 (1 + \OML/cmm/m/it/10 it\OT1/cmr/m/n/10 )\
 OMS/cmsy/m/n/10 j$\OT1/cmr/m/n/10 .
  []
 
-[14])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+[13])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
  (./biblio.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 342.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
 Package rerunfilecheck Info: File `biblio.out' has not changed.
 (rerunfilecheck)             Checksum: 9F07EC05F143D1F0C6494F0F9D9DFD36;46.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 342.
  ) 
 Here is how much of TeX's memory you used:
- 5246 strings out of 483041
- 80009 string characters out of 5962453
- 344008 words of memory out of 5000000
- 20215 multiletter control sequences out of 15000+600000
+ 5245 strings out of 483082
+ 80001 string characters out of 5963467
+ 344818 words of memory out of 5000000
+ 20207 multiletter control sequences out of 15000+600000
  535950 words of font info for 41 fonts, out of 8000000 for 9000
- 81 hyphenation exceptions out of 8191
- 37i,4n,31p,252b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59 hyphenation exceptions out of 8191
+ 37i,4n,31p,252b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on biblio.dvi (15 pages, 87456 bytes).
+Output written on biblio.dvi (14 pages, 86664 bytes).

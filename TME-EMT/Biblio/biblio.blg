@@ -2,62 +2,62 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: biblio.aux
 The style file: authordate1.bst
-Reallocated field_info (elt_size=4) to 10198 items from 5000.
+Reallocated field_info (elt_size=4) to 10221 items from 5000.
 Database file #1: Local-TME-EMT.bib
-Repeated entry---line 87 of file Local-TME-EMT.bib
+Repeated entry---line 127 of file Local-TME-EMT.bib
  : @article {Bordignon*21
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 12825 of file Local-TME-EMT.bib
+Repeated entry---line 12913 of file Local-TME-EMT.bib
  : @article{Kotnik-vandeLune*04
  :                             ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "Carneiro-Milinovich-Soundararajan*19" isn't style-file defined
---line 19211 of file Local-TME-EMT.bib
+--line 19299 of file Local-TME-EMT.bib
 Warning--I didn't find a database entry for "Kadiri-Faber*18"
 Warning--I didn't find a database entry for "Kadiri*18"
 Warning--empty school in Platt*13
 Warning--empty journal in Trudgian*12b
 Warning--empty journal in Wedeniwski*02
-You've used 224 entries,
+You've used 225 entries,
             2441 wiz_defined-function locations,
-            1978 strings with 34451 characters,
-and the built_in function-call counts, 90448 in all, are:
-= -- 9093
-> -- 2312
-< -- 738
-+ -- 726
-- -- 621
-* -- 7702
-:= -- 14436
-add.period$ -- 917
-call.type$ -- 224
-change.case$ -- 1405
-chr.to.int$ -- 211
-cite$ -- 227
-duplicate$ -- 3526
-empty$ -- 7215
-format.name$ -- 951
-if$ -- 18461
+            1983 strings with 34561 characters,
+and the built_in function-call counts, 90924 in all, are:
+= -- 9140
+> -- 2320
+< -- 741
++ -- 730
+- -- 623
+* -- 7743
+:= -- 14508
+add.period$ -- 921
+call.type$ -- 225
+change.case$ -- 1411
+chr.to.int$ -- 212
+cite$ -- 228
+duplicate$ -- 3542
+empty$ -- 7258
+format.name$ -- 954
+if$ -- 18559
 int.to.chr$ -- 14
 int.to.str$ -- 0
-missing$ -- 224
-newline$ -- 1144
-num.names$ -- 674
-pop$ -- 1118
+missing$ -- 225
+newline$ -- 1149
+num.names$ -- 677
+pop$ -- 1122
 preamble$ -- 1
-purify$ -- 1629
+purify$ -- 1636
 quote$ -- 0
-skip$ -- 3323
+skip$ -- 3338
 stack$ -- 0
-substring$ -- 7415
-swap$ -- 683
+substring$ -- 7479
+swap$ -- 686
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1772
+type$ -- 1780
 warning$ -- 3
-while$ -- 741
+while$ -- 744
 width$ -- 0
-write$ -- 2937
+write$ -- 2950
 (There were 2 error messages)

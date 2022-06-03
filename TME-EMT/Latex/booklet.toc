@@ -126,6 +126,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {16.2}Combinatorial sieve estimates}{90}{section.16.2}%
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.3}Integers free of small prime factors}{90}{section.16.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {part}{VIII\hspace {1em}Analytic Number Theory in Number Fields}{91}{part.8}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {17} Bounds on the Dedekind zeta-function}{93}{chapter.17}%

@@ -2467,6 +2467,31 @@
       \verb http://dx.doi.org/10.1090/S0025-5718-2014-02886-X
       \endverb
     \endentry
+    \entry{Fan*22}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9d4e9eefbaccdfb64ad628c6e7eb2dcb}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d4e9eefbaccdfb64ad628c6e7eb2dcb}
+      \strng{fullhash}{9d4e9eefbaccdfb64ad628c6e7eb2dcb}
+      \strng{bibnamehash}{9d4e9eefbaccdfb64ad628c6e7eb2dcb}
+      \strng{authorbibnamehash}{9d4e9eefbaccdfb64ad628c6e7eb2dcb}
+      \strng{authornamehash}{9d4e9eefbaccdfb64ad628c6e7eb2dcb}
+      \strng{authorfullhash}{9d4e9eefbaccdfb64ad628c6e7eb2dcb}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Integers}
+      \field{title}{An inequality for the distribution of numbers free of small prime factors}
+      \field{volume}{22}
+      \field{year}{2022}
+      \field{pages}{Paper No. A26\bibrangessep 12}
+      \range{pages}{-1}
+    \endentry
     \entry{Filaseta*90}{article}{}
       \name{author}{1}{}{%
         {{hash=f6c55ffde204eae3a434816b90b61dda}{%

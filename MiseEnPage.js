@@ -25,7 +25,7 @@ function BandeauGeneral(numeroOn, Home, profondeur, lang){
         } else {
             newHTML += '<li>';
         }
-        if(x == 2){
+        if(x == 3){
 	    newHTML += '<a href = "https://tmeemt.github.io/Chest/"</a></li>';
 	} else {
             newHTML += '<a href = "' + Home + arch[x][0][1]
@@ -52,7 +52,6 @@ function BandeauGeneral(numeroOn, Home, profondeur, lang){
             + '</strong></p>  ';
      } else if ((numeroOn == 2)&&(isNaN(profondeur))){ 
          /*** TME-EMT; in that case profondeur = [a,b] ***/
-	 Home = 'https://tmeemt.github.io/Chest/';
         newHTML += '<a href = "'  + Home  + arch[0][0][1] 
             + '">' + arch[0][0][0]
             + '</a>  &gt; ';

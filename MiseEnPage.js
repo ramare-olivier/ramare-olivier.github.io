@@ -25,7 +25,7 @@ function BandeauGeneral(numeroOn, Home, profondeur, lang){
         } else {
             newHTML += '<li>';
         }
-        if(x == 3){
+        if(x == 2){
 	    newHTML += '<a href = "https://tmeemt.github.io/Chest/"</a></li>';
 	} else {
             newHTML += '<a href = "' + Home + arch[x][0][1]

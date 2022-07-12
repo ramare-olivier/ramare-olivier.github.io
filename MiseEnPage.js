@@ -26,8 +26,8 @@ function BandeauGeneral(numeroOn, Home, profondeur, lang){
             newHTML += '<li>';
         }
         if(x == 2){
-	    newHTML += '<a href = "' + arch[x][0][1]
-		+ '">'+ arch[x][0][0] + '</a></li>';
+	    newHTML += '<a href = "' + arch[2][0][1]
+		+ '">'+ arch[2][0][0] + '</a></li>';
 	} else {
             newHTML += '<a href = "' + Home + arch[x][0][1]
 		+ '">'+ arch[x][0][0] + '</a></li>';}

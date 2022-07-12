@@ -1,4 +1,4 @@
-var Architecture = [[["Home", "index.html"]], [["Publications", "Maths/contenu.html"], ["Excursions Typos", "Maths/ExcursionsInMultiplicativeNT-Typos/contenu-typos.html"]], [["Projet TME-EMT", "index.html"]], [["Jeux - Games", "Jeux/IndexJeux.html"], ["Solitaire", "Jeux/Solitaire/SolitaireJeu.html"], ["&Eacute;tude du Solitaire", "Jeux/Solitaire/Solitaire.html"]]];
+var Architecture = [[["Home", "index.html"]], [["Publications", "Maths/contenu.html"], ["Excursions Typos", "Maths/ExcursionsInMultiplicativeNT-Typos/contenu-typos.html"]], [["Projet TME-EMT", "https://tmeemt.github.io/Chest/"]], [["Jeux - Games", "Jeux/IndexJeux.html"], ["Solitaire", "Jeux/Solitaire/SolitaireJeu.html"], ["&Eacute;tude du Solitaire", "Jeux/Solitaire/Solitaire.html"]]];
 
 var Architecture_en = [[["Home", "index.html"]], [["Publications", "Maths/contenu.html"], ["Excursions Typos", "Maths/ExcursionsInMultiplicativeNT-Typos/contenu-typos.html"]], [["The TME-EMT project", "https://tmeemt.github.io/Chest/"]], [["Games", "Jeux/IndexJeux.html"], ["Peg Solitaire", "Jeux/Solitaire/SolitaireJeu-en.html"], ["Study of Peg Solitaire", "Jeux/Solitaire/Solitaire-en.html"]]];
 

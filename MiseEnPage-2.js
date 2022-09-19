@@ -35,11 +35,11 @@ $(document).ready(function(){
         var text = $(this).parent().siblings('.moremenu').eq(0);
         if(text.is(':hidden')){
             text.slideDown('500');
-            $(this).html('-');
+            $(this).html('---');
         }
         else {
             text.slideUp('300');
-            $(this).html('+');
+            $(this).html('+++');
         }
     });
 });
@@ -49,15 +49,15 @@ $(document).ready(function(){
         var text = $(this).siblings('.resumecontent').eq(0);
         if(text.is(':hidden')){
             text.slideDown('500');
-            $(this).html('-');
+            $(this).html('---');
         }
         else {
             text.slideUp('300');
-            $(this).html('+');
+            $(this).html('+++');
         }
     });
     $('#TMEEMTMenu li .resumecontent').click(function() {
         $(this).slideUp('300');
-        $(this).siblings('.bidule').eq(0).html('+');
+        $(this).siblings('.bidule').eq(0).html('+++');
     });
 });

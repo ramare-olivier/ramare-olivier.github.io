@@ -48,14 +48,14 @@ var Flacon = {
            9,9,0,0,0,9,9],
     fin : [9,9,0,0,0,9,9,
            9,9,0,0,0,9,9,
-           0,0,0,0,0,0,0,
            0,0,0,1,0,0,0,
+           0,0,0,0,0,0,0,
            0,0,0,0,0,0,0,
            9,9,0,0,0,9,9,
            9,9,0,0,0,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Il faut finir avec un seul pion, et que celui-ci soit au centre !"
+    problematique_message : "Il faut finir avec un seul pion !"
 };
 
 var Arc_court = {

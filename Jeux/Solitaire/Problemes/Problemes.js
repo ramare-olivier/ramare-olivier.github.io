@@ -38,6 +38,26 @@ var Diamant = {
     problematique_message : "Il faut finir avec un seul pion, et que celui-ci soit au centre !"
 };
 
+var Flacon = {
+    ini : [9,9,0,0,0,9,9,
+           9,9,0,1,0,9,9,
+           0,0,1,1,1,0,0,
+           0,0,1,0,1,0,0,
+           0,0,1,1,1,0,0,
+           9,9,0,0,0,9,9,
+           9,9,0,0,0,9,9],
+    fin : [9,9,0,0,0,9,9,
+           9,9,0,0,0,9,9,
+           0,0,0,0,0,0,0,
+           0,0,0,1,0,0,0,
+           0,0,0,0,0,0,0,
+           9,9,0,0,0,9,9,
+           9,9,0,0,0,9,9],
+    hauteur : 7,
+    largeur : 7,
+    problematique_message : "Il faut finir avec un seul pion, et que celui-ci soit au centre !"
+};
+
 var Arc_court = {
     ini :[9,9,0,0,0,9,9,
                        9,9,0,0,0,9,9,
@@ -115,7 +135,7 @@ var Maison = {
            9,9,0,0,0,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Il faut finir avec un seul pion, là où nous l'avons indiqué"
+    problematique_message : "Il faut finir avec un seul pion, lÃ  oÃ¹ nous l'avons indiquÃ©"
 };
 
 var Arcades = {
@@ -135,7 +155,7 @@ var Arcades = {
            9,9,0,0,0,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Il faut finir avec un seul pion, là où nous l'avons indiqué"
+    problematique_message : "Il faut finir avec un seul pion, lÃ  oÃ¹ nous l'avons indiquÃ©"
 };
 
 var Yo = {
@@ -155,7 +175,7 @@ var Yo = {
            9,9,0,0,0,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Il faut finir avec un seul pion, là où nous l'avons indiqué"
+    problematique_message : "Il faut finir avec un seul pion, lÃ  oÃ¹ nous l'avons indiquÃ©"
 };
 
 var Spirale = {
@@ -195,7 +215,7 @@ var Troupe = {
                        9,9,-1,-1,-1,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Essayez de mettre un pion sur la case indiquée, quelque soit ce qui reste à côté."
+    problematique_message : "Essayez de mettre un pion sur la case indiquÃ©e, quelque soit ce qui reste Ã  cÃ´tÃ©."
 };
 
 var Fenetre = {
@@ -523,7 +543,7 @@ var Croix_de_Malte = {
            9,9,1,1,1,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Atteindre la position indiquée !"
+    problematique_message : "Atteindre la position indiquÃ©e !"
 };
 
 var Equateur = {
@@ -543,7 +563,7 @@ var Equateur = {
            9,9,1,1,1,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Atteindre la position indiquée !"
+    problematique_message : "Atteindre la position indiquÃ©e !"
 };
 
 var Carre_incline = {
@@ -563,7 +583,7 @@ var Carre_incline = {
            9,9,0,0,0,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Atteindre la position indiquée !"
+    problematique_message : "Atteindre la position indiquÃ©e !"
 };
 
 var Calice = {
@@ -583,7 +603,7 @@ var Calice = {
            9,9,1,1,1,9,9],
     hauteur : 7,
     largeur : 7,
-    problematique_message : "Il faut réussir à dessiner le Calice indiqué. Ce problème est TRÉS dur !!"
+    problematique_message : "Il faut rÃ©ussir Ã  dessiner le Calice indiquÃ©. Ce problÃ¨me est TRÃˆS dur !!"
 };
 
 var Wiegleb ={
@@ -607,7 +627,7 @@ var Wiegleb ={
            9,9,9,0,0,0,9,9,9],
     hauteur : 9,
     largeur : 9,
-    problematique_message : "Il faut finir avec un seul pion ! Ce plateau dû à Wiegleb en 1779 donne lieu à des problèmes souvent très difficiles, comme celui-ci."
+    problematique_message : "Il faut finir avec un seul pion ! Ce plateau dÃ» Ã  Wiegleb en 1779 donne lieu Ã  des problÃ¨mes souvent trÃ¨s difficiles, comme celui-ci."
 };
 
 
@@ -632,7 +652,7 @@ var Cellulaire ={
            0,0,0,0,0,0,0,0,0],
     hauteur : 9,
     largeur : 9,
-    problematique_message : "Il s'agit d'un problème ouvert. Le plateau est beaucoup plus difficile et possède par exemple huit caractéristiques."
+    problematique_message : "Il s'agit d'un problÃ¨me ouvert. Le plateau est beaucoup plus difficile et possÃ¨de par exemple huit caractÃ©ristiques."
 };
 
 

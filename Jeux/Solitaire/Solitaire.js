@@ -378,6 +378,7 @@ function newgame() {
     case "d29": newpb = Main_de_Fatma; break;
     case "d30": newpb = Wiegleb; break;
     case "d31": newpb = Cellulaire; break;
+    case "d32": newpb = Flacon; break;
     default :  newpb = Anglais; break;
     };
 

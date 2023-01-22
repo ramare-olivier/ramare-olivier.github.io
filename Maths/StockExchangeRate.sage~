@@ -1,6 +1,0 @@
-def plotPublis(alist):
-    # ln(alist) > 2
-    smoothedlist = [(alist[max(0, k-1)] + alist[k] + alist[min(k+1, len(alist))])/3
-                    | k <- [0..len(alist)]]
-    return(smoothedlist)
-

@@ -163,76 +163,92 @@ in this explanation. There are several kind of structures :
  [SOFT-STRING1 soft INDENT-SOFT1]
  ([STRONG-STRING1 strong INDENT-STRONG1]
   [SOFT-STRING2 soft INDENT-SOFT2])
- ([STRONG-STRING2 strong INDENT-STRONG2])
- [END-STRING end])
-is the usual structure, like in 'if/then/(elif/then)/(else)/end_if'.  Between
-the 'head' and the 'soft', INDENT-HEAD is used on subsequent lines to offset the
-new line with respect to the beginning of HEAD-STRING. When the 'soft' is found,
-INDENT-SOFT1 is used still with respect to the 'head'.  The next part is
-optional.  The STRONG-STRING is aligned on its 'head' and INDENT-STRONG is used
-after that, with respect to the STRONG-STRING. Finally the END-STRING is aligned
-on the previous STRONG-STRING (the 'heredity principle'). If you want to change
-this alignement, use `sli-shift-alist' below.  Note that an INDENT-* value can
-be either an integer or a cons pair whose first element is the symbol 'absolute
-and the second one is an integer: it means that the indentation is not relative
-but absolute with respect to the left margin. It applies also to the next
-strong/end key.  In this construct, you can also use [SPECIAL-HEAD-STRING
-special-head INDENT-SPECIAL-HEAD SEPARATORS]. This key is closed by SEPARATORS
-which is either a separator which belongs to `sli-separators' or a list of
-separators all in `sli-separators' in which case the first one is the one used
-by sli-maid. No other construct should happen between the special-head and its
-separator except comments and keys termed CONSTRUCTORs; for instance the
-'proc/(option)/begin/end_proc' construct of MuPAD is
-a head/special-head/strong/end. You can use several [END-STRING end]. The first
-one is going to be used by the maid. Furthermore you can use the same END-STR
-for several constructs. It then applies to the first 'head' that appears
-(going backward). Concerning SPECIAL-HEAD, the syntax could make believe that
-a string could be used after a HEAD with some separators and after another one
-with some other separators: in fact they are merge internally so the union
-of all appearing separators for this SPECIAL-HEAD is being used.
+ ([STRONG-STRING2 strong INDENT-STRONG2]) [END-STRING end]) is
+ the usual structure, like in
+ 'if/then/(elif/then)/(else)/end_if'.  Between the 'head' and the
+ 'soft', INDENT-HEAD is used on subsequent lines to offset the
+ new line with respect to the beginning of HEAD-STRING. When the
+ 'soft' is found, INDENT-SOFT1 is used still with respect to the
+ 'head'.  The next part is optional.  The STRONG-STRING is
+ aligned on its 'head' and INDENT-STRONG is used after that, with
+ respect to the STRONG-STRING. Finally the END-STRING is aligned
+ on the previous STRONG-STRING (the 'heredity principle'). If you
+ want to change this alignement, use `sli-shift-alist' below.
+ Note that an INDENT-* value can be either an integer or a cons
+ pair whose first element is the symbol 'absolute and the second
+ one is an integer: it means that the indentation is not relative
+ but absolute with respect to the left margin. It applies also to
+ the next strong/end key.  In this construct, you can also use
+ [SPECIAL-HEAD-STRING special-head INDENT-SPECIAL-HEAD
+ SEPARATORS]. This key is closed by SEPARATORS which is either a
+ separator which belongs to `sli-separators' or a list of
+ separators all in `sli-separators' in which case the first one
+ is the one used by sli-maid. No other construct should happen
+ between the special-head and its separator except comments and
+ keys termed CONSTRUCTORs; for instance the
+ 'proc/(option)/begin/end_proc' construct of MuPAD is a
+ head/special-head/strong/end. You can use several [END-STRING
+ end]. The first one is going to be used by the maid. Furthermore
+ you can use the same END-STR for several constructs. It then
+ applies to the first 'head' that appears
+(going backward). Concerning SPECIAL-HEAD, the syntax could make
+believe that a string could be used after a HEAD with some
+separators and after another one with some other separators: in
+fact they are merge internally so the union of all appearing
+separators for this SPECIAL-HEAD is being used.
 
-([BEACON-STRING beacon INDENT-BEACON]) specifies a special string that can be
-found between a 'head' or a 'strong' and its corresponding 'soft'. The typical
-example being 'for t from 1 to 2 do' and has pattern
-'head/beacon/beacon/soft'. If a newline is asked after the 'from' but before the
-'to', indentation is done with respect to the beginning of 'from' and
-INDENT-BEACON is added except if this newline is asked just after the beacon
-key, in which case indentation is done like from before the beacon but
-'math-relation's are ignored. Simply because 'math-relation' are supposedly
-closed by the appearance of a beacon, whether a separator has occured or not.
+([BEACON-STRING beacon INDENT-BEACON]) specifies a special string
+that can be found between a 'head' or a 'strong' and its
+corresponding 'soft'. The typical example being 'for t from 1 to
+2 do' and has pattern 'head/beacon/beacon/soft'. If a newline is
+asked after the 'from' but before the 'to', indentation is done
+with respect to the beginning of 'from' and INDENT-BEACON is
+added except if this newline is asked just after the beacon key,
+in which case indentation is done like from before the beacon but
+'math-relation's are ignored. Simply because 'math-relation' are
+supposedly closed by the appearance of a beacon, whether a
+separator has occured or not.
 
-([RELATION-STRING math-relation INDENT-RELATION]) specifies a mathematical type
-of relation (like '='). Such operators acts either as beacons (example 'while
-t=3D55 do' with pattern 'strong/math-relation/soft') or else are closed by
-someone in `sli-separators'. They may contain further structures in between like
-in 'foo = if ok then gonethrough=t ; 3 else 5 end_if'.  INDENT-RELATION is used
-before the appearance of the proper separator.
+([RELATION-STRING math-relation INDENT-RELATION]) specifies a
+mathematical type of relation (like '='). Such operators acts
+either as beacons (example 'while t=3D55 do' with pattern
+'strong/math-relation/soft') or else are closed by someone in
+`sli-separators'. They may contain further structures in between
+like in 'foo = if ok then gonethrough=t ; 3 else 5 end_if'.
+INDENT-RELATION is used before the appearance of the proper
+separator.
 
-HEAD-STRINGs, MATH-RELATION-STRINGs, BEACON-STRINGs, SEPARATORs should all be
-different, except one case for HEAD-STRINGs indicated below.  SOFT-STRINGs and
-STRONG-STRINGs are different from any of the above, but a same soft or strong
-key can be used in different constructs. Usual examples are 'then' and 'do' and
-the 'elif' in 'if/elif/end_if' and '%if/elif/end_if'.  But because of the way
-things are, the corresponding INDENT should be the same throughout. Note that
-longest match is always taken, so that if 'while(' is a head (like in gp) and
-'(' is also a head (almost everywhere), indentation after 'while(' is the one it
-should. Same applies for the two constructs '%if' and 'if' in mupad.
+HEAD-STRINGs, MATH-RELATION-STRINGs, BEACON-STRINGs, SEPARATORs
+should all be different, except one case for HEAD-STRINGs
+indicated below.  SOFT-STRINGs and STRONG-STRINGs are different
+from any of the above, but a same soft or strong key can be used
+in different constructs. Usual examples are 'then' and 'do' and
+the 'elif' in 'if/elif/end_if' and '%if/elif/end_if'.  But
+because of the way things are, the corresponding INDENT should be
+the same throughout. Note that longest match is always taken, so
+that if 'while(' is a head (like in gp) and '(' is also a
+head (almost everywhere), indentation after 'while(' is the one
+it should. Same applies for the two constructs '%if' and 'if' in
+mupad.
 
-Concerning HEAD-STRINGs, all starting heads are to be distincts, but inside a
-construct, an existing head can be used as a special head. The typical case in
-MuPAD is 'category' which is normally a head but can be used like a special head
-inside a 'domain' statement.
+Concerning HEAD-STRINGs, all starting heads are to be distincts,
+but inside a construct, an existing head can be used as a special
+head. The typical case in MuPAD is 'category' which is normally a
+head but can be used like a special head inside a 'domain'
+statement.
 
-CONSTRUCTORs are treated in a special way and keys declared as head or end
-or whatever can also be termed constructor. Usual example: ( is a head and
-is also declared as a constructor.
+CONSTRUCTORs are treated in a special way and keys declared as
+head or end or whatever can also be termed constructor. Usual
+example: ( is a head and is also declared as a constructor.
 
 Cdr's are to be evaled.
 
-If downcase/uppercase is relevant is controled by the variable `sli-case-fold'.
-If sli-case-fold is t, sli-structures should use lowercase letters.
+If downcase/uppercase is relevant is controled by the variable
+`sli-case-fold'.  If sli-case-fold is t, sli-structures should
+use lowercase letters.
 
-Technical note: the first element of this list *has to* contain a 'head'. ")
+Technical note: the first element of this list *has to* contain a
+'head'. ")
 
 (defvar sli-case-fold nil
 "The strings used as separators, relations, and all. Not yet used.
@@ -259,10 +275,10 @@ Elements of this list have format [head-key key].")
 (defvar sli-separators nil "Do not forget `sli-is-a-separatorp'.")
 
 (defvar sli-is-a-separatorp-fn 'sli-is-a-separatorp-default
-  "Function called to decide if character after POINT
-is a separator. This function takes an optional argument
-which is the value of POINT and should be surrounded by
-save-excursion and save-match-data, see `sli-is-a-separatorp-default'.")
+  "Function called to decide if character after POINT is a
+separator. This function takes an optional argument which is the
+value of POINT and should be surrounded by save-excursion and
+save-match-data, see `sli-is-a-separatorp-default'.")
 
 (defun sli-is-a-separatorp-default (&optional pt)
   (save-excursion
@@ -288,21 +304,23 @@ and takes care not to write anything on read-only parts."
     (funcall sli-put-newline-fn)))
 
 (defvar sli-safe-place-regexp "^\\(//--+\\|/\\*-+-\\*/\\)$"
-"Marker used to tell emacs this point is outside a commented area, a string or a sexp. The safe place starts at beginning of match-group 1 and ends at end of match-group 1.")
+"Marker used to tell emacs this point is outside a commented
+area, a string or a sexp. The safe place starts at beginning of
+match-group 1 and ends at end of match-group 1.")
 
 (defvar sli-fixed-keys-alist '()
 "Some keys should be placed at a fixed place with respect to the
 indentation of previous line when following a RELATION sign. See
-`sli-relation-keys'. This is the corresponding alist.
+`sli-relation-keys'. This is the corresponding alist.  
 List of (STRING . INDENTATION).")
 
 (defvar sli-keys-with-newline nil
-"When `sli-maid' tries to further your constructs, some keys should be
-followed by a newline before completion is added.")
+"When `sli-maid' tries to further your constructs, some keys
+should be followed by a newline before completion is added.")
 
 (defvar sli-keys-without-newline nil
-"When `sli-maid' tries to further your constructs, some keys should never be
-followed by a newline.")
+"When `sli-maid' tries to further your constructs, some keys
+should never be followed by a newline.")
 
 (defvar sli-maid-correction-alist nil "See `sli-maid'")
 
@@ -317,14 +335,15 @@ followed by a newline.")
 That is to say an extension of `comment-start' in this special case.")
 
 (defvar sli-block-comment-middle-offset -1
-"Indentation of block comments: they start with block-comment-start and then
-either some whitespace and a word on the same line, on which case next lines
-are aligned on this first word. Or the text starts on next line in which case
-they start at column-of-end-of-block-comment-start + this-offset.
-Exception for the last line if it contains only one word ending with
+"Indentation of block comments: they start with
+block-comment-start and then either some whitespace and a word on
+the same line, on which case next lines are aligned on this first
+word. Or the text starts on next line in which case they start at
+column-of-end-of-block-comment-start + this-offset.  Exception
+for the last line if it contains only one word ending with
 'block-comment-end in which case this word is where placed at
-column-of-end-of-block-comment-start+sli-block-comment-end-offset spaces
-from the margin.")
+column-of-end-of-block-comment-start+sli-block-comment-end-offset
+spaces from the margin.")
 
 (defvar sli-block-comment-end-offset -1
 "See `sli-block-comment-middle-offset'.")
@@ -347,7 +366,8 @@ from the margin.")
 (defvar sli-keys nil)
 (defvar sli-max-keys-length 0
 "An integer: the maximum length of a keyword in sli-structures.
-Used in `sli-anchored-posix-search-backward', a fix for `posix-search-backward'. ")
+Used in `sli-anchored-posix-search-backward', 
+a fix for `posix-search-backward'. ")
 (defvar sli-all-keys-nomrelations-noseparators-regexp nil)
 (defvar sli-all-keys-regexp nil) ; including string quotes and all kind of comments.
 (defvar sli-all-end-strong-regexp nil)
@@ -359,25 +379,30 @@ Used in `sli-anchored-posix-search-backward', a fix for `posix-search-backward'.
 (defvar sli-head-end-alist nil "The alist ((end . head) ...).")
 (defvar sli-ends-head-alist nil "The alist ((head . (end1 end2 ...) ...).")
 (defvar sli-heads-strong-alist nil "The alist ((strong . (head1 head2 ...)) ...).")
-(defvar sli-special-head-alist nil "The alist ((special-head . (separator1 separator2 ...)) ...).")
+(defvar sli-special-head-alist nil
+  "The alist ((special-head . (separator1 separator2 ...)) ...).")
 (defvar sli-special-head-heads-alist nil
-  "The alist ((special-head . heads) ...) for those special heads that are also heads.")
+  "The alist ((special-head . heads) ...) 
+for those special heads that are also heads.")
 (defvar sli-special-head-previous-keys-alist nil
-  "The alist ((special-head . keys) ...) for special-heads that can be heads.
+  "The alist ((special-head . keys) ...) 
+for special-heads that can be heads.
 keys are the keys that can be before special-head.")
 (defvar sli-companion-strong-keys-alist nil
   "The alist  ((strong/head . (strongs that could be after)) ...).
 The car should be a member of the cdr if the car is a strong.")
 (defvar sli-soft-alist nil 
-  "The alist ((ambiguous-soft . (head-or-strong1 head-or-strong2 ...)) ...).")
+  "The alist 
+((ambiguous-soft . (head-or-strong1 head-or-strong2 ...)) ...).")
 (defvar sli-soft-head-or-strong-alist nil "The alist ((head-or-strong . soft) ...)")
 (defvar sli-first-offset-alist nil)  ; to apply before the soft
         ; it applies to head/strong keys that are followed by a soft with no
         ; head or strong in between. Morally speaking this soft "closes" the head/strong.
 (defvar sli-relevant-alist nil
-"An alist. Put all head/strong/end's in one bundle. say two keys are linked if
-they occur in a same constructs. Close this relation transitively.
-this is the alist ((key . (keys in the same class)) ...).")
+"An alist. Put all head/strong/end's in one bundle. say two keys
+are linked if they occur in a same constructs. Close this
+relation transitively.  this is the alist ((key . (keys in the
+same class)) ...).")
 (defvar sli-ancestors-alist nil
 "The alist ((end/strong-key . (head/strong1 head/strong2 ...)) ...)
 of keys that can occur before the first key.")
@@ -399,8 +424,8 @@ to context. They *should be* soft or strong keys.")
 (defvar sli-overlay-end nil "overlay set by `sli-show-sexp' and showing the end key.")
 
 (defvar sli-prop-do-not-recompute-time 10
-"Time span in milliseconds under which it is not necessary to recompute
-text properties alloted by sli-tools.")
+"Time span in milliseconds under which it is not necessary to
+recompute text properties alloted by sli-tools.")
 (defvar sli-prop-used 0
 "Number of times text-properties have been used.")
 (defvar sli-key-is-a-special-headp nil
@@ -1312,14 +1337,13 @@ Answer is nil otherwise."
         (append (list word) skel))))))
  
 (defun sli-find-matching-key (pt whatwewant relevant &optional givekey forspecialhead) ; goes backward
-"PT is supposedly at beginning of an end/strong-key, out of comment or
-string and we look for the first element of WHATWEWANT which is not
-in a complete expression. RELEVANT is the list of keys that may
-intervene. If GIVEKEY, then full-key is given else key only.
-That's a kind of backward-sexp...
-If FORSPECIALHEAD is t, then if we find a special-head before PT,
-we stop and answer t.
-Supports imbedded comments. Answer nil if not found."
+"PT is supposedly at beginning of an end/strong-key, out of
+comment or string and we look for the first element of WHATWEWANT
+which is not in a complete expression. RELEVANT is the list of
+keys that may intervene. If GIVEKEY, then full-key is given else
+key only.  That's a kind of backward-sexp...  If FORSPECIALHEAD
+is t, then if we find a special-head before PT, we stop and
+answer t.  Supports imbedded comments. Answer nil if not found."
   (save-excursion
     (goto-char pt)
     ;(princ "\n") (princ (list "(sli-find-matching-key) getting in with " pt whatwewant relevant))
@@ -1392,11 +1416,13 @@ Supports imbedded comments. Answer nil if not found."
   (assoc (sli-keyword word) sli-special-head-heads-alist))
 
 (defun sli-is-a-special-head (pt word)
-  "Answer nil if WORD located at PT is not a special-head.  WORD should not be
-in comment, and PT is before WORD.  If WORD is a special-head that can be a
-head, answer is nil if it acts like a head; else answer is
-(previousword . previouspt) where previousword is the one that showed that word
-was a special-head: it is thus a special-head or a head located before (word . pt). "
+  "Answer nil if WORD located at PT is not a special-head.  
+WORD should not be in comment, and PT is before WORD.  
+If WORD is a special-head that can be a head, 
+answer is nil if it acts like a head; else answer is
+(previousword . previouspt) where previousword is the one 
+that showed that word was a special-head: 
+it is thus a special-head or a head located before (word . pt). "
   (save-match-data
     (cond 
      ((sli-special-head-headp word)

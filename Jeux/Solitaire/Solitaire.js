@@ -379,6 +379,12 @@ function newgame() {
     case "d30": newpb = Wiegleb; break;
     case "d31": newpb = Cellulaire; break;
     case "d32": newpb = Flacon; break;
+    case "d33": newpb = Deux_carres; break;
+    case "d34": newpb = Big_e; break;
+    case "d35": newpb = Petite_croix; break;
+    case "d36": newpb = Big_r; break;
+    case "d37": newpb = Big_t; break;
+    case "d38": newpb = Big_x; break;
     default :  newpb = Anglais; break;
     };
 

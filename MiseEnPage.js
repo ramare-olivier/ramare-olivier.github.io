@@ -71,7 +71,7 @@ function BandeauGeneral(numeroOn, Home, profondeur, lang){
             + '">' + arch[1][0][0]
             + '</a>  &gt; ';
         newHTML += '<a href = "' 
-             + Home + arch[1][0][1] + arch[1][1][1]
+             + Home + arch[1][1][1]
 	     + '">'
 	     +'<strong class="on">' + arch[1][1][0]
             + '</strong></a> &gt </p>  ';

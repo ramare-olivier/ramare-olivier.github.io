@@ -592,6 +592,11 @@ Monday 10 juillet 2023 : [66] 482/***/329 publications
 (61 Zbl 328/255 authors/234 documents)
 Saturday 5 Aout 2023 : [67] 483/***/329 publications/341 auteurs
 (61 Zbl 328/255 authors/234 documents)
+Friday 25 Aout 2023 : [67] 485/***/330 publications/343 auteurs
+(61 Zbl 328/255 authors/234 documents)
+[72, 43, 36, 33, 30, 25, 23, 18, 16, 15, 11, 11, 11, 10, 10, 9, 8, 7,
+7, 6, 6, 6, 6, 5, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2,
+1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 
 

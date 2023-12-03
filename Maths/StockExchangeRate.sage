@@ -1,6 +1,6 @@
 def plotPublis(adict):
     # ln(alist) > 2
-    smoothinglen = 3 # Moyenne sur 3 ans
+    smoothinglen = 4 # Moyenne sur 4 ans
     smoothedlist = [(1994 + k,
                      sum([(smoothinglen-abs(n))*adict[1994 + min(max(0, k-n), len(adict)-1)]
                           for n in [-smoothinglen .. smoothinglen]])
@@ -39,7 +39,7 @@ Mypubs = {
     2020 : 2,
     2021 : 4,
     2022 : 2,
-    2023 : 1}
+    2023 : 5}
 
     
 

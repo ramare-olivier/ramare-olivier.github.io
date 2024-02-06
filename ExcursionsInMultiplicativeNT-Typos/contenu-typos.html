@@ -101,7 +101,7 @@ MathJax.Hub.Config({
   <blockquote>
     Thanks are due to J. Avigdor from Charenton Le Pont and to
     <a href="https://www.allenstenger.com/">Allen
-    Stenger</a>. (Last update: July 25th, 2023)
+    Stenger</a>. (Last update: February 5th, 2024)
     </blockquote>
 
 
@@ -294,6 +294,37 @@ $\mathscr{C}_2$ has not been defined yet.
     </div></li>
  
 
+  <li><span class="titre">P. 105, Example 1</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle \prod_{p\ge 2}\biggl(1-\frac{1}{(p-1)p^{s+1}}-\frac{1}{(p-1)p^{s+2}}\biggr)$
+</span>should be
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle \prod_{p\ge 2}\biggl(1+\frac{1}{(p-1)p^{s+1}}-\frac{1}{(p-1)p^{s+2}}\biggr)$
+</span>.
+    </div></li>
+
+  <li><span class="titre">P. 107, Example 1</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle g_2(p)=g_3(p)=-\frac1{p(p-1)}$
+</span>should be
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle g_2(p)=-g_3(p)=\frac1{p(p-1)}$
+</span>.
+    </div></li>
+
+  <li><span class="titre">P. 111, line 4</span>.
+    <div class="typo">
+     The reference should be 
+      <span style="color:#6633CC;font-weight:bold">
+Lemma 10.1
+</span> and not to
+<span style="color:#6633CC;font-weight:bold">
+Lemma 10.2
+</span>.
+    </div></li>
+
   <li><span class="titre">P. 111, Exercise 10-4, part 1</span>.
     <div class="typo">
       <span style="color:#6633CC;font-weight:bold">
@@ -305,6 +336,17 @@ divide $n$''
 </span>.
     </div></li>
 
+
+  <li><span class="titre">P. 114, line 4</span>.
+    <div class="typo">
+     The reference [4] should point to
+      <span style="color:#6633CC;font-weight:bold">
+volume 22
+</span> and not to
+<span style="color:#6633CC;font-weight:bold">
+volume  21
+</span>.
+    </div></li>
 
   <li><span class="titre">P. 115, line 6 from bottom</span>.
     <div class="typo">
@@ -396,12 +438,318 @@ $o()$ on the last line.)
 
 
 
+  <li><span class="titre">P. 131, line 2 from bottom</span>.
+    <div class="typo"><span style="color:#6633CC;font-weight:bold">
+	$\displaystyle \sum_{k\ge2}\sum_{p^k\le x}\frac{1}{kp^k}
+       =
+       \sum_{k\ge2}\sum_{p\le x}\frac{1}{kp^k}
+       -\sum_{k\ge2}\sum_{p^k> x}\frac{1}{kp^k}$
+</span> should be 
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle \sum_{k\ge2}\sum_{p^k\le x}\frac{1}{kp^k}
+       =
+       \sum_{k\ge2}\sum_{p\ge 2}\frac{1}{kp^k}
+       -\sum_{k\ge2}\sum_{p^k> x}\frac{1}{kp^k}$
+</span> (the second summation over $p$ should not be restricted to
+	$p\le x$).
+    </div></li>
+
   <li><span class="titre">P. 134, Further Reading</span>.
     <div class="typo"><span style="color:#6633CC;font-weight:bold">
 treaty</span> should be 
 <span style="color:#6633CC;font-weight:bold">treatise</span>.
     </div></li>
 
+
+  <li><span class="titre">P. 141, line 6</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+``non especially non-negative''
+</span>
+should be
+<span style="color:#6633CC;font-weight:bold">
+``in particular, non-negative''
+</span>.
+    </div></li>
+
+  <li><span class="titre">P. 142, line 3</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+``for every primes''
+</span>
+should be
+<span style="color:#6633CC;font-weight:bold">
+``for every prime''
+</span>.
+    </div></li>
+
+  <li><span class="titre">Proof of Theorem 13.3, P. 143, line 5</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle G_p(X) = G(X) - \sum_{k \ge 1} G_p(D/p^k)$
+</span>
+should be
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle G_p(X) = G(X) - \sum_{k \ge 1} g(p^k) G_p(D/p^k)$
+</span>.
+    </div></li>
+
+  <li><span class="titre">P. 144, line 2</span>.
+    <div class="typo"> The inequality
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle 1/(1+x)\le 1+2x$ when $0\le x\le 1/2$
+</span>
+is not enough. What we need is
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle 1/(1+x)= 1+\mathcal{O}^*(2x)$ when $0\le x\le 1/2$
+</span>.
+    </div></li>
+
+  <li><span class="titre">P. 144, line 2 from bottom</span>.
+    <div class="typo"> 
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle \sqrt{2}(\log x + O^*(7/6))$ when $x \ge 2)$
+</span>
+should be
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle \sqrt{2}(\log Q + O^*(7/6))$ when $Q \ge 2)$
+</span> (the variable name is $Q$ and not $x$).
+    </div></li>
+
+  <li><span class="titre">P. 149</span>.
+    <div class="typo">
+      Reference [6] indicates 
+<span style="color:#6633CC;font-weight:bold">volume 43</span>
+but it should be
+<span style="color:#6633CC;font-weight:bold">volume 18</span>.
+    </div></li>
+
+  <li><span class="titre">P. 152, proof of Lemma 14.3, line 3 from bottom</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``second sum''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``second product''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 152, proof of Lemma 14.3, line 2 from bottom</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``recurrence hypotheses''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``inductive hypothesis''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 155, question 4 of Exercise 14-6</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``By combining Exer. <span style="color:blue">12-4</span>''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``By combining
+  Exer. <span style="color:blue">12-3</span>''</span>,
+refering to the correct exercise.
+    </div></li>
+
+  <li><span class="titre">P. 161, line 5 from bottom</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``Sect. <span style="color:blue">16</span>''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``Chap.
+  <span style="color:blue">16</span>''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 162, line 7 from bottom</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``taking $\beta = \pi \alpha$''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``taking $\beta = 2 \pi \alpha$''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 167,
+  Exercise <span style="color:blue">15-14</span></span>.
+    The notation for the sums and products is garbled in this
+  exercise. Here is the correct complete exercise.
+
+    <br>
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+      Exercise <span style="color:blue">15-14</span>.<br>
+      For any real parameter $x$ larger than 2, we set 
+<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;$\displaystyle
+      S(x) = \prod_{p\le x}\biggl(1-\frac{\chi_4(p)}{p}\biggr)^{-1},
+      \quad
+      T(x) = \sum_{n\le x}\frac{\chi_4(n)\Lambda(n)}{n\log n}
+      $
+<br>
+  with the aim of showing that $\displaystyle L(1,\chi_4)=\lim_{x\rightarrow\infty}S(x)$.
+
+  <br>
+  1&nbsp;&#9671;&nbsp; By using the previous exercise and the remark following
+  it, show that $S(x)$ tends to some limit $\ell$ when $x$ goes to infinity.
+
+  <br>
+  2&nbsp;&#9671;&nbsp; Show that
+  $ T(x)-\log S(x) \ll x^{-1/2} $
+  and conclude that $S(x)$ also tends to $\ell$.
+  
+  <br>
+  3&nbsp;&#9671;&nbsp;  Show that, for any $\delta>0$, we have
+  $\displaystyle
+      \delta\int_1^\infty T(x)\frac{dx}{x^{1+\delta}}=
+      \log L(1+\delta,\chi_4).$
+  Conclude.
+
+    </span></div></li>
+
+
+  <li><span class="titre">P. 168, line 8, Epilogue</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+      Theorem <span style="color:blue">12-2</span></span>
+      should be
+      <span style="color:#6633CC;font-weight:bold">
+      Theorem <span style="color:blue">15-2</span></span>.
+    </div></li>
+
+  <li><span class="titre">P. 168, line 11, Epilogue</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+      ``who was barely twenty years old''</span>
+      should be
+      <span style="color:#6633CC;font-weight:bold">
+      ``who was barely thirty years old''</span>.
+    Furthermore 
+    <span style="color:#6633CC;font-weight:bold">
+      de la Vall&eacute;e-Poussin</span>
+    should be
+    <span style="color:#6633CC;font-weight:bold">
+      de la Vall&eacute;e Poussin</span>, without hyphen.
+    </div></li>
+
+  <li><span class="titre">P. 173, line 13</span>.
+    <div class="typo">
+      In the displayed formula, 
+<span style="color:#6633CC;font-weight:bold">$\chi$</span>
+should be (twice)
+<span style="color:#6633CC;font-weight:bold">$\chi_4$</span>.
+    </div></li>
+
+  <li><span class="titre">P. 176, Reference [3]</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">Sequence</span>
+should be
+<span style="color:#6633CC;font-weight:bold">Sequences</span>.
+    </div></li>
+
+  <li><span class="titre">P. 176, Reference [8]</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">$n^2 a$</span>
+should be
+<span style="color:#6633CC;font-weight:bold">$n^2+a$</span>.
+    </div></li>
+
+  <li><span class="titre">P. 176, Reference [9]</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">$n^2 1$</span>
+should be
+<span style="color:#6633CC;font-weight:bold">$n^2 +1$</span>.
+    </div></li>
+
+  <li><span class="titre">P. 180, line 9</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``$\chi^k$ is multiplicative''</span>
+is not enough and should be
+<span style="color:#6633CC;font-weight:bold">``$\chi^k$ is
+  completely multiplicative''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 181, line 2</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">Theorem <span style="color:blue">17.2</span></span>
+should be
+<span style="color:#6633CC;font-weight:bold">Theorem <span style="color:blue">17.1</span></span>.
+    </div></li>
+
+  <li><span class="titre">P. 181, line 2</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``they vanish when $j > j_0k$''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``they vanish when $j < j_0k$''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 183, line 10</span>.
+    <div class="typo">
+    In question 1 of Exercise 17-7, 
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle \ell(s)=\sum_{p\equiv 3[4]}\log\frac{1+p^{-s}}{1-p^{s}}$
+</span>
+should be
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle \ell(s)=\sum_{p\equiv 3[4]}\log\frac{1+p^{-s}}{1-p^{-s}}$
+</span>.
+    </div></li>
+
+  <li><span class="titre">P. 185, line 2</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``infinitely chains''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``infinitely many chains''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 185, line 5</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``lign''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``row''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 185, line 5</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``wave''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``waive''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 185, Reference [3]</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``de composition''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``d&eacute;composition''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 185, Reference [9]</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">23 ()</span>
+should be
+<span style="color:#6633CC;font-weight:bold">23 (1925)</span>.
+    </div></li>
+
+  <li><span class="titre">P. 186, Reference [15]</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold"> ``erratum 5 (1958)''</span>
+should be
+<span style="color:#6633CC;font-weight:bold"> ``erratum 5 (1959)''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 187, line 8</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``divisors of 3''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``multiples of 3''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 187, line 9</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">``10 possibilities''</span>
+should be
+<span style="color:#6633CC;font-weight:bold">``22 possibilities''</span>.
+    </div></li>
+
+
+  <li><span class="titre">P. 187, line 8</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold"></span>
+should be
+<span style="color:#6633CC;font-weight:bold"></span>.
+    </div></li>
 
   <li><span class="titre">P. 190, line 4 from bottom</span>.
     <div class="typo">
@@ -419,8 +767,15 @@ treaty</span> should be
 <span style="color:#6633CC;font-weight:bold">developed</span>.
     </div></li>
 
+  <li><span class="titre">P. 204, line 6 from bottom</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">``no residue of the summand''</span>
+ should be 
+<span style="color:#6633CC;font-weight:bold">``no residue of the integrand''</span>.
+    </div></li>
 
-  <li><span class="titre">P. 231, reference [9]</span>.
+
+  <li><span class="titre">P. 231, Reference [9]</span>.
     <div class="typo">
       <span style="color:#6633CC;font-weight:bold">S.D. S.D. Chowla</span>
  should be <span style="color:#6633CC;font-weight:bold">S.D. Chowla</span>.
@@ -439,6 +794,24 @@ $ |\zeta(\sigma)|^3 |\zeta(\sigma + i t)|^4 |\zeta(\sigma + 2 i t)|
 \ge 1 $
 </span>
 (lower bound is $1$, not $0$).
+    </div></li>
+
+  <li><span class="titre">P. 251, line 7</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">sticked</span>
+ should be <span style="color:#6633CC;font-weight:bold">stuck</span>.
+    </div></li>
+
+  <li><span class="titre">P. 275, line 6 from bottom</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">``rhythm of convergence''</span>
+ should be <span style="color:#6633CC;font-weight:bold">``rate of convergence''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 293, line 3 from bottom</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">looses</span>
+ should be <span style="color:#6633CC;font-weight:bold">loses</span>.
     </div></li>
 
   <li><span class="titre">P. 294, Exercise 29.8 title</span>.

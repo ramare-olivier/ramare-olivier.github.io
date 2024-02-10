@@ -775,11 +775,222 @@ should be
     </div></li>
 
 
-  <li><span class="titre">P. 231, Reference [9]</span>.
+  <li><span class="titre">P. 205, 207 and Index</span>.
     <div class="typo">
-      <span style="color:#6633CC;font-weight:bold">S.D. S.D. Chowla</span>
- should be <span style="color:#6633CC;font-weight:bold">S.D. Chowla</span>.
+      <span style="color:#6633CC;font-weight:bold">Cahen-Millen</span>
+ should be <span style="color:#6633CC;font-weight:bold">Cahen-Mellin</span>.
     </div></li>
+
+  <li><span class="titre">P. 210, line 13</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">2&nbsp;arctan$(T/\kappa)$</span>
+ should
+ be <span style="color:#6633CC;font-weight:bold">2i&nbsp;arctan$(T/\kappa)$</span>,
+ so the sentence should be 
+<span style="color:#6633CC;font-weight:bold">
+``the first integral equals $2i\text{arctan}(T/\kappa)$, and the
+  absolute value of this is $\le \pi$, while ...''</span>
+    </div></li>
+
+  <li><span class="titre">P. 218, lines 3 and 5</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">Lemma 19.1</span>
+ should be <span style="color:#6633CC;font-weight:bold">Proposition 19.1</span>.
+    </div></li>
+
+  <li><span class="titre">P. 218, line 12</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">Lemma 20.4</span>
+ should be <span style="color:#6633CC;font-weight:bold">Lemma 20.5</span>.
+    </div></li>
+
+  <li><span class="titre">P. 218, Step 5</span>.
+    <div class="typo">
+      The sentence
+      <span style="color:#6633CC;font-weight:bold">
+``In our region, 
+we have $\Gamma(\sigma + i t) \ll (1 + |t|)^{5/8} \exp - (\pi
+|t|/2)$''</span>
+does not belong here: the region is $\sigma\ge 7/4$ which is not
+      introduced before Step 6. Please, simply ignore this
+      sentence.
+    </div></li>
+
+  <li><span class="titre">P. 218, lineS 3 and 4 from bottom</span>.
+    <div class="typo">
+    The integration bound
+      <span style="color:#6633CC;font-weight:bold">$2+iT$</span>
+ should (twice)
+ be <span style="color:#6633CC;font-weight:bold">$3+iT$</span>
+and similarly the integration bound
+      <span style="color:#6633CC;font-weight:bold">$2-iT$</span>
+ should (twice)
+ be <span style="color:#6633CC;font-weight:bold">$3-iT$</span>.
+    </div></li>
+
+
+
+  <li><span class="titre">P. 219, line 1</span>.
+    <div class="typo">
+For the first integral we should move the first absolute value
+and write
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle
+\biggl| \int_{3 + iT}^{7/4 + i T} D(f_0,s) \Gamma(s) x^s \, ds \biggr|
+$</span>
+
+    </div></li>
+
+  <li><span class="titre">P. 219, lines 1 and 4</span>.
+    <div class="typo">
+The integral sign
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int^{3}_{3/4}$</span>
+should be
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int^{2}_{3/4}$</span>. 
+<br>
+A similar confusion occurs
+line 4 where the 
+integral sign
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int^{2-iT}_{7/4-iT}$</span>
+should be
+<span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int^{3-iT}_{7/4-iT}$</span>. 
+ </div></li>
+
+
+  <li><span class="titre">P. 219, line 3</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">Lemma 19.1</span>
+ should be <span style="color:#6633CC;font-weight:bold">Proposition 19.1</span>.
+    </div></li>
+
+  <li><span class="titre">P. 219, line 3</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">Lemma 19.1</span>
+ should be <span style="color:#6633CC;font-weight:bold">Proposition 19.1</span>.
+    </div></li>
+
+  <li><span class="titre">P. 219, line 8 from bottom</span>.
+    <div class="typo">
+     The sentence
+      <span style="color:#6633CC;font-weight:bold">``on majorizing $(4
+ + t^2)^{5/8}$ by $(2t)^{5/8}$ when $t \ge 2$''</span> is
+ incorrect. It should be
+ <span style="color:#6633CC;font-weight:bold">
+``on majorizing $(4
+ + t^2)^{5/8}$ by $(2t^2)^{5/8}$ when $t \ge 2$''
+</span>.
+This has consequences on the subsequent inequalities. This proof can
+ be improved in numerous way, but here is one that still leads to the
+Claim of Step 7 without too many changes: simply improve the bound
+$\int_0^2|\Gamma(7/4+it)|dt\le 2\Gamma(7/4)$  by using numerical
+ integration.
+The Pari/GP script 
+<span style="color:#6633CC;font-weight:bold">
+<span style="background-color:#FFF2CC;padding:0 1em 0 1em">
+$\texttt{intnum(t=0,2,abs(gamma(7/4+I*t)))}$</span></span>
+tells us that this integral is bounded above  by $1.265$.
+<br>
+<br>
+<span style="color:#6633CC;font-weight:bold">
+``We thus find that, on majorizing $(4+t^2)^{5/8}$ by $(2t^2)^{5/8}$ when $t\ge 2$,
+$$
+  \left|\int_{7/4-i\infty}^{7/4+i\infty}
+      D(f_0,s)\Gamma(s) x^sds\right|
+    \le 2x^{7/4}\biggl(
+        203\cdot 1.265
+        +160\cdot\sqrt{2\pi}\cdot e^{1/12}\cdot 2^{5/8} 
+       \int_2^\infty t^{3/2}\log t \, e^{-\pi t/2}dt
+    \biggr)\;.
+$$
+We have now gone far enough in the analysis of the problem to 
+finish by numerical integration:
+<span style="background-color:#FFF2CC;padding:0 1em 0 1em">$\texttt{aux = intnum( t = 2, [[+1], Pi/2],
+t^(3/2)*log(t)*exp(-Pi/2*t));}$</span>
+followed by
+<span style="background-color:#FFF2CC;padding:0 1em 0 1em">$\texttt{2*(257 + 673 * aux)}$.
+</span>
+''
+</span>
+<br>
+This would enable us to improve the inequality of Step 7 in
+<span style="color:#6633CC;font-weight:bold">
+$$
+\frac1{2\pi}\left|\int_{7/4-i\infty}^{7/4+i\infty}
+      D(f_0,s)\Gamma(s) x^sds\right|
+    \le 680\cdot x^{7/4}\;.
+$$</span>
+    </div></li>
+
+
+  <li><span class="titre">P. 220, Exercise 21-1</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">$\pi^2x^2/12$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$6x^2/\pi^2$</span>.
+    </div></li>
+
+
+
+ <li><span class="titre">P. 223, Eq. (22.1)</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">$\mathscr{C}_1$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$\mathscr{C}_2$</span>.
+    </div></li>
+
+
+ <li><span class="titre">P. 223, line 2 from bottom</span>.
+    <div class="typo">
+      The sedond factor
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\left(1-\frac{n}{x+L}\right)$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\left(1-\frac{n}{x}\right)$</span>.
+    </div></li>
+
+
+ <li><span class="titre">P. 224, line 1</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">$\mathscr{C}_1$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$\mathscr{C}_2$</span>.
+    </div></li>
+
+
+ <li><span class="titre">P. 225, line 1</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\limsup_{n\rightarrow\infty}$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\limsup_{N\rightarrow\infty}$
+</span>.
+    </div></li>
+
+
+ <li><span class="titre">P. 226, line 8 from bottom</span>.
+    <div class="typo">
+     The second integral,
+      <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int_0^1|\log t|dt$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int_0^1(\log t)^2dt$
+</span>.
+    </div></li>
+
+<li><span class="titre">P. 228, line 2 from bottom, P. 229, line 9
+    and P. 230, line 12</span>.
+    <div class="typo">
+<span style="color:#6633CC;font-weight:bold">$\mathscr{C}_1$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$\mathscr{C}_2$</span>.
+    </div></li>
+
+
+
 
 
   <li><span class="titre">P. 234, line 14 from bottom</span>.
@@ -795,6 +1006,143 @@ $ |\zeta(\sigma)|^3 |\zeta(\sigma + i t)|^4 |\zeta(\sigma + 2 i t)|
 </span>
 (lower bound is $1$, not $0$).
     </div></li>
+
+
+<li><span class="titre">P. 235, line 10</span>.
+    <div class="typo">
+   <span style="color:#6633CC;font-weight:bold">
+$[s-1|$</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$|s-1|$</span>.
+    </div></li>
+
+<li><span class="titre">P. 235, line 14</span>.
+    <div class="typo">
+   The proof is confusing at this point. It is better to add:
+<span style="color:#6633CC;font-weight:bold">``We have proved that
+ $|1/\zeta(\sigma+it)|\le 20(\sigma-1)$ when $|s-1|\le 3/5$ and
+ $\sigma\ge 3/4$. This implies the claimed inequality when $|s-1|\le 1/2.$''</span>
+    </div></li>
+
+
+
+
+<li><span class="titre">P. 236, line 3 from bottom</span>.
+    <div class="typo">
+   <span style="color:#6633CC;font-weight:bold">
+``We now take $x=y=1/5^9$''
+</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+``We now take $x=y=1/6^9$''
+</span>.
+    </div></li>
+
+
+<li><span class="titre">P. 238, line 14</span>.
+    <div class="typo">
+   <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int_0^T\frac{2dt}{1+t}\le 2\log(1+T)$
+</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+$\displaystyle\int_0^T\frac{2dt}{1+t}= 2\log(1+T)$
+</span>.
+    </div></li>
+
+<li><span class="titre">P. 238, line 9</span>.
+    <div class="typo">
+  The statement 
+   <span style="color:#6633CC;font-weight:bold">
+``As for the first part, we use Lemma 7.1''
+</span>
+is incorrect and comes from a confusion of the true content of Lemma 7.1.
+It is better to write:
+<br>
+<span style="color:#6633CC;font-weight:bold">
+On invoking Cor. 23.1 and Lemma 7.1, we see that the second sum is bounded is absolute value by
+$$
+    \mathcal{O}\biggl(\frac{x}{(\log x)^A}\biggr)
+    \sum_{m\le \sqrt{x}}\frac{\log m}m
+    \ll_A \frac{x}{(\log x)^{A-2}}\;.
+$$
+As for the first part, we proceed as in Lemma 7.1 to prove that 
+$\displaystyle\sum_{m\le M}\log M=M\log M-M+\mathcal{O}(\log(2M))$.
+This leads to
+$$
+  \sum_{\ell \le \sqrt{x}}\mu(\ell)\sum_{m\le x/\ell}\log m
+  =
+  x\sum_{\ell \le \sqrt{x}}\frac{\mu(\ell)}{\ell}
+  \Bigl(\log\frac{x}{\ell}-1\Bigr)
+  +\mathcal{O}(\sqrt{x}\log x)\;.
+$$
+</span>.
+    </div></li>
+
+
+<li><span class="titre">P. 240, line 9</span>.
+    <div class="typo">
+   <span style="color:#6633CC;font-weight:bold">
+``value fo $F'(1)$''
+</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+``value of $F'(1)$''
+</span>.
+    </div></li>
+
+<li><span class="titre">P. 244, line 4</span>.
+    <div class="typo">
+   <span style="color:#6633CC;font-weight:bold">
+``$F_2(x)=x-\gamma$''
+</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+``$F_2(x)=x-\gamma-1$''
+</span>.
+    </div></li>
+
+<li><span class="titre">P. 245, proof of Proposition 24.1</span>.
+    <div class="typo">
+Several $\pm$ signs are not what they should be and some more details
+are called for. Here is a corrected
+version
+<br>
+  <span style="color:#6633CC;font-weight:bold">
+``We use Theorem 6.2 with $h(t)=(-\log t)/t$, $f(n)=\mu(n)$ and $g(n)=1$. On recalling Lemma 7.1
+ as well
+ as Eq. (7.1), we find that
+  $\displaystyle
+      \sum_{n\le t}\frac{\log(t/n)}{n}
+      =\frac12\log^2t+\gamma\log t-\gamma_1+\mathcal{O}\Bigl(\frac{\log(2t)}{t}\Bigr)\;.
+  $
+  This leads to our choice of $H$, as the main term above should be $H'(t)$. Since
+  $$
+      (at\log^2t+bt\log t+ct)'=
+      a\log^2t+(2a+b)\log t+b+c
+  $$
+  we select $H(t)=\tfrac12t\log^2t-(\gamma+1)t\log
+ t+(\gamma_1+\gamma+1)t$. Theorem 6.2 with these choices gives us
+  \begin{multline*}
+     \sum_{n\le x}\frac{\mu(n)}{n}\Bigl(
+     \frac12\log^2\frac xn-(\gamma+1)\log \frac{x}n+(\gamma_1+\gamma+1)
+     \Bigr)
+     =(\gamma_1+\gamma+1)\frac{M(x)}{x}
+     +\log x
+     \\-1+\frac1x
+     +\frac1x\int_1^x M(x/t)
+     \biggl(
+      \frac12\log^2t+\gamma\log t-\gamma_1-\sum_{n\le t}\frac{\log(t/n)}{n}\biggr)
+      dt\;.
+  \end{multline*}
+  We then plug in the estimates $|M(t)|\le t$, $|\sum_{n\le x}\mu(n)/n|\le1$ as well as the von Mangoldt estimate
+  $$
+      \sum_{n\le x}\frac{\mu(n)}{n}\log \frac{x}n\ll1
+  $$
+  to conclude the proof.''
+</span>.
+    </div></li>
+
+
+
+
+
 
   <li><span class="titre">P. 251, line 7</span>.
     <div class="typo">
@@ -833,6 +1181,31 @@ $ |\zeta(\sigma)|^3 |\zeta(\sigma + i t)|^4 |\zeta(\sigma + 2 i t)|
       <span style="color:#6633CC;font-weight:bold">``All the paper of
  may''</span>
  should be <span style="color:#6633CC;font-weight:bold">``All the papers of Ramanujan may''</span>.
+    </div></li>
+
+  <li><span class="titre">P. 331, Name Index</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">Bertand, Joseph</span>
+ should be <span style="color:#6633CC;font-weight:bold">Bertrand, Joseph</span>.
+    </div></li>
+
+  <li><span class="titre">P. 332, Name Index</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+Ger&scaron;hgorin, S&euml;men Aranovi&ccaron;
+</span>
+ should be <span style="color:#6633CC;font-weight:bold">
+Ger&scaron;hgorin, Sem&euml;n Aranovi&ccaron;
+</span>.
+
+  <li><span class="titre">P. 332, Name Index</span>.
+    <div class="typo">
+      <span style="color:#6633CC;font-weight:bold">
+Meissel, Daniel Friedrich Ernst Meissel
+</span>
+ should be only <span style="color:#6633CC;font-weight:bold">
+Meissel, Daniel Friedrich Ernst
+</span>.
     </div></li>
 
 

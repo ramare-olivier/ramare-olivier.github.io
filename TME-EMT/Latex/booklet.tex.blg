@@ -1,5 +1,0 @@
-[1] Config.pm:340> INFO - This is Biber 2.4
-[1] Config.pm:343> INFO - Logfile is 'booklet.tex.blg'
-[64] biber:287> INFO - === mer. févr. 15, 2017, 10:02:24
-[134] Utils.pm:163> ERROR - Cannot find control file 'booklet.tex.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
-[134] Biber.pm:113> INFO - ERRORS: 1

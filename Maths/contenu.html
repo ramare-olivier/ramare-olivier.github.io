@@ -115,7 +115,7 @@ MathJax.Hub.Config({
 <dd>&nbsp;&nbsp;&nbsp;
   <a href="#Explicit">Explicit estimates on primes or on the Moebius function</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;
-  <a href="#Bilinear">Bilinear sums on prime numbers</a></dd>
+  <a href="#Bilinear">Trigonometric polynomials of arithmetic functions</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;
   <a href="#Lfunctions">$L$-functions / primes in arithmetic progressions</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;
@@ -467,29 +467,6 @@ of A. S&aacute;rk&ouml;zy.
   (a smoothed version of) the quadratic form $V(\varphi,Q)$ may stay
   \emph{away} from $(6/\pi^2)Q\sum_n|\varphi_n|^2$ when $Q\asymp N$,
   though only on a vector space of positive but small dimension.
-      </div>
-  </li>
-  <!-- ============================= -->
-    <li class="paper"><script language="javascript">
-	Paper("Notes on restriction theory in the primes",
-	      "", "RestrictionTheory-IJM-06.pdf",
-	      "https://link.springer.com/journal/11856",
-	      "Israel Journal of Math.", "vol. ", 2023, "22pp",
-	      "https://link.springer.com/article/10.1007/s11856-023-2586-5");
-	nbr();</script>
-      <div class="resumecontent">We study the mean
-  $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$ when
-  $\ell$ covers the full range $[2,\infty)$ and
-  $\mathcal{X}\subset\mathbb{R}/\mathbb{Z}$ is a well-spaced set,
-  providing a smooth transition from the case $\ell=2$ to the case
-  $\ell>2$ and improving on the results of J.~Bourgain and of B.~Green
-  and T.~Tao. A uniform Hardy-Littlewood property for the set of
-  primes
-  is established as well as a sharp upper bound
-  for $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$
-  when $\mathcal{X}$ is small. These results are extended to primes in
-  any interval in a last section, provided the primes are
-  numerous enough therein.
       </div>
   </li>
 <!-- ============================= -->
@@ -983,7 +960,7 @@ all moduli $k \le 72$&nbsp; and other small moduli.
 <br>
 <!-- ======================================================================= -->
   <li><a name="Bilinear" class="dontmention"></a>
-    <span class="thema">Bilinear sums on prime numbers</span>
+    <span class="thema">Trigonometric polynomials of arithmetic functions</span>
   <ol>
   <!-- ============================= -->
   <li class="paper"><script language="javascript">
@@ -1060,6 +1037,29 @@ $\sum_{q^{20r}\le s \le q^{20r}+q^{16r}}e(sa/q)\ll q^{16r}(\log q)/\sqrt{\varphi
     |\le 1300 \sqrt{q}\,X/\varphi(q)$ for $250\le q\le X^{1/24}$. Several
     other results are also proved.
     </div>
+	</li>
+	  <!-- ============================= -->
+    <li class="paper"><script language="javascript">
+	Paper("Notes on restriction theory in the primes",
+	      "", "RestrictionTheory-IJM-06.pdf",
+	      "https://link.springer.com/journal/11856",
+	      "Israel Journal of Math.", "vol. ", 2023, "22pp",
+	      "https://link.springer.com/article/10.1007/s11856-023-2586-5");
+	nbr();</script>
+      <div class="resumecontent">We study the mean
+  $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$ when
+  $\ell$ covers the full range $[2,\infty)$ and
+  $\mathcal{X}\subset\mathbb{R}/\mathbb{Z}$ is a well-spaced set,
+  providing a smooth transition from the case $\ell=2$ to the case
+  $\ell>2$ and improving on the results of J.~Bourgain and of B.~Green
+  and T.~Tao. A uniform Hardy-Littlewood property for the set of
+  primes
+  is established as well as a sharp upper bound
+  for $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$
+  when $\mathcal{X}$ is small. These results are extended to primes in
+  any interval in a last section, provided the primes are
+  numerous enough therein.
+      </div>
   </li>
  <!-- ============================= -->
     <li class="paper"><script language="javascript">
@@ -1097,7 +1097,36 @@ $
 \sum_{X < \ell\leq 2X} a_g(\ell)\mu(\ell) e(p\alpha)\ll X/\sqrt{q}\;.
 $ 
       </div>
+      </li>
+        <!-- ============================= -->
+    <li class="paper preprint"><script language="javascript">
+	Preprint("The trigonometric polynomial on sums of two squares, an additive problem and generalisation",
+	"G. Kasi Viswanadham", "", 2024, 36, "Submitted");
+	nbrp();      </script>
+      <div class="resumecontent">
+	<img src="../trucs/kasi-viswanadh.jpeg" height="110px"
+	     title="Kasi Viswanadh Gopajosyula">
+	  Let $\mathfrak{B}$ be the set of odd integers that are sums of two coprime
+  squares. We prove that the trigonometric polynomial
+  $S(\alpha;N)=\sum_{b\in\mathfrak{B},b\le N}e(b\alpha)$ satisfies
+  \begin{equation*}
+    \frac{S(\alpha; N)}{N/\sqrt{\log N}}\ll_{A,A'}
+    \frac{1}{\varphi(q)}
+    +
+    \sqrt{\frac{q}{N}}(\log N)^{7}
+    +\frac{1}{(\log N)^A}
+  \end{equation*}
+  for any $A,A'\ge0$ and when $(a,q)=1$ and $|q\alpha-a|\le (\log
+  N)^{A'}/N$. We use this estimate together with a variant of the circle
+  method influenced by Green and Tao's Transference Principle to
+  obtain the number of representations of a large enough odd integer
+  $N$ as a sum $b+b_1+b_2$, where $b\in\mathfrak{B}$ while $b_1$
+  (resp. $b_2$) belongs to a general subset $\mathfrak{B}_1$
+  (resp. $\mathfrak{B}_2$) of $\mathfrak{B}$ of relative positive density.
+  We further show that the above bound is effective when $0\le A < 1/2$.
+	</div>
   </li>
+
 <!-- ======================================================================= -->
   </ol><br>
   </li>
@@ -1517,10 +1546,12 @@ primes in any given class of $H_{\mathfrak{q}}(\mathbb{K})$.
   </li>
   <!-- ============================= -->
     <li class="paper preprint"><script language="javascript">
-	Preprint("An application of counting ideals in ray classes",
+	ToAppear("An application of counting ideals in ray classes",
 	"Sanoli Gun and Jyothsnaa Sivaraman", 
-		 "", 2024, 20 ,"");
-	nbrp();</script>
+		 "",
+		 "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica",
+		 "Acta Arithmetica", 2024, 20 );
+	nbr();</script>
       <div class="resumecontent">
 	<img src="../trucs/Sanoli.jpeg" height="110px"
 	     title="Sanoli Gun">
@@ -2055,11 +2086,12 @@ analytic conductor of $f$ for some specific choices of $I$.
 </div>
   <!-- ============================= -->
 <li class="paper preprint"><script language="javascript">
-      Preprint("Convolution of periodic multiplicative functions and the divisor problem",
+      ToAppear("Convolution of periodic multiplicative functions and the divisor problem",
 	       "Marco Aymone, Gopal Maiti and Priyamvad Srivasta" ,
-      "divisor-omega.pdf", 2023,9,
-      "Submitted");
-      nbrp();</script>
+	       "divisor-omega.pdf",
+	       "https://www.cambridge.org/core/journals/canadian-journal-of-mathematics",
+	       "Canadian Journal of Math.",2024, 9);
+      nbr();</script>
   <div class="resumecontent">
        <img src="../trucs/Marco.jpeg" width="90px"
 	   title="Marco Aymone">

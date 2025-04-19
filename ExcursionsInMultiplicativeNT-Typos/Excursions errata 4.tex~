@@ -1,0 +1,285 @@
+\documentclass[12pt,reqno]{amsart}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+\calclayout
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{hyperref}
+\usepackage{mathrsfs} % for script C
+
+\title{Proposed Errata (4) for \\ \textit{Excursions in Multiplicative Number Theory}}
+\author{Allen Stenger}
+\address{Boulder, Colorado USA}
+\email{StenBiz@gmail.com}
+\date{\today}
+
+%-------------------------------------------------------
+% Proclamations
+%-------------------------------------------------------
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{conjecture}{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{note*}{Note}
+\newtheorem{case}{Case}
+
+%-------------------------------------------------------
+% local definitions
+%-------------------------------------------------------
+
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\N}{{\mathbb N}}
+
+\providecommand{\abs}[1]{\left \lvert #1 \right \rvert}
+\providecommand{\norm}[1]{\left \lVert #1 \right \rVert}
+
+\newcommand{\divides}{\mid}
+\newcommand{\notdivides}{\nmid}
+
+% special for this document
+\newcommand{\conj}[1]{\overline{#1}}
+
+\begin{document}
+\maketitle
+
+These are additional proposed errata (4th set) for Olivier Ramar\'{e}, 
+\textit{Excursions in Multiplicative Number Theory}.
+Most are typographical errors.
+
+\begin{itemize}
+
+\item
+(p.~56, line 3) ``there exists forcibly'': ``forcibly'' is the wrong word, it probably should be ``necessarily''
+\item
+(p.~87, line 3 from bottom) ``the problematic we address'': ``problematic'' is the wrong word, it should be probably be ``problem'' or perhaps ``challenge''
+
+\item
+(p.~147, last line of Theorem 13.4 statement) ``where \(C\) is as in Theorem 13.3.'' should be
+``where \(C\) is as in Theorem 13.3, taking \(g(d) = f(d)/d\).''
+
+\item
+(p.~148, lines 6--7) \(Q\) should be \(D\) throughout
+
+\item
+(p.~235, Exercise 23-1) ``Let \(D(t) = \sum_{n \ge 1} a_n n^{i t}\) and \(D^*(t) = \sum_{n \ge 1} a^*_n n^{i t}\)
+be two Dirichlet series, both absolutely convergent for \(\Re s \ge 0\).''
+I was confused by this phrasing. First, \(D(t)\) and \(D^*(t)\) are not Dirichlet series because they do 
+not have the correct form (although they can be considered as Dirichlet series restricted to the line
+\(\sigma = 0\)). Also, \(s\) is not mentioned in their definition, so \(\Re s \ge 0\) is not clear;
+this probably means that they are absolutely convergent for all real \(t\). 
+We don't consider any \(\sigma > 0\).
+Could we instead say 
+``Let \(D(t) = \sum_{n \ge 1} a_n n^{i t}\) and \(D^*(t) = \sum_{n \ge 1} a^*_n n^{i t}\)
+be two series, both absolutely convergent for all real \(t\).''?
+
+\item
+(p.~240, Exercise 23-9) \(\mathscr{C}_1\) should be \(\sqrt{2} \mathscr{C}_1\)
+
+\item
+(p.~243, line 6) ``due to the K.~Iseki'' should be``due to K.~Iseki''
+
+\item
+(p.~251, line 7 from bottom) ``to every integers'' should be ``to every integer''
+
+\item
+(p.~251, last displayed formula) \(\zeta(2 - a)\) should be \(C \zeta(2 - a)\)
+
+\item
+(p.~252, line 4) Exer. 3-4 should be Exer. 3-6
+
+\item
+(p.~252, Exercise 25-2 part 1: ``any nonnegative \(\sigma\)'' should be ``any positive \(\sigma\)''
+(\(\sigma = 0\) causes a division by zero)
+
+\item
+(p.~255, line 13)
+\[
+\sum_{\genfrac{}{}{0 pt}{}{d \le D}{d \divides P(z)}} \mu(d)
+\text{ should be }
+\sum_{\genfrac{}{}{0 pt}{}{d \le D}{d \divides Q}} \mu(d)
+\]
+
+\item
+(p.~258, line 1) ``The sieve problematic'' should be ``The sieve method''
+
+\item
+(p.~258, reference [5]) This reference is to a book and should be formatted as a book
+
+\item
+(p.~260, line 3) \((\rho - \rho^{-1})\rho^{-2k}\) should be \((\rho + \rho^{-1})\rho^{-2k}\) (wrong sign)
+
+\item
+(p.~260, line 8 from bottom) 
+\(N_k \ge (1 + \sqrt{2})^k / 2\) should be \(N_k \le (1 + \sqrt{2})^k / 2\)
+
+\item
+(p.~260, line 2 from bottom) ``coprime positive integer'' should be ``coprime positive integers''
+
+\item
+(p.~261, line 5) ``the points \(h \alpha\) are distant from one another by at least \(1/(2q)\)''
+should be 
+``the points \(h \alpha\) modulo \(1\) are distant from one another by at least \(1/(2q)\)''
+\
+\item
+(p.~262, line 9) ``loose a logarithmic factor'' should be ``lose a logarithmic factor''
+
+\item
+(p.~264, line 7 from bottom) ``forcibly larger than or equal to \(z\)'': The word ``forcibly'' is
+wrong here; I don't know what word is intended.
+
+\item
+(pp.~264--265, proof of Theorem 26.2) The symbol \(Q\) is not defined but is used in two places.
+I think it means the same as \(P(z)\).
+
+\item
+(p.~265, proof of Theorem 26.3) The function \(g\) to use in the application of Theorem 26.2
+is not stated; it should be \(g(n) = \operatorname{e}(\rho m)\).
+
+\item
+(p.~266, line 13) \(Q \le X/n\) should be \(Q \le x/n\) (lower case \(x\))
+
+\item
+(p.~266, last displayed equation)
+There seems to be a missing step in this proof: to pick the value of \(z\). At this point we are
+almost at the end of the proof, but all we know is \(z \ge 2\) and \(\log z \le \sqrt{\log x}/2\).
+I think we should pick \(\log z = \sqrt{\log x}/2\), which we can do at the beginning of the proof.
+This gives the indicated bound in this last line. The bound is not true for all \(z\) in
+the above range; for example, \(z = 2\) gives a bound of \(O(x \log x)\), which is worse than
+the trivial bound \(O(x)\).
+
+\item
+(p.~268, line 6)
+``if only finitely primes \(p\) where such that \(\{\rho p\} \notin [a,b]\)''
+should be
+``if there are only finitely primes \(p\) such that \(\{\rho p\} \notin [a,b]\)''
+
+\item
+(p.~273, lines 1--2)
+``the sequence \((\cos 2 \pi \rho n)\) where \(n\) ranges the irregular integers dense in \([-1, 1]\)''
+should be
+``the sequence \((\cos 2 \pi \rho n)_n\) where \(n\) ranges over the irregular integers is dense in \([-1, 1]\)''
+
+\item
+(p.~273, reference [3]) Distjointness should be Disjointness
+
+\item
+(p.~274, reference [19] This reference is to a book and should be formatted as a book
+
+\item
+(p.~275, line 11) E.~Cohen should be H.~Cohen
+
+\item
+(p.~276, line 4) \(x \ge 2 \cdot 10^6\) should be \(x \le 2 \cdot 10^6\) 
+
+\item
+(p.~277, line 6) \(\sqrt{x} \ge 3500\) is not correct; from \(x \ge 2 \cdot 10^6\) we only get
+\(\sqrt{x} \ge 1414\).
+
+\item
+(p.~278, line 4) \(\frac{2}{25} + \frac{27 \log x}{x^{1/3}} \le 4\)
+should be
+\(\frac{2\cdot 3}{25} + \frac{27 \log x}{x^{1/3}} \le 4\)
+(add factor for \(D(\abs{h_6},0)\)).
+
+\item
+(p.~279, line 5) ``the \textit{large sieve}. and stems from'' should be 
+``the \textit{large sieve}, and stems from'' (replace period with comma)
+
+\item
+(p.~281, Exercise 28-3) This result is incorrect as stated. As a counterexample, consider
+\(f\) defined by \(f(1,2) = 1\) and \(f(i,j) = 0\) otherwise. Then the left-hand side is
+\[
+\abs{\xi_1 \conj{\xi_2}} = \abs{\xi_1} \abs{\xi_2}
+\]
+and the right-hand side is
+\[
+\abs{\xi_1}^2.
+\]
+The exercise then asserts that \(\abs{\xi_1} \abs{\xi_2} \le \abs{\xi_1}^2\), which implies
+\(\abs{\xi_2} \le \abs{\xi_1}\).
+One way to repair this would be to add the hypothesis that \(f(i,j) = f(j,i)\) for all
+\(i\) and  \(j\).
+In the application of this item to Exercise 29-2, this additional symmetry hypothesis is satisfied.
+
+\item
+(p.~285, p.~291) The ordering of parameters of \(S(q;b)\) is inconsistent between Chapters 28 and 29;
+the \(S(q;b)\) of Chapter 28 is the \(S(b;q)\) of Chapter 29.
+
+\item
+(p.~285, line 10)
+\(W^*(d) = q \sum_{\delta \divides q}\) should be \(W^*(q) = \sum_{\delta \divides q}\) 
+(change argument of function, omit factor \(q\))
+
+\item
+(p.~285, line 13)
+\(V^*(d) = q^2 \sum_{\delta \divides q}\) should be \(V^*(q) = q \sum_{\delta \divides q}\)
+(change argument of function, omit one factor \(q\))
+
+\item
+(p.~285, last displayed equation)
+\[
+\frac{N \log^2 Q}{Q \sqrt{p}} \text{ should be } \frac{N \log Q}{Q \sqrt{p}}
+\text{ (omit one factor of } \log Q)
+\]
+
+\item
+(p.~285, line 6 from bottom) ``almost every pairs'' should be ``almost every pair''
+
+\item
+(p.~292, Exercise 29-2, part 2) This is not true as stated. For example, for \(t = T\)
+we have \(\hat{K}(t) = 0\).
+
+\item
+(p.~293, Exercise 29-3) The statement of part 2 is not clear. I think it means,
+``Enumerate the triples \((n, n+2, n+4)\) where \(n \le 3^{100}\) 
+and each element of the ordered triple is a prime power.''
+
+\item
+(p.~295, reference [4]) \(2^k \ p\) should be \(2^k + p\)
+
+\item
+(p.~295, reference [8]) \(p \ 2^k\) should be \(p + 2^k\)
+
+\item
+(p.~295, references [9] and [12]) These references are to books and should be formatted as books
+
+\item
+(p.~295, reference [14]) ``14 O.~Ramar\'{e}'' should be ``O.~Ramar\'{e}'' (omit repeated 14)
+\item
+(p.~318, Hint for 23-3) Lemma 19.2 should be Lemma 19.1 (there is no Lemma 19.2)
+
+\item
+(p.~318, Hint for 23-8) Lemma 12.2.1 should be Lemma 12.2.
+
+\item
+(p.~320, line 13 from bottom) \verb+for(y = 1, x,+ should be \verb+for(y = begx, endx,+
+
+\item
+(p.~324, line 2) \(\hat{K}(t)\) should be \(\hat{K}(t) \pi^2 T\)
+
+\item
+(p.~325, line 1) ofenly should be often (``oftenly'' is archaic)
+
+
+\end{itemize}
+%-------------------------------------------------------
+\bibliography{AllenMain}
+\bibliographystyle{amsplain}
+%-------------------------------------------------------
+
+\end{document}  

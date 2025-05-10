@@ -294,14 +294,30 @@ position d'arriv&eacute;e : il s'agit du probl&egrave;me &agrave;
       <tr>
         <td>
           <table id="etude_position_initiale" class="fondgris">
-            <tr><td>
+            <SCRIPT LANGUAGE="javascript" type="text/javascript" >
+              <!-- ----------------------------------------------------- -->  
+              <!-- ----------------------------------------------------- -->  
+              for(var x = 0; x < PlateauEtude.hauteur; x++){
+                document.write("<tr>");
+                for(var y = 0; y < PlateauEtude.largeur; y++){
+                   if(PlateauEtude.Table[PlateauEtude.xytocode(x,y)]!=9){
+                      document.write("<td><input type=\"button\"  id=\"Plateau_Graphique_button_"+lettres[x]+lettres[y]+"\" value=\"    \" onClick=\"window.Plateau_Graphique_select("+x+","+y+",Etude.position_initiale)\"></td>");}
+                   else {
+                      document.write("<td></td>");
+                   };};
+                document.write("</tr>");
+              };
+              <!-- ----------------------------------------------------- -->  
+              <!-- ----------------------------------------------------- -->
+            </SCRIPT>
+             <tr><td>
                 <font style="font-weight:bold;font-size:300%">?</font>
             </td></tr>
           </table>
         </td>
         <td>
           <table id="commandes_sur_pos_ini">
-            <tr><td id="cleaner"></td></tr>
+            <tr><td id="cleaner_ini"></td></tr>
             <tr><td id="vide_ini"></td></tr>
             <tr><td id="plein_ini"></td></tr>
           </table>
@@ -313,13 +329,31 @@ position d'arriv&eacute;e : il s'agit du probl&egrave;me &agrave;
         </td>
         <td>
           <table id="etude_position_finale" class="fondgris">
-            <tr><td>
+            <SCRIPT LANGUAGE="javascript" type="text/javascript" >
+              <!-- ----------------------------------------------------- -->  
+              <!-- ----------------------------------------------------- -->  
+              for(var x = 0; x < PlateauEtude.hauteur; x++){
+                document.write("<tr>");
+                for(var y = 0; y < PlateauEtude.largeur; y++){
+                   if(PlateauEtude.Table[PlateauEtude.xytocode(x,y)]!=9){
+                      document.write("<td><input type=\"button\"  id=\"Plateau_Graphique_button_"+lettres[x]+lettres[y]+"\" value=\"    \" onClick=\"window.Plateau_Graphique_select("+x+","+y+",Etude.position_finale)\"></td>");}
+                   else {
+                      document.write("<td></td>");
+                   };};
+                document.write("</tr>");
+              };
+              <!-- ----------------------------------------------------- -->  
+              <!-- ----------------------------------------------------- -->
+            </SCRIPT>
                 <font style="font-weight:bold;font-size:300%">?</font>
             </td></tr>
           </table>
         </td>
         <td>
           <table id="commandes_sur_pos_fin">
+            <tr><td id="cleaner_fin"></td></tr>
+            <tr><td id="vide_fin"></td></tr>
+            <tr><td id="plein_fin"></td></tr>
           </table>
         </td>
       </tr>

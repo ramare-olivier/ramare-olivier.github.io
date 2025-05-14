@@ -260,7 +260,7 @@ function Plateau_Graphique_set_plateau(){
     /* Tells JAVA about it !! */
     //alert("Going to java, yo! ");
     // Le plateau :
-    document.JavaLibrary.initPlateauEtude();
+    //document.JavaLibrary.initPlateauEtude();
 
     document.getElementById("ShowTab").innerHTML = 
         "<input type=\"button\" style=\"width:250px;background-color:#FFFFCC\""

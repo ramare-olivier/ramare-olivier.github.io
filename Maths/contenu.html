@@ -1341,15 +1341,23 @@ $
   </li>
   <!-- ============================= -->
   <li class="paper software"><script language="javascript">
-      Software("Sage Library: Computing Lattice Invariant Euler Products", "" ,
-      "LatticeInvariantEulerProducts-06.sage", 2020,533,
+      Software("Sage Library: Euler Product", "Dominique Benielli" ,
+      "https://archimede-institut.github.io/sage-euler-product/index.html", 2025, 1000,
       "Addendum to 'Fast multi-precision computation of some Euler products'");
       nbrs();</script>
     <div class="resumecontent">
       <img src="../trucs/FourFreedoms.png" height="110px" 
-      title="See Free Software Fundation">  
-      This is the software that emerges from the paper 'Fast multi-precision
-      computation of some Euler products'.
+	   title="See Free Software Fundation"> The sage-euler-product
+	package for SageMath adds functionality related to Number
+	Theory. For instance <tt>get_euler_products(1, 1 , 1-x^4,
+	1+2x^2-3x^3, 1000)</tt> computes
+	$\prod_{p\ge2}(1-1/p^4)/(1+2/p^2-3/p^3)$ to one thousand
+	certified digits in a very fast manner. Several similar Euler
+	products with rational fractions and added congruence
+	conditions on the summing primes are also available, see the
+	<a href="https://archimede-institut.github.io/sage-euler-product/tutorial/index.html">Tutorial</a>.  This
+	software emerges from the paper 'Fast multi-precision
+	computation of some Euler products'.
     </div>
   </li>
   <!-- ============================= -->

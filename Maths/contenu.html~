@@ -102,8 +102,6 @@ MathJax.Hub.Config({
 </script>
 <dl id="MenuDroit"> 
 <dt>Navigation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img class="w3-image" src="../trucs/ukraine3.gif" width="60px"
-	     title = "Ukraine will stand">
 	</dt>
 <dd><a href="#Top">Retour au d&eacute;but</a></dd>
 <dd><a href="#Recherche">Articles de recherche</a>
@@ -115,7 +113,7 @@ MathJax.Hub.Config({
 <dd>&nbsp;&nbsp;&nbsp;
   <a href="#Explicit">Explicit estimates on primes or on the Moebius function</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;
-  <a href="#Bilinear">Bilinear sums on prime numbers</a></dd>
+  <a href="#Bilinear">Trigonometric polynomials of arithmetic functions</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;
   <a href="#Lfunctions">$L$-functions / primes in arithmetic progressions</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;
@@ -139,11 +137,11 @@ MathJax.Hub.Config({
 <center>
 <font size=+2 color=#CC9933>
 <i>
-&laquo;M&eacute;fiez-vous des 
+M&eacute;fiez-vous des 
 <span title=
 "Ces beaux-parleurs pr&eacute;tendront vous montrer
 le fond de choses alors qu'ils n'y sont jamais all&eacute;">montreurs d'ours</span>, tr&egrave;s peu
-en ont captur&eacute;s&raquo;
+en ont captur&eacute;s.
 </i>
 </font>
 </center>
@@ -243,7 +241,7 @@ academical and personal purpose.</i></font></CENTER>
 	Paper("On S'nirel'man's constant",
 	"","Article.pdf","http://annaliscienze.sns.it/",
 	"Annali della Scuola Superiore di Pisa",
-	"vol. 21 no 4", 1995,
+	"vol. 22 no 4", 1995,
 	"645--705",
 	"http://archive.numdam.org/ARCHIVE/ASNSP/ASNSP_1995_4_22_4/ASNSP_1995_4_22_4_645_0/ASNSP_1995_4_22_4_645_0.pdf"); 
 	nbr();
@@ -275,7 +273,8 @@ an additive asymptotic basis whose order is very well controled.
 	"", "Eigenvalues2.pdf",
 	"http://www.functiones.amu.edu.pl/",
 	"Functiones et Approximatio",
-	"vol. 37", 2007, "399--427","");
+	      "vol. 37", 2007, "399--427",
+	      "https://projecteuclid.org/journals/functiones-et-approximatio-commentarii-mathematici/volume-37/issue-2/Eigenvalues-in-the-large-sieve-inequality/10.7169/facm/1229619662.full");
 	nbr();</script>
       <div class="resumecontent">
 	We provide some evidence that the eigenvalues of the hermitian form
@@ -346,7 +345,7 @@ an additive asymptotic basis whose order is very well controled.
     <!-- ============================= -->
     <li class="paper preprint"><script language="javascript">
 	Preprint("On long $\\kappa$-tuples: small values of $\\kappa$",
-	"", "HRIW-Numerical-4.pdf", 2010, 16, "");
+		 "", "HRIW-Numerical-4.pdf", 2010, 16, "");
 	nbrp();</script>
       <div class="resumecontent">
 	This paper is the sequel of the previous one. I did not publish it at the
@@ -363,7 +362,8 @@ an additive asymptotic basis whose order is very well controled.
 	"D. S. Ramana", "dense_primes_israel.pdf",
 	"http://www.ma.huji.ac.il/~ijmath/",
 	"Israel Journal of Mathematics",
-	"vol. 199", 2014, "955--974", "");
+	      "vol. 199", 2014, "955--974",
+	      "https://link.springer.com/article/10.1007/s11856-013-0075-y");
 	nbr();</script>
       <div class="resumecontent">
 	<img src="../trucs/Luminy2015-3.jpg" width="100px"
@@ -447,10 +447,14 @@ of A. S&aacute;rk&ouml;zy.
      </div>
   </li>
   <!-- ============================= -->
-    <li class="paper preprint"><script language="javascript">
-	Preprint("A spectral resolution of the large sieve",
-	"", "LSE-46-N-04-submitted-1.pdf", 2023, 55, "Submitted");
-	nbrp();</script>
+    <li class="paper"><script language="javascript">
+	Paper("A spectral resolution of the large sieve",
+	      "", "LSE-46-N-04-submitted-1.pdf",
+	      "https://smf.emath.fr/publications/bulletin-de-la-societe-mathematique-de-france",
+	      "Bulletin de la Soci&eacute;t&eacute; Math&eacute;matique de France",
+	      "vol. 153 no 3", 2025, "575--636",
+	     "");
+	nbr();</script>
       <div class="resumecontent">
 	The quadratic form
   $V(\varphi,Q)=\sum_{q\sim Q}\sum_{a\mod^* q}|S(\varphi,a/q)|^2$ and
@@ -463,28 +467,6 @@ of A. S&aacute;rk&ouml;zy.
   (a smoothed version of) the quadratic form $V(\varphi,Q)$ may stay
   \emph{away} from $(6/\pi^2)Q\sum_n|\varphi_n|^2$ when $Q\asymp N$,
   though only on a vector space of positive but small dimension.
-      </div>
-  </li>
-  <!-- ============================= -->
-    <li class="paper"><script language="javascript">
-	Paper("Notes on restriction theory in the primes",
-	      "", "RestrictionTheory-IJM-06.pdf",
-	      "https://www.springer.com/journal/118562022",
-	      "Israel Journal of Math.", "vol. ", 2022, "21pp", "");
-	nbr();</script>
-      <div class="resumecontent">We study the mean
-  $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$ when
-  $\ell$ covers the full range $[2,\infty)$ and
-  $\mathcal{X}\subset\mathbb{R}/\mathbb{Z}$ is a well-spaced set,
-  providing a smooth transition from the case $\ell=2$ to the case
-  $\ell>2$ and improving on the results of J.~Bourgain and of B.~Green
-  and T.~Tao. A uniform Hardy-Littlewood property for the set of
-  primes
-  is established as well as a sharp upper bound
-  for $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$
-  when $\mathcal{X}$ is small. These results are extended to primes in
-  any interval in a last section, provided the primes are
-  numerous enough therein.
       </div>
   </li>
 <!-- ============================= -->
@@ -530,7 +512,8 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "Andrew Granville", "granvilleramare.pdf",
       "https://www.cambridge.org/core/journals/mathematika#",
       "Mathematika",
-      "vol. 43 no 1", 1996, "73--107", "");
+	    "vol. 43 no 1", 1996, "73--107",
+	    "https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/S0025579300011608");
       nbr();</script>
     <div class="resumecontent">
 	<img src="../trucs/andrew-granville.jpeg" width="80px"
@@ -583,7 +566,8 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "", "PsiTildeSimple-Acta-2.pdf",
       "http://journals.impan.gov.pl/aa/",
       "Acta Arithmetica",
-      "vol 159 no 2", 2013, "113--122");
+	    "vol. 159 no 2", 2013, "113--122",
+	    "https://www.impan.pl/pl/wydawnictwa/czasopisma-i-serie-wydawnicze/acta-arithmetica/all/159/2/82334/explicit-estimates-for-the-summatory-function-of-varlambda-n-n-from-the-one-of-varlambda-n");
       nbr();</script>
     <div class="resumecontent">We prove that the error term $\sum_{\substack{n\le
       x}}\Lambda(n)/n-\log x+\gamma$
@@ -595,10 +579,14 @@ all moduli $k \le 72$&nbsp; and other small moduli.
     </div>
   </li>
  <!-- ============================= -->
-    <li class="paper preprint"><script language="javascript">
-	Preprint("Corrigendum to ``Explicit estimates for the summatory function of $\\Lambda(n)/n$ from the one of $\\Lambda(n)$''",
-	"", "Corrigendum-PsiTildeSimple-Acta-02.pdf", 2022, 3, "Submitted");
-	nbrp();</script>
+    <li class="paper"><script language="javascript">
+	Paper("Corrigendum to ``Explicit estimates for the summatory function of $\\Lambda(n)/n$ from the one of $\\Lambda(n)$''",
+	      "", "Corrigendum-PsiTildeSimple-Acta-02.pdf",
+	      "http://journals.impan.gov.pl/aa/",
+	      "Acta Arithmetica",
+	      "vol. 211 no 1", 2023, "93--96",
+	      "https://doi.org/10.4064/aa220605-11-10");
+	nbr();</script>
       <div class="resumecontent">
       </div>
     </li>
@@ -608,7 +596,8 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "", "MuLog-4.pdf",
       "http://www.functiones.amu.edu.pl/",
       "Functiones et Approximatio",
-      "vol. 49", 2013, "229--240");
+	    "vol. 49", 2013, "229--240",
+	   "https://projecteuclid.org/journals/functiones-et-approximatio-commentarii-mathematici/volume-49/issue-2/Some-elementary-explicit-bounds-for-two-mollifications-of-the-Moebius/10.7169/facm/2013.49.2.3.full");
       nbr();</script>
     <div class="resumecontent">We prove that the sum
         $\sum_{\left\{\substack{d\le x,\\
@@ -629,7 +618,7 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "http://journals.impan.gov.pl/aa/",
       "Acta Arithmetica",
       "vol 157 no 4", 2013, "365--379",
-      "")
+      "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/157/4/82991/from-explicit-estimates-for-primes-to-explicit-estimates-for-the-mobius-function")
       nbr();</script>
     <div class="resumecontent">We prove two explicit estimates
       respectively slightly stronger than $|\sum_{d\le D}\mu(d)|/D\le
@@ -644,7 +633,7 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "http://journals.impan.gov.pl/aa/",
       "Acta Arithmetica",
       "vol 165 no 1", 2014, "1--10",
-      "");
+      "https://www.impan.pl/pl/wydawnictwa/czasopisma-i-serie-wydawnicze/acta-arithmetica/all/165/1/83068/explicit-estimates-on-the-summatory-functions-of-the-mobius-function-with-coprimality-restrictions");
       nbr();</script>
     <div class="resumecontent">We prove that
       $|\sum_{\left\{\substack{d\le x,\\(d,q)=1}\right.}\mu(d)/d|\le
@@ -661,7 +650,7 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "http://www.ams.org/publications/journals/journalsframework/mcom",
       "Mathematics of Computation",
       "vol 84 no 293", 2015, "1359--1387",
-      "");
+      "https://www.ams.org/journals/mcom/2015-84-293/S0025-5718-2014-02914-1/");
       nbr();</script>
     <div class="resumecontent">
       We prove that $|\sum_{d\le x}\mu(d)/d|\log x\le 1/69$&nbsp;  when $x\ge
@@ -692,7 +681,7 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "http://www.ams.org/publications/journals/journalsframework/mcom",
       "Mathematics of Computation",
       "vol 88 no 319", 2019, "2383--2388",
-      "");
+      "https://www.ams.org/journals/mcom/2019-88-319/S0025-5718-2019-03449-X/");
       nbr();</script>
     <div class="resumecontent">
       The initial paper had a sign mistake (in the definition of $h'$
@@ -787,7 +776,8 @@ all moduli $k \le 72$&nbsp; and other small moduli.
        Paper("Chowla's conjecture: from the Liouville function to the Moebius function",
       "", "ChowlaMoebius-7.pdf", "",
       "Ergodic Theory and Dynamical Systems in their Interactions with Arithmetics and Combinatorics<br> (ed. S. Ferenczi, J. Ku&lstrok;aga-Przymus and M. Lema&nacute;czyk)",
-      "LNM 2213", 2018, "317-323");
+	     "LNM 2213", 2018, "317-323",
+	    "https://link.springer.com/book/10.1007/978-3-319-74908-2");
       nbr();</script>
     <div class="resumecontent">This aim of this short note is to try
   to clarify the links between different versions of the ``Chowla
@@ -800,7 +790,8 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       Paper("On the missing Log factor",
       "", "MissingLogFactor-3-withbib.pdf", "",
       "Ergodic Theory and Dynamical Systems in their Interactions with Arithmetics and Combinatorics<br> (ed. S. Ferenczi, J. Ku&lstrok;aga-Przymus and M. Lema&nacute;czyk)",
-      "LNM 2213", 2018, "293-315");
+	    "LNM 2213", 2018, "293-315",
+	   "https://link.springer.com/book/10.1007/978-3-319-74908-2");
       nbr();</script>
     <div class="resumecontent">This paper is the detailled written
       account of a talk with the same title given during the
@@ -901,7 +892,99 @@ all moduli $k \le 72$&nbsp; and other small moduli.
   $(10^{15}q)^{5/2}$. 
     </div>
   </li>
-  
+
+  <li class="paper"><script language="javascript">
+      Paper("From explicit estimates for the primes to explicit estimates for the Moebius function -- II",
+	       "Sebastian Zuniga Alterman",
+            "From-explicit-estimates-for-the-primes-to-explicit-estimates-for-the-Mobius-function-II-12.pdf",
+	    "http://www.functiones.amu.edu.pl/",
+	    "Functiones et Approximatio",
+	    "vol. ?", 2025, "7pp",
+	    "http://dx.doi.org/");
+      nbr();</script>
+    <div class="resumecontent">
+      <img src="../trucs/Sebastian.jpg" width="128px"
+	   title="Sebastian Zuniga Alterman">
+      We improve on all the results of the paper ``From explicit estimates
+  for the primes to explicit estimates for the M\"obius function''
+  by the first author by incorporating the finite
+  range computations performed since then by several authors. Thus we
+  have
+  \begin{align*}
+    \Bigg|\sum_{n\le X}\mu(n)\Bigg|
+    &\le \frac{0.006688\,X}{\log X},&&\text{for } X\ge 1\,798\,118,\\
+    \Bigg|\sum_{n\le X}\frac{\mu(n)}{n}\Bigg|
+   & \le \frac{0.010032}{\log X},&& \text{for } X\ge 617\,990.
+  \end{align*}  
+  We also improve on the method described in the earlier paper of the
+      same title by a simple remark.
+    </div>
+  </li>
+ 
+  <li class="paper preprint"><script language="javascript">
+      Preprint("Moebius function and primes: an identity factory with applications",
+	       "Sebastian Zuniga Alterman and Michel Balazard",
+               "BV-Mobius-IdentityFactory.pdf", 2023, 30, "Submitted");
+      nbrp();</script>
+    <div class="resumecontent">
+      <img src="../trucs/Sebastian.png" height="128px"
+	   title="Sebastian Zuniga Alterman">
+      <img src="../trucs/balazard.jpg" height="128px"
+	   title="Michel Balazard">
+	We study the sums
+	$\sum_{n\le X, (n,q)=1}\frac{\mu(n)\log(X/n)^k}{n^s}$  in an
+	explicit manner where
+	$k\in\{0,1\}$, 
+	$s\in\mathbb{C}$ and $\Re s>0$. To do so, we introduce a large
+	family of arithmetical identities. In an appendix, we complete this
+	work by a direct proof along similar lines of the inequality $\sum_{n\le
+	X}\Lambda(n)/n\le \log X$.
+	<br> An appendix by Michel Balazard uses a similar setting to prove
+	  that $\sum_{n\le x}\Lambda(n)/n\le \log x$.
+    </div>
+  </li>
+ 
+  <li class="paper preprint"><script language="javascript">
+      Preprint("A Moebius sum",
+	       "Sebastian Zuniga Alterman",
+               "", 2023, 30, "Submitted");
+      nbrp();</script>
+    <div class="resumecontent">
+      <img src="../trucs/Sebastian.png" width="128px"
+	   title="Sebastian Zuniga Alterman">
+      We first provide numerical bounds for $\Sigma_\varepsilon(X)=\sum_{\substack{d_1,d_2\le
+      X}}\frac{\mu(d_1)\mu(d_2)}{[d_1,d_2]^{1+\varepsilon}}$. We show in particular
+      that $0\le \Sigma_0(X)\le 23/40$ for every $X\ge2$ and that
+      $0\le \Sigma_\varepsilon(X)\le 27/50$ when  $3\cdot 10^{10}\le X$
+      and $\varepsilon\in[0, 1/10]$.
+    </div>
+  </li>
+ 
+  <li class="paper"><script language="javascript">
+      Paper("An explicit harmonic $L^2$-bound for the Barban \& Vehov weights",
+	       "Sebastian Zuniga Alterman",
+               "BV-BV-09.pdf",
+	    "http://www.functiones.amu.edu.pl/",
+	    "Functiones et Approximatio",
+	    "vol. ?", 2025, "16pp",
+	    "http://dx.doi.org/");
+      nbr();</script>
+    <div class="resumecontent">
+      <img src="../trucs/Sebastian.png" width="128px"
+	   title="Sebastian Zuniga Alterman">
+     The Barban-Vehov weights being defined below, we prove that
+      $\displaystyle
+      \sum_{n\le
+      N}\Bigl(\sum_{\substack{d|n}}\lambda(d)\Bigr)^2/n
+      \le
+      3.1\,\frac{\log N}{\log (z_2/z_1)}
+      \frac{1.301(1+\tau^2)+1.084(1+\tau)-0.116}{\tau-1}
+      $
+      when $N\ge z_1\ge100$ and  $z_2=z_1^\tau$ for some $\tau>1$. 
+      Two related estimates are also proved.
+    </div>
+  </li>
+ 
   </ol><br>
   </li>
 <!-- ======================================================================= -->
@@ -913,7 +996,7 @@ all moduli $k \le 72$&nbsp; and other small moduli.
 <br>
 <!-- ======================================================================= -->
   <li><a name="Bilinear" class="dontmention"></a>
-    <span class="thema">Bilinear sums on prime numbers</span>
+    <span class="thema">Trigonometric polynomials of arithmetic functions</span>
   <ol>
   <!-- ============================= -->
   <li class="paper"><script language="javascript">
@@ -921,7 +1004,8 @@ all moduli $k \le 72$&nbsp; and other small moduli.
       "Andrew Granville", "granvilleramare.pdf",
       "https://www.cambridge.org/core/journals/mathematika#",
       "Mathematika",
-      "vol. 43 no 1", 1996, "73--107", "");
+	    "vol. 43 no 1", 1996, "73--107",
+	    "https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/S0025579300011608");
       nbretoile();</script>
     <div class="resumecontent">
       For many years, Paul Erd&ouml;s has asked intriguing questions
@@ -955,7 +1039,7 @@ all moduli $k \le 72$&nbsp; and other small moduli.
   <!-- ============================= -->
   <li class="paper"><script language="javascript">
       Paper("Modular Ternary Additive Problems with Irregular or Prime Numbers",
-      "G. Kasi Viswanadham", "",
+      "G. Kasi Viswanadham", "SelbergIdentity-KVOR-21-withbib.pdf",
       "http://www.mathnet.ru/php/journal.phtml?jrnid=tm&option_lang=eng",
       "Proceedings of the Steklov Institute of Mathematics", 
       "Volume dedicated to I.M. Vinogradov, vol. 314",
@@ -989,12 +1073,39 @@ $\sum_{q^{20r}\le s \le q^{20r}+q^{16r}}e(sa/q)\ll q^{16r}(\log q)/\sqrt{\varphi
     |\le 1300 \sqrt{q}\,X/\varphi(q)$ for $250\le q\le X^{1/24}$. Several
     other results are also proved.
     </div>
+	</li>
+	  <!-- ============================= -->
+    <li class="paper"><script language="javascript">
+	Paper("Notes on restriction theory in the primes",
+	      "", "RestrictionTheory-IJM-06.pdf",
+	      "https://link.springer.com/journal/11856",
+	      "Israel Journal of Math.", "vol. 261", 2024, "717--738",
+	      "https://link.springer.com/article/10.1007/s11856-023-2586-5");
+	nbr();</script>
+      <div class="resumecontent">We study the mean
+  $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$ when
+  $\ell$ covers the full range $[2,\infty)$ and
+  $\mathcal{X}\subset\mathbb{R}/\mathbb{Z}$ is a well-spaced set,
+  providing a smooth transition from the case $\ell=2$ to the case
+  $\ell>2$ and improving on the results of J.~Bourgain and of B.~Green
+  and T.~Tao. A uniform Hardy-Littlewood property for the set of
+  primes
+  is established as well as a sharp upper bound
+  for $\sum_{x\in\mathcal{X}} \bigl|\sum_{p\le N}{}u_p e(xp)\bigr|^{\ell}$
+  when $\mathcal{X}$ is small. These results are extended to primes in
+  any interval in a last section, provided the primes are
+  numerous enough therein.
+      </div>
   </li>
  <!-- ============================= -->
-    <li class="paper preprint"><script language="javascript">
-	Preprint("Exponential sums over primes with multiplicative  coefficients",
-	"G. Kasi Viswanadham", "OR_KV_new_version-06.pdf", 2021, 19, "Submitted");
-	nbrp();</script>
+    <li class="paper"><script language="javascript">
+	Paper("Exponential sums over primes with multiplicative  coefficients",
+		 "G. Kasi Viswanadham",
+	"OR_KV_ new_version-06.pdf","https://www.springer.com/journal/209",
+	      "Mathematische Zeitschrift", " vol. 304 no 3", 2023,
+	      "Paper no 50, 20pp",
+	      "https://link.springer.com/article/10.1007/s00209-023-03305-7");
+	nbr();</script>
       <div class="resumecontent">
 <img src="../trucs/kasi-viswanadh.jpeg" height="110px"
 	     title="Kasi Viswanadh Gopajosyula">
@@ -1021,10 +1132,72 @@ $q\le X^{(1-\eta)/15}$. Under
 stronger restrictions and the same conditions on $\alpha$ and
 $a/q$, we also prove that
 $
-\sum_{X < \ell\leq 2X} a_g(\ell)\mu(\ell) e(p\alpha)\ll X/\sqrt{q}\;.
+\sum_{X < \ell\leq 2X} a_g(\ell)\mu(\ell) e(\ell\alpha)\ll X/\sqrt{q}\;.
 $ 
       </div>
+      </li>
+        <!-- ============================= -->
+    <li class="paper"><script language="javascript">
+	ToAppear("The trigonometric polynomial on sums of two squares, an additive problem and generalisation",
+		 "G. Kasi Viswanadham", "",
+		 "https://www.ams.org/publications/journals/journalsframework/abouttran",
+		 "Transactions of the American Math. Soc.", "vol. no ",
+		 2025, "38pp", "");
+	nbr();      </script>
+      <div class="resumecontent">
+	<img src="../trucs/kasi-viswanadh.jpeg" height="110px"
+	     title="Kasi Viswanadh Gopajosyula">
+	  Let $\mathfrak{B}$ be the set of odd integers that are sums of two coprime
+  squares. We prove that the trigonometric polynomial
+  $S(\alpha;N)=\sum_{b\in\mathfrak{B},b\le N}e(b\alpha)$ satisfies
+  \begin{equation*}
+    \frac{S(\alpha; N)}{N/\sqrt{\log N}}\ll_{A,A'}
+    \frac{1}{\varphi(q)}
+    +
+    \sqrt{\frac{q}{N}}(\log N)^{7}
+    +\frac{1}{(\log N)^A}
+  \end{equation*}
+  for any $A,A'\ge0$ and when $(a,q)=1$ and $|q\alpha-a|\le (\log
+  N)^{A'}/N$. We use this estimate together with a variant of the circle
+  method influenced by Green and Tao's Transference Principle to
+  obtain the number of representations of a large enough odd integer
+  $N$ as a sum $b+b_1+b_2$, where $b\in\mathfrak{B}$ while $b_1$
+  (resp. $b_2$) belongs to a general subset $\mathfrak{B}_1$
+  (resp. $\mathfrak{B}_2$) of $\mathfrak{B}$ of relative positive density.
+  We further show that the above bound is effective when $0\le A < 1/2$.
+	</div>
   </li>
+
+<!-- ======================================================================= -->
+    <li class="paper preprint"><script language="javascript">
+	Preprint("Cusps of primes in dense subsequences -- Bypassing $W$-trick",
+	"", "RestrictionTheory-AA-NSB-22.pdf", 2024, 25, "Submitted");
+	nbrp();      </script>
+      <div class="resumecontent">
+	  Let the $A$-cusps of a dense subset
+  $\mathcal{P}^*\in[\sqrt{N},N]$ of primes be points
+  $\alpha\in\mathbb{R}/\mathbb{Z}$ that are such that
+  $|\sum_{\substack{p\in\mathcal{P}^*}} e(\alpha p)|\ge
+  |\mathcal{P}^*|/A$. We establish that any $(1/N)$-well spaced subset
+  of $A$-cusps contains at most $20A^2K\log(2A)$ points, where
+  $K=N/(|\mathcal{P}^*|\log N)$.  We further show that any
+  $B$-cusps $\xi$ is accompanied, when $B\le \sqrt{A}$, by a large
+  proportion of $A$-cusps of the shape $\xi+(a/q)$.  We conclude this
+  study by showing that, given $A\ge2$, the characteristic function
+  $1_{\mathcal{P}^*}$ may be decomposed in the form
+  $1_{\mathcal{P}^*}=(V(z_0)\log N)^{-1}f^\flat +f^\sharp$ where the
+  trigonometric polynomial of $f^\sharp$ takes only values
+  $\le |\mathcal{P}^*|/A$, and $f^\flat$ is a bounded non-negative
+  function supported on the integers prime to $M$; the parameters
+  $z_0$ and $M$ are given in terms of $A$, while
+  $V(z_0)=\prod_{p < z_0}(1-1/p)$. The function $f^\flat$ satisfies more
+  regularity properties. In particular, its density with respect to
+  the integers $\le N$ and coprime to $M$ is again $K$. This transfers
+  questions on $\mathcal{P}^*$ to problems on integers coprime to the
+  modulus $M$.
+	</div>
+  </li>
+
 <!-- ======================================================================= -->
   </ol><br>
   </li>
@@ -1106,7 +1279,7 @@ $
       "http://dx.doi.org/10.7169/facm/1277811637");
       nbr();</script>
     <div class="resumecontent">We show that any $L$-function attached
-      to a non-exceptionnal Hecke Grossencharakter~$\Xi$&nbsp;  may be
+      to a non-exceptionnal Hecke Grossencharakter $\Xi$&nbsp;  may be
       approximated by a truncated Euler product when $s$&nbsp;  lies near the
       line $\Re s=1$. This leads to some refined bounds on $L(s,\Xi)$.
     </div>
@@ -1207,6 +1380,49 @@ $
   product of terms of the shape $F(1/p, 1/p^s)$ when $F$ is a
   two-variable polynomial with coefficients in $\mathbb{C}$ and satisfying
   some restrictive conditions.
+    </div>
+  </li>
+  <!-- ============================= -->
+  <li class="paper"><script language="javascript">
+      Paper("An explicit upper bound for $L(1,\\chi)$ when $\\chi$ is quadratic", 
+      "D.R. Johnston et T. Trudgian", "JRT_Submitted.pdf",
+      "https://www.springer.com/journal/40993",
+      "Research in Number Theory", 
+      "vol. 9, no. 4, Paper No.72", 2023, "20pp", 
+      "");
+      nbr();</script>
+    <div class="resumecontent">
+       <img src="../trucs/johnston.jpeg" height="110px"
+	    title="D.R. Johnston">
+       <img src="../trucs/trudgian.jpeg" height="110px"
+	    title="T. Trudgian">
+	 We consider Dirichlet $L$-functions $L(s, \chi)$ where $\chi$ is a
+  non-principal quadratic character to the modulus $q$. We make
+  explicit a result due to Pintz and Stephens by showing that
+  $|L(1, \chi)|\leq \frac{1}{2}\log q$ for all $q\geq 2\cdot 10^{23}$
+  and $|L(1, \chi)|\leq \frac{9}{20}\log q$ for all $q\geq 5\cdot 10^{50}$.
+    </div>
+  </li>
+  <!-- ============================= -->
+    <li class="paper"><script language="javascript">
+	ToAppear("Explicit count of integral ideals of an imaginary quadratic field",
+		 "", "ConvolutionAndVoronoi-10-AMQ.pdf",
+		 "https://link.springer.com/journal/40316/articles",
+		 "Annales math&eacute;matiques du Qu&eacute;bec",2025, 11);
+	nbr();      </script>
+      <div class="resumecontent">
+       We provide explicit bounds for the number of integral ideals of
+  norms at most $X$ is $\mathbb{Q}[\sqrt{d}]$ when $d < 0$ is a
+  fundamendal discriminant with an error term of size
+  $\mathcal(X^{1/3})$. In particular, we prove that, when $\chi$
+  is the non-principal character modulo 3 and $X\ge1$, we have
+  $\sum_{n\le X}(1\star\chi)(n)
+    =
+    \frac{\pi X}{3\sqrt{3}}
+    +\mathcal{O}^*(1.94\,X^{1/3})$, and that , when $\chi$
+  is the non-principal character modulo $4$ and $X\ge1$, we have
+  $\sum_{n\le X}(1\star\chi)(n)
+    = \frac{\pi X}{4} +\mathcal{O}^*( 1.4\,X^{1/3})$.
     </div>
   </li>
 
@@ -1396,11 +1612,13 @@ $
  explicit bound for the error term.
       </div>
   <!-- ============================= -->
-    <li class="paper preprint"><script language="javascript">
-	Preprint("Representing ideal classes of ray class groups by product of prime ideals of small size",
+    <li class="paper"><script language="javascript">
+	ToAppear("Representing ideal classes of ray class groups by product of prime ideals of small size",
 	"Jean-Marc Deshouillers, Sanoli Gun and Jyothsnaa Sivaraman", 
-		 "", 2022, 36,"");
-	nbrp();</script>
+		 "https://doi.org/10.48550/arXiv.2210.11051",
+		 "https://www.springer.com/journal/209",
+	      "Mathematische Zeitschrift", 2025, 36);
+	nbr();</script>
       <div class="resumecontent">
 	<img src="../trucs/JMD.jpeg" height="110px"
 	     title="Jean-Marc Deshouillers">
@@ -1422,11 +1640,15 @@ primes in any given class of $H_{\mathfrak{q}}(\mathbb{K})$.
       </div>
   </li>
   <!-- ============================= -->
-    <li class="paper preprint"><script language="javascript">
-	Preprint("An application of counting ideals in ray classes",
+    <li class="paper"><script language="javascript">
+	Paper("An application of counting ideals in ray classes",
 	"Sanoli Gun and Jyothsnaa Sivaraman", 
-		 "", 2022, 16 ,"");
-	nbrp();</script>
+		 "doiA-aa230406-10-6.pdf",
+		 "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica",
+	      "Acta Arithmetica",
+	      "vol. 216 no 2", 2024, "99--121",
+	      "https://www.impan.pl/pl/wydawnictwa/czasopisma-i-serie-wydawnicze/acta-arithmetica/all/216/2/115736/an-application-of-counting-ideals-in-ray-classes");
+	nbr();</script>
       <div class="resumecontent">
 	<img src="../trucs/Sanoli.jpeg" height="110px"
 	     title="Sanoli Gun">
@@ -1435,7 +1657,8 @@ primes in any given class of $H_{\mathfrak{q}}(\mathbb{K})$.
 	In this article, we prove a fully explicit generalized
 Brun-Titchmarsh theorem for an imaginary quadratic field $\mathbb{K}$. More precisely,
  for any finite family of linearly independent 
-linear forms with coefficients in $\mathcal{O}_{\mathbb{K}}$, we count the number of integers 
+	linear forms with coefficients in $\mathcal{O}_{\mathbb{K}}$,
+	we count the number of integers 
 at which all these linear forms
 take prime values in $\mathcal{O}_{\mathbb{K}}$.
       </div>
@@ -1532,7 +1755,7 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       "http://www.springer.com/mathematics/journal/10474",
       "Acta Mathematica Hungarica",
       "vol. 143 no 1", 2014, "75--80",
-      "");
+      "https://link.springer.com/article/10.1007/s10474-014-0408-2");
       nbr();</script>
     <div class="resumecontent">
       <img src="../trucs/lefevre-pascal.jpeg" height="110px"
@@ -1557,14 +1780,15 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       "", "TruncatedPerron-5.pdf",
       "http://ambp.cedram.org/",
       "Annales Blaise Pascal",
-      "vol. 33 no 1", 2016, "109--128");
+	    "vol. 33 no 1", 2016, "109--128",
+	   "https://ambp.centre-mersenne.org/item/?id=AMBP_2016__23_1_109_0");
       nbr();</script>
     <div class="resumecontent">We prove two general and ready for use
       formulae relating variations of the summatory function $\sum_{\le
       x}a_n$&nbsp;  together with
       $\frac{1}{2i\pi}\int_{\kappa-iT}^{\kappa+iT}F(z)x^zdz/z$, where
       $F(z)=\sum_{n\ge1}a_n/n^z$&nbsp;  and $\kappa$&nbsp;  is a parameter strictly
-      larger than the abcissa of absolute convergence of~$F$.
+      larger than the abcissa of absolute convergence of $F$.
     </div>
   </li>
 
@@ -1597,7 +1821,7 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       Hypothesis that for every non-constant integer valued polynomial
       $f$, for every positive $\delta$, and almost every prime $q$&nbsp;  in $[Q,2Q]$,
 		  the number of primes from the interval $[x,x+x^{\frac{1}2+\delta}]$
-		  that are values of $f$&nbsp;  modulo~$q$&nbsp;  is the expected one, provided $Q$
+		  that are values of $f$&nbsp;  modulo $q$&nbsp;  is the expected one, provided $Q$
 		  is not more than $x^{\frac{2}{3}-\epsilon}$. We obtain this via a
 		  variant of the classical truncated Perron's formula for the partial
 		  sums of the coefficients of a Dirichlet series.
@@ -1626,7 +1850,7 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica",
       "Acta Arithmetica",
       "vol. 173 no 2", 2015, "183--196",
-      "");
+      "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/173/2/91488/discrepancy-estimates-for-some-linear-generalized-monomials");
       nbr();</script>
     <div class="resumecontent">
        <img src="../trucs/hofer-roswitha.png" height="110px"
@@ -1661,7 +1885,9 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       We obtain an upper bound for the  discrepancy of the  sequence 
       $([p(n)\alpha]\beta)_{n\geq 0}$&nbsp;  generated by the generalized polynomial 
       $[p(x)\alpha]\beta$, where $p(x)$&nbsp;  is a polynomial with real coefficients,  
-      $\alpha$&nbsp;  and $\beta$&nbsp;  are irrational numbers satisfying  certain conditions.
+      $\alpha$&nbsp;  and $\beta$&nbsp;  are irrational numbers
+	     satisfying  certain conditions. Here is a
+<a link="https://rdcu.be/dfYuM">SharedIt link</a> to this paper.
     </div>
   </li>
   <!-- ============================= -->
@@ -1676,7 +1902,7 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
     <div class="resumecontent">
 	<img src="../trucs/Julien.jpeg" width="160px"
 	     title="Julien Cassaigne">
-      <img src="../trucs/Sary.jpeg" width="100px"
+      <img src="../trucs/Sary-Kolkata-2023-small.png" width="100px"
 	   title="Sary Drappeau">
     The theory of exponent pairs as initiated by Phillipps in 1933
     proposes pairs of exponents $(\kappa,\lambda)$ so that one has
@@ -1708,18 +1934,45 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
     </div>
   </li>
     <!-- ============================= -->
-    <li class="paper preprint"><script language="javascript">
-	Preprint("A probability-free proof of an explicit Croot-Laba-Sisask Lemma",
-	"", "Croot-Laba-Sisask-Lemma-02.pdf", 2022, 6, "");
-	nbrp();</script>
+    <li class="paper"><script language="javascript">
+	Paper("An explicit Croot-Laba-Sisask Lemma free of probabilistic language",
+	"", "Croot-Laba-Sisask-Lemma-Brazil-04.pdf",
+	"https://link.springer.com/journal/574",
+	"Bulletin of the Brazilian Mathematical Society, New Series",
+	"vol. 55 no. 2", 2024, "Paper No. 23", 
+        "https://link.springer.com/epdf/10.1007/s00574-024-00397-5?sharing_token=iSWVSFPPNFHiuXT6sRIcm_e4RwlQNchNByi7wbcMAY5KitXMWF4FY6dA0PwD3qGt13F6lUP-FBkU3KMSUzd7dPMULQy1ceCIF4LGrWzjBXR9Hw7JtmvA-moLrmssQsaAUBWAEXuP8e2tSUETFt5s4DN8LBKFfokb9Bb08dSl0_I%3D");
+	nbr();</script>
       <div class="resumecontent">
-	This note proposes a proof free of probabilistic language of the
+	This note proposes a proof aimed at number theorists and which
+  is free of probabilistic language of the
   famous Croot-Laba-Sisask Lemma. In between, we do the same for the
   Khintchine and Marcinkiewicz-Zygmund inequalities and explicitate the
   implied constants.
       </div>
     </li>
     
+  <!-- ============================= -->
+ <li class="paper preprint"><script language="javascript">
+	Preprint("Rudin Inequality, Chang Theorem, primes and squares",
+	"", "RudinInequality-11-Arxiv.pdf", 2025, 17, "");
+	nbrp();</script>
+      <div class="resumecontent">
+	We prove that the set of large values of
+the trigonometric polynomial over a subset of density of the primes has some additive structure, similarly to what happens for
+subsets of densities in $\mathbb{Z}/{N}\mathbb{Z}$ but in a weaker form.
+To do so, we prove large sieve inequalities for \emph{dissociate sets}
+$\mathcal{X}$ of circle 
+points and functions $f$ whose support $S$ is finite and
+respectively in an interval, in
+the set of primes or in the set of squares. Set
+$T(f,x)=\sum_{n}f(n)\exp(2i\pi nx)$. These inequalities are of
+the shape $\sum_{x\in\mathcal{X}}|T(f,x)|^2\ll
+|S|\|f\|_2^2\log(8R/|S|)$ where $R$ is respectively $N$, $N/\log
+N$ and $\sqrt{N}$. The implied constants depend on
+the spacement between sumsets of $\mathcal{X}$.
+      </div>
+    </li>
+
   <!-- ============================= -->
 
 
@@ -1822,7 +2075,7 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       "https://www.impan.pl/pl/wydawnictwa/czasopisma-i-serie-wydawnicze/colloquium-mathematicum",
       "Colloquium Mathematicum",
       "vol. 147", 2017, "275--313",
-      "");
+      "https://www.impan.pl/en/publishing-house/journals-and-series/colloquium-mathematicum/all/147/2/92047/explicit-averages-of-non-negative-multiplicative-functions-going-beyond-the-main-term");
       nbr();</script>
     <div class="resumecontent">
       <img src="../trucs/akhilesh-p.jpeg" height="110px"
@@ -1842,7 +2095,7 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       the changes of sign of the Moebius function. It is in particular
       proven that $|G_1(D)-\log D-c_0|\le 4/\sqrt{D}$&nbsp;  and $|G_1(D)-\log
       D-c_0|\le 21/(\sqrt{D}\log D)$&nbsp;  when $D>1$, for a suitable
-      constant~$c_0$.
+      constant $c_0$.
     </div>
   </li>
    <!-- ============================= -->
@@ -1852,7 +2105,6 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       "http://www.springer.com/mathematics/journal/11501",
       "Proceedings of the Steklov Institute of Mathematics",
       "vol. 296", 2017, "52--64",
-      "",
       "Translation in Tr. Mat. Inst. Steklova 296, 58--71 (2017); addendum ibid. 296, 251--255 (2017)");
       nbr();</script>
     <div class="resumecontent"><img src="../trucs/cilleruelo-javier-2.jpeg" height="110px"
@@ -1935,7 +2187,7 @@ e^v}}\nolimits'\frac{\Lambda(n)}n+v+\frac12\log(\frac{1-e^{v}}{1+e^v})+\gamma
       "AcharyaDrappeauGangulyRamare2022.pdf",
       "https://www.springer.com/journal/11139",
       "The Ramanujan Journal",
-      "vol. ", 2022, "14pp", "https://doi.org/10.1007/s11139-022-00688-9");
+      "vol. 62", 2023, "365-382", "https://doi.org/10.1007/s11139-022-00688-9");
       nbr();</script>
     <div class="resumecontent">
 	<img src="../trucs/Ratnadeep.jpg" width="120px"
@@ -1951,7 +2203,30 @@ least prime $p$ such that $a(p)\in I$. This can be viewed as a modular form
 analogue of Vinogradov's problem on the least quadratic
 non-residue. We obtain strong explicit bounds on $p$, depending on the
 analytic conductor of $f$ for some specific choices of $I$.  
+</div>
+  <!-- ============================= -->
+<li class="paper"><script language="javascript">
+      ToAppear("Convolution of periodic multiplicative functions and the divisor problem",
+	       "Marco Aymone, Gopal Maiti and Priyamvad Srivasta" ,
+	       "divisor-omega.pdf",
+	       "https://www.cambridge.org/core/journals/canadian-journal-of-mathematics",
+	       "Canadian Journal of Math.",2024, 9);
+      nbr();</script>
+  <div class="resumecontent">
+       <img src="../trucs/Marco.jpeg" width="90px"
+	   title="Marco Aymone">
+       <img src="../trucs/Gopal-small.jpeg" width="90px"
+	   title="Gopal Maiti">
+       <img src="../trucs/priyamvad-srivastav.jpeg" width="90px"
+	   title="Priyamvad Srivasta">
+	 <br>   
+      Let $f$ and $g$ be two multiplicative functions that are periodic,
+  non-vanishing at their period and with bounded partial sums.  We
+  prove that $\sum_{n\leq x}(f\ast g)(n)=\Omega(x^{1/4})$ when the
+  periods of $f$ and $g$, say $M_1$ and $M_2$, are squarefree.
     </div>
+  </li>
+  <!-- ============================= -->
  </li>
  <!-- ======================================================================= -->
  <!-- ======================================================================= -->
@@ -2008,10 +2283,14 @@ analytic conductor of $f$ for some specific choices of $I$.
   </li>
 
   <!-- ============================= -->
-  <li class="paper preprint"><script language="javascript">
-      Preprint("Planik and Square Dance, two planar permutation games","" ,
-      "Planik-04.pdf", 2023, 10, "Submitted");
-      nbrp();</script>
+  <li class="paper"><script language="javascript">
+      Paper("Planik and Square Dance, two planar permutation games: solving a simpler Rubik's cube with group theory","" ,
+	    "Planik-04.pdf",
+	    "https://www.ias.ac.in/listing/issues/reso",
+	    "Resonance, Journal of Science Education",
+	    "vol. 28 no. 11", 2023, "1685--1699",
+	    "https://www.ias.ac.in/article/fulltext/reso/028/11/1685-1699");
+      nbr();</script>
     <div class="resumecontent">
       The Planik is a two dimensional version of a game close to the
   Rubik cube. In this paper, we present this game and the group
@@ -2030,16 +2309,39 @@ analytic conductor of $f$ for some specific choices of $I$.
 
   <BR>
 
-<!-- =====================================================
-<center>
-<img src="../trucs/MassifCentralLac2014.jpg" width="250px"
-     class="InTheMiddle"
-     title="Massif Central (2014)">
-<img src="../trucs/MassifCentralChamps2014.jpg" width="300px"
-     class="InTheMiddle"
-     title="Massif Central (2014)">
+<br>
+    <center>
+      <a href="../trucs/CVOlivierRamareBySumaia.jpg">
+	<font face="Comic sans MS" size="+2" color="black">
+	  <it> My paper pile &#128513;, by Sumaia Saad Eddin (2025)
+	  </it>
+	</font>
+      </a>
+      <br><br>
+	<font size=+2><i>Let us change the metrics!</i>
+	  &nbsp;&nbsp;&nbsp;</font>
+	<br><br>
+	  <font>
+	    &#x266F; countries where I published:
+	  <font color="red">13</font>
+	  &nbsp;&nbsp;&nbsp;
+	  &#x266F; co-authors:
+	  <font color="red">40</font>
+	  &nbsp;&nbsp;&nbsp;
+	  &#x266F; languages for papers: <font color="red">3</font>
+	  <br>
+	    <font size=-1><a href="../trucs/Collaborators2025.png">
+	  <sl> Repartition my co-authors per country (2025)
+	  </sl>
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../trucs/Journals2025.png">
+	  <sl> Countries of journals where I published (2025)
+	  </sl></font>
+      </a>
 </center>
-======================================================== -->
+    <br>
+      <br>
 
 <!-- ================================================================= -->
 <!-- ================================================================= -->
@@ -2265,9 +2567,13 @@ the fundamentals of analytic number theory. It will also appeal to
 researchers in mathematics and engineering interested in experimental
 techniques in this active area.
 <br>
- The <a href="https://www.maa.org/press/maa-reviews/excursions-in-multiplicative-number-theory">review</a>
- from MAA and
- the <a href="https://zbmath.org/?q=an%3A7349511">review</a> from ZentralBlatt.
+ Here are the <a href="https://www.maa.org/book-reviews/excursions-in-multiplicative-number-theory">review</a>
+ from MAA,
+ the <a href="https://zbmath.org/?q=an%3A7349511">review</a> from
+ ZentralBlatt,
+ and the
+ <a href=https://mathscinet-ams-org.ezproxy.math.cnrs.fr/mathscinet/article?mr=4400952>
+ one</a> from MathScinet.
  <br> Typos <a href="../ExcursionsInMultiplicativeNT-Typos/contenu-typos.html">here</a>.
  </font>
 </blockquote>
@@ -2704,36 +3010,7 @@ corr&eacute;ligionaires (voir aussi <a href="../GdT-TAN-Store/GdT-TAN-Store.html
 <!-- ================================================================= -->
 <!-- ================================================================= -->
 <!-- ================================================================= -->
-<!-- ================================================================= -->
-<br>
-<li><div class="oddselectionaround">
-<div class="oddselectionbord"><a name="CoursNotesAutres" class="dontmention"></a>
-<br>    <font size=+2> Biblioth&egrave;que</font>
-<br>
-<br>
-<ol>
-<!-- --------------------------------------------------------------------- -->
-<li> -&#167;-
-<a class="someword" href="http://www.helsinki.fi/~ernvall/ntsummer/arc3.pdf">
- Artic Number Theory School, Turku 2011 (par M. Jutila)</a> : 
-  <emph><i>Analytic Number Theory and Number Theoretic Analysis</i></emph>. 
-<span class="moinsimportant">Une courte et dense introduction aux formules de
-  Vorono&iuml; / Atkinson et les &eacute;valuations associ&eacute;es par un
-  ma&icirc;tre du domaine.</span>
-</li>
-<!-- --------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------- -->
-<li> -&#167;-
-<a class="someword" href="http://lmbp.uca.fr/~royer/courses/m2_afrique/VersionWeb2019.pdf">
- Le cours de Bamako 2019 (par E. Royer)</a> : 
-  <emph><i>Un cours &laquo;africain&raquo; sur les formes modulaires</i></emph>. 
-<span class="moinsimportant">D&eacute;j&agrave; tr&egrave;s complet mais pas encore
-  termin&eacute; !</span>
-</li>
-<!-- --------------------------------------------------------------------- -->
-</ol></div></div></li> <!-- fin de li CoursNotesAutres -->
 
-<br>
 <br>
 
 <!-- ================================================================= -->

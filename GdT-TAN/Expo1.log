@@ -1,0 +1,18 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdftex 2022.11.25)  7 DEC 2022 09:35
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Expo1.tex
+(./Expo1.tex
+./Expo1.tex:1: I can't find file `amstex'.
+l.1 \input amstex
+                 
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name
+./Expo1.tex:1: Emergency stop.
+l.1 \input amstex
+                 
+*** (job aborted, file error in nonstop mode)
+
+./Expo1.tex:1:  ==> Fatal error occurred, no output PDF file produced!
